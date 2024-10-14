@@ -1,0 +1,47 @@
+[
+  {
+    "companyName": "ceg1",
+    "companyLogo": "startup1",
+    "stage": ["Pre-Startup", "Startup"],
+    "type": ["Állami szereplők"],
+    "site": null,
+    "about": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "interest": null
+  },
+  {
+    "companyName": "ce2",
+    "companyLogo": "startup2",
+    "stage": ["Startup"],
+    "type": ["Állami szereplők"],
+    "site": null,
+    "about": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+    "interest": null
+  },
+  {
+    "companyName": "cég3",
+    "companyLogo": "startup3",
+    "stage": ["Scaleup", "Startup"],
+    "type": ["Állami szereplők", "HUB-ok"],
+    "site": null,
+    "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "interest": null
+  },
+  {
+    "companyName": "cég4",
+    "companyLogo": "startup4",
+    "stage": ["Pre-Startup", "Startup"],
+    "type": ["Állami szereplők", "Külföldi befektetők"],
+    "site": null,
+    "about": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+    "interest": null
+  },
+  {
+    "companyName": "cég5",
+    "companyLogo": "startup5",
+    "stage": ["Startup"],
+    "type": ["Állami szereplők"],
+    "site": null,
+    "about": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "interest": null
+  }
+]
