@@ -35,15 +35,15 @@ function EcosystemGrid(data: { startups: StartupDataType[] }) {
             value={stage}
             onClick={() => setSelectedStage(stage)}
             className={cn(
-              "p-8 bg-transparent ring-2 text-neutral-700 font-bold text-xl ring-primary/60 hover:bg-primary/60 relative hover:text-neutral-50",
-              { "bg-primary/60 text-neutral-50": stage === selectedStage }
+              "p-8 bg-transparent ring-2 text-neutral-700 font-bold group text-xl ring-primary hover:bg-primary/60 hover:ring-primary/60 relative hover:text-neutral-50",
+              { "bg-primary text-neutral-50": stage === selectedStage }
             )}
             size="lg"
             key={i}
           >
             {stage}
             {stage === selectedStage && (
-              <div className="after:content-[''] after:absolute after:left-1/2 after:bottom-[-12px] after:-translate-x-1/2 after:w-0 after:h-0 after:border-t-[10px] after:border-t-primary/60 after:border-l-[10px] after:border-l-transparent after:border-r-[10px] after:border-r-transparent"></div>
+              <div className="after:content-[''] after:absolute after:left-1/2 after:bottom-[-12px] after:-translate-x-1/2 after:w-0 after:h-0 after:border-t-[10px] after:border-t-primary after:border-l-[10px] after:border-l-transparent after:border-r-[10px] group-hover:after:border-t-primary/60 after:border-r-transparent"></div>
             )}
           </Button>
         ))}
@@ -60,15 +60,15 @@ function EcosystemGrid(data: { startups: StartupDataType[] }) {
               value={type}
               onClick={() => setSelectedType(type)}
               className={cn(
-                "p-8 w-full bg-transparent ring-2 text-neutral-700 text-md font-bold ring-primary/60 hover:bg-primary/60 relative hover:text-neutral-50",
-                type === selectedType ? "bg-primary/60 text-neutral-50" : ""
+                "p-8 group w-full bg-transparent ring-2 text-neutral-700 text-md font-bold ring-primary hover:bg-primary/60 relative hover:text-neutral-50 hover:ring-primary/60",
+                type === selectedType ? "bg-primary text-neutral-50" : ""
               )}
               size="lg"
               key={i}
             >
               {type}
               {selectedType === type && (
-                <div className="after:content-[''] after:absolute after:top-1/2 after:right-[-22px] after:-translate-y-1/2 after:w-0 after:h-0 after:border-r-[10px] after:border-r-transparent after:border-t-[10px] after:border-t-transparent after:border-b-[10px] after:border-b-transparent after:border-l-[10px] after:border-l-primary/60" />
+                <div className="after:content-[''] after:absolute after:top-1/2 after:right-[-22px] after:-translate-y-1/2 after:w-0 after:h-0 after:border-r-[10px] after:border-r-transparent after:border-t-[10px] after:border-t-transparent after:border-b-[10px] after:border-b-transparent after:border-l-[10px] after:border-l-primary group-hover:after:border-l-primary/60" />
               )}
             </Button>
           ))}
