@@ -1,20 +1,19 @@
 "use client";
-import { StartupDataType } from "@/lib/utils";
+
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import { Card, CardContent } from "./ui/card";
 import { Button } from "./ui/button";
 
-function StatupCard({
-  about,
-  companyLogo,
+type StartupDataType = {
+  companyLogo: string;
+  site: string;
+};
 
-  site,
-}: StartupDataType) {
+function StatupCard({ companyLogo, site }: StartupDataType) {
   const [expand, setExpand] = useState<boolean>(false);
 
-  const shortAbout = about.substring(0, 135) + "...";
   return (
     <Link
       onMouseEnter={() => setExpand(true)}
@@ -39,7 +38,6 @@ function StatupCard({
               alt={""}
             />
             <CardContent className="flex flex-col justify-center items-center">
-              <p className="">{shortAbout}</p>
               <Button className="mt-3 bg-primary/60">Visit</Button>
             </CardContent>
           </Card>
