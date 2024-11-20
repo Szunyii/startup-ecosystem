@@ -5,11 +5,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { Card, CardContent } from "./ui/card";
 import { Button } from "./ui/button";
-
-type StartupDataType = {
-  companyLogo: string;
-  site: string;
-};
+import { StartupDataType } from "@/lib/utils";
 
 function StatupCard({ companyLogo, site }: StartupDataType) {
   const [expand, setExpand] = useState<boolean>(false);

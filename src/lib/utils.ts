@@ -5,6 +5,13 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+export type StartupDataType = {
+  companyLogo: string;
+  site: string;
+  stage: string;
+  type: string;
+};
+
 export function formatHuf(sum: number) {
   return sum.toLocaleString("hu-HU", {
     style: "currency",
