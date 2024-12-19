@@ -1,47 +1,80 @@
 [
   {
-    "companyName": "ceg1",
+    "companyName": "PortfoLion",
     "companyLogo": "startup1",
-    "stage": ["Pre-Startup", "Startup"],
-    "type": ["Állami szereplők"],
-    "site": null,
-    "about": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    "interest": null
-  },
-  {
-    "companyName": "ce2",
-    "companyLogo": "startup2",
     "stage": ["Startup"],
-    "type": ["Állami szereplők"],
-    "site": null,
-    "about": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
-    "interest": null
+    "type": ["Local investors"],
+    "link": "https://www.portfolion.hu/"
+  },
+
+  {
+    "companyName": "3TS Capital Partners",
+    "companyLogo": "startup1",
+    "stage": ["Startup", "Scale-up"],
+    "type": ["Local investors"],
+    "link": "https://3tscapital.com/"
   },
   {
-    "companyName": "cég3",
-    "companyLogo": "startup3",
-    "stage": ["Scaleup", "Startup"],
-    "type": ["Állami szereplők", "HUB-ok"],
-    "site": null,
-    "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    "interest": null
+    "companyName": "BnL Growth Partners",
+    "companyLogo": "startup1",
+    "stage": ["Startup", "Pre-Startup"],
+    "type": ["Local investors", "Acccelerators/Incubators"],
+    "link": "http://www.bnl.hu/"
   },
   {
-    "companyName": "cég4",
-    "companyLogo": "startup4",
-    "stage": ["Pre-Startup", "Startup"],
-    "type": ["Állami szereplők", "Külföldi befektetők"],
-    "site": null,
-    "about": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
-    "interest": null
-  },
-  {
-    "companyName": "cég5",
-    "companyLogo": "startup5",
+    "companyName": "Day One Capital",
+    "companyLogo": "startup1",
     "stage": ["Startup"],
-    "type": ["Állami szereplők"],
-    "site": null,
-    "about": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    "interest": null
+    "type": ["Local investors"],
+    "link": "https://www.dayonecapital.com/"
+  },
+  {
+    "companyName": "Drukka Startup Studio",
+    "companyLogo": "startup1",
+    "stage": ["Pre-Startup"],
+    "type": ["Acccelerators/Incubators"],
+    "link": "https://drukka.hu/"
+  },
+  {
+    "companyName": "Euroventures Capital Advisory",
+    "companyLogo": "startup1",
+    "stage": ["Scale-up"],
+    "type": ["Local investors"],
+    "link": "http://www.euroventures.hu/"
+  },
+  {
+    "companyName": "Fiedler Capital",
+    "companyLogo": "startup1",
+    "stage": ["Startup"],
+    "type": ["Local investors"],
+    "link": "https://www.fiedler.capital/"
+  },
+  {
+    "companyName": "Flashpoint VC",
+    "companyLogo": "startup1",
+    "stage": ["Startup", "Scale-up"],
+    "type": ["Local investors"],
+    "link": "https://flashpointvc.com/"
+  },
+  {
+    "companyName": "Hiventures",
+    "companyLogo": "startup1",
+    "stage": ["Startup"],
+    "type": ["Local investors"],
+    "link": "https://www.hiventures.hu/"
+  },
+  {
+    "companyName": "Hungarian Business Angel Network",
+    "companyLogo": "startup1",
+    "stage": ["Startup", "Pre-Startup", "Scale-up"],
+    "type": ["Local investors"],
+    "link": "https://hunban.eu/"
+  },
+  {
+    "companyName": "Interactive Venture Partners",
+    "companyLogo": "startup1",
+    "stage": ["Startup", "Scale-up"],
+    "type": ["Local investors"],
+    "link": "https://www.ivp.hu/"
   }
 ]

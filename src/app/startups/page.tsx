@@ -1,17 +1,34 @@
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import React from "react";
-import Image from "next/image";
+
 import { Separator } from "@/components/ui/separator";
 import { formatHuf, formatNumber, cardData, startupsData } from "@/lib/utils";
 import StartupDataTable, { columns } from "@/components/StartupDataTable";
 import { ArrowUp } from "lucide-react";
+// import { prisma } from "@/lib/db/prisma";
 
-function StartupPage() {
+async function StartupPage() {
+  // await prisma.company.create({
+  //   data: {
+  //     companyName: "page",
+  //     employees: "100",
+  //     growthStage: "startup",
+  //     hqCountry: "hun",
+  //     hqRegion: "hun",
+  //     logo: "",
+  //     profileUrl: "aa",
+  //     taxNumber: "123w21e21",
+  //     valuation: "sok",
+  //     website: "dfafs",
+  //     Industries: {
+  //       createMany: { data: [{ industrie: "a" }, { industrie: "b" }] },
+  //     },
+  //   },
+  // });
   return (
     <div>
       <div className="my-4 mx-2 ">
-        <Image src={"/niu-logo.png"} width={150} height={100} alt="ajaj" />
         <h1 className="mt-9 text-4xl font-bold">Startup Database</h1>
       </div>
       <Separator />
@@ -33,8 +50,6 @@ function StartupPage() {
               <Badge variant={"default"} className="text-sm mb-2">
                 {data.label}
               </Badge>
-              {/* icon */}
-              {/* <props.icon className="h-4 w-4 text-gray-400" /> */}
             </div>
             <div className="flex flex-col gap-1 ">
               <div className="flex">

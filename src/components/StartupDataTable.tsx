@@ -222,9 +222,10 @@ export const columns: ColumnDef<StartupType>[] = [
     },
     cell: ({ row }) => {
       const employee = parseFloat(row.getValue("employee"));
-      const formatted = new Intl.NumberFormat("hu-HU", {}).format(employee);
+      //fixálni a hármas tagolást
+      // const formatted = new Intl.NumberFormat("hu-HU", {}).format(employee);
 
-      return <div className="text-right font-medium">{formatted}</div>;
+      return <div className="text-right font-medium">{employee}</div>;
     },
   },
   {
@@ -278,6 +279,7 @@ export function StartupDataTable<TData, TValue>({
   const table = useReactTable({
     data,
     columns,
+
     getCoreRowModel: getCoreRowModel(),
     onSortingChange: setSorting,
     getSortedRowModel: getSortedRowModel(),

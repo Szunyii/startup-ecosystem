@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import MaxWidthWraper from "@/components/MaxWidthWrapper";
+import Navigation from "@/components/Navigation";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -43,7 +44,7 @@ export default function RootLayout({
         className={`${inter.variable} ${roboto_mono.variable}`}
       >
         <MaxWidthWraper>
-          <div>nav</div>
+          <Navigation />
           {children}
         </MaxWidthWraper>
       </body>

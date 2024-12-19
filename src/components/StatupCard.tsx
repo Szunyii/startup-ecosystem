@@ -1,20 +1,20 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import React, { useState } from "react";
 import { Card, CardContent } from "./ui/card";
-import { Button } from "./ui/button";
 import { StartupDataType } from "@/lib/utils";
 
-function StatupCard({ companyLogo, site }: StartupDataType) {
+function StatupCard({ companyLogo, link, companyName }: StartupDataType) {
   const [expand, setExpand] = useState<boolean>(false);
 
   return (
-    <Link
+    <a
       onMouseEnter={() => setExpand(true)}
       onMouseLeave={() => setExpand(false)}
-      href={`startup/${site}`}
+      href={`${link}`}
+      target="_blank"
+      className="transition-all"
     >
       <Card className="h-44 transition-all w-full flex flex-col justify-center items-center relative">
         <Image
@@ -25,7 +25,7 @@ function StatupCard({ companyLogo, site }: StartupDataType) {
           alt={""}
         />
         {expand && (
-          <Card className="z-50 absolute top-[50%] left-[50%] h-[360px] w-[300px] flex flex-col justify-center gap-4 items-center -translate-x-1/2 -translate-y-1/2">
+          <Card className="z-50 absolute top-[50%] left-[50%] h-[280px] w-[270px] flex flex-col justify-center gap-4 items-center -translate-x-1/2 -translate-y-1/2 transition-all">
             <Image
               className="mt-4"
               src={`/${companyLogo}.png`}
@@ -34,12 +34,12 @@ function StatupCard({ companyLogo, site }: StartupDataType) {
               alt={""}
             />
             <CardContent className="flex flex-col justify-center items-center">
-              <Button className="mt-3 bg-primary/60">Visit</Button>
+              <h2>{companyName}</h2>
             </CardContent>
           </Card>
         )}
       </Card>
-    </Link>
+    </a>
   );
 }
 
