@@ -35,6 +35,7 @@ export type StartupType = {
   salaryYoY: number;
   employee: number;
   employeeYoY: number;
+  year?: number;
 };
 
 export const startupsData: StartupType[] = [
@@ -47,6 +48,7 @@ export const startupsData: StartupType[] = [
     salaryYoY: 128.2,
     employee: 88,
     employeeYoY: 81.8,
+    year: 2024,
   },
   {
     id: "2",
@@ -57,6 +59,7 @@ export const startupsData: StartupType[] = [
     salaryYoY: 116.2,
     employee: 18,
     employeeYoY: 63.6,
+    year: 2024,
   },
   {
     id: "3",
@@ -67,6 +70,7 @@ export const startupsData: StartupType[] = [
     salaryYoY: 34.51,
     employee: 52,
     employeeYoY: -5.5,
+    year: 2024,
   },
   {
     id: "4",
@@ -77,6 +81,7 @@ export const startupsData: StartupType[] = [
     salaryYoY: 62.2,
     employee: 34,
     employeeYoY: 61.9,
+    year: 2024,
   },
   {
     id: "5",
@@ -87,6 +92,7 @@ export const startupsData: StartupType[] = [
     salaryYoY: 105.3,
     employee: 8,
     employeeYoY: 66.1,
+    year: 2024,
   },
   {
     id: "6",
@@ -97,6 +103,7 @@ export const startupsData: StartupType[] = [
     salaryYoY: 49.1,
     employee: 91,
     employeeYoY: 93.3,
+    year: 2023,
   },
   {
     id: "7",
@@ -107,6 +114,7 @@ export const startupsData: StartupType[] = [
     salaryYoY: 89,
     employee: 2,
     employeeYoY: 100,
+    year: 2023,
   },
   {
     id: "8",
@@ -117,6 +125,7 @@ export const startupsData: StartupType[] = [
     salaryYoY: 58.4,
     employee: 33,
     employeeYoY: 8,
+    year: 2023,
   },
   {
     id: "9",
@@ -127,6 +136,7 @@ export const startupsData: StartupType[] = [
     salaryYoY: 102.5,
     employee: 4,
     employeeYoY: 0,
+    year: 2023,
   },
   {
     id: "10",
@@ -137,6 +147,7 @@ export const startupsData: StartupType[] = [
     salaryYoY: 304.9,
     employee: 7,
     employeeYoY: 57.1,
+    year: 2023,
   },
 ];
 

@@ -43,7 +43,6 @@ export const columns: ColumnDef<StartupType>[] = [
   {
     accessorKey: "name",
     header: ({ column }) => {
-      console.log(column.getIsSorted());
       return (
         <Button
           className="flex pl-0 hover:bg-transparent gap-1"
@@ -66,7 +65,6 @@ export const columns: ColumnDef<StartupType>[] = [
     accessorKey: "taxes",
     // header: "Taxes paid",
     header: ({ column }) => {
-      console.log(column.getIsSorted());
       return (
         <div className="flex flex-row-reverse">
           <Button
@@ -276,10 +274,12 @@ export function StartupDataTable<TData, TValue>({
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     []
   );
+
+  // const [filtering, setFiltering] = useState({});
+
   const table = useReactTable({
     data,
     columns,
-
     getCoreRowModel: getCoreRowModel(),
     onSortingChange: setSorting,
     getSortedRowModel: getSortedRowModel(),
@@ -288,8 +288,15 @@ export function StartupDataTable<TData, TValue>({
     state: {
       sorting,
       columnFilters,
+      // // globalFilter: filtering,
+      // globalFilter: columnFilters,
     },
+    // onGlobalFilterChange: setFiltering,
   });
+
+  // const handleDatePick = (value: string) => {
+  //   setFiltering(parseInt(value));
+  // };
 
   return (
     <div>
@@ -310,7 +317,7 @@ export function StartupDataTable<TData, TValue>({
           />
           <SearchIcon className="absolute right-2 top-50%" />
         </div>
-        <Select defaultValue="2024">
+        <Select defaultValue="">
           <SelectTrigger className="w-[180px]">
             <SelectValue placeholder="Year" />
           </SelectTrigger>

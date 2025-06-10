@@ -10,26 +10,21 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Company {
-  id          String       @id @default(cuid())
+model Startup {
+  id          Int               @id @default(autoincrement())
   companyName String
-  taxNumber   String
-  profileUrl  String
-  website     String
-  hqRegion    String
-  hqCountry   String
-  growthStage String
-  employees   String
-  valuation   String
-  logo        String
-  Industries  Industries[]
+  taxNumber   Int
+  createdAt   DateTime          @default(now())
+  results     OperatingResult[]
 
-  @@map("companies")
+  @@unique([companyName, taxNumber])
 }
 
-model Industries {
-  id        String  @id @default(cuid())
-  companyId String
-  industrie String
-  company   Company @relation(fields: [companyId], references: [id], onDelete: Cascade)
+model OperatingResult {
+  id           Int     @id @default(autoincrement())
+  year         Int
+  balanceSheet String
+  value        Int
+  startupId    Int
+  startup      Startup @relation(fields: [startupId], references: [id])
 }
