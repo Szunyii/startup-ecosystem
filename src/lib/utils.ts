@@ -1,10 +1,33 @@
+import { Prisma } from "@prisma/client";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
+import { prisma } from "./db/prisma";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 //sss
+
+export type startupDataPayload = Prisma.CompanysGetPayload<{
+  select: {
+    companyName: true;
+    income_2023: true;
+    income_2024: true;
+    id: true;
+    income_YoY: true;
+    person_2023: true;
+    person_2024: true;
+    person_YoY: true;
+    salary_2023: true;
+    salary_2024: true;
+    salary_YoY: true;
+    tax_2023: true;
+    taxNumber: true;
+    tax_2024: true;
+    tax_YoY: true;
+  };
+}>;
+
 export type StartupDataType = {
   companyLogo: string;
   companyName: string;
@@ -13,16 +36,24 @@ export type StartupDataType = {
   link: string;
 };
 
-export function formatHuf(sum: number) {
-  return sum.toLocaleString("hu-HU", {
-    style: "currency",
-    currency: "HUF",
-    maximumFractionDigits: 0,
-  });
+export function formatHuf(num: number) {
+  if (num > 0) {
+    return (
+      num.toLocaleString("hu-HU", {
+        maximumFractionDigits: 0,
+      }) + " eFt"
+    );
+  } else {
+    return "-";
+  }
 }
 
-export function formatNumber(numb: number) {
-  return numb.toLocaleString("hu-HU", {});
+export function formatPerc(num: number) {
+  if (num === 0 || num === null || NaN) {
+    return "-";
+  } else {
+    return num + " %";
+  }
 }
 
 // test
@@ -38,136 +69,54 @@ export type StartupType = {
   year?: number;
 };
 
-export const startupsData: StartupType[] = [
-  {
-    id: "1",
-    name: "Asura Technologies",
-    taxes: 200916000,
-    taxesYoY: 284.12,
-    salary: 1209642000,
-    salaryYoY: 128.2,
-    employee: 88,
-    employeeYoY: 81.8,
-    year: 2024,
-  },
-  {
-    id: "2",
-    name: "Colossyan",
-    taxes: 4556000,
-    taxesYoY: 888.3,
-    salary: 37903300,
-    salaryYoY: 116.2,
-    employee: 18,
-    employeeYoY: 63.6,
-    year: 2024,
-  },
-  {
-    id: "3",
-    name: "Turbine AI",
-    taxes: 6698000,
-    taxesYoY: -86.7,
-    salary: 1104205000,
-    salaryYoY: 34.51,
-    employee: 52,
-    employeeYoY: -5.5,
-    year: 2024,
-  },
-  {
-    id: "4",
-    name: "Munch",
-    taxes: 153000,
-    taxesYoY: -99.1,
-    salary: 70566000,
-    salaryYoY: 62.2,
-    employee: 34,
-    employeeYoY: 61.9,
-    year: 2024,
-  },
-  {
-    id: "5",
-    name: "Deligo Vision Technologies",
-    taxes: 282000,
-    taxesYoY: 28.8,
-    salary: 153783000,
-    salaryYoY: 105.3,
-    employee: 8,
-    employeeYoY: 66.1,
-    year: 2024,
-  },
-  {
-    id: "6",
-    name: "Taxually",
-    taxes: 23217000,
-    taxesYoY: -85.6,
-    salary: 1255539000,
-    salaryYoY: 49.1,
-    employee: 91,
-    employeeYoY: 93.3,
-    year: 2023,
-  },
-  {
-    id: "7",
-    name: "BLOCK",
-    taxes: 678000,
-    taxesYoY: 6.2,
-    salary: 14034000,
-    salaryYoY: 89,
-    employee: 2,
-    employeeYoY: 100,
-    year: 2023,
-  },
-  {
-    id: "8",
-    name: "Barion",
-    taxes: 47284000,
-    taxesYoY: 83.9,
-    salary: 676957000,
-    salaryYoY: 58.4,
-    employee: 33,
-    employeeYoY: 8,
-    year: 2023,
-  },
-  {
-    id: "9",
-    name: "ViveLab Ergo",
-    taxes: 1817000,
-    taxesYoY: 90.1,
-    salary: 21620000,
-    salaryYoY: 102.5,
-    employee: 4,
-    employeeYoY: 0,
-    year: 2023,
-  },
-  {
-    id: "10",
-    name: "Giggle Work",
-    taxes: 5586000,
-    taxesYoY: 1347.2,
-    salary: 63332000,
-    salaryYoY: 304.9,
-    employee: 7,
-    employeeYoY: 57.1,
-    year: 2023,
-  },
-];
+//
+//     id: "10",
+//     name: "Giggle Work",
+//     taxes: 5586000,
+//     taxesYoY: 1347.2,
+//     salary: 63332000,
+//     salaryYoY: 304.9,
+//     employee: 7,
+//     employeeYoY: 57.1,
+//     year: 2023,
+//   },
+// ];
 
-export const cardData = [
-  {
-    label: "AVG. SALARY",
-    amount: 350000,
-    discription: "Avg. salary before taxes",
-    // icon: DollarSign,
-  },
-  {
-    label: "EMPLOYEES",
-    amount: 1000,
-    discription: "Avg. salary before taxes",
-    // icon: DollarSign,
-  },
-  {
-    label: "TAXES PAID",
-    amount: 400000000,
-    discription: "Avg. salary before taxes",
-    // icon: DollarSign,
-  },
-];
+// -- Salary
+export const getAvgSalary = () => {};
+// --- tax
+export const getSummTax = async (year: number) => {
+  const taxes = await prisma.operatingResult.aggregate({
+    _sum: {
+      value: true,
+    },
+    where: {
+      balanceSheet: "Adófizetési kötelezettség",
+      year: year,
+    },
+  });
+
+  return taxes._sum.value;
+};
+
+// export const getTaxYoY = async (year: number) => {
+//   const taxes = await prisma.operatingResult.aggregate({
+//     _sum: {
+//       value: true,
+//     },
+//     where: {
+//       balanceSheet: "Adófizetési kötelezettség",
+//       year: year,
+//     },
+//   });
+//   const preTaxes = await prisma.operatingResult.aggregate({
+//     _sum: {
+//       value: true,
+//     },
+//     where: {
+//       balanceSheet: "Adófizetési kötelezettség",
+//       year: year - 1,
+//     },
+//   });
+// };
+// ----

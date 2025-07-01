@@ -7,16 +7,17 @@ import StatupCard from "./StatupCard";
 const stageCategory = ["Pre-Startup", "Startup", "Scaleup"];
 const typeCategory = [
   "Govermental support",
-  "Accelerators/Incubators",
+  "Acccelerators/Incubators",
   "Local investors",
   "HUBs",
-  "Supporting programs",
-  "Foreign investors",
+  "Supporting programmes",
+  "Foreign Investors",
   "Crowdfunding",
+  "Service Provider",
 ];
 
 function EcosystemGrid(data: { startups: StartupDataType[] }) {
-  const [selectedType, setSelectedType] = useState("Local investors");
+  const [selectedType, setSelectedType] = useState("Govermental support");
   const [selectedStage, setSelectedStage] = useState("Pre-Startup");
 
   const filteredEntity = data.startups.filter(
@@ -75,7 +76,7 @@ function EcosystemGrid(data: { startups: StartupDataType[] }) {
         </div>
         {/* szereplők grid */}
         <div className="flex-1">
-          <div className="grid grid-cols-4 gap-1 justify-start items-start p-2 rel transition-all transitionduration-300">
+          <div className="grid grid-cols-4 gap-3 justify-start items-start p-2 rel transition-all transitionduration-300">
             {filteredEntity.map((startup, i) => (
               <StatupCard key={i} {...startup} />
             ))}

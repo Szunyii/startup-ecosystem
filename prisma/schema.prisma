@@ -28,3 +28,22 @@ model OperatingResult {
   startupId    Int
   startup      Startup @relation(fields: [startupId], references: [id])
 }
+
+model Companys {
+  id          Int    @id @default(autoincrement())
+  startupId   Int
+  companyName String
+  taxNumber   Int
+  income_2023 Int?
+  salary_2023 Int?
+  tax_2023    Int?
+  person_2023 Int?
+  income_2024 Int?
+  salary_2024 Int?
+  tax_2024    Int?
+  person_2024 Int?
+  income_YoY  Int?
+  salary_YoY  Int?
+  tax_YoY     Int?
+  person_YoY  Int?
+}

@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { StartupType } from "@/lib/utils";
+import { formatHuf, formatPerc, startupDataPayload } from "@/lib/utils";
 import {
   ColumnDef,
   flexRender,
@@ -22,26 +22,30 @@ import {
 } from "@/components/ui/table";
 import { Input } from "./ui/input";
 import { ArrowDown, ArrowUp, ArrowUpDown, SearchIcon } from "lucide-react";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "./ui/select";
+
 import { Button } from "./ui/button";
 
-export const columns: ColumnDef<StartupType>[] = [
+export const columns: ColumnDef<startupDataPayload>[] = [
   {
-    accessorKey: "name",
+    id: "No",
     header: () => <div className="text-right">No</div>,
-    cell: ({ row }) => {
-      const index = row.index + 1;
-      return <div className="text-right font-medium">{index}</div>;
+    cell: (info) => {
+      const rowIndex = info.table
+        .getRowModel()
+        .rows.findIndex((r) => r.id === info.row.id);
+      return rowIndex + 1;
+
+      // ({ row, table }) => {
+      // const index = row.index + 1;
+      // return <div className="text-right font-medium">{index}</div>;
+      // const visibleRows = table.getFilteredRowModel().rows;
+      // const rowIndex = visibleRows.findIndex((r) => r.id === row.id);
+      // return rowIndex + 1;
     },
+    // columns:
   },
   {
-    accessorKey: "name",
+    accessorKey: "companyName",
     header: ({ column }) => {
       return (
         <Button
@@ -62,8 +66,7 @@ export const columns: ColumnDef<StartupType>[] = [
     },
   },
   {
-    accessorKey: "taxes",
-    // header: "Taxes paid",
+    accessorKey: "tax_2024",
     header: ({ column }) => {
       return (
         <div className="flex flex-row-reverse">
@@ -85,20 +88,14 @@ export const columns: ColumnDef<StartupType>[] = [
       );
     },
     cell: ({ row }) => {
-      const taxes = parseFloat(row.getValue("taxes"));
-      const formatted = new Intl.NumberFormat("hu-HU", {
-        style: "currency",
-        currency: "HUF",
-        maximumFractionDigits: 0,
-      }).format(taxes);
+      const tax = parseFloat(row.getValue("tax_2024"));
 
-      return <div className="text-right font-medium">{formatted}</div>;
+      return <div className="text-right font-medium">{formatHuf(tax)}</div>;
     },
   },
   {
-    accessorKey: "taxesYoY",
+    accessorKey: "tax_YoY",
     header: ({ column }) => {
-      console.log(column.getIsSorted());
       return (
         <div className="flex flex-row-reverse">
           <Button
@@ -119,19 +116,23 @@ export const columns: ColumnDef<StartupType>[] = [
       );
     },
     cell: ({ row }) => {
-      const taxesYoY = parseFloat(row.getValue("taxesYoY"));
-      const formatted = new Intl.NumberFormat("hu-HU", {
-        style: "percent",
-        maximumFractionDigits: 2,
-      }).format(taxesYoY / 100);
+      const val: number = row.getValue("tax_YoY")!;
+      const tax = formatPerc(val)!;
 
-      return <div className="text-right font-medium">{formatted}</div>;
+      return (
+        <div
+          className={`text-right font-medium ${
+            val > 0 ? "text-green-500" : "text-red-500"
+          }`}
+        >
+          {tax}
+        </div>
+      );
     },
   },
   {
-    accessorKey: "salary",
+    accessorKey: "salary_2024",
     header: ({ column }) => {
-      console.log(column.getIsSorted());
       return (
         <div className="flex flex-row-reverse">
           <Button
@@ -152,20 +153,14 @@ export const columns: ColumnDef<StartupType>[] = [
       );
     },
     cell: ({ row }) => {
-      const salary = parseFloat(row.getValue("salary"));
-      const formatted = new Intl.NumberFormat("hu-HU", {
-        style: "currency",
-        currency: "HUF",
-        maximumFractionDigits: 0,
-      }).format(salary);
+      const tax = parseFloat(row.getValue("salary_2024"));
 
-      return <div className="text-right font-medium">{formatted}</div>;
+      return <div className="text-right font-medium">{formatHuf(tax)}</div>;
     },
   },
   {
-    accessorKey: "salaryYoY",
+    accessorKey: "salary_YoY",
     header: ({ column }) => {
-      console.log(column.getIsSorted());
       return (
         <div className="flex flex-row-reverse">
           <Button
@@ -186,19 +181,23 @@ export const columns: ColumnDef<StartupType>[] = [
       );
     },
     cell: ({ row }) => {
-      const salaryYoY = parseFloat(row.getValue("salaryYoY"));
-      const formatted = new Intl.NumberFormat("hu-HU", {
-        style: "percent",
-        maximumFractionDigits: 2,
-      }).format(salaryYoY / 100);
+      const val: number = row.getValue("salary_YoY")!;
+      const tax = formatPerc(val)!;
 
-      return <div className="text-right font-medium">{formatted}</div>;
+      return (
+        <div
+          className={`text-right font-medium ${
+            val > 0 ? "text-green-500" : "text-red-500"
+          }`}
+        >
+          {tax}
+        </div>
+      );
     },
   },
   {
-    accessorKey: "employee",
+    accessorKey: "person_2024",
     header: ({ column }) => {
-      console.log(column.getIsSorted());
       return (
         <div className="flex flex-row-reverse">
           <Button
@@ -206,7 +205,7 @@ export const columns: ColumnDef<StartupType>[] = [
             variant="ghost"
             onClick={() => column.toggleSorting()}
           >
-            Employee
+            Employees
             {column.getIsSorted() === false ? (
               <ArrowUpDown className=" h-4 w-4" />
             ) : column.getIsSorted() === "asc" ? (
@@ -219,17 +218,14 @@ export const columns: ColumnDef<StartupType>[] = [
       );
     },
     cell: ({ row }) => {
-      const employee = parseFloat(row.getValue("employee"));
-      //fixálni a hármas tagolást
-      // const formatted = new Intl.NumberFormat("hu-HU", {}).format(employee);
+      const tax = parseFloat(row.getValue("person_2024"));
 
-      return <div className="text-right font-medium">{employee}</div>;
+      return <div className="text-right font-medium">{tax}</div>;
     },
   },
   {
-    accessorKey: "employeeYoY",
+    accessorKey: "person_YoY",
     header: ({ column }) => {
-      console.log(column.getIsSorted());
       return (
         <div className="flex flex-row-reverse">
           <Button
@@ -237,7 +233,7 @@ export const columns: ColumnDef<StartupType>[] = [
             variant="ghost"
             onClick={() => column.toggleSorting()}
           >
-            Employee YoY
+            Employees YoY
             {column.getIsSorted() === false ? (
               <ArrowUpDown className=" h-4 w-4" />
             ) : column.getIsSorted() === "asc" ? (
@@ -250,13 +246,18 @@ export const columns: ColumnDef<StartupType>[] = [
       );
     },
     cell: ({ row }) => {
-      const employeeYoY = parseFloat(row.getValue("employeeYoY"));
-      const formatted = new Intl.NumberFormat("hu-HU", {
-        style: "percent",
-        maximumFractionDigits: 2,
-      }).format(employeeYoY / 100);
+      const val: number = row.getValue("person_YoY")!;
+      const tax = formatPerc(val)!;
 
-      return <div className="text-right font-medium">{formatted}</div>;
+      return (
+        <div
+          className={`text-right font-medium ${
+            val > 0 ? "text-green-500" : "text-red-500"
+          }`}
+        >
+          {tax}
+        </div>
+      );
     },
   },
 ];
@@ -267,6 +268,7 @@ interface DataTableProps<TData, TValue> {
 }
 
 export function StartupDataTable<TData, TValue>({
+  startupNumber,
   columns,
   data,
 }: DataTableProps<TData, TValue>) {
@@ -288,8 +290,6 @@ export function StartupDataTable<TData, TValue>({
     state: {
       sorting,
       columnFilters,
-      // // globalFilter: filtering,
-      // globalFilter: columnFilters,
     },
     // onGlobalFilterChange: setFiltering,
   });
@@ -302,7 +302,9 @@ export function StartupDataTable<TData, TValue>({
     <div>
       <div className="flex items-center justify-centers gap-2 mb-4 text-5xl">
         <h1 className=" font-medium ">Startups</h1>
-        <span className="text-muted-foreground">(361)</span>
+        <span className="text-muted-foreground">
+          ({startupNumber})<sup>*</sup>
+        </span>
       </div>
 
       {/* filter row */}
@@ -310,23 +312,15 @@ export function StartupDataTable<TData, TValue>({
         <div className="relative min-w-[300px] flex items-center mb-3">
           <Input
             placeholder="Company's name"
-            value={(table.getColumn("name")?.getFilterValue() as string) ?? ""}
+            value={
+              (table.getColumn("companyName")?.getFilterValue() as string) ?? ""
+            }
             onChange={(event) =>
-              table.getColumn("name")?.setFilterValue(event.target.value)
+              table.getColumn("companyName")?.setFilterValue(event.target.value)
             }
           />
           <SearchIcon className="absolute right-2 top-50%" />
         </div>
-        <Select defaultValue="">
-          <SelectTrigger className="w-[180px]">
-            <SelectValue placeholder="Year" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value={"2024"}>2024</SelectItem>
-            <SelectItem value="2023">2023</SelectItem>
-            <SelectItem value="2022">2022</SelectItem>
-          </SelectContent>
-        </Select>
       </div>
       {/* table */}
       <div className="rounded-md border">
