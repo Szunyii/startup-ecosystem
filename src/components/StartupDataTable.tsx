@@ -140,7 +140,7 @@ export const columns: ColumnDef<startupDataPayload>[] = [
             variant="ghost"
             onClick={() => column.toggleSorting()}
           >
-            Salary
+            Payroll
             {column.getIsSorted() === false ? (
               <ArrowUpDown className=" h-4 w-4" />
             ) : column.getIsSorted() === "asc" ? (
@@ -168,7 +168,7 @@ export const columns: ColumnDef<startupDataPayload>[] = [
             variant="ghost"
             onClick={() => column.toggleSorting()}
           >
-            Salary YoY
+            Payroll YoY
             {column.getIsSorted() === false ? (
               <ArrowUpDown className=" h-4 w-4" />
             ) : column.getIsSorted() === "asc" ? (
