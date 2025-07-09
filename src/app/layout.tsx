@@ -42,6 +42,7 @@ export default function RootLayout({
       <body
         // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         className={`${inter.variable} ${roboto_mono.variable}`}
+        cz-shortcut-listen="true"
       >
         <MaxWidthWraper>
           <Navigation />

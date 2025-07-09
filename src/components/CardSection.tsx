@@ -13,9 +13,8 @@ export type CardProps = {
 };
 
 export default async function CardSection() {
-  const avgSalary = await prisma.companys.aggregate({
-    _avg: { salary_2024: true, salary_2023: true },
-    where: { salary_2024: { gt: 0 } },
+  const sumSalary = await prisma.companys.aggregate({
+    _sum: { salary_2024: true, salary_2023: true },
   });
   const allEmployees = await prisma.companys.aggregate({
     _sum: { person_2024: true, person_2023: true },
@@ -23,6 +22,8 @@ export default async function CardSection() {
   const totalTax = await prisma.companys.aggregate({
     _sum: { tax_2024: true, tax_2023: true },
   });
+
+  const totalCompany = await prisma.companys.count();
 
   return (
     <section className="flex flex-col md:flex-row w-full gap-2 gap-x-4 transition-all my-4 ">
@@ -36,19 +37,23 @@ export default async function CardSection() {
         <div className="flex flex-col gap-1 ">
           <div className="flex">
             <h2 className="text-4xl font-semibold">
-              {formatHuf(avgSalary._avg.salary_2024!)}
+              {formatHuf(
+                sumSalary._sum.salary_2024! / allEmployees._sum.person_2024!
+              )}
             </h2>
             <ArrowUp />
             <span className="text-green-500">
               {(
-                ((avgSalary._avg.salary_2024! - avgSalary._avg.salary_2023!) /
-                  avgSalary._avg.salary_2023!) *
-                100
+                (sumSalary._sum.salary_2024! / allEmployees._sum.person_2024! -
+                  sumSalary._sum.salary_2023! /
+                    allEmployees._sum.person_2023!) /
+                sumSalary._sum.salary_2023! /
+                allEmployees._sum.person_2023!
               ).toFixed(2) + "%"}
             </span>
           </div>
           <p className="text-xs text-muted-foreground">
-            Avg. total personal expenditure
+            Avg. Salary per employee
           </p>
         </div>
       </Card>

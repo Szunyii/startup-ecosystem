@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 import { cn, StartupDataType } from "@/lib/utils";
 import StatupCard from "./StatupCard";
 
-const stageCategory = ["Pre-Startup", "Startup", "Scaleup"];
+const stageCategory = ["Pre-Startup", "Startup", "Scale-up"];
 const typeCategory = [
   "Govermental support",
   "Acccelerators/Incubators",
