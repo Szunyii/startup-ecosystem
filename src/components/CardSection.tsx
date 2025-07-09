@@ -23,8 +23,6 @@ export default async function CardSection() {
     _sum: { tax_2024: true, tax_2023: true },
   });
 
-  const totalCompany = await prisma.companys.count();
-
   return (
     <section className="flex flex-col md:flex-row w-full gap-2 gap-x-4 transition-all my-4 ">
       <Card className="p-4 flex-1" key={"AvgSalary"}>
