@@ -268,7 +268,6 @@ interface DataTableProps<TData, TValue> {
 }
 
 export function StartupDataTable<TData, TValue>({
-  startupNumber,
   columns,
   data,
 }: DataTableProps<TData, TValue>) {
@@ -303,7 +302,7 @@ export function StartupDataTable<TData, TValue>({
       <div className="flex items-center justify-centers gap-2 mb-4 text-5xl">
         <h1 className=" font-medium ">Startups</h1>
         <span className="text-muted-foreground">
-          ({startupNumber})<sup>*</sup>
+          (199)<sup>*</sup>
         </span>
       </div>
 

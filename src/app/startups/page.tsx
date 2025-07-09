@@ -1,11 +1,8 @@
-import { Badge } from "@/components/ui/badge";
-import { Card } from "@/components/ui/card";
 import React from "react";
 
 import { Separator } from "@/components/ui/separator";
-import { formatHuf, formatNumber, cardData, getSummTax } from "@/lib/utils";
+
 import StartupDataTable, { columns } from "@/components/StartupDataTable";
-import { ArrowUp } from "lucide-react";
 import { prisma } from "@/lib/db/prisma";
 import CardSection from "@/components/CardSection";
 import {
@@ -29,7 +26,7 @@ async function StartupPage() {
     orderBy: { companyName: "asc" },
   });
 
-  const startupNumber = await prisma.companys.count({});
+  // const startupNumber: number = await prisma.companys.count();
 
   // const opt = await prisma.operatingResult.findMany({
   //   where: { startupId: 98 },
@@ -68,11 +65,7 @@ async function StartupPage() {
       <Separator />
       {/* datatable */}
       <section className=" w-full py-10">
-        <StartupDataTable
-          columns={columns}
-          data={datas}
-          startupNumber={startupNumber}
-        />
+        <StartupDataTable columns={columns} data={datas} />
       </section>
     </div>
   );

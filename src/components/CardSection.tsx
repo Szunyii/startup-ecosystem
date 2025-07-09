@@ -1,6 +1,6 @@
 import { ArrowDown, ArrowUp, LucideIcon } from "lucide-react";
 import React from "react";
-import { formatHuf, formatPerc } from "@/lib/utils";
+import { formatHuf } from "@/lib/utils";
 import { Badge } from "./ui/badge";
 import { Card } from "./ui/card";
 import { prisma } from "@/lib/db/prisma";
