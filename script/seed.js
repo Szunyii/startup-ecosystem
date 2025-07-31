@@ -1,6 +1,4 @@
-const startups = require("./startups.json");
-const operatindData = require("./operatings.json");
-const companys = require("./companys.json");
+const companys = require("./companyUpdate.json");
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
@@ -18,7 +16,8 @@ async function main() {
     // })
 
     companys.map(async (op) => {
-      await prisma.companys.create({
+      await prisma.companys.update({
+        where: { id: op.startupId },
         data: {
           startupId: op.startupId,
           companyName: op.companyName,
@@ -35,6 +34,7 @@ async function main() {
           salary_YoY: op.salary_YoY,
           tax_YoY: op.tax_YoY,
           person_YoY: op.person_YoY,
+          link: op.link,
         },
       });
     })

@@ -178,7 +178,7 @@
   {
     "link": "https://fivosz.hu/",
     "stage": ["Pre-Startup", "Startup"],
-    "type": ["Supporting programmes"],
+    "type": ["Supporting Organizations"],
     "id": 27,
     "companyLogo": "startup27",
     "companyName": "FIVOSZ"
@@ -226,7 +226,7 @@
   {
     "link": "https://www.hvca.hu/",
     "stage": ["Pre-Startup", "Startup", "Scale-up"],
-    "type": ["Supporting programmes"],
+    "type": ["Supporting Organizations"],
     "id": 33,
     "companyLogo": "startup33",
     "companyName": "HVCA"
@@ -266,7 +266,7 @@
   {
     "link": "https://ivsz.hu/",
     "stage": ["Pre-Startup"],
-    "type": ["Supporting programmes"],
+    "type": ["Supporting Organizations"],
     "id": 38,
     "companyLogo": "startup38",
     "companyName": "IVSZ"
@@ -474,7 +474,7 @@
   {
     "link": "https://www.startuphungary.io/",
     "stage": ["Scale-up", "Startup", "Pre-Startup"],
-    "type": ["Supporting programmes"],
+    "type": ["Supporting Organizations"],
     "id": 64,
     "companyLogo": "startup64",
     "companyName": "Startup Hungary"
@@ -514,7 +514,7 @@
   {
     "link": "https://vosz.hu/",
     "stage": ["Scale-up", "Startup"],
-    "type": ["Supporting programmes"],
+    "type": ["Supporting Organizations"],
     "id": 70,
     "companyLogo": "startup70",
     "companyName": "VOSZ"
@@ -542,5 +542,109 @@
     "id": 73,
     "companyLogo": "startup73",
     "companyName": "Óbuda Uni Venture Capital"
+  },
+  {
+    "link": "https://blockchainhungary.org/",
+    "stage": ["Startup", "Pre-Startup"],
+    "type": ["Supporting programmes"],
+    "id": 74,
+    "companyLogo": "startup74",
+    "companyName": "Blockchain Hungary"
+  },
+  {
+    "link": "https://bnlstart.com/",
+    "stage": ["Startup", "Pre-Startup"],
+    "type": ["Local investors", "Acccelerators/Incubators"],
+    "id": 75,
+    "companyLogo": "startup75",
+    "companyName": "BnL Growth Partners"
+  },
+  {
+    "link": "https://brancskozosseg.hu/",
+    "stage": ["Pre-Startup"],
+    "type": ["Crowdfunding"],
+    "id": 76,
+    "companyLogo": "startup76",
+    "companyName": "Brancsközösség"
+  },
+  {
+    "link": "https://eit-ris.eu/hungary-2/hu/",
+    "stage": ["Startup", "Pre-Startup", "Scale-up"],
+    "type": ["Supporting programmes"],
+    "id": 77,
+    "companyLogo": "startup77",
+    "companyName": "EIT"
+  },
+  {
+    "link": "https://eit-ris.eu/hungary-2/hu/",
+    "stage": ["Pre-Startup"],
+    "type": ["Foreign Investors"],
+    "id": 78,
+    "companyLogo": "startup78",
+    "companyName": "Entrepreneurs First"
+  },
+  {
+    "link": "http://www.euroventures.hu/",
+    "stage": ["Scale-up"],
+    "type": ["Local investors"],
+    "id": 79,
+    "companyLogo": "startup79",
+    "companyName": "Euroventures Capital Advisory"
+  },
+  {
+    "link": "https://hunfintech.com/",
+    "stage": ["Scale-up", "Pre-Startup", "Startup"],
+    "type": ["Supporting programmes"],
+    "id": 80,
+    "companyLogo": "startup80",
+    "companyName": "Hungarian Fintech Association"
+  },
+  {
+    "link": "https://www.innovacio.hu/",
+    "stage": ["Scale-up", "Pre-Startup", "Startup"],
+    "type": ["Govermental support"],
+    "id": 81,
+    "companyLogo": "startup81",
+    "companyName": "Hungarian Innovation Association"
+  },
+  {
+    "link": "https://nkfih.gov.hu/",
+    "stage": ["Scale-up", "Pre-Startup", "Startup"],
+    "type": ["Govermental support"],
+    "id": 82,
+    "companyLogo": "startup82",
+    "companyName": "NKFIH"
+  },
+  {
+    "link": "https://hu.linkedin.com/in/szabolcsszakacsits",
+    "stage": ["Pre-Startup", "Startup"],
+    "type": ["Local investors"],
+    "id": 83,
+    "companyLogo": "startup83",
+    "companyName": "Szakacsits Ventures Kft."
+  },
+  {
+    "link": "https://hu.linkedin.com/in/szabolcsszakacsits",
+    "stage": ["Pre-Startup", "Startup", "Scale-up"],
+    "type": ["Govermental support"],
+    "id": 84,
+    "companyLogo": "startup84",
+    "companyName": "SZTNH"
+  },
+  {
+    "link": "https://tokeportal.com/",
+    "stage": ["Startup"],
+    "type": ["Crowdfunding"],
+    "id": 85,
+    "companyLogo": "startup85",
+    "companyName": "Tőkeportál"
+  },
+  {
+    "link": "https://www.linkedin.com/in/andr%C3%A1s-szab%C3%B3/?originalSubdomain=hu",
+    "stage": ["Startup"],
+    "type": ["Service Provider"],
+    "id": 86,
+    "companyLogo": "startup86",
+    "companyName": "Dr. Szabó András"
   }
 ]

@@ -21,9 +21,21 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Input } from "./ui/input";
-import { ArrowDown, ArrowUp, ArrowUpDown, SearchIcon } from "lucide-react";
+import {
+  ArrowDown,
+  ArrowUp,
+  ArrowUpDown,
+  InfoIcon,
+  SearchIcon,
+} from "lucide-react";
 
 import { Button } from "./ui/button";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "./ui/tooltip";
 
 export const columns: ColumnDef<startupDataPayload>[] = [
   {
@@ -70,20 +82,35 @@ export const columns: ColumnDef<startupDataPayload>[] = [
     header: ({ column }) => {
       return (
         <div className="flex flex-row-reverse">
-          <Button
-            className="flex pr-0 hover:bg-transparent gap-1"
-            variant="ghost"
-            onClick={() => column.toggleSorting()}
-          >
-            Taxes paid
-            {column.getIsSorted() === false ? (
-              <ArrowUpDown className=" h-4 w-4" />
-            ) : column.getIsSorted() === "asc" ? (
-              <ArrowDown className=" h-4 w-4" />
-            ) : (
-              <ArrowUp className=" h-4 w-4" />
-            )}
-          </Button>
+          <div className="flex flex-row gap-1">
+            <Button
+              className="flex pr-0 hover:bg-transparent gap-1"
+              variant="ghost"
+              onClick={() => column.toggleSorting()}
+            >
+              Taxes paid
+              {column.getIsSorted() === false ? (
+                <ArrowUpDown className=" h-4 w-4" />
+              ) : column.getIsSorted() === "asc" ? (
+                <ArrowDown className=" h-4 w-4" />
+              ) : (
+                <ArrowUp className=" h-4 w-4" />
+              )}
+            </Button>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger>
+                  <InfoIcon size={15} />
+                </TooltipTrigger>
+                <TooltipContent align="center" className="max-w-60">
+                  <p>
+                    Corporate income tax (TAO in Hungary) paid by the company
+                    annually, as reported to the Hungarian tax authority.
+                  </p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+          </div>
         </div>
       );
     },
@@ -135,20 +162,36 @@ export const columns: ColumnDef<startupDataPayload>[] = [
     header: ({ column }) => {
       return (
         <div className="flex flex-row-reverse">
-          <Button
-            className="flex pr-0 hover:bg-transparent gap-1"
-            variant="ghost"
-            onClick={() => column.toggleSorting()}
-          >
-            Payroll
-            {column.getIsSorted() === false ? (
-              <ArrowUpDown className=" h-4 w-4" />
-            ) : column.getIsSorted() === "asc" ? (
-              <ArrowDown className=" h-4 w-4" />
-            ) : (
-              <ArrowUp className=" h-4 w-4" />
-            )}
-          </Button>
+          <div className="flex flex-row gap-1">
+            <Button
+              className="flex pr-0 hover:bg-transparent gap-1"
+              variant="ghost"
+              onClick={() => column.toggleSorting()}
+            >
+              Payroll
+              {column.getIsSorted() === false ? (
+                <ArrowUpDown className=" h-4 w-4" />
+              ) : column.getIsSorted() === "asc" ? (
+                <ArrowDown className=" h-4 w-4" />
+              ) : (
+                <ArrowUp className=" h-4 w-4" />
+              )}
+            </Button>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger>
+                  <InfoIcon size={15} />
+                </TooltipTrigger>
+                <TooltipContent align="center" className="max-w-60">
+                  <p>
+                    Total personnel-related expenses for the company (e.g.,
+                    salaries, benefits), reported in annual financial
+                    statements.
+                  </p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+          </div>
         </div>
       );
     },
@@ -200,20 +243,35 @@ export const columns: ColumnDef<startupDataPayload>[] = [
     header: ({ column }) => {
       return (
         <div className="flex flex-row-reverse">
-          <Button
-            className="flex pr-0 hover:bg-transparent gap-1"
-            variant="ghost"
-            onClick={() => column.toggleSorting()}
-          >
-            Employees
-            {column.getIsSorted() === false ? (
-              <ArrowUpDown className=" h-4 w-4" />
-            ) : column.getIsSorted() === "asc" ? (
-              <ArrowDown className=" h-4 w-4" />
-            ) : (
-              <ArrowUp className=" h-4 w-4" />
-            )}
-          </Button>
+          <div className="flex flex-row gap-1">
+            <Button
+              className="flex pr-0 hover:bg-transparent gap-1"
+              variant="ghost"
+              onClick={() => column.toggleSorting()}
+            >
+              Employees
+              {column.getIsSorted() === false ? (
+                <ArrowUpDown className=" h-4 w-4" />
+              ) : column.getIsSorted() === "asc" ? (
+                <ArrowDown className=" h-4 w-4" />
+              ) : (
+                <ArrowUp className=" h-4 w-4" />
+              )}
+            </Button>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger>
+                  <InfoIcon size={15} />
+                </TooltipTrigger>
+                <TooltipContent align="center" className="max-w-3xl">
+                  <p className="">
+                    Average number of employees as reported in the company’s
+                    annual closing statement.
+                  </p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+          </div>
         </div>
       );
     },
@@ -270,6 +328,7 @@ interface DataTableProps<TData, TValue> {
 export function StartupDataTable<TData, TValue>({
   columns,
   data,
+  link,
 }: DataTableProps<TData, TValue>) {
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(

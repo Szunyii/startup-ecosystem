@@ -30,7 +30,7 @@ model OperatingResult {
 }
 
 model Companys {
-  id          Int    @id @default(autoincrement())
+  id          Int     @id @default(autoincrement())
   startupId   Int
   companyName String
   taxNumber   Int
@@ -46,4 +46,5 @@ model Companys {
   salary_YoY  Int?
   tax_YoY     Int?
   person_YoY  Int?
+  link        String?
 }

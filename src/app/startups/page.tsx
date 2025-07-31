@@ -12,6 +12,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import Faq from "./Faq";
 // import { prisma } from "@/lib/db/prisma";
 
 async function StartupPage() {
@@ -36,19 +37,22 @@ async function StartupPage() {
   // console.log(opt);
   return (
     <div>
-      <div className="my-4 mx-2 flex items-center gap-4 mt-8">
-        <h1 className=" text-4xl font-bold">Startup Database</h1>
-        <Select defaultValue="2024">
-          <SelectTrigger className="w-[180px]">
-            <SelectValue placeholder="Year" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value={"2024"}>2024</SelectItem>
-            <SelectItem value="2023">2023</SelectItem>
-            <SelectItem value="2022">2022</SelectItem>
-            <SelectItem value="2021">2022</SelectItem>
-          </SelectContent>
-        </Select>
+      <div className="my-4 mx-2 flex items-center gap-4 mt-8 justify-between flex-row">
+        <div className="flex gap-4">
+          <h1 className=" text-4xl font-bold">Startup Database</h1>
+          <Select defaultValue="2024">
+            <SelectTrigger className="w-[180px]">
+              <SelectValue placeholder="Year" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value={"2024"}>2024</SelectItem>
+              <SelectItem value="2023">2023</SelectItem>
+              <SelectItem value="2022">2022</SelectItem>
+              <SelectItem value="2021">2022</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
+        <Faq />
       </div>
       <Separator />
       <section className="flex flex-col md:flex-row w-full gap-2 gap-x-4 transition-all my-4 ">

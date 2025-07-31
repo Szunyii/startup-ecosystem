@@ -10,7 +10,7 @@ const typeCategory = [
   "Acccelerators/Incubators",
   "Local investors",
   "HUBs",
-  "Supporting programmes",
+  "Supporting Organizations",
   "Foreign Investors",
   "Crowdfunding",
   "Service Provider",
