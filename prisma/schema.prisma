@@ -48,3 +48,9 @@ model Companys {
   person_YoY  Int?
   link        String?
 }
+
+model Test {
+  id           Int    @id @unique
+  year         Int
+  balanceSheet String
+}

@@ -1,4 +1,5 @@
 // lib/sshDbConnect.ts
+"use server";
 import { Client } from "ssh2";
 import mysql from "mysql2/promise";
 
@@ -65,3 +66,45 @@ export async function getData() {
     ssh.connect(sshConfig);
   });
 }
+
+export async function insertData(name: string, email: string) {
+  const ssh = new Client();
+
+  return new Promise<void>((resolve, reject) => {
+    ssh.on("ready", () => {
+      ssh.forwardOut(
+        forwardConfig.srcHost,
+        forwardConfig.srcPort,
+        forwardConfig.dstHost,
+        forwardConfig.dstPort,
+        async (err, stream) => {
+          if (err) {
+            ssh.end();
+            return reject(err);
+          }
+
+          try {
+            const connection = await mysql.createConnection({
+              ...dbConfig,
+              stream: stream,
+            });
+
+            const query = "INSERT INTO pelda (name, email) VALUES (?, ?)";
+            await connection.execute(query, [name, email]);
+
+            await connection.end();
+            ssh.end();
+            resolve();
+          } catch (queryError) {
+            ssh.end();
+            reject(queryError);
+          }
+        }
+      );
+    });
+
+    ssh.on("error", reject);
+    ssh.connect(sshConfig);
+  });
+}
+//await insertData("John Doe", "john@example.com");

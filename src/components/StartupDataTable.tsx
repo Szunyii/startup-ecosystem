@@ -76,6 +76,9 @@ export const columns: ColumnDef<startupDataPayload>[] = [
         </Button>
       );
     },
+    // cell: ({ row }) => {
+
+    // },
   },
   {
     accessorKey: "tax_2024",
