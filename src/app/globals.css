@@ -39,6 +39,13 @@ body {
     --chart-3: 228 55% 54%; /* HEX: 7967d3 (Midnight Sapphire) */
     --chart-4: 0 0% 20%; /* Neutral darker tone */
     --chart-5: 0 0% 96.1%;
+    --navbar-background: 0 0% 100%;
+    --navbar-border: 220 13% 91%;
+    --navbar-item: 0 0% 45%;
+    --navbar-item-hover: 222.2 84% 4.9%;
+    --navbar-item-active: 222.2 84% 4.9%;
+    --navbar-slider: 0 0% 98%;
+    --navbar-slider-border: 220 13% 91%;
   }
 
   .dark {

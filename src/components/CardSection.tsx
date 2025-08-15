@@ -1,9 +1,9 @@
-import { ArrowDown, ArrowUp, LucideIcon } from "lucide-react";
+import { ArrowDown, LucideIcon } from "lucide-react";
 import React from "react";
-import { formatHuf } from "@/lib/utils";
+// import { formatHuf } from "@/lib/utils";
 import { Badge } from "./ui/badge";
 import { Card } from "./ui/card";
-import { prisma } from "@/lib/db/prisma";
+// import { prisma } from "@/lib/db/prisma";
 
 export type CardProps = {
   label: string;
@@ -13,15 +13,15 @@ export type CardProps = {
 };
 
 export default async function CardSection() {
-  const sumSalary = await prisma.companys.aggregate({
-    _sum: { salary_2024: true, salary_2023: true },
-  });
-  const allEmployees = await prisma.companys.aggregate({
-    _sum: { person_2024: true, person_2023: true },
-  });
-  const totalTax = await prisma.companys.aggregate({
-    _sum: { tax_2024: true, tax_2023: true },
-  });
+  // const sumSalary = await prisma.companys.aggregate({
+  //   _sum: { salary_2024: true, salary_2023: true },
+  // });
+  // const allEmployees = await prisma.companys.aggregate({
+  //   _sum: { person_2024: true, person_2023: true },
+  // });
+  // const totalTax = await prisma.companys.aggregate({
+  //   _sum: { tax_2024: true, tax_2023: true },
+  // });
 
   return (
     <section className="flex flex-col md:flex-row w-full gap-2 gap-x-4 transition-all my-4 ">
@@ -34,7 +34,7 @@ export default async function CardSection() {
         </div>
         <div className="flex flex-col gap-1 ">
           <div className="flex">
-            <h2 className="text-4xl font-semibold">
+            {/* <h2 className="text-4xl font-semibold">
               {formatHuf(
                 sumSalary._sum.salary_2024! / allEmployees._sum.person_2024!
               )}
@@ -48,7 +48,7 @@ export default async function CardSection() {
                 sumSalary._sum.salary_2023! /
                 allEmployees._sum.person_2023!
               ).toFixed(2) + "%"}
-            </span>
+            </span> */}
           </div>
           <p className="text-xs text-muted-foreground">
             Avg. Salary per employee
@@ -65,17 +65,17 @@ export default async function CardSection() {
         <div className="flex flex-col gap-1 ">
           <div className="flex">
             <h2 className="text-4xl font-semibold">
-              {allEmployees._sum.person_2024!}
+              {/* {allEmployees._sum.person_2024!} */}
             </h2>
             <ArrowDown />
-            <span className="text-red-500">
+            {/* <span className="text-red-500">
               {(
                 ((allEmployees._sum.person_2024! -
                   allEmployees._sum.person_2023!) /
                   allEmployees._sum.person_2023!) *
                 100
               ).toFixed(2) + "%"}
-            </span>
+            </span> */}
           </div>
           <p className="text-xs text-muted-foreground">All employees</p>
         </div>
@@ -90,16 +90,16 @@ export default async function CardSection() {
         <div className="flex flex-col gap-1 ">
           <div className="flex">
             <h2 className="text-4xl font-semibold">
-              {formatHuf(totalTax._sum.tax_2024!)}
+              {/* {formatHuf(totalTax._sum.tax_2024!)} */}
             </h2>
             <ArrowDown />
-            <span className="text-red-500">
+            {/* <span className="text-red-500">
               {(
                 ((totalTax._sum.tax_2024! - totalTax._sum.tax_2023!) /
                   totalTax._sum.tax_2023!) *
                 100
               ).toFixed(2) + "%"}
-            </span>
+            </span> */}
           </div>
           <p className="text-xs text-muted-foreground">
             Total Corporate income tax paid{" "}

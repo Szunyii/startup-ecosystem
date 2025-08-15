@@ -1,30 +1,34 @@
 import { Prisma } from "@prisma/client";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
-import { prisma } from "./db/prisma";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 //sss
 
-export type startupDataPayload = Prisma.CompanysGetPayload<{
+export type startupDataPayload = Prisma.startup_dataGetPayload<{
   select: {
-    companyName: true;
-    income_2023: true;
-    income_2024: true;
-    id: true;
-    income_YoY: true;
+    tax_2022: true;
+    tax_2023: true;
+    tax_2024: true;
+    tax_yoy_2022: true;
+    tax_yoy_2023: true;
+    tax_yoy_2024: true;
+    personalexpenses_2022: true;
+    personalexpenses_2023: true;
+    personalexpenses_2024: true;
+    personalexpenses_yoy_2022: true;
+    personalexpenses_yoy_2023: true;
+    personalexpenses_yoy_2024: true;
+    person_2022: true;
     person_2023: true;
     person_2024: true;
-    person_YoY: true;
-    salary_2023: true;
-    salary_2024: true;
-    salary_YoY: true;
-    tax_2023: true;
-    taxNumber: true;
-    tax_2024: true;
-    tax_YoY: true;
+    personal_yoy_2022: true;
+    personal_yoy_2023: true;
+    personal_yoy_2024: true;
+    link: true;
+    startupname: true;
   };
 }>;
 
@@ -56,6 +60,16 @@ export function formatPerc(num: number) {
   }
 }
 
+export function toPercent(value: number | null, fractionDigits = 2): string {
+  if (value === null) {
+    return "n.a";
+  }
+  if (isNaN(value)) {
+    throw new Error("A megadott érték nem szám!");
+  }
+  return `${(value * 100).toFixed(fractionDigits)}%`;
+}
+
 // test
 export type StartupType = {
   id: string;
@@ -84,20 +98,20 @@ export type StartupType = {
 
 // -- Salary
 export const getAvgSalary = () => {};
-// --- tax
-export const getSummTax = async (year: number) => {
-  const taxes = await prisma.operatingResult.aggregate({
-    _sum: {
-      value: true,
-    },
-    where: {
-      balanceSheet: "Adófizetési kötelezettség",
-      year: year,
-    },
-  });
+// // --- tax
+// export const getSummTax = async (year: number) => {
+//   const taxes = await prisma.startup_data.aggregate({
+//     _sum: {
+//       netrevenue_2024: true,
+//     },
+//     where: {
+//       balanceSheet: "Adófizetési kötelezettség",
+//       year: year,
+//     },
+//   });
 
-  return taxes._sum.value;
-};
+//   return taxes._sum.;
+// };
 
 // export const getTaxYoY = async (year: number) => {
 //   const taxes = await prisma.operatingResult.aggregate({

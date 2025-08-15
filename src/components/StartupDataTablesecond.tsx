@@ -94,7 +94,7 @@ export const columns: ColumnDef<startupDataPayload>[] = [
     },
   },
   {
-    accessorKey: "tax_2024",
+    accessorKey: "tax_2023",
     header: ({ column }) => {
       return (
         <div className="flex flex-row-reverse">
@@ -131,13 +131,13 @@ export const columns: ColumnDef<startupDataPayload>[] = [
       );
     },
     cell: ({ row }) => {
-      const tax = parseFloat(row.getValue("tax_2024"));
+      const tax = parseFloat(row.getValue("tax_2023"));
 
       return <div className="text-right font-medium">{formatHuf(tax)}</div>;
     },
   },
   {
-    accessorKey: "tax_yoy_2024",
+    accessorKey: "tax_yoy_2023",
     header: ({ column }) => {
       return (
         <div className="flex flex-row-reverse">
@@ -159,7 +159,7 @@ export const columns: ColumnDef<startupDataPayload>[] = [
       );
     },
     cell: ({ row }) => {
-      const val: number = row.getValue("tax_yoy_2024")!;
+      const val: number = row.getValue("tax_yoy_2023")!;
       const tax = toPercent(val)!;
 
       return (
@@ -174,7 +174,7 @@ export const columns: ColumnDef<startupDataPayload>[] = [
     },
   },
   {
-    accessorKey: "personalexpenses_2024",
+    accessorKey: "personalexpenses_2023",
     header: ({ column }) => {
       return (
         <div className="flex flex-row-reverse">
@@ -212,13 +212,13 @@ export const columns: ColumnDef<startupDataPayload>[] = [
       );
     },
     cell: ({ row }) => {
-      const tax = parseFloat(row.getValue("personalexpenses_2024"));
+      const tax = parseFloat(row.getValue("personalexpenses_2023"));
 
       return <div className="text-right font-medium">{formatHuf(tax)}</div>;
     },
   },
   {
-    accessorKey: "personalexpenses_yoy_2024",
+    accessorKey: "personalexpenses_yoy_2023",
     header: ({ column }) => {
       return (
         <div className="flex flex-row-reverse">
@@ -240,7 +240,7 @@ export const columns: ColumnDef<startupDataPayload>[] = [
       );
     },
     cell: ({ row }) => {
-      const val: number = row.getValue("personalexpenses_yoy_2024")!;
+      const val: number = row.getValue("personalexpenses_yoy_2023")!;
       const tax = toPercent(val)!;
 
       return (
@@ -255,7 +255,7 @@ export const columns: ColumnDef<startupDataPayload>[] = [
     },
   },
   {
-    accessorKey: "person_2024",
+    accessorKey: "person_2023",
     header: ({ column }) => {
       return (
         <div className="flex flex-row-reverse">
@@ -292,13 +292,13 @@ export const columns: ColumnDef<startupDataPayload>[] = [
       );
     },
     cell: ({ row }) => {
-      const tax = parseFloat(row.getValue("person_2024"));
+      const tax = parseFloat(row.getValue("person_2023"));
 
       return <div className="text-right font-medium">{tax}</div>;
     },
   },
   {
-    accessorKey: "personal_yoy_2024",
+    accessorKey: "personal_yoy_2023",
     header: ({ column }) => {
       return (
         <div className="flex flex-row-reverse">
@@ -320,7 +320,7 @@ export const columns: ColumnDef<startupDataPayload>[] = [
       );
     },
     cell: ({ row }) => {
-      const val: number = row.getValue("personal_yoy_2024")!;
+      const val: number = row.getValue("personal_yoy_2023")!;
       const tax = toPercent(val)!;
 
       return (
@@ -341,7 +341,7 @@ interface DataTableProps<TData, TValue> {
   data: TData[];
 }
 
-export function StartupDataTable<TData, TValue>({
+export function StartupDataTablesecond<TData, TValue>({
   columns,
   data,
 }: // link,
@@ -451,4 +451,4 @@ DataTableProps<TData, TValue>) {
   );
 }
 
-export default StartupDataTable;
+export default StartupDataTablesecond;

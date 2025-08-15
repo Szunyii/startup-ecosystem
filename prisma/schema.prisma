@@ -1,56 +1,118 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = env("DATABASE_URL")
+  provider  = "mysql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DATABASE_URL")
 }
 
-model Startup {
-  id          Int               @id @default(autoincrement())
-  companyName String
-  taxNumber   Int
-  createdAt   DateTime          @default(now())
-  results     OperatingResult[]
-
-  @@unique([companyName, taxNumber])
+model pelda {
+  id     Int     @id @default(autoincrement())
+  szoveg String? @db.Text
 }
 
-model OperatingResult {
-  id           Int     @id @default(autoincrement())
-  year         Int
-  balanceSheet String
-  value        Int
-  startupId    Int
-  startup      Startup @relation(fields: [startupId], references: [id])
+model scaleupOptenImport {
+  id                    Int      @id @default(autoincrement())
+  traderegnumber        Int?
+  taxnumber             String?  @db.VarChar(255)
+  type                  String?  @db.VarChar(255)
+  startupname           String?  @db.VarChar(255)
+  companyname           String?  @db.VarChar(255)
+  hq                    String?  @db.VarChar(255)
+  teaor                 Int?
+  netrevenue_2024       Decimal? @db.Decimal(18, 4)
+  netrevenue_2023       Decimal? @db.Decimal(18, 4)
+  netrevenue_2022       Decimal? @db.Decimal(18, 4)
+  tax_2024              Decimal? @db.Decimal(18, 4)
+  tax_2023              Decimal? @db.Decimal(18, 4)
+  tax_2022              Decimal? @db.Decimal(18, 4)
+  personalexpenses_2024 Decimal? @db.Decimal(18, 4)
+  personalexpenses_2023 Decimal? @db.Decimal(18, 4)
+  personalexpenses_2022 Decimal? @db.Decimal(18, 4)
 }
 
-model Companys {
-  id          Int     @id @default(autoincrement())
-  startupId   Int
-  companyName String
-  taxNumber   Int
-  income_2023 Int?
-  salary_2023 Int?
-  tax_2023    Int?
-  person_2023 Int?
-  income_2024 Int?
-  salary_2024 Int?
-  tax_2024    Int?
-  person_2024 Int?
-  income_YoY  Int?
-  salary_YoY  Int?
-  tax_YoY     Int?
-  person_YoY  Int?
-  link        String?
+model startupOptenImport {
+  id                    Int     @id @default(autoincrement())
+  tradeRegNumber        Int?
+  taxNumber             String? @db.VarChar(13)
+  type                  String? @db.VarChar(7)
+  startupName           String? @db.VarChar(42)
+  companyName           String? @db.VarChar(44)
+  hq                    String? @db.VarChar(59)
+  teaor                 Int?
+  note                  Float?
+  netRevenue_2024       Float?
+  netRevenue_2023       Float?
+  netRevenue_2022       Float?
+  tax_2024              Float?
+  tax_2023              Float?
+  tax_2022              Float?
+  personalExpenses_2024 Float?
+  personalExpenses_2023 Float?
+  personalExpenses_2022 Float?
 }
 
-model Test {
-  id           Int    @id @unique
-  year         Int
-  balanceSheet String
+model startupRegistry {
+  id                  Int       @id @default(autoincrement())
+  company_name        String    @db.VarChar(255)
+  brand_name          String?   @db.VarChar(255)
+  website_url         String?   @db.VarChar(255)
+  contact_email       String?   @db.VarChar(255)
+  contact_person_name String?   @db.VarChar(255)
+  dealroom_url        String?   @db.VarChar(255)
+  request_type        String?   @db.VarChar(255)
+  created_at          DateTime? @default(now()) @db.Timestamp(0)
+  updated_at          DateTime  @default(now()) @db.Timestamp(0)
+  status              String?   @default("new") @db.VarChar(255)
+}
+
+model startup_data {
+  id                        Int     @id @default(autoincrement())
+  traderegnumber            String? @db.VarChar(255)
+  link                      String? @db.VarChar(255)
+  status                    String? @db.VarChar(255)
+  type                      String? @db.VarChar(255)
+  startupname               String? @db.VarChar(255)
+  netrevenue_2024           Int?
+  netrevenue_2023           Int?
+  netrevenue_2022           Int?
+  netrevenue_yoy_2024       Float?
+  netrevenue_yoy_2023       Float?
+  netrevenue_yoy_2022       Float?
+  tax_2024                  Int?
+  tax_2023                  Int?
+  tax_2022                  Int?
+  tax_yoy_2024              Float?
+  tax_yoy_2023              Float?
+  tax_yoy_2022              Float?
+  personalexpenses_2024     Int?
+  personalexpenses_2023     Int?
+  personalexpenses_2022     Int?
+  personalexpenses_yoy_2024 Float?
+  personalexpenses_yoy_2023 Float?
+  personalexpenses_yoy_2022 Float?
+  person_2024               Int?
+  person_2023               Int?
+  person_2022               Int?
+  personal_yoy_2024         Float?
+  personal_yoy_2023         Float?
+  personal_yoy_2022         Float?
+}
+
+model ecosystemRegistry {
+  id            Int      @id @default(autoincrement()) @db.UnsignedInt
+  company_name  String?  @db.VarChar(255)
+  website_url   String?  @db.VarChar(255)
+  contact_name  String?  @db.VarChar(255)
+  contact_role  String?  @db.VarChar(255)
+  contact_email String?  @db.VarChar(255)
+  logo          Bytes?
+  stage         String?  @db.VarChar(255)
+  type          String?  @db.VarChar(255)
+  request_type  String?  @db.VarChar(255)
+  created_at    DateTime @default(now()) @db.Timestamp(0)
+  updated_at    DateTime @default(now()) @db.Timestamp(0)
+  status        String?  @default("new") @db.VarChar(255)
 }

@@ -5,28 +5,25 @@ import { Separator } from "@/components/ui/separator";
 import StartupDataTable, { columns } from "@/components/StartupDataTable";
 import { prisma } from "@/lib/db/prisma";
 import CardSection from "@/components/CardSection";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+
 import Faq from "./Faq";
+import YearSelector from "@/components/YearSelector";
+import StartupDataTablesecond from "@/components/StartupDataTablesecond";
 // import { prisma } from "@/lib/db/prisma";
 
-async function StartupPage() {
-  const datas = await prisma.companys.findMany({
-    where: {
-      OR: [
-        { tax_2024: { not: 0 } },
-        { salary_2024: { not: 0 } },
-        { person_2024: { not: 0 } },
-      ],
-    },
-    orderBy: { companyName: "asc" },
+async function StartupPage({
+  searchParams,
+}: {
+  searchParams: { [key: string]: string | string[] | undefined };
+}) {
+  const datas = await prisma.startup_data.findMany({
+    orderBy: { tax_2024: "desc" },
   });
 
+  const rest = JSON.stringify(searchParams.year);
+
+  console.log("0", parseInt(rest));
+  // const links=await prisma.startup_data.fin
   // const startupNumber: number = await prisma.companys.count();
 
   // const opt = await prisma.operatingResult.findMany({
@@ -40,18 +37,8 @@ async function StartupPage() {
       <div className="my-4 mx-2 flex items-center gap-4 mt-8 justify-between flex-row">
         <div className="flex gap-4">
           <h1 className=" text-4xl font-bold">Startup Database</h1>
-          <Select defaultValue="2024">
-            <SelectTrigger className="w-[180px]">
-              <SelectValue placeholder="Year" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value={"2024"}>2024</SelectItem>
-              <SelectItem value="2023">2023</SelectItem>
-              <SelectItem value="2022">2022</SelectItem>
-              <SelectItem value="2021">2022</SelectItem>
-            </SelectContent>
-          </Select>
         </div>
+        <YearSelector />
         <Faq />
       </div>
       <Separator />
@@ -69,7 +56,11 @@ async function StartupPage() {
       <Separator />
       {/* datatable */}
       <section className=" w-full py-10">
-        <StartupDataTable columns={columns} data={datas} />
+        {rest === "2024" || "" ? (
+          <StartupDataTable columns={columns} data={datas} />
+        ) : (
+          <StartupDataTablesecond columns={columns} data={datas} />
+        )}
       </section>
     </div>
   );
