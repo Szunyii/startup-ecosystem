@@ -7,26 +7,49 @@ export function cn(...inputs: ClassValue[]) {
 }
 //sss
 
-export type startupDataPayload = Prisma.startup_dataGetPayload<{
+// export type startupDataPayload = Prisma.startup_dataGetPayload<{
+//   select: {
+//     tax_2022: true;
+//     tax_2023: true;
+//     tax_2024: true;
+//     tax_yoy_2022: true;
+//     tax_yoy_2023: true;
+//     tax_yoy_2024: true;
+//     personalexpenses_2022: true;
+//     personalexpenses_2023: true;
+//     personalexpenses_2024: true;
+//     personalexpenses_yoy_2022: true;
+//     personalexpenses_yoy_2023: true;
+//     personalexpenses_yoy_2024: true;
+//     person_2022: true;
+//     person_2023: true;
+//     person_2024: true;
+//     personal_yoy_2022: true;
+//     personal_yoy_2023: true;
+//     personal_yoy_2024: true;
+//     link: true;
+//     startupname: true;
+//   };
+// }>;
+
+export type startupDataPayload = Prisma.startup_data_finalGetPayload<{
   select: {
-    tax_2022: true;
-    tax_2023: true;
-    tax_2024: true;
-    tax_yoy_2022: true;
-    tax_yoy_2023: true;
-    tax_yoy_2024: true;
-    personalexpenses_2022: true;
-    personalexpenses_2023: true;
-    personalexpenses_2024: true;
-    personalexpenses_yoy_2022: true;
-    personalexpenses_yoy_2023: true;
-    personalexpenses_yoy_2024: true;
-    person_2022: true;
-    person_2023: true;
-    person_2024: true;
-    personal_yoy_2022: true;
-    personal_yoy_2023: true;
-    personal_yoy_2024: true;
+    id: true;
+    taxnumber: true;
+    traderegnumber: true;
+    type: true;
+    report: true;
+    status: true;
+    startup_id: true;
+    tax: true;
+    netrevenue: true;
+    person: true;
+    personal_yoy: true;
+    netrevenue_yoy: true;
+    tax_yoy: true;
+    personalexpenses: true;
+    personalexpenses_yoy: true;
+    year: true;
     link: true;
     startupname: true;
   };
@@ -47,6 +70,8 @@ export function formatHuf(num: number) {
         maximumFractionDigits: 0,
       }) + " eFt"
     );
+  } else if (num === null) {
+    return "n.a";
   } else {
     return "-";
   }

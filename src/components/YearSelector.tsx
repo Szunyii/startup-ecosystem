@@ -13,6 +13,8 @@ function YearSelector() {
   const router = useRouter();
   const searchParams = useSearchParams();
 
+  const search = searchParams.get("year") ?? "2024";
+
   function updateSearchParam(key: string, value: string) {
     const params = new URLSearchParams(searchParams.toString()); // meglévők megtartása
     params.set(key, value); // új érték beállítása / felülírás
@@ -24,6 +26,7 @@ function YearSelector() {
       <Select
         defaultValue="2024"
         onValueChange={(value) => updateSearchParam("year", value)}
+        value={search!}
       >
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Year" />

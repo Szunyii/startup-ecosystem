@@ -10,7 +10,7 @@ function StatupCard({ companyLogo, link, companyName }: StartupDataType) {
     <a
       href={`${link}`}
       target="_blank"
-      className="transition-all hover:scale-110 hover:z-50"
+      className="transition-all hover:scale-110 hover:z-50 overflow-hidden"
     >
       <Card className="h-44 transition-all w-full flex flex-col justify-center items-center relative shadow-md group">
         <Image

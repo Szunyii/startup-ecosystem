@@ -116,3 +116,75 @@ model ecosystemRegistry {
   updated_at    DateTime @default(now()) @db.Timestamp(0)
   status        String?  @default("new") @db.VarChar(255)
 }
+
+model startup_data_new {
+  id                        Int     @id @default(0)
+  traderegnumber            String? @db.VarChar(255)
+  link                      String? @db.VarChar(255)
+  status                    String? @db.VarChar(255)
+  type                      String? @db.VarChar(255)
+  startupname               String? @db.VarChar(255)
+  netrevenue_2024           Int?
+  netrevenue_2023           Int?
+  netrevenue_2022           Int?
+  netrevenue_yoy_2024       Float?
+  netrevenue_yoy_2023       Float?
+  netrevenue_yoy_2022       Float?
+  tax_2024                  Int?
+  tax_2023                  Int?
+  tax_2022                  Int?
+  tax_yoy_2024              Float?
+  tax_yoy_2023              Float?
+  tax_yoy_2022              Float?
+  personalexpenses_2024     Int?
+  personalexpenses_2023     Int?
+  personalexpenses_2022     Int?
+  personalexpenses_yoy_2024 Float?
+  personalexpenses_yoy_2023 Float?
+  personalexpenses_yoy_2022 Float?
+  person_2024               Int?
+  person_2023               Int?
+  person_2022               Int?
+  personal_yoy_2024         Float?
+  personal_yoy_2023         Float?
+  personal_yoy_2022         Float?
+}
+
+model startup_data_year {
+  id                   Int     @id @default(autoincrement()) @db.UnsignedInt
+  startup_id           Int?
+  traderegnumber       Int?
+  link                 String? @db.Text
+  status               String? @db.Text
+  type                 String? @db.Text
+  startupname          String? @db.Text
+  netrevenue           Float?
+  year                 Int?
+  netrevenue_yoy       Float?
+  tax                  Float?
+  tax_yoy              Float?
+  personalexpenses     Float?
+  personalexpenses_yoy Float?
+  person               Float?
+  personal_yoy         Float?
+}
+
+model startup_data_final {
+  id                   Int     @id @default(autoincrement())
+  traderegnumber       String? @db.VarChar(50)
+  taxnumber            String? @db.VarChar(32)
+  link                 String? @db.Text
+  status               String? @db.VarChar(32)
+  type                 String? @db.VarChar(32)
+  report               String? @db.VarChar(32)
+  year                 Int?
+  startupname          String? @db.VarChar(255)
+  netrevenue           Float?
+  netrevenue_yoy       Float?
+  tax                  Float?
+  tax_yoy              Float?
+  personalexpenses     Float?
+  personalexpenses_yoy Float?
+  person               Float?
+  personal_yoy         Float?
+}

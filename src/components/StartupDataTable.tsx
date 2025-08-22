@@ -94,7 +94,7 @@ export const columns: ColumnDef<startupDataPayload>[] = [
     },
   },
   {
-    accessorKey: "tax_2024",
+    accessorKey: "tax",
     header: ({ column }) => {
       return (
         <div className="flex flex-row-reverse">
@@ -131,13 +131,13 @@ export const columns: ColumnDef<startupDataPayload>[] = [
       );
     },
     cell: ({ row }) => {
-      const tax = parseFloat(row.getValue("tax_2024"));
+      const tax = parseFloat(row.getValue("tax"));
 
       return <div className="text-right font-medium">{formatHuf(tax)}</div>;
     },
   },
   {
-    accessorKey: "tax_yoy_2024",
+    accessorKey: "tax_yoy",
     header: ({ column }) => {
       return (
         <div className="flex flex-row-reverse">
@@ -159,7 +159,7 @@ export const columns: ColumnDef<startupDataPayload>[] = [
       );
     },
     cell: ({ row }) => {
-      const val: number = row.getValue("tax_yoy_2024")!;
+      const val: number = row.getValue("tax_yoy")!;
       const tax = toPercent(val)!;
 
       return (
@@ -174,7 +174,7 @@ export const columns: ColumnDef<startupDataPayload>[] = [
     },
   },
   {
-    accessorKey: "personalexpenses_2024",
+    accessorKey: "personalexpenses",
     header: ({ column }) => {
       return (
         <div className="flex flex-row-reverse">
@@ -212,13 +212,13 @@ export const columns: ColumnDef<startupDataPayload>[] = [
       );
     },
     cell: ({ row }) => {
-      const tax = parseFloat(row.getValue("personalexpenses_2024"));
+      const tax = parseFloat(row.getValue("personalexpenses"));
 
       return <div className="text-right font-medium">{formatHuf(tax)}</div>;
     },
   },
   {
-    accessorKey: "personalexpenses_yoy_2024",
+    accessorKey: "personalexpenses_yoy",
     header: ({ column }) => {
       return (
         <div className="flex flex-row-reverse">
@@ -240,7 +240,7 @@ export const columns: ColumnDef<startupDataPayload>[] = [
       );
     },
     cell: ({ row }) => {
-      const val: number = row.getValue("personalexpenses_yoy_2024")!;
+      const val: number = row.getValue("personalexpenses_yoy")!;
       const tax = toPercent(val)!;
 
       return (
@@ -255,7 +255,7 @@ export const columns: ColumnDef<startupDataPayload>[] = [
     },
   },
   {
-    accessorKey: "person_2024",
+    accessorKey: "person",
     header: ({ column }) => {
       return (
         <div className="flex flex-row-reverse">
@@ -292,13 +292,13 @@ export const columns: ColumnDef<startupDataPayload>[] = [
       );
     },
     cell: ({ row }) => {
-      const tax = parseFloat(row.getValue("person_2024"));
+      const tax = parseFloat(row.getValue("person"));
 
       return <div className="text-right font-medium">{tax}</div>;
     },
   },
   {
-    accessorKey: "personal_yoy_2024",
+    accessorKey: "personal_yoy",
     header: ({ column }) => {
       return (
         <div className="flex flex-row-reverse">
@@ -320,7 +320,7 @@ export const columns: ColumnDef<startupDataPayload>[] = [
       );
     },
     cell: ({ row }) => {
-      const val: number = row.getValue("personal_yoy_2024")!;
+      const val: number = row.getValue("personal_yoy")!;
       const tax = toPercent(val)!;
 
       return (
@@ -339,11 +339,13 @@ export const columns: ColumnDef<startupDataPayload>[] = [
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
+  count: number;
 }
 
 export function StartupDataTable<TData, TValue>({
   columns,
   data,
+  count,
 }: // link,
 DataTableProps<TData, TValue>) {
   const [sorting, setSorting] = React.useState<SortingState>([]);
@@ -377,7 +379,7 @@ DataTableProps<TData, TValue>) {
       <div className="flex items-center justify-centers gap-2 mb-4 text-5xl">
         <h1 className=" font-medium ">Startups</h1>
         <span className="text-muted-foreground">
-          (199)<sup>*</sup>
+          ({count})<sup>*</sup>
         </span>
       </div>
 
@@ -387,10 +389,10 @@ DataTableProps<TData, TValue>) {
           <Input
             placeholder="Company's name"
             value={
-              (table.getColumn("companyName")?.getFilterValue() as string) ?? ""
+              (table.getColumn("startupname")?.getFilterValue() as string) ?? ""
             }
             onChange={(event) =>
-              table.getColumn("companyName")?.setFilterValue(event.target.value)
+              table.getColumn("startupname")?.setFilterValue(event.target.value)
             }
           />
           <SearchIcon className="absolute right-2 top-50%" />

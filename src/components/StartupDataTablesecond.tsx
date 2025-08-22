@@ -387,10 +387,10 @@ DataTableProps<TData, TValue>) {
           <Input
             placeholder="Company's name"
             value={
-              (table.getColumn("companyName")?.getFilterValue() as string) ?? ""
+              (table.getColumn("startupname")?.getFilterValue() as string) ?? ""
             }
             onChange={(event) =>
-              table.getColumn("companyName")?.setFilterValue(event.target.value)
+              table.getColumn("startupname")?.setFilterValue(event.target.value)
             }
           />
           <SearchIcon className="absolute right-2 top-50%" />
