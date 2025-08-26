@@ -165,7 +165,7 @@ export const columns: ColumnDef<startupDataPayload>[] = [
       return (
         <div
           className={`text-right font-medium ${
-            val > 0 ? "text-green-500" : "text-red-500"
+            val > 0 ? "text-green-500" : val < 0 ? "text-red-500" : "text-black"
           }`}
         >
           {tax}
@@ -246,7 +246,7 @@ export const columns: ColumnDef<startupDataPayload>[] = [
       return (
         <div
           className={`text-right font-medium ${
-            val > 0 ? "text-green-500" : "text-red-500"
+            val > 0 ? "text-green-500" : val < 0 ? "text-red-500" : "text-black"
           }`}
         >
           {tax}
@@ -326,7 +326,7 @@ export const columns: ColumnDef<startupDataPayload>[] = [
       return (
         <div
           className={`text-right font-medium ${
-            val > 0 ? "text-green-500" : "text-red-500"
+            val > 0 ? "text-green-500" : val < 0 ? "text-red-500" : "text-black"
           }`}
         >
           {tax}
@@ -379,7 +379,20 @@ DataTableProps<TData, TValue>) {
       <div className="flex items-center justify-centers gap-2 mb-4 text-5xl">
         <h1 className=" font-medium ">Startups</h1>
         <span className="text-muted-foreground">
-          ({count})<sup>*</sup>
+          ({count})
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger className="relative -top-8 text-xs leading-none">
+                <InfoIcon size={15} />
+              </TooltipTrigger>
+              <TooltipContent align="center" className="max-w-60">
+                <p>
+                  The list only includes companies that have already submitted
+                  reports for the current fiscal year.
+                </p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
         </span>
       </div>
 

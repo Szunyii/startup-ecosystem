@@ -10,9 +10,9 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 
-import AccordionDatabase from "./AccordionDatabe";
+import React from "react";
 
-export default function Faq() {
+export default function Faq({ children }: { children: React.ReactNode }) {
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -25,7 +25,7 @@ export default function Faq() {
             Make changes to your profile here. Click save when you&apos;re done.
           </DialogDescription> */}
         </DialogHeader>
-        <AccordionDatabase />
+        {children}
         <DialogFooter>
           <DialogClose asChild>
             <Button

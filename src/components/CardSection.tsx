@@ -5,7 +5,6 @@ import { Badge } from "./ui/badge";
 import { Card } from "./ui/card";
 import { prisma } from "@/lib/db/prisma";
 import { formatHuf } from "@/lib/utils";
-import { nan } from "zod";
 // import { prisma } from "@/lib/db/prisma";
 
 export type CardProps = {
@@ -17,22 +16,56 @@ export type CardProps = {
 
 export default async function CardSection({ qYear }: { qYear: number }) {
   const safeYear = qYear < 2022 ? 2022 : qYear - 1;
+
+  const aggregationsSalary = await prisma.startup_data_final.aggregate({
+    _avg: { personalexpenses: true, tax: true, person: true },
+    _sum: { personalexpenses: true, tax: true, person: true },
+    where: {
+      year: qYear,
+      report: "valid",
+      person: { gt: 0 },
+      personalexpenses: { gt: 0 },
+      status: "active",
+    },
+  });
+
+  const aggregationsSalaryPrev = await prisma.startup_data_final.aggregate({
+    _avg: { personalexpenses: true, tax: true, person: true },
+    _sum: { personalexpenses: true, tax: true, person: true },
+    where: {
+      year: safeYear,
+      report: "valid",
+      person: { gt: 0 },
+      personalexpenses: { gt: 0 },
+      status: "active",
+    },
+  });
+
   const aggregations = await prisma.startup_data_final.aggregate({
     _avg: { personalexpenses: true, tax: true, person: true },
     _sum: { personalexpenses: true, tax: true, person: true },
-    where: { year: qYear },
+    where: { year: qYear, report: "valid", status: "active" },
   });
   const aggregationsPrev = await prisma.startup_data_final.aggregate({
     _avg: { personalexpenses: true, tax: true, person: true },
     _sum: { personalexpenses: true, tax: true, person: true },
-    where: { year: safeYear },
+    where: { year: safeYear, report: "valid", status: "active" },
   });
 
+  // const avgSalaryChange =
+  //   ((aggregations._sum.personalexpenses! / aggregations._sum.person! -
+  //     aggregationsPrev._sum.personalexpenses! / aggregationsPrev._sum.person!) /
+  //     (aggregationsPrev._sum.personalexpenses! /
+  //       aggregationsPrev._sum.person!)) *
+  //   100;
+
   const avgSalaryChange =
-    ((aggregations._sum.personalexpenses! / aggregations._sum.person! -
-      aggregationsPrev._sum.personalexpenses! / aggregationsPrev._sum.person!) /
-      (aggregationsPrev._sum.personalexpenses! /
-        aggregationsPrev._sum.person!)) *
+    ((aggregationsSalary._sum.personalexpenses! /
+      aggregationsSalary._sum.person! -
+      aggregationsSalaryPrev._sum.personalexpenses! /
+        aggregationsSalaryPrev._sum.person!) /
+      (aggregationsSalaryPrev._sum.personalexpenses! /
+        aggregationsSalaryPrev._sum.person!)) *
     100;
 
   const employeeChange =
@@ -58,7 +91,8 @@ export default async function CardSection({ qYear }: { qYear: number }) {
           <div className="flex">
             <h2 className="text-4xl font-semibold">
               {formatHuf(
-                aggregations._sum.personalexpenses! / aggregations._sum.person!
+                aggregationsSalary._sum.personalexpenses! /
+                  aggregationsSalary._sum.person!
               )}
             </h2>
             {!avgSalaryChange || Number.isNaN(avgSalaryChange) ? (
@@ -81,7 +115,7 @@ export default async function CardSection({ qYear }: { qYear: number }) {
             </span>
           </div>
           <p className="text-xs text-muted-foreground">
-            Avg. Salary per employee
+            Avg. Yearly salary per employee
           </p>
         </div>
       </Card>

@@ -215,7 +215,7 @@ function StartupRegForm() {
                 className="w-full mt-6"
                 loading={isPending}
               >
-                Submit
+                Submit for Review
               </LoadingButton>
             </form>
           </Form>

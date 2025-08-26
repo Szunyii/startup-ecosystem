@@ -34,18 +34,18 @@ export function cn(...inputs: ClassValue[]) {
 
 export type startupDataPayload = Prisma.startup_data_finalGetPayload<{
   select: {
-    id: true;
-    taxnumber: true;
-    traderegnumber: true;
-    type: true;
-    report: true;
-    status: true;
-    startup_id: true;
+    // id: true;
+    // taxnumber: true;
+    // traderegnumber: true;
+    // type: true;
+    // // report: true;
+    // status: true;
+    // startup_id: true;
     tax: true;
-    netrevenue: true;
+    // netrevenue: true;
     person: true;
     personal_yoy: true;
-    netrevenue_yoy: true;
+    // netrevenue_yoy: true;
     tax_yoy: true;
     personalexpenses: true;
     personalexpenses_yoy: true;

@@ -3,6 +3,7 @@ import { Inter, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import MaxWidthWraper from "@/components/MaxWidthWrapper";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Fotter";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -48,6 +49,7 @@ export default function RootLayout({
           <Navigation />
           {children}
         </MaxWidthWraper>
+        <Footer />
       </body>
     </html>
   );

@@ -1,6 +1,5 @@
 // import { prisma } from "@/lib/db/prisma";
 // import { getData } from "@/lib/external";
-import StartupRegForm from "@/components/StartupRegForm";
 import { redirect } from "next/navigation";
 
 export default async function Home() {
@@ -15,7 +14,6 @@ export default async function Home() {
       {/* {allStartups.map((el) => el.companyName)} */}
 
       <main className="flex justify-center items-center flex-col gap-8 row-start-2 w-full">
-        <StartupRegForm />
         {/* <Formtest /> */}
       </main>
     </div>

@@ -280,7 +280,7 @@ function EcosystemRegForm() {
                 className="w-full mt-6"
                 loading={isPending}
               >
-                Submit
+                Submit Request
               </LoadingButton>
             </form>
           </Form>

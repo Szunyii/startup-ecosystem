@@ -20,7 +20,7 @@ body {
     --card-foreground: 1 0% 3.9%;
     --popover: 250 100% 100%; /* HEX: fafdff (Silver) */
     --popover-foreground: 1 0% 3.9%;
-    --primary: 227 77% 60%; /* HEX: 5d3dff (Inno Amethyst) */
+    --primary: 250 100% 62%; /* HEX: 5d3dff (Inno Amethyst) */
     --primary-foreground: 1 85% 97%;
     --secondary: 87 85% 58%; /* HEX: afe200 */
     --secondary-foreground: 0 0% 9%;

@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { Button } from "./ui/button";
 import { cn, StartupDataType } from "@/lib/utils";
 import StatupCard from "./StatupCard";
+import Faq from "@/app/startups/Faq";
+import AccordionEcosystem from "@/app/ecosystem/AccordionEcosystwm";
 
 const stageCategory = ["Pre-Startup", "Startup", "Scale-up"];
 const typeCategory = [
@@ -25,8 +27,13 @@ function EcosystemGrid(data: { startups: StartupDataType[] }) {
   );
 
   return (
-    <section>
+    <section className="">
       {/* header */}
+      <div className="mb-3 self-end flex w-full justify-end">
+        <Faq>
+          <AccordionEcosystem />
+        </Faq>
+      </div>
       <div className="p-4 flex items-center gap-4 border rounded-md mb-8 shadow-md">
         <div className="font-thin text-2xl mx-10 text-gray-400">
           Select Stage:

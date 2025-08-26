@@ -9,7 +9,7 @@ import { buttonVariants } from "./ui/button";
 const links = [
   { href: "/ecosystem", label: "Startup ecosystem" },
   { href: "/startups", label: "Startup database" },
-  { href: "/registry", label: "Registry" },
+  { href: "/registry", label: "Registration" },
 ];
 
 function Navigation() {
