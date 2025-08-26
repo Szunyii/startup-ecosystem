@@ -34,18 +34,9 @@ export function cn(...inputs: ClassValue[]) {
 
 export type startupDataPayload = Prisma.startup_data_finalGetPayload<{
   select: {
-    // id: true;
-    // taxnumber: true;
-    // traderegnumber: true;
-    // type: true;
-    // // report: true;
-    // status: true;
-    // startup_id: true;
     tax: true;
-    // netrevenue: true;
     person: true;
     personal_yoy: true;
-    // netrevenue_yoy: true;
     tax_yoy: true;
     personalexpenses: true;
     personalexpenses_yoy: true;
@@ -107,55 +98,3 @@ export type StartupType = {
   employeeYoY: number;
   year?: number;
 };
-
-//
-//     id: "10",
-//     name: "Giggle Work",
-//     taxes: 5586000,
-//     taxesYoY: 1347.2,
-//     salary: 63332000,
-//     salaryYoY: 304.9,
-//     employee: 7,
-//     employeeYoY: 57.1,
-//     year: 2023,
-//   },
-// ];
-
-// -- Salary
-export const getAvgSalary = () => {};
-// // --- tax
-// export const getSummTax = async (year: number) => {
-//   const taxes = await prisma.startup_data.aggregate({
-//     _sum: {
-//       netrevenue_2024: true,
-//     },
-//     where: {
-//       balanceSheet: "Adófizetési kötelezettség",
-//       year: year,
-//     },
-//   });
-
-//   return taxes._sum.;
-// };
-
-// export const getTaxYoY = async (year: number) => {
-//   const taxes = await prisma.operatingResult.aggregate({
-//     _sum: {
-//       value: true,
-//     },
-//     where: {
-//       balanceSheet: "Adófizetési kötelezettség",
-//       year: year,
-//     },
-//   });
-//   const preTaxes = await prisma.operatingResult.aggregate({
-//     _sum: {
-//       value: true,
-//     },
-//     where: {
-//       balanceSheet: "Adófizetési kötelezettség",
-//       year: year - 1,
-//     },
-//   });
-// };
-// ----
