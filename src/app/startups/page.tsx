@@ -40,7 +40,7 @@ async function StartupPage(props: {
         </div>
 
         <Faq>
-          <AccordionDatabase />
+          <AccordionDatabase />&
         </Faq>
       </div>
       <Separator />

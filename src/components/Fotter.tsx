@@ -30,7 +30,7 @@ function Footer() {
             href={"https://www.linkedin.com/company/nationalinnovationagency"}
           >
             <Image
-              src={"/Linkedin.svg"}
+              src={"/linkedin.svg"}
               width={25}
               height={25}
               alt="linkedin"
