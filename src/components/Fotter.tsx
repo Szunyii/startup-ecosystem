@@ -3,7 +3,7 @@ import Link from "next/link";
 
 function Footer() {
   return (
-    <div className="w-full bg-[#011321] flex flex-row justify-between pt-12 px-32 pb-20">
+    <footer className="w-full bg-[#011321] flex flex-row justify-between pt-12 px-32 pb-20">
       <div className="flex flex-col gap-y-8">
         <Image src={"/niu-logo.png"} width={300} height={200} alt="facebook" />
         <div className="flex justify-between">
@@ -74,7 +74,7 @@ function Footer() {
           </a>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }
 

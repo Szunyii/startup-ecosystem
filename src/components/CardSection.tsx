@@ -1,10 +1,16 @@
-import { ArrowDown, ArrowUp, LucideIcon, Minus } from "lucide-react";
+import { ArrowDown, ArrowUp, InfoIcon, LucideIcon, Minus } from "lucide-react";
 import React from "react";
 // import { formatHuf } from "@/lib/utils";
 import { Badge } from "./ui/badge";
 import { Card } from "./ui/card";
 import { prisma } from "@/lib/db/prisma";
 import { formatHuf } from "@/lib/utils";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "./ui/tooltip";
 // import { prisma } from "@/lib/db/prisma";
 
 export type CardProps = {
@@ -83,9 +89,27 @@ export default async function CardSection({ qYear }: { qYear: number }) {
       <Card className="p-4 flex-1">
         <div className="flex justify-between gap-2">
           {/* label */}
-          <Badge variant={"default"} className="text-sm mb-2">
-            AVG. SALARY
-          </Badge>
+          <div className="flex">
+            <Badge variant={"default"} className="text-sm mb-2">
+              AVG. SALARY
+            </Badge>
+            <div>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger className="relative -top-1 text-xs leading-none">
+                    <InfoIcon size={13} />
+                  </TooltipTrigger>
+                  <TooltipContent align="center" className="max-w-60">
+                    <p>
+                      The average salary is calculated as the ratio of a
+                      company&apos;s personnel expenses to the number of
+                      employees.
+                    </p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            </div>
+          </div>
         </div>
         <div className="flex flex-col gap-1 ">
           <div className="flex">
@@ -122,9 +146,23 @@ export default async function CardSection({ qYear }: { qYear: number }) {
       <Card className="p-4 ">
         <div className="flex justify-between gap-2">
           {/* label */}
-          <Badge variant={"default"} className="text-sm mb-2">
-            EMPLOYEES
-          </Badge>
+          <div className="flex">
+            <Badge variant={"default"} className="text-sm mb-2">
+              EMPLOYEES
+            </Badge>
+            <div>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger className="relative -top-1 text-xs leading-none">
+                    <InfoIcon size={13} />
+                  </TooltipTrigger>
+                  <TooltipContent align="center" className="max-w-60">
+                    <p>Total number of employees by listed startups.</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            </div>
+          </div>
         </div>
         <div className="flex flex-col gap-1 ">
           <div className="flex">
@@ -160,9 +198,26 @@ export default async function CardSection({ qYear }: { qYear: number }) {
       <Card className="p-4 flex-1">
         <div className="flex justify-between gap-2">
           {/* label */}
-          <Badge variant={"default"} className="text-sm mb-2">
-            TAXES PAID
-          </Badge>
+          <div className="flex">
+            <Badge variant={"default"} className="text-sm mb-2">
+              TAXES PAID
+            </Badge>
+            <div>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger className="relative -top-1 text-xs leading-none">
+                    <InfoIcon size={13} />
+                  </TooltipTrigger>
+                  <TooltipContent align="center" className="max-w-60">
+                    <p>
+                      The total value of corporate taxes paid by the listed
+                      startups.
+                    </p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            </div>
+          </div>
         </div>
         <div className="flex flex-col gap-1 ">
           <div className="flex">

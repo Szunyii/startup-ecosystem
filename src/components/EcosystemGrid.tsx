@@ -8,18 +8,17 @@ import AccordionEcosystem from "@/app/ecosystem/AccordionEcosystwm";
 
 const stageCategory = ["Pre-Startup", "Startup", "Scale-up"];
 const typeCategory = [
-  "Govermental support",
+  "Governmental support",
   "Acccelerators/Incubators",
   "Local investors",
   "HUBs",
   "Supporting Organizations",
   "Foreign Investors",
   "Crowdfunding",
-  "Service Provider",
 ];
 
 function EcosystemGrid(data: { startups: StartupDataType[] }) {
-  const [selectedType, setSelectedType] = useState("Govermental support");
+  const [selectedType, setSelectedType] = useState("Governmental support");
   const [selectedStage, setSelectedStage] = useState("Pre-Startup");
 
   const filteredEntity = data.startups.filter(

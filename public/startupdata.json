@@ -154,7 +154,7 @@
   {
     "link": "https://exim.hu/",
     "stage": ["Scale-up"],
-    "type": ["Govermental support"],
+    "type": ["Governmental support"],
     "id": 22,
     "companyLogo": "startup22",
     "companyName": "EXIM Hungary"
@@ -162,7 +162,7 @@
   {
     "link": "https://eximinvest.hu/",
     "stage": ["Scale-up"],
-    "type": ["Govermental support"],
+    "type": ["Governmental support"],
     "id": 23,
     "companyLogo": "startup23",
     "companyName": "EXIM Invest"
@@ -242,7 +242,7 @@
   {
     "link": "https://hunban.eu/",
     "stage": ["Scale-up", "Startup", "Pre-Startup"],
-    "type": ["Local investors"],
+    "type": ["Local investors", "Supporting Organizations"],
     "id": 35,
     "companyLogo": "startup35",
     "companyName": "Hungarian Business Angel Network"
@@ -250,7 +250,7 @@
   {
     "link": "https://niu.hu/",
     "stage": ["Pre-Startup", "Startup", "Scale-up"],
-    "type": ["Govermental support"],
+    "type": ["Supporting Organizations"],
     "id": 36,
     "companyLogo": "startup36",
     "companyName": "Hungarian Innovation Agency"
@@ -258,7 +258,7 @@
   {
     "link": "https://www.hihub.hu/",
     "stage": ["Pre-Startup"],
-    "type": ["Acccelerators/Incubators"],
+    "type": ["HUBs"],
     "id": 37,
     "companyLogo": "startup37",
     "companyName": "Hungarian Innovation Hub"
@@ -322,7 +322,7 @@
   {
     "link": "https://mfbinvest.hu/",
     "stage": ["Scale-up"],
-    "type": ["Govermental support"],
+    "type": ["Governmental support"],
     "id": 45,
     "companyLogo": "startup45",
     "companyName": "MFB Invest"
@@ -330,7 +330,7 @@
   {
     "link": "https://kormany.hu/kulturalis-es-innovacios-miniszterium",
     "stage": ["Pre-Startup"],
-    "type": ["Govermental support"],
+    "type": ["Governmental support"],
     "id": 46,
     "companyLogo": "startup46",
     "companyName": "Ministry of Culture and Innovation"
@@ -602,7 +602,7 @@
   {
     "link": "https://www.innovacio.hu/",
     "stage": ["Scale-up", "Pre-Startup", "Startup"],
-    "type": ["Govermental support"],
+    "type": ["Supporting Organizations"],
     "id": 81,
     "companyLogo": "startup81",
     "companyName": "Hungarian Innovation Association"
@@ -610,7 +610,7 @@
   {
     "link": "https://nkfih.gov.hu/",
     "stage": ["Scale-up", "Pre-Startup", "Startup"],
-    "type": ["Govermental support"],
+    "type": ["Governmental support"],
     "id": 82,
     "companyLogo": "startup82",
     "companyName": "NKFIH"
@@ -626,7 +626,7 @@
   {
     "link": "https://hu.linkedin.com/in/szabolcsszakacsits",
     "stage": ["Pre-Startup", "Startup", "Scale-up"],
-    "type": ["Govermental support"],
+    "type": ["Governmental support"],
     "id": 84,
     "companyLogo": "startup84",
     "companyName": "SZTNH"
@@ -646,5 +646,29 @@
     "id": 86,
     "companyLogo": "startup86",
     "companyName": "Dr. Szabó András"
+  },
+  {
+    "link": "https://www.nth.hu/",
+    "stage": ["Startup", "Scale-up"],
+    "type": ["Governmental support"],
+    "id": 87,
+    "companyLogo": "startup87",
+    "companyName": "National Capital Holding"
+  },
+  {
+    "link": "https://www.hiventures.hu/",
+    "stage": ["Startup", "Scale-up"],
+    "type": ["Governmental support"],
+    "id": 88,
+    "companyLogo": "startup88",
+    "companyName": "Hiventures"
+  },
+  {
+    "link": "https://mkik.hu/",
+    "stage": ["Pre-Startup", "Startup", "Scale-up"],
+    "type": ["Supporting Organizations"],
+    "id": 89,
+    "companyLogo": "startup89",
+    "companyName": "Hungarian Chamber of Commerce and Industry"
   }
 ]

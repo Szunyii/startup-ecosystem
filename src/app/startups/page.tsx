@@ -24,7 +24,7 @@ async function StartupPage(props: {
   // második megoldás
   const datas = await prisma.startup_data_final.findMany({
     where: { year: q, report: "valid", status: "active" },
-    orderBy: { tax: "desc" },
+    orderBy: { person: "desc" },
   });
 
   const count = await prisma.startup_data_final.count({
@@ -40,7 +40,7 @@ async function StartupPage(props: {
         </div>
 
         <Faq>
-          <AccordionDatabase />&
+          <AccordionDatabase />
         </Faq>
       </div>
       <Separator />

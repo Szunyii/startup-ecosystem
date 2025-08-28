@@ -221,7 +221,7 @@ function EcosystemRegForm() {
                           <SelectTrigger>
                             <SelectValue
                               defaultValue="new"
-                              placeholder="Stage"
+                              placeholder="Type"
                             />
                           </SelectTrigger>
                           <SelectContent>
