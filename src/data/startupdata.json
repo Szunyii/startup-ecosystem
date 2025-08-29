@@ -1,0 +1,674 @@
+[
+  {
+    "link": "https://www.cloudbreak.vc/",
+    "stage": ["Pre-Startup"],
+    "type": ["Local investors"],
+    "id": 1,
+    "companyLogo": "startup1",
+    "companyName": "Cloudbreak"
+  },
+  {
+    "link": "https://www.credoventures.com/",
+    "stage": ["Startup"],
+    "type": ["Foreign Investors"],
+    "id": 2,
+    "companyLogo": "startup2",
+    "companyName": "Credo Ventures"
+  },
+  {
+    "link": "https://depoventures.com/",
+    "stage": ["Pre-Startup", "Startup"],
+    "type": ["Foreign Investors"],
+    "id": 3,
+    "companyLogo": "startup3",
+    "companyName": "DEPO Ventures"
+  },
+  {
+    "link": "https://innovationnest.com/",
+    "stage": ["Startup"],
+    "type": ["Acccelerators/Incubators"],
+    "id": 4,
+    "companyLogo": "startup4",
+    "companyName": "Innovation Nest"
+  },
+  {
+    "link": "https://www.karma.vc/",
+    "stage": ["Scale-up"],
+    "type": ["Foreign Investors"],
+    "id": 5,
+    "companyLogo": "startup5",
+    "companyName": "Karma Ventures"
+  },
+  {
+    "link": "https://lakestar.com/",
+    "stage": ["Startup"],
+    "type": ["Foreign Investors"],
+    "id": 6,
+    "companyLogo": "startup6",
+    "companyName": "Lakestar"
+  },
+  {
+    "link": "https://www.techstars.com/",
+    "stage": ["Pre-Startup"],
+    "type": ["Foreign Investors"],
+    "id": 7,
+    "companyLogo": "startup7",
+    "companyName": "Techstars"
+  },
+  {
+    "link": "https://e2.vc/",
+    "stage": ["Pre-Startup", "Startup"],
+    "type": ["Foreign Investors"],
+    "id": 8,
+    "companyLogo": "startup8",
+    "companyName": "e2vc"
+  },
+  {
+    "link": "https://3tscapital.com/",
+    "stage": ["Scale-up", "Startup"],
+    "type": ["Local investors"],
+    "id": 9,
+    "companyLogo": "startup9",
+    "companyName": "3TS Capital Partners"
+  },
+  {
+    "link": "https://apx.vc/",
+    "stage": ["Pre-Startup"],
+    "type": ["Foreign Investors"],
+    "id": 10,
+    "companyLogo": "startup10",
+    "companyName": "APX Ventures"
+  },
+  {
+    "link": "https://www.twobirds.com/en/reach/central-and-eastern-europe/hungary/budapest",
+    "stage": ["Scale-up", "Startup"],
+    "type": ["Service Provider"],
+    "id": 11,
+    "companyLogo": "startup11",
+    "companyName": "Bird & Bird International LLP"
+  },
+  {
+    "link": "https://create26.hu/",
+    "stage": ["Pre-Startup"],
+    "type": ["HUBs"],
+    "id": 13,
+    "companyLogo": "startup13",
+    "companyName": "Create26"
+  },
+  {
+    "link": "https://creativeaccelerator.hu/",
+    "stage": ["Pre-Startup"],
+    "type": ["Local investors"],
+    "id": 14,
+    "companyLogo": "startup14",
+    "companyName": "Creative Accelerator"
+  },
+  {
+    "link": "https://csovarilegal.hu/",
+    "stage": ["Startup"],
+    "type": ["Service Provider"],
+    "id": 15,
+    "companyLogo": "startup15",
+    "companyName": "Csővári Legal"
+  },
+  {
+    "link": "https://dbh-group.com/hu",
+    "stage": ["Scale-up"],
+    "type": ["Local investors"],
+    "id": 16,
+    "companyLogo": "startup16",
+    "companyName": "DBH Group"
+  },
+  {
+    "link": "https://www.dayonecapital.com/",
+    "stage": ["Startup"],
+    "type": ["Local investors"],
+    "id": 17,
+    "companyLogo": "startup17",
+    "companyName": "Day One Capital"
+  },
+  {
+    "link": "https://drukka.hu/",
+    "stage": ["Pre-Startup"],
+    "type": ["Acccelerators/Incubators"],
+    "id": 19,
+    "companyLogo": "startup19",
+    "companyName": "Drukka Startup Studio"
+  },
+  {
+    "link": "https://www.ebrdvcip.com/",
+    "stage": ["Scale-up", "Startup"],
+    "type": ["Foreign Investors"],
+    "id": 20,
+    "companyLogo": "startup20",
+    "companyName": "EBRD Ventures"
+  },
+  {
+    "link": "https://www.eitdigital.eu/",
+    "stage": ["Pre-Startup"],
+    "type": ["Acccelerators/Incubators"],
+    "id": 21,
+    "companyLogo": "startup21",
+    "companyName": "EIT Digital"
+  },
+  {
+    "link": "https://exim.hu/",
+    "stage": ["Scale-up"],
+    "type": ["Governmental support"],
+    "id": 22,
+    "companyLogo": "startup22",
+    "companyName": "EXIM Hungary"
+  },
+  {
+    "link": "https://eximinvest.hu/",
+    "stage": ["Scale-up"],
+    "type": ["Governmental support"],
+    "id": 23,
+    "companyLogo": "startup23",
+    "companyName": "EXIM Invest"
+  },
+  {
+    "link": "https://euroventures.vc/",
+    "stage": ["Scale-up"],
+    "type": ["Local investors"],
+    "id": 25,
+    "companyLogo": "startup25",
+    "companyName": "Euroventures"
+  },
+  {
+    "link": "https://fivosz.hu/",
+    "stage": ["Pre-Startup", "Startup"],
+    "type": ["Supporting Organizations"],
+    "id": 27,
+    "companyLogo": "startup27",
+    "companyName": "FIVOSZ"
+  },
+  {
+    "link": "https://www.fiedler.capital/",
+    "stage": ["Startup"],
+    "type": ["Local investors"],
+    "id": 28,
+    "companyLogo": "startup28",
+    "companyName": "Fiedler Capital"
+  },
+  {
+    "link": "https://www.linkedin.com/company/first-principle-innovation",
+    "stage": ["Pre-Startup"],
+    "type": ["Acccelerators/Incubators"],
+    "id": 29,
+    "companyLogo": "startup29",
+    "companyName": "First Principle"
+  },
+  {
+    "link": "https://flashpointvc.com/",
+    "stage": ["Scale-up", "Startup"],
+    "type": ["Local investors"],
+    "id": 30,
+    "companyLogo": "startup30",
+    "companyName": "Flashpoint VC"
+  },
+  {
+    "link": "https://focusventures.hu/",
+    "stage": ["Startup"],
+    "type": ["Local investors"],
+    "id": 31,
+    "companyLogo": "startup31",
+    "companyName": "Focus Ventures"
+  },
+  {
+    "link": "https://www.futurefounders.hu/",
+    "stage": ["Pre-Startup"],
+    "type": ["Acccelerators/Incubators"],
+    "id": 32,
+    "companyLogo": "startup32",
+    "companyName": "Future Founders"
+  },
+  {
+    "link": "https://www.hvca.hu/",
+    "stage": ["Pre-Startup", "Startup", "Scale-up"],
+    "type": ["Supporting Organizations"],
+    "id": 33,
+    "companyLogo": "startup33",
+    "companyName": "HVCA"
+  },
+  {
+    "link": "https://www.hiventures.hu/",
+    "stage": ["Startup"],
+    "type": ["Local investors"],
+    "id": 34,
+    "companyLogo": "startup34",
+    "companyName": "Hiventures"
+  },
+  {
+    "link": "https://hunban.eu/",
+    "stage": ["Scale-up", "Startup", "Pre-Startup"],
+    "type": ["Local investors", "Supporting Organizations"],
+    "id": 35,
+    "companyLogo": "startup35",
+    "companyName": "Hungarian Business Angel Network"
+  },
+  {
+    "link": "https://niu.hu/",
+    "stage": ["Pre-Startup", "Startup", "Scale-up"],
+    "type": ["Supporting Organizations"],
+    "id": 36,
+    "companyLogo": "startup36",
+    "companyName": "Hungarian Innovation Agency"
+  },
+  {
+    "link": "https://www.hihub.hu/",
+    "stage": ["Pre-Startup"],
+    "type": ["HUBs"],
+    "id": 37,
+    "companyLogo": "startup37",
+    "companyName": "Hungarian Innovation Hub"
+  },
+  {
+    "link": "https://ivsz.hu/",
+    "stage": ["Pre-Startup"],
+    "type": ["Supporting Organizations"],
+    "id": 38,
+    "companyLogo": "startup38",
+    "companyName": "IVSZ"
+  },
+  {
+    "link": "https://impactventures.hu/igy-fektetunk-be/",
+    "stage": ["Pre-Startup"],
+    "type": ["Local investors"],
+    "id": 39,
+    "companyLogo": "startup39",
+    "companyName": "Impact Ventures"
+  },
+  {
+    "link": "https://www.interactivevp.com/en/home.php",
+    "stage": ["Scale-up", "Startup"],
+    "type": ["Local investors"],
+    "id": 40,
+    "companyLogo": "startup40",
+    "companyName": "Interactive Venture Partners"
+  },
+  {
+    "link": "https://kekbolygoalapitvany.hu/",
+    "stage": ["Pre-Startup", "Startup"],
+    "type": ["Local investors"],
+    "id": 41,
+    "companyLogo": "startup41",
+    "companyName": "Kék Bolygó Tőkealapok"
+  },
+  {
+    "link": "https://leadventures.eu/",
+    "stage": ["Scale-up"],
+    "type": ["Local investors"],
+    "id": 42,
+    "companyLogo": "startup42",
+    "companyName": "Lead Ventures"
+  },
+  {
+    "link": "https://www.lunarprogram.eu/",
+    "stage": ["Pre-Startup"],
+    "type": ["Acccelerators/Incubators"],
+    "id": 43,
+    "companyLogo": "startup43",
+    "companyName": "Lunar"
+  },
+  {
+    "link": "https://www.fintechlab.hu/",
+    "stage": ["Pre-Startup"],
+    "type": ["Acccelerators/Incubators"],
+    "id": 44,
+    "companyLogo": "startup44",
+    "companyName": "MBH Fintechlab"
+  },
+  {
+    "link": "https://mfbinvest.hu/",
+    "stage": ["Scale-up"],
+    "type": ["Governmental support"],
+    "id": 45,
+    "companyLogo": "startup45",
+    "companyName": "MFB Invest"
+  },
+  {
+    "link": "https://kormany.hu/kulturalis-es-innovacios-miniszterium",
+    "stage": ["Pre-Startup"],
+    "type": ["Governmental support"],
+    "id": 46,
+    "companyLogo": "startup46",
+    "companyName": "Ministry of Culture and Innovation"
+  },
+  {
+    "link": "https://www.naktechlab.hu/",
+    "stage": ["Pre-Startup"],
+    "type": ["Acccelerators/Incubators"],
+    "id": 47,
+    "companyLogo": "startup47",
+    "companyName": "NAK Techlab"
+  },
+  {
+    "link": "https://nesprit.vc/",
+    "stage": ["Pre-Startup"],
+    "type": ["Acccelerators/Incubators"],
+    "id": 48,
+    "companyLogo": "startup48",
+    "companyName": "Nesprit"
+  },
+  {
+    "link": "https://oxolabs.eu/",
+    "stage": ["Pre-Startup"],
+    "type": ["Acccelerators/Incubators"],
+    "id": 49,
+    "companyLogo": "startup49",
+    "companyName": "OXO Labs"
+  },
+  {
+    "link": "https://oxotechnologies.eu/",
+    "stage": ["Startup"],
+    "type": ["Local investors"],
+    "id": 50,
+    "companyLogo": "startup50",
+    "companyName": "OXO Technologies"
+  },
+  {
+    "link": "https://www.oktogon.vc/",
+    "stage": ["Startup"],
+    "type": ["Local investors"],
+    "id": 51,
+    "companyLogo": "startup51",
+    "companyName": "Oktogon Ventures"
+  },
+  {
+    "link": "https://www.oppenheimlegal.com/hu/",
+    "stage": ["Startup"],
+    "type": ["Service Provider"],
+    "id": 52,
+    "companyLogo": "startup52",
+    "companyName": "Oppenheim Ugyvedi Iroda"
+  },
+  {
+    "link": "https://partechpartners.com/",
+    "stage": ["Scale-up", "Startup"],
+    "type": ["Foreign Investors"],
+    "id": 53,
+    "companyLogo": "startup53",
+    "companyName": "Partech"
+  },
+  {
+    "link": "https://platinacapital.hu/",
+    "stage": ["Scale-up"],
+    "type": ["Local investors"],
+    "id": 54,
+    "companyLogo": "startup54",
+    "companyName": "Platina Capital"
+  },
+  {
+    "link": "https://www.pointnine.com/",
+    "stage": ["Startup"],
+    "type": ["Foreign Investors"],
+    "id": 55,
+    "companyLogo": "startup55",
+    "companyName": "Point Nine Capital"
+  },
+  {
+    "link": "https://www.portfolion.hu/",
+    "stage": ["Startup"],
+    "type": ["Local investors"],
+    "id": 56,
+    "companyLogo": "startup56",
+    "companyName": "PortfoLion"
+  },
+  {
+    "link": "https://www.puzl.com/coworking-locations/budapest",
+    "stage": ["Pre-Startup", "Startup", "Scale-up"],
+    "type": ["HUBs"],
+    "id": 57,
+    "companyLogo": "startup57",
+    "companyName": "PuzL Coworking"
+  },
+  {
+    "link": "https://strt.hu/",
+    "stage": ["Startup"],
+    "type": ["Acccelerators/Incubators"],
+    "id": 58,
+    "companyLogo": "startup58",
+    "companyName": "STRT Holding"
+  },
+  {
+    "link": "https://strt.hu/launchpad/",
+    "stage": ["Pre-Startup"],
+    "type": ["Local investors"],
+    "id": 59,
+    "companyLogo": "startup59",
+    "companyName": "STRT Launchpad"
+  },
+  {
+    "link": "https://seedcamp.com/",
+    "stage": ["Startup"],
+    "type": ["Foreign Investors"],
+    "id": 60,
+    "companyLogo": "startup60",
+    "companyName": "Seedcamp"
+  },
+  {
+    "link": "https://www.soluscapital.hu/",
+    "stage": ["Pre-Startup", "Startup"],
+    "type": ["Local investors"],
+    "id": 61,
+    "companyLogo": "startup61",
+    "companyName": "Solus Capital"
+  },
+  {
+    "link": "https://www.speedinvest.com/",
+    "stage": ["Scale-up", "Startup"],
+    "type": ["Foreign Investors"],
+    "id": 62,
+    "companyLogo": "startup62",
+    "companyName": "Speedinvest"
+  },
+  {
+    "link": "https://www.facebook.com/startitkh/?locale=hu_HU",
+    "stage": ["Pre-Startup"],
+    "type": ["Acccelerators/Incubators"],
+    "id": 63,
+    "companyLogo": "startup63",
+    "companyName": "StartIT@KH"
+  },
+  {
+    "link": "https://www.startuphungary.io/",
+    "stage": ["Scale-up", "Startup", "Pre-Startup"],
+    "type": ["Supporting Organizations"],
+    "id": 64,
+    "companyLogo": "startup64",
+    "companyName": "Startup Hungary"
+  },
+  {
+    "link": "https://www.startupbootcamp.org/",
+    "stage": ["Startup"],
+    "type": ["Acccelerators/Incubators"],
+    "id": 65,
+    "companyLogo": "startup65",
+    "companyName": "Startupbootcamp"
+  },
+  {
+    "link": "https://www.szta.hu/",
+    "stage": ["Scale-up"],
+    "type": ["Local investors"],
+    "id": 67,
+    "companyLogo": "startup67",
+    "companyName": "Széchenyi Tőkealap-kezelő"
+  },
+  {
+    "link": "https://drtanacs.hu/",
+    "stage": ["Pre-Startup"],
+    "type": ["Service Provider"],
+    "id": 68,
+    "companyLogo": "startup68",
+    "companyName": "Tanács Ferenc Ügyvédi Iroda"
+  },
+  {
+    "link": "https://twosigmaventures.com/",
+    "stage": ["Pre-Startup"],
+    "type": ["Foreign Investors"],
+    "id": 69,
+    "companyLogo": "startup69",
+    "companyName": "Two Sigma Ventures"
+  },
+  {
+    "link": "https://vosz.hu/",
+    "stage": ["Scale-up", "Startup"],
+    "type": ["Supporting Organizations"],
+    "id": 70,
+    "companyLogo": "startup70",
+    "companyName": "VOSZ"
+  },
+  {
+    "link": "https://www.vespuccipartners.com/",
+    "stage": ["Pre-Startup", "Startup"],
+    "type": ["Local investors"],
+    "id": 71,
+    "companyLogo": "startup71",
+    "companyName": "Vespucci Partners"
+  },
+  {
+    "link": "https://www.ycombinator.com/",
+    "stage": ["Pre-Startup"],
+    "type": ["Foreign Investors"],
+    "id": 72,
+    "companyLogo": "startup72",
+    "companyName": "Y Combinator"
+  },
+  {
+    "link": "https://obudaunivc.com/",
+    "stage": ["Startup"],
+    "type": ["Local investors"],
+    "id": 73,
+    "companyLogo": "startup73",
+    "companyName": "Óbuda Uni Venture Capital"
+  },
+  {
+    "link": "https://blockchainhungary.org/",
+    "stage": ["Startup", "Pre-Startup"],
+    "type": ["Supporting programmes"],
+    "id": 74,
+    "companyLogo": "startup74",
+    "companyName": "Blockchain Hungary"
+  },
+  {
+    "link": "https://bnlstart.com/",
+    "stage": ["Startup", "Pre-Startup"],
+    "type": ["Local investors", "Acccelerators/Incubators"],
+    "id": 75,
+    "companyLogo": "startup75",
+    "companyName": "BnL Growth Partners"
+  },
+  {
+    "link": "https://brancskozosseg.hu/",
+    "stage": ["Pre-Startup"],
+    "type": ["Crowdfunding"],
+    "id": 76,
+    "companyLogo": "startup76",
+    "companyName": "Brancsközösség"
+  },
+  {
+    "link": "https://eit-ris.eu/hungary-2/hu/",
+    "stage": ["Startup", "Pre-Startup", "Scale-up"],
+    "type": ["Supporting programmes"],
+    "id": 77,
+    "companyLogo": "startup77",
+    "companyName": "EIT"
+  },
+  {
+    "link": "https://eit-ris.eu/hungary-2/hu/",
+    "stage": ["Pre-Startup"],
+    "type": ["Foreign Investors"],
+    "id": 78,
+    "companyLogo": "startup78",
+    "companyName": "Entrepreneurs First"
+  },
+  {
+    "link": "http://www.euroventures.hu/",
+    "stage": ["Scale-up"],
+    "type": ["Local investors"],
+    "id": 79,
+    "companyLogo": "startup79",
+    "companyName": "Euroventures Capital Advisory"
+  },
+  {
+    "link": "https://hunfintech.com/",
+    "stage": ["Scale-up", "Pre-Startup", "Startup"],
+    "type": ["Supporting programmes"],
+    "id": 80,
+    "companyLogo": "startup80",
+    "companyName": "Hungarian Fintech Association"
+  },
+  {
+    "link": "https://www.innovacio.hu/",
+    "stage": ["Scale-up", "Pre-Startup", "Startup"],
+    "type": ["Supporting Organizations"],
+    "id": 81,
+    "companyLogo": "startup81",
+    "companyName": "Hungarian Innovation Association"
+  },
+  {
+    "link": "https://nkfih.gov.hu/",
+    "stage": ["Scale-up", "Pre-Startup", "Startup"],
+    "type": ["Governmental support"],
+    "id": 82,
+    "companyLogo": "startup82",
+    "companyName": "NKFIH"
+  },
+  {
+    "link": "https://hu.linkedin.com/in/szabolcsszakacsits",
+    "stage": ["Pre-Startup", "Startup"],
+    "type": ["Local investors"],
+    "id": 83,
+    "companyLogo": "startup83",
+    "companyName": "Szakacsits Ventures Kft."
+  },
+  {
+    "link": "https://hu.linkedin.com/in/szabolcsszakacsits",
+    "stage": ["Pre-Startup", "Startup", "Scale-up"],
+    "type": ["Governmental support"],
+    "id": 84,
+    "companyLogo": "startup84",
+    "companyName": "SZTNH"
+  },
+  {
+    "link": "https://tokeportal.com/",
+    "stage": ["Startup"],
+    "type": ["Crowdfunding"],
+    "id": 85,
+    "companyLogo": "startup85",
+    "companyName": "Tőkeportál"
+  },
+  {
+    "link": "https://www.linkedin.com/in/andr%C3%A1s-szab%C3%B3/?originalSubdomain=hu",
+    "stage": ["Startup"],
+    "type": ["Service Provider"],
+    "id": 86,
+    "companyLogo": "startup86",
+    "companyName": "Dr. Szabó András"
+  },
+  {
+    "link": "https://www.nth.hu/",
+    "stage": ["Startup", "Scale-up"],
+    "type": ["Governmental support"],
+    "id": 87,
+    "companyLogo": "startup87",
+    "companyName": "National Capital Holding"
+  },
+  {
+    "link": "https://www.hiventures.hu/",
+    "stage": ["Startup", "Scale-up"],
+    "type": ["Governmental support"],
+    "id": 88,
+    "companyLogo": "startup88",
+    "companyName": "Hiventures"
+  },
+  {
+    "link": "https://mkik.hu/",
+    "stage": ["Pre-Startup", "Startup", "Scale-up"],
+    "type": ["Supporting Organizations"],
+    "id": 89,
+    "companyLogo": "startup89",
+    "companyName": "Hungarian Chamber of Commerce and Industry"
+  }
+]

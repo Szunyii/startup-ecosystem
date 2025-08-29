@@ -5,32 +5,7 @@ import { twMerge } from "tailwind-merge";
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
-//sss
 
-// export type startupDataPayload = Prisma.startup_dataGetPayload<{
-//   select: {
-//     tax_2022: true;
-//     tax_2023: true;
-//     tax_2024: true;
-//     tax_yoy_2022: true;
-//     tax_yoy_2023: true;
-//     tax_yoy_2024: true;
-//     personalexpenses_2022: true;
-//     personalexpenses_2023: true;
-//     personalexpenses_2024: true;
-//     personalexpenses_yoy_2022: true;
-//     personalexpenses_yoy_2023: true;
-//     personalexpenses_yoy_2024: true;
-//     person_2022: true;
-//     person_2023: true;
-//     person_2024: true;
-//     personal_yoy_2022: true;
-//     personal_yoy_2023: true;
-//     personal_yoy_2024: true;
-//     link: true;
-//     startupname: true;
-//   };
-// }>;
 
 export type startupDataPayload = Prisma.startup_data_finalGetPayload<{
   select: {
