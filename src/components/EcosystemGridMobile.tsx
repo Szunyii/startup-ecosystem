@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import { Button } from "./ui/button";
-import { cn, StartupDataType } from "@/lib/utils";
+
+import { StartupDataType } from "@/lib/utils";
 import StatupCard from "./StatupCard";
 import Faq from "@/app/startups/Faq";
 import AccordionEcosystem from "@/app/ecosystem/AccordionEcosystwm";
