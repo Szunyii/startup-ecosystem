@@ -1,13 +1,16 @@
 import { z } from "zod";
 
 export const startupFormSchema = z.object({
-  companyName: z.string().min(2).max(50),
-  brandName: z.string().min(2).max(50),
-  websiteUrl: z.string().min(2).max(50),
-  contactEmail: z.string().min(2).max(50),
-  contactName: z.string().min(2).max(50),
-  dealroomUrl: z.string().min(2).max(50),
-  startupType: z.string().min(2).max(50),
+	companyName: z.string().min(2).max(50),
+	brandName: z.string().min(2).max(50),
+	websiteUrl: z.string().min(2).max(50),
+	contactEmail: z.string().min(2).max(50),
+	contactName: z.string().min(2).max(50),
+	dealroomUrl: z.string().min(2).max(50),
+	startupType: z.string().min(2).max(50),
+	acceptTerms: z.boolean().refine((val) => val === true, {
+		message: "You must accept the terms and conditions to submit this form.",
+	}),
 });
 
 export type startupFormValues = z.infer<typeof startupFormSchema>;
@@ -16,14 +19,17 @@ export type startupFormValues = z.infer<typeof startupFormSchema>;
 // const ACCEPTED_IMAGE_MIME_TYPES = ["image/jpeg", "image/jpg", "image/png"];
 
 export const ecosystemFormSchema = z.object({
-  companyName: z.string().min(2).max(50),
-  websiteUrl: z.string().min(2).max(50),
-  contactName: z.string().min(2).max(50),
-  contactRole: z.string().min(2).max(50),
-  contactEmail: z.string().min(2).max(50),
-  stage: z.string().min(2),
-  type: z.string().min(2),
-  requestType: z.string().min(2),
+	companyName: z.string().min(2).max(50),
+	websiteUrl: z.string().min(2).max(50),
+	contactName: z.string().min(2).max(50),
+	contactRole: z.string().min(2).max(50),
+	contactEmail: z.string().min(2).max(50),
+	stage: z.string().min(2),
+	type: z.string().min(2),
+	requestType: z.string().min(2),
+	acceptTerms: z.boolean().refine((val) => val === true, {
+		message: "You must accept the terms and conditions to submit this form.",
+	}),
 });
 
 export type ecosystemFormValues = z.infer<typeof ecosystemFormSchema>;

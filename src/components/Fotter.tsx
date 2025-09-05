@@ -3,7 +3,7 @@ import Link from "next/link";
 
 function Footer() {
   return (
-    <footer className="w-full bg-[#011321] flex flex-row justify-between pt-12 px-32 pb-20">
+    <footer className="w-full bg-[#011321] flex flex-row lg:justify-between justify-center pt-12 lg:px-32 lg:pb-20 flex-wrap gap-y-4">
       <div className="flex flex-col gap-y-8">
         <Image src={"/niu-logo.png"} width={300} height={200} alt="facebook" />
         <div className="flex justify-between">
@@ -38,7 +38,7 @@ function Footer() {
           </Link>
         </div>
       </div>
-      <div className="flex gap-10">
+      <div className="flex gap-4 lg:gap-10 flex-wrap flex-col lg:flex-row ">
         <div className="text-white">
           <Link
             href={"/disclaimer"}
@@ -48,7 +48,7 @@ function Footer() {
           </Link>
         </div>
 
-        <div className="flex-col flex justify-start text-white gap-0.5">
+        <div className="flex-col flex justify-start text-white gap-0.5 ">
           <p className="text-[#afe202] font-bold text-xl">Contact</p>
           <div className="flex gap-x-4">
             <a className="hover:underline" href="mailto:info@niu.hu">

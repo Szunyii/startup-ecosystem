@@ -1,6 +1,6 @@
 "use client";
-import React from "react";
-import { formatHuf, startupDataPayload, toPercent } from "@/lib/utils";
+import React, { useMemo, useState } from "react";
+import { cn, formatHuf, startupDataPayload, toPercent } from "@/lib/utils";
 import {
 	ColumnDef,
 	flexRender,
@@ -10,6 +10,7 @@ import {
 	getSortedRowModel,
 	ColumnFiltersState,
 	getFilteredRowModel,
+	VisibilityState,
 } from "@tanstack/react-table";
 
 import {
@@ -41,6 +42,7 @@ export const columns: ColumnDef<startupDataPayload>[] = [
 	{
 		id: "No",
 		header: () => <div className="text-right">No</div>,
+
 		cell: (info) => {
 			const rowIndex = info.table
 				.getRowModel()
@@ -58,6 +60,7 @@ export const columns: ColumnDef<startupDataPayload>[] = [
 	},
 	{
 		accessorKey: "startupname",
+
 		header: ({ column }) => {
 			return (
 				<Button
@@ -85,7 +88,7 @@ export const columns: ColumnDef<startupDataPayload>[] = [
 					href={row.original.link!}
 					target="_blank"
 					rel="noopener noreferrer"
-					className="inline-flex items-center gap-2 text-link hover:text-link-hover transition-colors duration-200 font-medium group"
+					className="inline-flex max-w-6 items-center gap-2 text-link hover:text-link-hover transition-colors duration-200 font-medium group shrink"
 				>
 					<span className="group-hover:underline">{name}</span>
 					{/* <Link className="h-4 w-4 opacity-70 group-hover:opacity-100 transition-opacity" /> */}
@@ -342,7 +345,7 @@ interface DataTableProps<TData, TValue> {
 	count: number;
 }
 
-export function StartupDataTable<TData, TValue>({
+export function StartupDataTableMobile<TData, TValue>({
 	columns,
 	data,
 	count,
@@ -353,26 +356,63 @@ DataTableProps<TData, TValue>) {
 		[]
 	);
 
+	const [columnVisibility, setColumnVisibility] = useState<VisibilityState>({});
+	const [viewMode, setViewMode] = useState<ViewMode>("tax");
+
 	// const [filtering, setFiltering] = useState({});
+	const defaultColumn = {
+		minSize: 30,
+
+		maxSize: 80,
+	};
 
 	const table = useReactTable({
 		data,
 		columns,
+		defaultColumn,
 		getCoreRowModel: getCoreRowModel(),
 		onSortingChange: setSorting,
 		getSortedRowModel: getSortedRowModel(),
 		onColumnFiltersChange: setColumnFilters,
+		onColumnVisibilityChange: setColumnVisibility,
 		getFilteredRowModel: getFilteredRowModel(),
 		state: {
 			sorting,
 			columnFilters,
+			columnVisibility,
 		},
 		// onGlobalFilterChange: setFiltering,
 	});
 
-	// const handleDatePick = (value: string) => {
-	//   setFiltering(parseInt(value));
-	// };
+	useMemo(() => {
+		const newVisibility: VisibilityState = {};
+
+		switch (viewMode) {
+			case "tax":
+				// Show: Company Number, Company Name, Tax, Tax YoY
+				newVisibility.personalexpenses = false;
+				newVisibility.personalexpenses_yoy = false;
+				newVisibility.person = false;
+				newVisibility.personal_yoy = false;
+				break;
+			case "personalExpenses":
+				// Show: Company Number, Company Name, Expenses, Expenses YoY
+				newVisibility.tax = false;
+				newVisibility.tax_yoy = false;
+				newVisibility.person = false;
+				newVisibility.personal_yoy = false;
+				break;
+			case "person":
+				// Show all main metrics but hide YoY columns
+				newVisibility.tax = false;
+				newVisibility.tax_yoy = false;
+				newVisibility.personalexpenses = false;
+				newVisibility.personalexpenses_yoy = false;
+				break;
+		}
+
+		setColumnVisibility(newVisibility);
+	}, [viewMode]);
 
 	return (
 		<div>
@@ -397,8 +437,8 @@ DataTableProps<TData, TValue>) {
 			</div>
 
 			{/* filter row */}
-			<div className=" gap-3 flex flex-row w-full mt-3 mb-2">
-				<div className="relative min-w-[300px] flex items-center mb-3">
+			<div className="gap-3 flex flex-col lg:flex-row mt-3 mb-2">
+				<div className="relative min-w-[300px] flex items-center mb-3 flex-wrap">
 					<Input
 						placeholder="Company's name"
 						value={
@@ -410,6 +450,7 @@ DataTableProps<TData, TValue>) {
 					/>
 					<SearchIcon className="absolute right-2 top-50%" />
 				</div>
+				<ViewButtons currentView={viewMode} onViewChange={setViewMode} />
 			</div>
 			{/* table */}
 			<div className="rounded-md border">
@@ -465,5 +506,53 @@ DataTableProps<TData, TValue>) {
 		</div>
 	);
 }
+type ViewMode = "tax" | "personalExpenses" | "person";
 
-export default StartupDataTable;
+const ViewButtons = ({
+	currentView,
+	onViewChange,
+}: {
+	currentView: ViewMode;
+	onViewChange: (view: ViewMode) => void;
+}) => {
+	return (
+		<div className="flex gap-2">
+			<Button
+				variant={currentView === "tax" ? "default" : "outline"}
+				size="sm"
+				onClick={() => onViewChange("tax")}
+				className={cn(
+					"transition-all duration-base hover:bg-muted",
+					currentView === "tax" && "bg-primary shadow-md hover:bg-primary/60"
+				)}
+			>
+				Tax
+			</Button>
+			<Button
+				variant={currentView === "personalExpenses" ? "default" : "outline"}
+				size="sm"
+				onClick={() => onViewChange("personalExpenses")}
+				className={cn(
+					"transition-all duration-base hover:bg-muted",
+					currentView === "personalExpenses" &&
+						"bg-primary shadow-md hover:bg-primary/60"
+				)}
+			>
+				Payroll
+			</Button>
+			<Button
+				variant={currentView === "person" ? "default" : "outline"}
+				size="sm"
+				onClick={() => onViewChange("person")}
+				className={cn(
+					"transition-all duration-base hover:bg-muted",
+					currentView === "person" && "bg-primary shadow-md hover:bg-primary/60"
+				)}
+			>
+				Person
+			</Button>
+		</div>
+	);
+};
+
+export default StartupDataTableMobile;

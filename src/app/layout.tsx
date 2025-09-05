@@ -45,8 +45,9 @@ export default function RootLayout({
         className={`${inter.variable} ${roboto_mono.variable}`}
         cz-shortcut-listen="true"
       >
+        <Navigation />
         <MaxWidthWraper>
-          <Navigation />
+          
           {children}
         </MaxWidthWraper>
         <Footer />
