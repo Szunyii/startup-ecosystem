@@ -60,6 +60,7 @@ export const columns: ColumnDef<startupDataPayload>[] = [
 	},
 	{
 		accessorKey: "startupname",
+		maxSize: 0.3,
 
 		header: ({ column }) => {
 			return (
@@ -88,7 +89,7 @@ export const columns: ColumnDef<startupDataPayload>[] = [
 					href={row.original.link!}
 					target="_blank"
 					rel="noopener noreferrer"
-					className="inline-flex max-w-6 items-center gap-2 text-link hover:text-link-hover transition-colors duration-200 font-medium group shrink"
+					className="inline-flex max-w-8 items-center gap-2 text-link hover:text-link-hover transition-colors duration-200 font-medium group shrink"
 				>
 					<span className="group-hover:underline">{name}</span>
 					{/* <Link className="h-4 w-4 opacity-70 group-hover:opacity-100 transition-opacity" /> */}

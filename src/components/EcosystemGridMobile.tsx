@@ -37,7 +37,7 @@ function EcosístemGridMobile(data: { startups: StartupDataType[] }) {
 	return (
 		<section className="">
 			{/* header */}
-			<div className="mb-3 self-end flex w-full justify-end">
+			<div className="mb-3 self-end flex lg:w-full justify-end">
 				<Faq>
 					<AccordionEcosystem />
 				</Faq>
@@ -83,7 +83,7 @@ function EcosístemGridMobile(data: { startups: StartupDataType[] }) {
 			</div>
 
 			{/* szereplők grid */}
-			<div className="flex-1">
+			<div className="lg:flex-1 mt-4">
 				<div className="grid grid-cols-1 gap-3 justify-start items-start transition-all transitionduration-300">
 					{filteredEntity.map((startup, i) => (
 						<StatupCard key={i} {...startup} />

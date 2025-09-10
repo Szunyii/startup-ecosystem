@@ -227,24 +227,16 @@ function StartupRegForm() {
 											</FormControl>
 											<div className="space-y-1 leading-none">
 												<FormLabel className="text-sm font-medium">
-													Accept terms and conditions
-												</FormLabel>
-												<FormDescription className="text-xs text-muted-foreground">
-													I agree to the{" "}
+													I acknowledge the{" "}
 													<a
-														href="#"
+														target="_blank"
+														href="https://niu.hu/storage/GDPR/20250529_NIU_Privacy_Notice_EN_korrJOG.pdf"
 														className="underline hover:text-primary transition-colors"
 													>
-														terms of service
-													</a>{" "}
-													and{" "}
-													<a
-														href="#"
-														className="underline hover:text-primary transition-colors"
-													>
-														privacy policy
+														General data protection statemt
 													</a>
-												</FormDescription>
+												</FormLabel>
+												<FormDescription className="text-xs text-muted-foreground"></FormDescription>
 												<FormMessage />
 											</div>
 										</FormItem>
