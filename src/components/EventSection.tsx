@@ -5,18 +5,18 @@ import { format, isAfter, isEqual } from "date-fns";
 import eventsArray from "@/data/startup_events.json";
 import EventCard from "./EventCard";
 
-type StartupEventType = {
-  title: string;
-  event_url: string;
-  main_image_url: string;
-  event_date: string; // ISO date (YYYY-MM-DD)
-  organizer: string;
-  location: string;
-  description: string;
-  duration: string; // ha számmá szeretnéd alakítani, szólj
-  type: string;
-  language: string;
-};
+// type StartupEventType = {
+//   title: string;
+//   event_url: string;
+//   main_image_url: string;
+//   event_date: string; // ISO date (YYYY-MM-DD)
+//   organizer: string;
+//   location: string;
+//   description: string;
+//   duration: string; // ha számmá szeretnéd alakítani, szólj
+//   type: string;
+//   language: string;
+// };
 
 function EventSection() {
   const router = useRouter();
