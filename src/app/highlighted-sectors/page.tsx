@@ -21,7 +21,14 @@ function page() {
           international visibility across five key industries.
         </b>
         <br />
-        Between 2015 and 2025: <b>€925M</b>
+        <p>
+          {" "}
+          Between 2015 and 2025:{" "}
+          <b>
+            €925M million in venture capital flowed into the most active sectors
+          </b>{" "}
+          shaping the future of the Hungarian innovation economy.
+        </p>
       </h3>
       <div className="grid grid-cols-2 grid-rows-3 w-full gap-8 mt-6">
         <Card className="bg-[#120937] text-white border-none ">

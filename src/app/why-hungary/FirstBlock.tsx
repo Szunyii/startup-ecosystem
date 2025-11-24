@@ -6,7 +6,7 @@ import React from "react";
 function FirstBlock() {
   return (
     <div className="w-full ">
-      <Card className="bg-[#12093780]/25 text-white border-none mt-4 h-[800px] rounded-3xl border border-[#111111]/15 flex-col">
+      <Card className="bg-[#12093780]/25 text-white border-none mt-4 h-[800px] rounded-3xl border border-[#111111]/15 flex flex-col">
         <CardHeader>
           <h2 className="text-[24px]">
             1. Hungary&apos;s business environment is among the best globally
@@ -81,7 +81,7 @@ function FirstBlock() {
             </div>
           </CardContent>
         </CardHeader>
-        <CardFooter className="justify-end items-end text-muted-foreground pt-28">
+        <CardFooter className="text-muted-foreground justify-end">
           Source: World Bank
         </CardFooter>
       </Card>
