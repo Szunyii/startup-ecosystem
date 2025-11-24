@@ -52,10 +52,10 @@ export function SlidingNavbar({
   };
 
   return (
-    <nav
+    <div
       ref={navRef}
       className={cn(
-        "relative flex items-center bg-navbar border border-primary rounded-lg p-1",
+        "relative flex items-center bg-navbar border border-primary rounded-lg p-1 text-white",
         className
       )}
     >
@@ -84,6 +84,6 @@ export function SlidingNavbar({
           {item.label}
         </button>
       ))}
-    </nav>
+    </div>
   );
 }

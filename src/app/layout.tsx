@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   description: "National Innovation Agency's startup database",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -41,15 +41,29 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        className={`${inter.variable} ${roboto_mono.variable}`}
+        // className={`${geistSans.variable} ${geistMono.variable} antialiased #5D3DFF00 #5D3DFF00`}
+        className={` ${inter.variable} 
+    ${roboto_mono.variable}
+
+    bg-gradient-to-b
+
+    from-[#091737]/95     from-5%   
+
+    via-[#3b23b3]/95  via-55%     
+
+       
+    to-[#091737]/95   to-95%      
+
+    bg-[length:100%_100vh]
+    bg-repeat-y
+    relative  backdrop-blur-2xl`}
         cz-shortcut-listen="true"
       >
-        <Navigation />
         <MaxWidthWraper>
-          
+          <Navigation />
           {children}
         </MaxWidthWraper>
+
         <Footer />
       </body>
     </html>

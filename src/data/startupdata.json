@@ -670,5 +670,13 @@
     "id": 89,
     "companyLogo": "startup89",
     "companyName": "Hungarian Chamber of Commerce and Industry"
+  },
+  {
+    "link": "https://hu.smartware.tech/",
+    "stage": ["Startup"],
+    "type": ["Local investors"],
+    "id": 90,
+    "companyLogo": "startup90",
+    "companyName": "SmartWare.tech"
   }
 ]
