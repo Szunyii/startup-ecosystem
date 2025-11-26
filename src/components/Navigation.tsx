@@ -8,7 +8,7 @@ import { Button, buttonVariants } from "./ui/button";
 import { Menu, X } from "lucide-react";
 
 const links = [
-  { href: "/why-hungary", label: "Why-Hungary" },
+  { href: "/why-hungary", label: "Why Hungary" },
   { href: "/highlighted-sectors", label: "Highlighted Sectors" },
   { href: "/startups", label: "Startup database" },
   { href: "/ecosystem", label: "Startup ecosystem" },

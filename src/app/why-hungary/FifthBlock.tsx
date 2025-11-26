@@ -6,7 +6,7 @@ import Image from "next/image";
 function FifthBlock() {
   return (
     <div className="w-full ">
-      <Card className="bg-[#12093780]/25 text-white border-none mt-4 h-[800px] rounded-3xl border border-[#111111]/15 flex flex-col">
+      <Card className="bg-[#12093780]/15 text-white border-none mt-4 h-[800px] rounded-3xl border border-[#111111]/15 flex flex-col">
         <CardHeader>
           <h2 className="text-[24px] max-w-[65%]">
             5. Large multinational corporates play a decisive role in

@@ -5,19 +5,6 @@ import { format, isAfter, isEqual } from "date-fns";
 import eventsArray from "@/data/startup_events.json";
 import EventCard from "./EventCard";
 
-// type StartupEventType = {
-//   title: string;
-//   event_url: string;
-//   main_image_url: string;
-//   event_date: string; // ISO date (YYYY-MM-DD)
-//   organizer: string;
-//   location: string;
-//   description: string;
-//   duration: string; // ha számmá szeretnéd alakítani, szólj
-//   type: string;
-//   language: string;
-// };
-
 function EventSection() {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -74,7 +61,7 @@ function EventSection() {
           mode="single"
           selected={selectedDate}
           onSelect={handleDateSelect}
-          className="rounded-lg border flex-shrink-0 order-1 md:order-none"
+          className="rounded-lg border flex-shrink-0 order-1 md:order-none bg-primary/80 text-white border-none"
         />
       </div>
     </div>

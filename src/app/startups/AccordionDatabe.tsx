@@ -7,7 +7,7 @@ import {
 
 export default function AccordionDatabase() {
   return (
-    <Accordion type="single" collapsible className="w-full">
+    <Accordion type="single" collapsible className="w-full z-50">
       <AccordionItem value="item-1">
         <AccordionTrigger>1. What is the Startup Database?</AccordionTrigger>
         <AccordionContent className="flex flex-col gap-4 text-balance">

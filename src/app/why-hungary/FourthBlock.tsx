@@ -6,7 +6,7 @@ import Image from "next/image";
 function FourthBlock() {
   return (
     <div className="w-full ">
-      <Card className="bg-[#12093780]/25 text-white border-none mt-4 h-[800px] rounded-3xl border border-[#111111]/15 flex flex-col">
+      <Card className="bg-[#12093780]/15 text-white border-none mt-4 h-[800px] rounded-3xl border border-[#111111]/15 flex flex-col">
         <CardHeader>
           <h2 className="text-[24px]">
             4. Constantly increasing investments is R&D

@@ -55,7 +55,7 @@ function page() {
                 stand out regionally for their impact and scalability.
               </p>
               <p>
-                <b> VC investments between 2015-2025:</b> <b>€112,1M</b>,
+                <b> VC investments between 2015-2025:</b> <b>€112,1M</b>
               </p>
             </div>
           </CardContent>

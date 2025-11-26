@@ -16,11 +16,11 @@ export default function Faq({ children }: { children: React.ReactNode }) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button className="hover:bg-muted hover:text-black rounded-2xl transition-all  flex flex-col justify-center items-center  shadow-md group rounded-tr-none rounded-bl-none">
+        <Button className="hover:bg-muted hover:text-black rounded-2xl transition-all flex flex-col justify-center items-center shadow-md group rounded-tr-none rounded-bl-none">
           FAQ
         </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[620px]">
+      <DialogContent className="sm:max-w-[620px] z-50 justify-center items-center">
         <DialogHeader>
           <DialogTitle>Frequently Asked Questions</DialogTitle>
           {/* <DialogDescription>

@@ -56,7 +56,7 @@ export default async function RootLayout({
 
     bg-[length:100%_100vh]
     bg-repeat-y
-    relative  backdrop-blur-2xl`}
+     backdrop-blur-2xl`}
         cz-shortcut-listen="true"
       >
         <MaxWidthWraper>
