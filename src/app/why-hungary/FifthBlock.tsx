@@ -19,7 +19,7 @@ function FifthBlock() {
                 Over the past 15 years,{" "}
                 <b>
                   Central and Eastern Europe (CEE) has substantially enhanced
-                  its economic significance
+                  its economic significance{" "}
                 </b>
                 within the European Union. Situated at the heart of the CEE
                 region,
