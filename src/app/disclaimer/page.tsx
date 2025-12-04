@@ -2,18 +2,10 @@ import React from "react";
 
 function disclaimer() {
   return (
-    <div className="min-h-[89vh] flex justify-center">
+    <div className="min-h-[89vh] flex justify-center text-white">
       <div className="mt-24 flex-col flex gap-6 w-1/2">
         <h1 className="text-3xl font-bold"> Disclaimer </h1>
-        <p>
-          All data displayed on this platform is collected from publicly
-          accessible sources, including the entity’s official website, the
-          Hungarian Company Registry (https://www.e-cegjegyzek.hu/), and
-          Dealroom (www.dealroom.co) . We do not alter or modify the original
-          data; we aggregate and present this information in a unified,
-          accessible format. Accuracy is based on the latest available public
-          records at the time of collection.
-        </p>
+
         <p>
           The webpage, data collection, and platform operation are carried out
           by the <b>Hungarian Innovation Agency PLC (NIÜ)</b>.

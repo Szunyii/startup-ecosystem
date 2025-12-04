@@ -1,7 +1,5 @@
 import React from "react";
 
-import { Separator } from "@/components/ui/separator";
-
 import StartupDataTable, { columns } from "@/components/StartupDataTable";
 import { prisma } from "@/lib/db/prisma";
 import CardSection from "@/components/CardSection";
@@ -33,7 +31,41 @@ async function StartupPage(props: {
   });
 
   return (
-    <div>
+    <div className="relative">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute  left-0 top-1/4 z-0 transform-gpu blur-3xl"
+      >
+        <div
+          style={{
+            clipPath: "circle(50% at 50% 50%)",
+          }}
+          className="relative aspect-square  w-[56.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-primary to-[#9089fc] opacity-10 sm:left-[calc(50%-30rem)] z-0"
+        />
+      </div>
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute  -right-0 top-2/4 z-0 transform-gpu blur-3xl"
+      >
+        <div
+          style={{
+            clipPath: "circle(50% at 50% 50%)",
+          }}
+          className="relative aspect-square  w-[56.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-primary to-[#9089fc] opacity-10 sm:left-[calc(50%-30rem)] z-0"
+        />
+      </div>
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute  right-0 top-1 z-0 transform-gpu blur-3xl"
+      >
+        <div
+          style={{
+            clipPath: "circle(50% at 50% 50%)",
+          }}
+          className="relative aspect-square  w-[26.125rem]  rotate-[30deg] bg-gradient-to-tr from-primary to-[#9089fc] opacity-10 sm:left-[calc(50%-30rem)] z-0"
+        />
+      </div>
+
       <div className="my-4 mx-2 flex items-center gap-4 mt-8 justify-between flex-row ">
         <div className="flex gap-4 flex-col flex-wrap">
           <h1 className=" text-4xl font-bold text-white">Startup Database</h1>
@@ -44,24 +76,11 @@ async function StartupPage(props: {
           <AccordionDatabase />
         </Faq>
       </div>
-      <Separator />
-      <section className="flex flex-col md:flex-row w-full gap-2 gap-x-4 transition-all my-4 text-white">
-        <div className="px-4 flex lg:w-1/4 mr-3">
-          <div className="flex flex-col justify-center gap-2">
-            <div>
-              <p className="font-light text-muted-foreground text-white">
-                Indicators
-              </p>
-              <h1 className="text-4xl font-bold">{q}</h1>
-            </div>
 
-            <p className="text-sm">Compared to the previous year</p>
-          </div>
-          <Separator className="ml-4" orientation="vertical" />
-        </div>
+      <section className="flex flex-col md:flex-row w-full gap-x-4 transition-all my-4 text-white flex-grow">
         <CardSection qYear={q} />
       </section>
-      <Separator />
+
       {/* datatable */}
       <section className=" w-full py-10">
         <div className="lg:hidden block">

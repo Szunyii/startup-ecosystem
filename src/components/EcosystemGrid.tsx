@@ -43,7 +43,7 @@ function EcosystemGrid(data: { startups: StartupDataType[] }) {
             <h2 className="text-xl font-light italic text-white">
               Select stage
             </h2>
-            <div className="flex flex-col  rounded-xl bg-primary/80 ">
+            <div className="flex flex-col  rounded-xl bg-primary/15 ">
               {stageCategory.map((stage, i) => (
                 <div key={stage} className="w-full flex flex-col">
                   <Button
@@ -51,7 +51,7 @@ function EcosystemGrid(data: { startups: StartupDataType[] }) {
                     className={cn(
                       "w-full text-white justify-start font-light py-8 rounded-xl ",
                       selectedStage === stage
-                        ? "font-medium bg-primary"
+                        ? "font-medium bg-primary/30 "
                         : "font-light"
                     )}
                     variant="link"
@@ -74,7 +74,7 @@ function EcosystemGrid(data: { startups: StartupDataType[] }) {
               <h2 className="text-xl font-light italic text-white">
                 Select type
               </h2>
-              <div className="flex flex-col  rounded-xl bg-primary/80 ">
+              <div className="flex flex-col  rounded-xl bg-primary/15 ">
                 {typeCategory.map((type, i) => (
                   <div key={type} className="w-full flex flex-col">
                     <Button
@@ -82,7 +82,7 @@ function EcosystemGrid(data: { startups: StartupDataType[] }) {
                       className={cn(
                         "w-full text-white justify-start font-light py-8 rounded-xl",
                         selectedType === type
-                          ? "font-medium bg-primary"
+                          ? "font-medium bg-primary/30"
                           : "font-light"
                       )}
                       variant="link"

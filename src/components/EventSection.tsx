@@ -1,38 +1,44 @@
 "use client";
 import { Calendar } from "./ui/calendar";
 import { useRouter, useSearchParams } from "next/navigation";
-import { format, isAfter, isEqual } from "date-fns";
+import { format, isBefore, isEqual, startOfDay } from "date-fns";
 import eventsArray from "@/data/startup_events.json";
 import EventCard from "./EventCard";
+import React, { useRef } from "react";
+import { Button } from "./ui/button";
 
 function EventSection() {
   const router = useRouter();
   const searchParams = useSearchParams();
+  const eventRef = useRef<HTMLDivElement | null>(null);
 
-  // Get date from search params or use current date
+  // const enabledDays = eventsArray.map((d) => new Date(d.event_date));
+
+  const today = startOfDay(new Date());
+
+  // --TODO ref scolling
+  // date param olvasása
   const dateParam = searchParams.get("date");
-  const selectedDate = dateParam ? new Date(dateParam) : new Date();
+  const selectedDate = dateParam ? startOfDay(new Date(dateParam)) : undefined;
 
-  // Format the selected date for comparison
-  // const selectedDateString = format(selectedDate, "yyyy-MM-dd");
-  console.log(selectedDate);
-  const upcomingEvents = eventsArray
+  // Események szűrése:
+  // - ha van selectedDate → csak az aznapi
+  // - ha nincs → minden, ami ma vagy utánna van
+  const filteredEvents = eventsArray
     .filter((event) => {
-      const eventDate = new Date(event.event_date);
+      const eventDate = startOfDay(new Date(event.event_date));
 
-      return (
-        isAfter(eventDate, selectedDate) || isEqual(eventDate, selectedDate)
-      );
+      if (selectedDate) {
+        return isEqual(eventDate, selectedDate);
+      }
+
+      // alap eset: >= ma
+      return !isBefore(eventDate, today); // azaz eventDate >= today
     })
     .sort(
       (a, b) =>
         new Date(a.event_date).getTime() - new Date(b.event_date).getTime()
     );
-
-  // Filter events for the selected date
-  //   const eventsForDate = EVENTS.filter(
-  //     (event) => event.date === selectedDateString
-  //   );
 
   // Handle date selection
   const handleDateSelect = (date: Date | undefined) => {
@@ -42,27 +48,55 @@ function EventSection() {
     }
   };
 
+  // const isSameDay = (a: Date, b: Date) =>
+  //   a.getFullYear() === b.getFullYear() &&
+  //   a.getMonth() === b.getMonth() &&
+  //   a.getDate() === b.getDate();
+
   return (
     <div className="w-full flex flex-col md:flex-row p-8 min-h-[500px] gap-4">
-      <div className="flex-grow grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 order-2 md:order-none">
-        {upcomingEvents.map((event) => (
-          <EventCard
-            key={event.title}
-            event_date={event.event_date}
-            title={event.title}
-            event_url={event.event_url}
-            main_image_url={event.main_image_url}
-          />
-        ))}
+      <div
+        className="flex-grow grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 order-2 md:order-none"
+        ref={eventRef}
+        id="event"
+      >
+        {filteredEvents.length < 0 ? (
+          filteredEvents.map((event) => (
+            <EventCard
+              key={event.title}
+              event_date={event.event_date}
+              title={event.title}
+              event_url={event.event_url}
+              main_image_url={event.main_image_url}
+            />
+          ))
+        ) : (
+          <p className="text-center text-white"></p>
+        )}
       </div>
       <div className="flex-shrink">
         <Calendar
           hideWeekdays
           mode="single"
-          selected={selectedDate}
+          selected={selectedDate ?? today}
           onSelect={handleDateSelect}
+          // disabled={(day) => {
+          //   const isEnabled = enabledDays.some((d) => isSameDay(d, day));
+          //   return !isEnabled;
+          // }}
+          disabled={true}
           className="rounded-lg border flex-shrink-0 order-1 md:order-none bg-primary/80 text-white border-none"
         />
+        {dateParam ? (
+          <Button
+            className="mt-2"
+            onClick={() => {
+              router.replace("/#event");
+            }}
+          >
+            See all event
+          </Button>
+        ) : null}
       </div>
     </div>
   );

@@ -86,7 +86,20 @@ export default async function CardSection({ qYear }: { qYear: number }) {
 
   return (
     <section className="flex flex-col md:flex-row w-full gap-2 gap-x-4 transition-all my-4 flex-wrap">
-      <Card className="p-4 flex-1 bg-primary/60 border-none">
+      <Card className="p-4 bg-primary/20 border-none rounded-tr-none rounded-bl-none rounded-tl-3xl rounded-br-3xl  text-white">
+        <div className="flex flex-col justify-center gap-2">
+          <div>
+            <p className="font-light text-muted-foreground text-white">
+              Indicators
+            </p>
+            <h1 className="text-3xl font-bold">{qYear}</h1>
+          </div>
+
+          <p className="text-sm">Compared to the previous year</p>
+        </div>
+      </Card>
+
+      <Card className="p-4 flex-1 bg-primary/20 border-none rounded-tr-none rounded-bl-none rounded-tl-3xl rounded-br-3xl">
         <div className="flex justify-between gap-2">
           {/* label */}
           <div className="flex">
@@ -143,7 +156,7 @@ export default async function CardSection({ qYear }: { qYear: number }) {
           </p>
         </div>
       </Card>
-      <Card className="p-4 w-full lg:w-fit bg-primary/60 border-none">
+      <Card className="p-4 w-full lg:w-fit bg-primary/20 border-none rounded-tr-none rounded-bl-none rounded-tl-3xl rounded-br-3xl">
         <div className="flex justify-between gap-2">
           {/* label */}
           <div className="flex">
@@ -197,7 +210,7 @@ export default async function CardSection({ qYear }: { qYear: number }) {
           </p>
         </div>
       </Card>
-      <Card className="p-4 flex-1 bg-primary/60 border-none">
+      <Card className="p-4 flex-1 bg-primary/20 border-none rounded-tr-none rounded-bl-none rounded-tl-3xl rounded-br-3xl">
         <div className="flex justify-between gap-2">
           {/* label */}
           <div className="flex">

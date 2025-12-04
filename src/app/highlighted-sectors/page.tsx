@@ -10,11 +10,34 @@ import React from "react";
 
 function page() {
   return (
-    <div className="min-h-screen py-6 text-white flex items-center flex-col">
+    <div className="min-h-screen py-6 text-white flex items-center flex-col relative">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute  left-0 top-1/4 z-0 transform-gpu blur-3xl"
+      >
+        <div
+          style={{
+            clipPath: "circle(50% at 50% 50%)",
+          }}
+          className="relative aspect-square  w-[56.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-primary to-[#9089fc] opacity-10 sm:left-[calc(50%-30rem)] z-0"
+        />
+      </div>
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute  right-0 top-1 z-0 transform-gpu blur-3xl"
+      >
+        <div
+          style={{
+            clipPath: "circle(50% at 50% 50%)",
+          }}
+          className="relative aspect-square  w-[26.125rem]  rotate-[30deg] bg-gradient-to-tr from-primary to-[#9089fc] opacity-10 sm:left-[calc(50%-30rem)] z-0"
+        />
+      </div>
       <h1 className="text-center text-2xl mb-5 text-[42px] mt-4">
         Innovation Ecosystem Strength in Hungary
       </h1>
-      <h3 className="text-center">
+
+      <h3 className="text-center mb-10">
         Over the past decade,{" "}
         <b>
           Hungary&apos;s startup ecosystem has shown sustained strength and
@@ -30,12 +53,13 @@ function page() {
           shaping the future of the Hungarian innovation economy.
         </p>
       </h3>
-      <div className="grid grid-cols-2 grid-rows-3 w-full gap-8 mt-6">
-        <Card className="bg-[#120937] text-white border-none ">
+      {/* grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-3 w-full gap-4 mt-6 ">
+        <Card className="bg-primary/20 text-white border-none rounded-tr-none rounded-bl-none rounded-tl-3xl rounded-br-3xl">
           <CardHeader>
             <div className="flex items-center gap-x-3">
               <Image
-                src={"/icon/science.png"}
+                src={"/icon/lifescience.png"}
                 alt="icon"
                 width={35}
                 height={35}
@@ -185,7 +209,7 @@ function page() {
             </div>
           </CardFooter>
         </Card>
-        <Card className="bg-[#120937] text-white border-none">
+        <Card className="bg-primary/20 text-white border-none rounded-tr-none rounded-bl-none rounded-tl-3xl rounded-br-3xl">
           <CardHeader>
             <div className="flex items-center gap-x-3">
               <Image src={"/icon/AI.png"} alt="icon" width={35} height={35} />
@@ -306,7 +330,7 @@ function page() {
           </CardFooter>
         </Card>
         {/* fintech */}
-        <Card className="bg-[#120937] text-white border-none">
+        <Card className="bg-primary/20 text-white border-none rounded-tr-none rounded-bl-none rounded-tl-3xl rounded-br-3xl">
           <CardHeader>
             <div className="flex items-center gap-x-3">
               <Image src={"/icon/tech.png"} alt="icon" width={35} height={35} />
@@ -391,11 +415,11 @@ function page() {
           </CardFooter>
         </Card>
         {/* enterprise */}
-        <Card className="bg-[#120937] text-white border-none">
+        <Card className="bg-primary/20 text-white border-none rounded-tr-none rounded-bl-none rounded-tl-3xl rounded-br-3xl">
           <CardHeader>
             <div className="flex items-center gap-x-3">
               <Image
-                src={"/icon/science.png"}
+                src={"/icon/software.png"}
                 alt="icon"
                 width={35}
                 height={35}
@@ -485,7 +509,7 @@ function page() {
             </div>
           </CardFooter>
         </Card>
-        <Card className="bg-[#120937] text-white border-none">
+        <Card className="bg-primary/20 text-white border-none rounded-tr-none rounded-bl-none rounded-tl-3xl rounded-br-3xl">
           <CardHeader>
             <div className="flex items-center gap-x-3">
               <Image

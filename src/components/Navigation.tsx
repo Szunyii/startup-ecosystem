@@ -21,7 +21,7 @@ function Navigation() {
 
   return (
     <>
-      <header className=" w-full">
+      <header className=" w-full z-50 relative">
         <nav className="flex justify-between items-center py-4 bg-[#5d3dff] px-8 mt-3 rounded-br-3xl rounded-tl-3xl text-cyan-50">
           <Link href={"/"}>
             <Image src={"/niu-logo.png"} width={150} height={100} alt="link" />

@@ -58,7 +58,6 @@ function Footer() {
               sajto@niu.hu
             </a>
           </div>
-          <p>Headquarters: 1133 Budapest, Pozsonyi út 56.</p>
           <a
             className="hover:underline flex gap-x-2 "
             href="https://maps.app.goo.gl/BhxV7LeYYrAtEnFj6"
