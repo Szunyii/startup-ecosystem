@@ -1,6 +1,7 @@
 // import EventSection from "@/components/EventSection";
 import EventSection from "@/components/EventSection";
 import { ChevronDownIcon } from "lucide-react";
+import { Suspense } from "react";
 
 export default function HomePage() {
   return (
@@ -25,7 +26,9 @@ export default function HomePage() {
           <h3 className="text-muted text-center text-sm mb-3">
             Explore upcoming startup events
           </h3>
-          <EventSection />
+          <Suspense fallback={"Loading"}>
+            <EventSection />
+          </Suspense>
         </section>
       </div>
     </>

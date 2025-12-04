@@ -300,7 +300,7 @@ function page() {
         <Leaf className="left-[134px] opacity-10" />
         {/* ------- */}
         <Leaf className="bottom-8 -left-12 size-44 opacity-25" />
-        <Leaf className="left-0 -bottom-20 -left-10 opacity-10 size-24" />
+        <Leaf className=" -bottom-20 -left-10 opacity-10 size-24" />
         <h2 className="text-[24px] text-center font-bold z-20">
           5. Large multinational corporates play a decisive role in
           Hungary&apos;s innovation ecosystem bringing their R&D centers to
