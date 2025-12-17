@@ -14,10 +14,7 @@ export default function HomePage() {
               map
             </h2>
             <a className="mt-9 z-20 content-center items-center" href="#events">
-              <ChevronDownIcon
-                size={40}
-                className="animate-bounce duration-[6000s]"
-              />
+              <ChevronDownIcon size={40} className={"animate-bounce"} />
             </a>
           </div>
         </div>
