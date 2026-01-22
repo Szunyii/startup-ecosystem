@@ -111,7 +111,7 @@ function EcosystemRegForm() {
                       <FormLabel>Company Name</FormLabel>
                       <FormControl>
                         <Input
-                          placeholder="National Innovation agency Ltd."
+                          placeholder="Hungarian Innovation Agency Ltd."
                           {...field}
                         />
                       </FormControl>

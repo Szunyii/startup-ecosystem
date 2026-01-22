@@ -12,6 +12,7 @@ const links = [
   { href: "/highlighted-sectors", label: "Highlighted Sectors" },
   { href: "/startups", label: "Startup database" },
   { href: "/ecosystem", label: "Startup ecosystem" },
+  { href: "/legal-library", label: "Legal Library" },
   { href: "/registry", label: "Registration" },
 ];
 

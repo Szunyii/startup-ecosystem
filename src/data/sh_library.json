@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Founders' Agreement",
+    "descripton": "A Founders Agreement is a must-have for any startup, setting out the roles, responsibilities, and ownership stakes of each co-founder. It covers important topics like share ownership, voting rights, non-compete clauses, dividends, reverse vesting and employee stock options. The agreement also helps manage potential disputes, founder exits, and protects confidential information. By laying down these clear rules, the agreement helps avoid conflicts and ensures everyone is on the same page, providing a solid foundation for the startup's growth.\n\n Please note that neither Startup Hungary, nor any law firm or attorney involved in preparing these documents assumes responsibility for their content or consequences of their use. These documents do not constitute legal advice for any specific circumstances.",
+    "link": "https://cdn.prod.website-files.com/648192c742437e3bb535b994/69206dcfda3b20d6e2858879_Alapitoi_megallapodas_Founders%20Agreement.docx"
+  },
+  {
+    "id": 2,
+    "name": "Term Sheet",
+    "descripton": "A Term Sheet is like the blueprint for an investment deal. It outlines key terms like the amount being invested, company valuation, and investor rights (voting, liquidation preferences, anti-dilution, and pre-emption). It also covers founder vesting and share buybacks if a founder exits. Investors get a say in major company decisions, and founders agree to confidentiality and non-compete clauses. While not legally binding, it sets the stage for final agreements, providing a roadmap for the investment process.\n\n Please note that neither Startup Hungary, nor any law firm or attorney involved in preparing these documents assumes responsibility for their content or consequences of their use. These documents do not constitute legal advice for any specific circumstances.",
+    "link": "https://cdn.prod.website-files.com/648192c742437e3bb535b994/692074edb5117c13fda0f57d_Seed-Equity-Investment-Term-Sheet.docx"
+  },
+  {
+    "id": 3,
+    "name": "ESOP",
+    "descripton": "An Employee Stock Option Plan (ESOP) gives employees or other stakeholders the right to buy shares in the company under agreed terms. It outlines how many shares they can purchase, the price, and the vesting schedule (typically over four years). It also covers what happens if they leave the company, with different rules for 'Good Leaver,' 'Bad Leaver,' or 'Voluntary Leaver' situations. The ESOP ensures both the company and the Optionholder are protected, providing a clear path for acquiring and managing equity.\n\n Please note that neither Startup Hungary, nor any law firm or attorney involved in preparing these documents assumes responsibility for their content or consequences of their use. These documents do not constitute legal advice for any specific circumstances.",
+    "link": "https://cdn.prod.website-files.com/648192c742437e3bb535b994/692074dca435c5107ed192f0_ESOP.docx"
+  },
+  {
+    "id": 4,
+    "name": "Convertible Loan Approval Agreement",
+    "descripton": "The Seed Convertible Loan Approval Agreement lets investors enforce the conversion into shares, while shareholders agree to back the process. Both protect the interests of the company and investors all governed by Hungarian law.\n\n Please note that neither Startup Hungary, nor any law firm or attorney involved in preparing these documents assumes responsibility for their content or consequences of their use. These documents do not constitute legal advice for any specific circumstances.",
+    "link": "https://cdn.prod.website-files.com/648192c742437e3bb535b994/692d99ece83708a8577b1dfa_02_SEED%20.docx"
+  },
+  {
+    "id": 5,
+    "name": "Convertible Loan",
+    "descripton": "The Seed Convertible Loan Agreement details how a company can raise funds through a loan that converts into shares later. Key terms include the loan amount, interest rate, discount, and valuation cap. The loan converts into equity during a financing event or at maturity. It also spells out pre-emptive rights, conversion processes, and confidentiality obligations.\n\n Please note that neither Startup Hungary, nor any law firm or attorney involved in preparing these documents assumes responsibility for their content or consequences of their use. These documents do not constitute legal advice for any specific circumstances.",
+    "link": "https://cdn.prod.website-files.com/648192c742437e3bb535b994/692d999b44d181e340edf647_01_CONVERTIBLE%20INSTRUMENTS.docx"
+  },
+  {
+    "id": 6,
+    "name": "SAFE",
+    "descripton": "A Post-Money SAFE (Simple Agreement for Future Equity) is an agreement where an investor provides funding in exchange for a future stake in the company, typically at the next equity financing round. The terms include a valuation cap and discount, defining the price at which the investment will convert into equity. The SAFE offers investors rights to convert their investment into preferred stock but doesn't give them immediate equity. It also includes rules on liquidation, investor rights, and legal obligations, offering a simple yet effective way to raise capital.\n\n Please note that neither Startup Hungary, nor any law firm or attorney involved in preparing these documents assumes responsibility for their content or consequences of their use. These documents do not constitute legal advice for any specific circumstances.",
+    "link": "https://cdn.prod.website-files.com/648192c742437e3bb535b994/692ec0caf2d2f946e3d1553f_03_SAFE.docx"
+  }
+]

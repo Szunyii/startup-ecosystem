@@ -1,0 +1,443 @@
+[
+  {
+    "title": "4YFN (4 Years From Now)",
+    "event_url": "https://www.4yfn.com",
+    "event_date": "2026-03-02",
+    "location": "Barcelona, Spain",
+    "type": "Globális",
+    "category": "Other",
+    "country": "Spain"
+  },
+  {
+    "title": "Africa Tech Summit (London)",
+    "event_url": "https://www.africatechsummit.com",
+    "event_date": "2026-05-29",
+    "location": "London, UK",
+    "type": "Globális",
+    "category": "Summit",
+    "country": "UK"
+  },
+  {
+    "title": "Africa Tech Summit (Nairobi)",
+    "event_url": "https://www.africatechsummit.com",
+    "event_date": "2026-02-11",
+    "location": "Nairobi, Kenya",
+    "type": "Globális",
+    "category": "Summit",
+    "country": "Kenya"
+  },
+  {
+    "title": "ARCTIC15 Startup Conference \n",
+    "event_url": "https://arctic15.com/",
+    "event_date": "2026-06-11",
+    "location": "Helsinki, Finland",
+    "type": "Globális",
+    "category": "Conference",
+    "country": "Finland"
+  },
+  {
+    "title": "Asia Tech x Singapore",
+    "event_url": "https://asiatechxsg.com/",
+    "event_date": "May 20-22 2026",
+    "location": "Singapore, Singapore",
+    "type": "Globális",
+    "category": "Other",
+    "country": "Singapore"
+  },
+  {
+    "title": "AWS re:Invent",
+    "event_url": "https://reinvent.awsevents.com",
+    "event_date": "Nov 30 - Dec 4 2026",
+    "location": "Las Vegas, USA",
+    "type": "Globális",
+    "category": "Other",
+    "country": "USA"
+  },
+  {
+    "title": "Bits & Pretzels",
+    "event_url": "https://www.bitsandpretzels.com",
+    "event_date": "2026-09-28",
+    "location": "Munich, Germany",
+    "type": "Globális",
+    "category": "Other",
+    "country": "Germany"
+  },
+  {
+    "title": "CES",
+    "event_url": "https://ces.tech",
+    "event_date": "2026-01-06",
+    "location": "Las Vegas, USA",
+    "type": "Globális",
+    "category": "Other",
+    "country": "USA"
+  },
+  {
+    "title": "Dublin Tech Summit",
+    "event_url": "https://dublintechsummit.tech/",
+    "event_date": "2026-05-27",
+    "location": "Dublin, Ireland",
+    "type": "Globális",
+    "category": "Summit",
+    "country": "Ireland"
+  },
+  {
+    "title": "Echelon / e27",
+    "event_url": "https://e27.co/echelon",
+    "event_date": "2026-06-10",
+    "location": "Singapore",
+    "type": "Globális",
+    "category": "Other",
+    "country": "Singapore"
+  },
+  {
+    "title": "Energy Tech Summit",
+    "event_url": "https://energytechsummit.com/",
+    "event_date": "2026-04-15",
+    "location": "Bilbao, Spain",
+    "type": "Globális",
+    "category": "Summit",
+    "country": "Spain"
+  },
+  {
+    "title": "EU-Startups Summit",
+    "event_url": "https://www.eu-startups.com/summit/?gad_source=1&gad_campaignid=22107758862&gbraid=0AAAAAC2bgJKRkLaBMjskuXDK2GwmGEzhi&gclid=Cj0KCQiA6Y7KBhCkARIsAOxhqtNYrweWUdlwmgbeRNzAcRoTVfeUz9SRTjrAhTf79Gg08yHRFnT4yVwaAgGwEALw_wcB",
+    "event_date": "2026-05-07",
+    "location": "Valetta, Malta",
+    "type": "Globális",
+    "category": "Summit",
+    "country": "Malta"
+  },
+  {
+    "title": "Founders Forum",
+    "event_url": "https://ff.co/events-for-founders/founders-forum/",
+    "event_date": "2026-06-09",
+    "location": "London, UK",
+    "type": "Globális",
+    "category": "Forum",
+    "country": "UK"
+  },
+  {
+    "title": "Gen-E",
+    "event_url": "https://gen-e.eu/",
+    "event_date": "2026-07-07",
+    "location": "Riga, Latvia",
+    "type": "CEE",
+    "category": "Other",
+    "country": "Latvia"
+  },
+  {
+    "title": "GITEX Global",
+    "event_url": "https://www.gitex.com",
+    "event_date": "2026-12-07",
+    "location": "Dubai, UAE",
+    "type": "Globális",
+    "category": "Other",
+    "country": "UAE"
+  },
+  {
+    "title": "Google Cloud Next",
+    "event_url": "https://cloud.withgoogle.com/next",
+    "event_date": "2026-04-22",
+    "location": "Las Vegas, USA",
+    "type": "Globális",
+    "category": "Other",
+    "country": "USA"
+  },
+  {
+    "title": "Hello Tomorrow Summit",
+    "event_url": "https://hello-tomorrow.org",
+    "event_date": "2026-06-11",
+    "location": "Amsterdam, Netherlands",
+    "type": "Globális",
+    "category": "Summit",
+    "country": "Netherlands"
+  },
+  {
+    "title": "London Tech Week",
+    "event_url": "https://londontechweek.com",
+    "event_date": "2026-06-08",
+    "location": "London, UK",
+    "type": "Globális",
+    "category": "Other",
+    "country": "UK"
+  },
+  {
+    "title": "Mobile World Congress (MWC)",
+    "event_url": "https://www.mwcbarcelona.com",
+    "event_date": "2026-03-02",
+    "location": "Barcelona, Spain",
+    "type": "Globális",
+    "category": "Other",
+    "country": "Spain"
+  },
+  {
+    "title": "Money20/20 Europe",
+    "event_url": "https://www.money2020.com",
+    "event_date": "2026-06-02",
+    "location": "Amsterdam, Netherlands",
+    "type": "Globális",
+    "category": "Other",
+    "country": "Netherlands"
+  },
+  {
+    "title": "Money20/20 US",
+    "event_url": "https://us.money2020.com/",
+    "event_date": "2026-10-18",
+    "location": "Las Vegas, USA",
+    "type": "Globális",
+    "category": "Other",
+    "country": "USA"
+  },
+  {
+    "title": "Nordic Business Forum",
+    "event_url": "https://nbforum.com",
+    "event_date": "2026-09-24",
+    "location": "Helsinki, Finland",
+    "type": "Globális",
+    "category": "Forum",
+    "country": "Finland"
+  },
+  {
+    "title": "Pioneers Festival",
+    "event_url": "https://pioneers.io",
+    "event_date": "2026-05-21",
+    "location": "Vienna, Austria",
+    "type": "Globális",
+    "category": "Other",
+    "country": "Austria"
+  },
+  {
+    "title": "SaaStock",
+    "event_url": "https://www.saastock.com",
+    "event_date": "2026-10-13",
+    "location": "Dublin, Ireland",
+    "type": "Globális",
+    "category": "Other",
+    "country": "Ireland"
+  },
+  {
+    "title": "SaaStr Annual",
+    "event_url": "https://www.saastr.com/annual/",
+    "event_date": "2026-05-12",
+    "location": "San Francisco, USA",
+    "type": "Globális",
+    "category": "Other",
+    "country": "USA"
+  },
+  {
+    "title": "Sifted Summit",
+    "event_url": "https://summit.sifted.eu/",
+    "event_date": "Oct 8-9 2026",
+    "location": "London, UK",
+    "type": "Globális",
+    "category": "Summit",
+    "country": "UK"
+  },
+  {
+    "title": "Singapore FinTech Festival",
+    "event_url": "https://www.fintechfestival.sg/",
+    "event_date": "2026-11-18",
+    "location": "Singapore, Singapore",
+    "type": "Globális",
+    "category": "Other",
+    "country": "Singapore"
+  },
+  {
+    "title": "Slush",
+    "event_url": "https://slush.org",
+    "event_date": "2026-11-18",
+    "location": "Helsinki, Finland",
+    "type": "Globális",
+    "category": "Other",
+    "country": "Finland"
+  },
+  {
+    "title": "South Summit",
+    "event_url": "https://www.southsummit.io/e/madrid",
+    "event_date": "2026-06-03",
+    "location": "Madrid, Spain",
+    "type": "Globális",
+    "category": "Summit",
+    "country": "Spain"
+  },
+  {
+    "title": "sTARTUp Day",
+    "event_url": "https://www.startupday.ee/",
+    "event_date": "2026-01-28",
+    "location": "Tartu, Estonia",
+    "type": "CEE",
+    "category": "Other",
+    "country": "Estonia"
+  },
+  {
+    "title": "Startup Grind Global Conference",
+    "event_url": "https://www.startupgrind.com",
+    "event_date": "2026-04-27",
+    "location": "San Francisco, USA",
+    "type": "Globális",
+    "category": "Conference",
+    "country": "USA"
+  },
+  {
+    "title": "Startup Olé (Spain)",
+    "event_url": "https://startupole.eu",
+    "event_date": "Sep 13-15 2026",
+    "location": "Salamanca, Spain ",
+    "type": "Globális",
+    "category": "Other",
+    "country": "Spain"
+  },
+  {
+    "title": "Startupfest",
+    "event_url": "https://startupfest.com",
+    "event_date": "2026-07-08",
+    "location": "Montreal, Canada",
+    "type": "Globális",
+    "category": "Other",
+    "country": "Canada"
+  },
+  {
+    "title": "STEP Conference (Dubai)",
+    "event_url": "https://www.stepconference.com",
+    "event_date": "2026-02-11",
+    "location": "Dubai, UAE",
+    "type": "Globális",
+    "category": "Conference",
+    "country": "UAE"
+  },
+  {
+    "title": "Stiftung Entrepreneurship",
+    "event_url": "https://entrepreneurship.de/en",
+    "event_date": "2026-10-17",
+    "location": "Berlin, Germany",
+    "type": "Globális",
+    "category": "Other",
+    "country": "Germany"
+  },
+  {
+    "title": "Tech Open Air (TOA)",
+    "event_url": "https://toa.berlin",
+    "event_date": "2026-06-04",
+    "location": "Berlin, Germany",
+    "type": "Globális",
+    "category": "Other",
+    "country": "Germany"
+  },
+  {
+    "title": "Tech.eu Summit London",
+    "event_url": "https://tech.eu/event/2026/summit-london/",
+    "event_date": "2026-04-21",
+    "location": "London, UK",
+    "type": "Globális",
+    "category": "Summit",
+    "country": "UK"
+  },
+  {
+    "title": "TechArena",
+    "event_url": "https://techarena.se/",
+    "event_date": "2026-02-11",
+    "location": "Stockholm, Sweden",
+    "type": "Globális",
+    "category": "Other",
+    "country": "Sweden"
+  },
+  {
+    "title": "TechBBQ",
+    "event_url": "https://techbbq.dk",
+    "event_date": "2026-08-26",
+    "location": "Copenhagen, Denmark",
+    "type": "Globális",
+    "category": "Other",
+    "country": "Denmark"
+  },
+  {
+    "title": "Techsylvania",
+    "event_url": "https://techsylvania.com/?gad_source=1&gad_campaignid=23252706150&gbraid=0AAAAADHoE4xEKltTlWdDDousbM_Cd9bgc&gclid=Cj0KCQiA6Y7KBhCkARIsAOxhqtMVeqhFHqk_qDuuETJSrzHbtKXOqWELQrjUEGYG_bfBerbeBkQpDLIaAs6ZEALw_wcB",
+    "event_date": "2026-06-24",
+    "location": "Cluj-Napoca, Romania",
+    "type": "CEE",
+    "category": "Other",
+    "country": "Romania"
+  },
+  {
+    "title": "The Amsterdam AI Conference 2026",
+    "event_url": "https://www.iamsterdam.com/en/business/calendar/events/all/the-amsterdam-ai-conference-2026",
+    "event_date": "2026-01-29",
+    "location": "Amsterdam, Netherlands",
+    "type": "Globális",
+    "category": "Conference",
+    "country": "Netherlands"
+  },
+  {
+    "title": "The Dublin AI Conference 2026",
+    "event_url": "https://dublin.ie/whats-on/listings/the-dublin-ai-conference/",
+    "event_date": "2026-01-30",
+    "location": "Dublin, Ireland",
+    "type": "Globális",
+    "category": "Conference",
+    "country": "Ireland"
+  },
+  {
+    "title": "The Stockholm AI Conference",
+    "event_url": "https://www.eventbrite.ie/e/the-stockholm-ai-conference-2026-tickets-1848998196379",
+    "event_date": "2026-05-21",
+    "location": "Stockholm, Sweden",
+    "type": "Globális",
+    "category": "Conference",
+    "country": "Sweden"
+  },
+  {
+    "title": "VivaTech",
+    "event_url": "https://vivatechnology.com",
+    "event_date": "2026-06-17",
+    "location": "Paris, France",
+    "type": "Globális",
+    "category": "Other",
+    "country": "France"
+  },
+  {
+    "title": "WeAreDevelopers World Congress",
+    "event_url": "https://www.wearedevelopers.com/world-congress",
+    "event_date": "2026-07-08",
+    "location": "Berlin, Germany",
+    "type": "Globális",
+    "category": "Other",
+    "country": "Germany"
+  },
+  {
+    "title": "Web Summit",
+    "event_url": "https://websummit.com",
+    "event_date": "2026-11-09",
+    "location": "Lisbon, Portugal",
+    "type": "Globális",
+    "category": "Summit",
+    "country": "Portugal"
+  },
+  {
+    "title": "Web Summit Vancouver",
+    "event_url": "https://collisionconf.com",
+    "event_date": "May 11-14 2026",
+    "location": "Vancouver, Canada",
+    "type": "Globális",
+    "category": "Summit",
+    "country": "Canada"
+  },
+  {
+    "title": "Webit Festival",
+    "event_url": "https://webit.org",
+    "event_date": "2026-06-26",
+    "location": "Sofia, Bulgaria",
+    "type": "CEE",
+    "category": "Other",
+    "country": "Bulgaria"
+  },
+  {
+    "title": "Wolves Summit",
+    "event_url": "https://wolvessummit.com",
+    "event_date": "2026-04-21",
+    "location": "Warsaw, Poland",
+    "type": "CEE",
+    "category": "Summit",
+    "country": "Poland"
+  }
+]

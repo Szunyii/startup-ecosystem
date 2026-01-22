@@ -93,7 +93,7 @@ function page() {
               </li>
             </ul>
           </div>
-          <Card className="w-full flex flex-[45%] justify-center items-center border-primary/20 bg-[#12093733]/10 h-min z-30">
+          <Card className="w-full flex flex-[45%] justify-center items-center border-primary/20 bg-[#31255e33] h-min z-30">
             <Image src={"/icon/1.png"} width={800} height={600} alt="image" />
           </Card>
         </div>

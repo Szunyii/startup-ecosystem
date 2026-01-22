@@ -2,7 +2,7 @@
 import { Calendar } from "./ui/calendar";
 import { useRouter, useSearchParams } from "next/navigation";
 import { format, isBefore, isEqual, startOfDay } from "date-fns";
-import eventsArray from "@/data/startup_events.json";
+import eventsArray from "@/data/events.json";
 import EventCard from "./EventCard";
 import React, { useRef } from "react";
 import { Button } from "./ui/button";
@@ -12,7 +12,7 @@ function EventSection() {
   const searchParams = useSearchParams();
   const eventRef = useRef<HTMLDivElement | null>(null);
 
-  // const enabledDays = eventsArray.map((d) => new Date(d.event_date));
+  const enabledDays = eventsArray.map((d) => new Date(d.event_date));
 
   const today = startOfDay(new Date());
 
@@ -37,7 +37,7 @@ function EventSection() {
     })
     .sort(
       (a, b) =>
-        new Date(a.event_date).getTime() - new Date(b.event_date).getTime()
+        new Date(a.event_date).getTime() - new Date(b.event_date).getTime(),
     );
 
   // Handle date selection
@@ -48,10 +48,10 @@ function EventSection() {
     }
   };
 
-  // const isSameDay = (a: Date, b: Date) =>
-  //   a.getFullYear() === b.getFullYear() &&
-  //   a.getMonth() === b.getMonth() &&
-  //   a.getDate() === b.getDate();
+  const isSameDay = (a: Date, b: Date) =>
+    a.getFullYear() === b.getFullYear() &&
+    a.getMonth() === b.getMonth() &&
+    a.getDate() === b.getDate();
 
   return (
     <div className="w-full flex flex-col md:flex-row p-8 min-h-[500px] gap-4">
@@ -60,14 +60,15 @@ function EventSection() {
         ref={eventRef}
         id="event"
       >
-        {filteredEvents.length < 0 ? (
+        {filteredEvents.length > 0 ? (
           filteredEvents.map((event) => (
             <EventCard
               key={event.title}
               event_date={event.event_date}
               title={event.title}
               event_url={event.event_url}
-              main_image_url={event.main_image_url}
+              eventFlag={event.country}
+              category={event.category}
             />
           ))
         ) : (
@@ -80,11 +81,10 @@ function EventSection() {
           mode="single"
           selected={selectedDate ?? today}
           onSelect={handleDateSelect}
-          // disabled={(day) => {
-          //   const isEnabled = enabledDays.some((d) => isSameDay(d, day));
-          //   return !isEnabled;
-          // }}
-          disabled={true}
+          disabled={(day) => {
+            const isEnabled = enabledDays.some((d) => isSameDay(d, day));
+            return !isEnabled;
+          }}
           className="rounded-lg border flex-shrink-0 order-1 md:order-none bg-primary/80 text-white border-none"
         />
         {dateParam ? (

@@ -5,6 +5,7 @@ import MaxWidthWraper from "@/components/MaxWidthWrapper";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Fotter";
 import BgImage from "@/components/BgImage";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -62,6 +63,7 @@ export default async function RootLayout({
           <Footer />
         </div>
       </body>
+      <GoogleAnalytics gaId="G-41SDPF4YC4" />
     </html>
   );
 }

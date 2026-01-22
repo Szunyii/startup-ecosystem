@@ -13,7 +13,10 @@ export default function HomePage() {
               Facilitating Hungarian startups visibility on the global ecosystem
               map
             </h2>
-            <a className="mt-9 z-20 content-center items-center" href="#events">
+            <a
+              className="mt-9 flex flex-col z-20 content-center items-center"
+              href="#events"
+            >
               <ChevronDownIcon size={40} className={"animate-bounce"} />
             </a>
           </div>
