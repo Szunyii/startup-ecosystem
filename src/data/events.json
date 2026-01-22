@@ -5,7 +5,7 @@
     "event_date": "2026-03-02",
     "location": "Barcelona, Spain",
     "type": "Globális",
-    "category": "Other",
+    "category": "other",
     "country": "Spain"
   },
   {
@@ -14,7 +14,7 @@
     "event_date": "2026-05-29",
     "location": "London, UK",
     "type": "Globális",
-    "category": "Summit",
+    "category": "summit",
     "country": "UK"
   },
   {
@@ -23,7 +23,7 @@
     "event_date": "2026-02-11",
     "location": "Nairobi, Kenya",
     "type": "Globális",
-    "category": "Summit",
+    "category": "summit",
     "country": "Kenya"
   },
   {
@@ -32,7 +32,7 @@
     "event_date": "2026-06-11",
     "location": "Helsinki, Finland",
     "type": "Globális",
-    "category": "Conference",
+    "category": "conference",
     "country": "Finland"
   },
   {
@@ -41,7 +41,7 @@
     "event_date": "May 20-22 2026",
     "location": "Singapore, Singapore",
     "type": "Globális",
-    "category": "Other",
+    "category": "other",
     "country": "Singapore"
   },
   {
@@ -50,7 +50,7 @@
     "event_date": "Nov 30 - Dec 4 2026",
     "location": "Las Vegas, USA",
     "type": "Globális",
-    "category": "Other",
+    "category": "other",
     "country": "USA"
   },
   {
@@ -59,7 +59,7 @@
     "event_date": "2026-09-28",
     "location": "Munich, Germany",
     "type": "Globális",
-    "category": "Other",
+    "category": "other",
     "country": "Germany"
   },
   {
@@ -68,7 +68,7 @@
     "event_date": "2026-01-06",
     "location": "Las Vegas, USA",
     "type": "Globális",
-    "category": "Other",
+    "category": "other",
     "country": "USA"
   },
   {
@@ -77,7 +77,7 @@
     "event_date": "2026-05-27",
     "location": "Dublin, Ireland",
     "type": "Globális",
-    "category": "Summit",
+    "category": "summit",
     "country": "Ireland"
   },
   {
@@ -86,7 +86,7 @@
     "event_date": "2026-06-10",
     "location": "Singapore",
     "type": "Globális",
-    "category": "Other",
+    "category": "other",
     "country": "Singapore"
   },
   {
@@ -95,7 +95,7 @@
     "event_date": "2026-04-15",
     "location": "Bilbao, Spain",
     "type": "Globális",
-    "category": "Summit",
+    "category": "summit",
     "country": "Spain"
   },
   {
@@ -104,7 +104,7 @@
     "event_date": "2026-05-07",
     "location": "Valetta, Malta",
     "type": "Globális",
-    "category": "Summit",
+    "category": "summit",
     "country": "Malta"
   },
   {
@@ -113,7 +113,7 @@
     "event_date": "2026-06-09",
     "location": "London, UK",
     "type": "Globális",
-    "category": "Forum",
+    "category": "forum",
     "country": "UK"
   },
   {
@@ -122,7 +122,7 @@
     "event_date": "2026-07-07",
     "location": "Riga, Latvia",
     "type": "CEE",
-    "category": "Other",
+    "category": "other",
     "country": "Latvia"
   },
   {
@@ -131,7 +131,7 @@
     "event_date": "2026-12-07",
     "location": "Dubai, UAE",
     "type": "Globális",
-    "category": "Other",
+    "category": "other",
     "country": "UAE"
   },
   {
@@ -140,7 +140,7 @@
     "event_date": "2026-04-22",
     "location": "Las Vegas, USA",
     "type": "Globális",
-    "category": "Other",
+    "category": "other",
     "country": "USA"
   },
   {
@@ -149,7 +149,7 @@
     "event_date": "2026-06-11",
     "location": "Amsterdam, Netherlands",
     "type": "Globális",
-    "category": "Summit",
+    "category": "summit",
     "country": "Netherlands"
   },
   {
@@ -158,7 +158,7 @@
     "event_date": "2026-06-08",
     "location": "London, UK",
     "type": "Globális",
-    "category": "Other",
+    "category": "other",
     "country": "UK"
   },
   {
@@ -167,7 +167,7 @@
     "event_date": "2026-03-02",
     "location": "Barcelona, Spain",
     "type": "Globális",
-    "category": "Other",
+    "category": "other",
     "country": "Spain"
   },
   {
@@ -176,7 +176,7 @@
     "event_date": "2026-06-02",
     "location": "Amsterdam, Netherlands",
     "type": "Globális",
-    "category": "Other",
+    "category": "other",
     "country": "Netherlands"
   },
   {
@@ -185,7 +185,7 @@
     "event_date": "2026-10-18",
     "location": "Las Vegas, USA",
     "type": "Globális",
-    "category": "Other",
+    "category": "other",
     "country": "USA"
   },
   {
@@ -194,7 +194,7 @@
     "event_date": "2026-09-24",
     "location": "Helsinki, Finland",
     "type": "Globális",
-    "category": "Forum",
+    "category": "forum",
     "country": "Finland"
   },
   {
@@ -203,7 +203,7 @@
     "event_date": "2026-05-21",
     "location": "Vienna, Austria",
     "type": "Globális",
-    "category": "Other",
+    "category": "other",
     "country": "Austria"
   },
   {
@@ -212,7 +212,7 @@
     "event_date": "2026-10-13",
     "location": "Dublin, Ireland",
     "type": "Globális",
-    "category": "Other",
+    "category": "other",
     "country": "Ireland"
   },
   {
@@ -221,7 +221,7 @@
     "event_date": "2026-05-12",
     "location": "San Francisco, USA",
     "type": "Globális",
-    "category": "Other",
+    "category": "other",
     "country": "USA"
   },
   {
@@ -230,7 +230,7 @@
     "event_date": "Oct 8-9 2026",
     "location": "London, UK",
     "type": "Globális",
-    "category": "Summit",
+    "category": "summit",
     "country": "UK"
   },
   {
@@ -239,7 +239,7 @@
     "event_date": "2026-11-18",
     "location": "Singapore, Singapore",
     "type": "Globális",
-    "category": "Other",
+    "category": "other",
     "country": "Singapore"
   },
   {
@@ -248,7 +248,7 @@
     "event_date": "2026-11-18",
     "location": "Helsinki, Finland",
     "type": "Globális",
-    "category": "Other",
+    "category": "other",
     "country": "Finland"
   },
   {
@@ -257,7 +257,7 @@
     "event_date": "2026-06-03",
     "location": "Madrid, Spain",
     "type": "Globális",
-    "category": "Summit",
+    "category": "summit",
     "country": "Spain"
   },
   {
@@ -266,7 +266,7 @@
     "event_date": "2026-01-28",
     "location": "Tartu, Estonia",
     "type": "CEE",
-    "category": "Other",
+    "category": "other",
     "country": "Estonia"
   },
   {
@@ -275,7 +275,7 @@
     "event_date": "2026-04-27",
     "location": "San Francisco, USA",
     "type": "Globális",
-    "category": "Conference",
+    "category": "conference",
     "country": "USA"
   },
   {
@@ -284,7 +284,7 @@
     "event_date": "Sep 13-15 2026",
     "location": "Salamanca, Spain ",
     "type": "Globális",
-    "category": "Other",
+    "category": "other",
     "country": "Spain"
   },
   {
@@ -293,7 +293,7 @@
     "event_date": "2026-07-08",
     "location": "Montreal, Canada",
     "type": "Globális",
-    "category": "Other",
+    "category": "other",
     "country": "Canada"
   },
   {
@@ -302,7 +302,7 @@
     "event_date": "2026-02-11",
     "location": "Dubai, UAE",
     "type": "Globális",
-    "category": "Conference",
+    "category": "conference",
     "country": "UAE"
   },
   {
@@ -311,7 +311,7 @@
     "event_date": "2026-10-17",
     "location": "Berlin, Germany",
     "type": "Globális",
-    "category": "Other",
+    "category": "other",
     "country": "Germany"
   },
   {
@@ -320,7 +320,7 @@
     "event_date": "2026-06-04",
     "location": "Berlin, Germany",
     "type": "Globális",
-    "category": "Other",
+    "category": "other",
     "country": "Germany"
   },
   {
@@ -329,7 +329,7 @@
     "event_date": "2026-04-21",
     "location": "London, UK",
     "type": "Globális",
-    "category": "Summit",
+    "category": "summit",
     "country": "UK"
   },
   {
@@ -338,7 +338,7 @@
     "event_date": "2026-02-11",
     "location": "Stockholm, Sweden",
     "type": "Globális",
-    "category": "Other",
+    "category": "other",
     "country": "Sweden"
   },
   {
@@ -347,7 +347,7 @@
     "event_date": "2026-08-26",
     "location": "Copenhagen, Denmark",
     "type": "Globális",
-    "category": "Other",
+    "category": "other",
     "country": "Denmark"
   },
   {
@@ -356,7 +356,7 @@
     "event_date": "2026-06-24",
     "location": "Cluj-Napoca, Romania",
     "type": "CEE",
-    "category": "Other",
+    "category": "other",
     "country": "Romania"
   },
   {
@@ -365,7 +365,7 @@
     "event_date": "2026-01-29",
     "location": "Amsterdam, Netherlands",
     "type": "Globális",
-    "category": "Conference",
+    "category": "conference",
     "country": "Netherlands"
   },
   {
@@ -374,7 +374,7 @@
     "event_date": "2026-01-30",
     "location": "Dublin, Ireland",
     "type": "Globális",
-    "category": "Conference",
+    "category": "conference",
     "country": "Ireland"
   },
   {
@@ -383,7 +383,7 @@
     "event_date": "2026-05-21",
     "location": "Stockholm, Sweden",
     "type": "Globális",
-    "category": "Conference",
+    "category": "conference",
     "country": "Sweden"
   },
   {
@@ -392,7 +392,7 @@
     "event_date": "2026-06-17",
     "location": "Paris, France",
     "type": "Globális",
-    "category": "Other",
+    "category": "other",
     "country": "France"
   },
   {
@@ -401,7 +401,7 @@
     "event_date": "2026-07-08",
     "location": "Berlin, Germany",
     "type": "Globális",
-    "category": "Other",
+    "category": "other",
     "country": "Germany"
   },
   {
@@ -410,7 +410,7 @@
     "event_date": "2026-11-09",
     "location": "Lisbon, Portugal",
     "type": "Globális",
-    "category": "Summit",
+    "category": "summit",
     "country": "Portugal"
   },
   {
@@ -419,7 +419,7 @@
     "event_date": "May 11-14 2026",
     "location": "Vancouver, Canada",
     "type": "Globális",
-    "category": "Summit",
+    "category": "summit",
     "country": "Canada"
   },
   {
@@ -428,7 +428,7 @@
     "event_date": "2026-06-26",
     "location": "Sofia, Bulgaria",
     "type": "CEE",
-    "category": "Other",
+    "category": "other",
     "country": "Bulgaria"
   },
   {
@@ -437,7 +437,7 @@
     "event_date": "2026-04-21",
     "location": "Warsaw, Poland",
     "type": "CEE",
-    "category": "Summit",
+    "category": "summit",
     "country": "Poland"
   }
 ]
