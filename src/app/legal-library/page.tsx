@@ -33,7 +33,7 @@ function LegalPage() {
         <div className="text-white text-justify mt-8 ">
           <p>
             In agreement with Startup Hungary and Hungarian Venture Capital and
-            Private Equity Association (HVCA), on behalf og the Hungarian
+            Private Equity Association (HVCA), on behalf of the Hungarian
             Innovation Agency (NIÜ), we recognize how crucial it is to have
             high-quality legal documents readily available for founders and
             investors. These documents are designed to serve as a strong,
