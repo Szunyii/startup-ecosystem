@@ -6,16 +6,21 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Button, buttonVariants } from "./ui/button";
 import { Menu, X } from "lucide-react";
-// import NavItemDrop from "./NavItemDrop";
+import NavItemDrop from "./NavItemDrop";
+import StartupNavDrop from "./StartupNavDrop";
 
 const links = [
   { href: "/why-hungary", label: "Why Hungary" },
   { href: "/highlighted-sectors", label: "Highlighted Sectors" },
-  { href: "/startups", label: "Startup database" },
-  { href: "/ecosystem", label: "Startup ecosystem" },
+];
+
+const dropdownLinks = [
   { href: "/legal-library", label: "Legal Library" },
   { href: "/funding-opportunities", label: "Funding opportunities" },
-  { href: "/registry", label: "Registration" },
+];
+const startupDropdownLinks = [
+  { href: "/startups", label: "Startup database" },
+  { href: "/ecosystem", label: "Startup ecosystem" },
 ];
 
 function Navigation() {
@@ -44,6 +49,20 @@ function Navigation() {
                 {label}
               </Link>
             ))}
+            <StartupNavDrop />
+            <NavItemDrop />
+            <Link
+              href="/registry"
+              className={cn(
+                pathname === "/registry"
+                  ? "font-bold bg-white text-black"
+                  : "",
+                buttonVariants({ variant: "ghost", className: "px-2" }),
+                "hover:bg-muted",
+              )}
+            >
+              Registration
+            </Link>
           </div>
           <Button
             onClick={() => setIsOpen(!isOpen)}
@@ -98,6 +117,65 @@ function Navigation() {
                   </Link>
                 </div>
               ))}
+              <div className="pt-2">
+                <div className="px-3 py-2 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+                  Startups
+                </div>
+                {startupDropdownLinks.map((item) => (
+                  <div key={item.label}>
+                    <Link
+                      href={item.href}
+                      onClick={() => setIsOpen(false)}
+                      className={cn(
+                        pathname === item.href
+                          ? "font-bold text-white bg-primary"
+                          : "",
+                        buttonVariants({ variant: "ghost" }),
+                        "hover:bg-muted block text-center",
+                      )}
+                    >
+                      {item.label}
+                    </Link>
+                  </div>
+                ))}
+              </div>
+              <div className="pt-2">
+                <div className="px-3 py-2 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+                  Useful
+                </div>
+                {dropdownLinks.map((item) => (
+                  <div key={item.label}>
+                    <Link
+                      href={item.href}
+                      onClick={() => setIsOpen(false)}
+                      className={cn(
+                        pathname === item.href
+                          ? "font-bold text-white bg-primary"
+                          : "",
+                        buttonVariants({ variant: "ghost" }),
+                        "hover:bg-muted block text-center",
+                      )}
+                    >
+                      {item.label}
+                    </Link>
+                  </div>
+                ))}
+              </div>
+              <div className="pt-2">
+                <Link
+                  href="/registry"
+                  onClick={() => setIsOpen(false)}
+                  className={cn(
+                    pathname === "/registry"
+                      ? "font-bold text-white bg-primary"
+                      : "",
+                    buttonVariants({ variant: "ghost" }),
+                    "hover:bg-muted block text-center",
+                  )}
+                >
+                  Registration
+                </Link>
+              </div>
             </div>
           </nav>
         </div>

@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import {
   NavigationMenu,
@@ -13,10 +12,9 @@ import { buttonVariants } from "./ui/button";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
-function NavItemDrop() {
+function StartupNavDrop() {
   const pathname = usePathname();
-  const isActive =
-    pathname === "/legal-library" || pathname === "/funding-opportunities";
+  const isActive = pathname === "/startups" || pathname === "/ecosystem";
 
   return (
     <NavigationMenu>
@@ -29,15 +27,12 @@ function NavItemDrop() {
               isActive ? " bg-white text-black" : "",
             )}
           >
-            Useful
+            Startups
           </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="w-34 space-y-2 p-3">
-              <ListItem href="/legal-library" title="Legal Library" />
-              <ListItem
-                href="/funding-opportunities"
-                title="Funding opportunities"
-              />
+            <ul className="w-44 space-y-2 p-3">
+              <ListItem href="/startups" title="Startup database" />
+              <ListItem href="/ecosystem" title="Startup ecosystem" />
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
@@ -70,4 +65,4 @@ function ListItem({
   );
 }
 
-export default NavItemDrop;
+export default StartupNavDrop;
