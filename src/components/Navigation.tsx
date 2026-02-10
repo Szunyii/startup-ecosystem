@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Button, buttonVariants } from "./ui/button";
 import { Menu, X } from "lucide-react";
+// import NavItemDrop from "./NavItemDrop";
 
 const links = [
   { href: "/why-hungary", label: "Why Hungary" },
@@ -13,6 +14,7 @@ const links = [
   { href: "/startups", label: "Startup database" },
   { href: "/ecosystem", label: "Startup ecosystem" },
   { href: "/legal-library", label: "Legal Library" },
+  { href: "/funding-opportunities", label: "Funding opportunities" },
   { href: "/registry", label: "Registration" },
 ];
 
@@ -28,15 +30,15 @@ function Navigation() {
             <Image src={"/niu-logo.png"} width={150} height={100} alt="link" />
           </Link>
           {/* desktop nav */}
-          <div className="hidden lg:flex gap-2 lg:items-center">
+          <div className="hidden lg:flex gap-1 lg:items-center">
             {links.map(({ href, label }) => (
               <Link
                 href={href}
                 key={href}
                 className={cn(
                   pathname === href ? "font-bold bg-white text-black" : "",
-                  buttonVariants({ variant: "ghost" }),
-                  "hover:bg-muted"
+                  buttonVariants({ variant: "ghost", className: "px-2" }),
+                  "hover:bg-muted",
                 )}
               >
                 {label}
@@ -60,7 +62,9 @@ function Navigation() {
       <div
         className={cn(
           "fixed top-0 left-0 z-40 min-h-screen w-full bg-background border-l border-border transform transition-transform duration-300 ease-in-out lg:hidden",
-          isOpen ? "translate-x-0 animate-fadeInUp" : "translate-x-full hidden "
+          isOpen
+            ? "translate-x-0 animate-fadeInUp"
+            : "translate-x-full hidden ",
         )}
       >
         <div className="flex flex-col h-full">
@@ -87,7 +91,7 @@ function Navigation() {
                         ? "font-bold text-white bg-primary"
                         : "",
                       buttonVariants({ variant: "ghost" }),
-                      "hover:bg-muted block text-center"
+                      "hover:bg-muted block text-center",
                     )}
                   >
                     {item.label}
