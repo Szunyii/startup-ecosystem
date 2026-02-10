@@ -115,10 +115,11 @@ function page() {
             <ul className="list-disc ml-5 space-y-8">
               <li>
                 <p>
-                  The ratio of{" "}
+                  The ratio of The ratio of
                   <b>
-                    ICT student entrants to bachelor programmes currently stands
-                    at 12%{" "}
+                    {" "}
+                    ICT students enrolling to bachelor programmes currently
+                    stands at 12%
                   </b>
                   (increased from 4% in 2014).
                 </p>
@@ -273,7 +274,7 @@ function page() {
             <p className="self-start">
               There has been a{" "}
               <b>
-                consistent increase in public investment in Research and
+                consistent increase in public investment in research and
                 development.
               </b>
             </p>

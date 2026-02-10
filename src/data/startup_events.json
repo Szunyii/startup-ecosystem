@@ -550,5 +550,17 @@
     "duration": null,
     "type": "presentation",
     "language": "hungarian"
+  },
+  {
+    "title": "Web Summit Rio",
+    "event_url": "https://vosz.hu/vosz-info/a-skills4retail-palyazat-bemutatasa",
+    "main_image_url": "https://vosz.hu/file/news/2919/gallery/big/skillsrretail-banner.png",
+    "event_date": "2026-01-07",
+    "organizer": "VOSZ",
+    "location": "VOSZ Székház – 1065 Budapest, Bajcsy-Zsilinszky út 53.",
+    "description": "If you are interested in the latest trends and development opportunities in retail, education, and digitalization, register TODAY and don't miss out on the latest developments, opportunities, and trends!",
+    "duration": null,
+    "type": "presentation",
+    "language": "hungarian"
   }
 ]

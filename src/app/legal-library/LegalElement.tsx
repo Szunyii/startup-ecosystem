@@ -37,7 +37,9 @@ function LegalElement({ name, description, link }: LegalElemntProps) {
          [mask-image:linear-gradient(to_bottom,black_40%,transparent)]
          [-webkit-mask-image:linear-gradient(to_bottom,black_40%,transparent)]"
       >
-        <p className="text-white leading-relaxed text-justify">{description}</p>
+        <p className="text-white leading-relaxed text-justify whitespace-pre-line">
+          {description}
+        </p>
       </div>
       <div className="flex flex-col gap-5 mt-2 items-center">
         <Dialog>

@@ -1,0 +1,114 @@
+[
+  {
+    "stage": "Pre-startup",
+    "type": "Competitions",
+    "program": "National Science and Innovation Olympiad - OTIO",
+    "description": "The National Science and Innovation Olympiad (OTIO) is a national program supporting the scientific and creative aspirations of high school students aged 14–20. The competition aims to help students interested in natural sciences to implement their own innovative ideas, inventions or research projects. The program is aimed at those who want to get acquainted with the world of research, innovation and entrepreneurship at a young age. The most successful applicants receive several months of professional mentoring, during which they can further develop their concepts with the help of experts. The process ends with a large-scale national final and exhibition, where the most outstanding projects can be presented to a professional audience.\n\n The competition is announced in September every year.",
+    "link": "https://www.otio.hu"
+  },
+  {
+    "stage": "Pre-startup",
+    "type": "Competitions",
+    "program": "innOtdk",
+    "description": "innOtdk is a higher education innovation competition that gives students the opportunity to further develop their research results published in their OTDK thesis towards innovation, market or social utilization. It is an ideal choice for those who want to not only research, but also create solutions.\n\n The competition is open to students who have work that has been part of the OTDK and wish to present its innovation potential. The applications are judged by experts, and the best projects can present themselves in a national final, with mentoring and professional support. Participation offers valuable experience, connections and development opportunities. Applications are accepted based on an annual call for applications.",
+    "link": "https://otdk.hu/innotdk-palyazat-otdk-resztvevoknek/"
+  },
+  {
+    "stage": "Pre-startup",
+    "type": "Training opportunities",
+    "program": "HSUP BASE (for high school students)",
+    "description": "HSUP BASE is an online and practice-oriented training designed for high school students, which provides basic knowledge about innovation, entrepreneurship and startup thinking. The program aims to strengthen the domestic innovative entrepreneurial generation and inspire high school students to take their first entrepreneurial steps. It supports young people in developing their innovative ideas with an entrepreneurial approach. The opportunity is intended for students who are just taking their first steps into the world of startups.\n\n Participants can prepare a business and financial plan in 4 months, with the support of experienced mentors and startuppers, learning about the processes from idea generation and market research, through project and product development to leadership skills and legal foundations. At the end of the program, students can present their projects in front of a professional jury and investors at a Demo Day event, gaining real-world experience, new contacts and opportunities. It is possible to apply for the program at the beginning of each academic year.",
+    "link": "https://niu.hu/service/hsup-base-program"
+  },
+  {
+    "stage": "Pre-startup",
+    "type": "Training opportunities",
+    "program": "Hungarian Startup University Program - HSUP (for university students)",
+    "description": "The Hungarian Startup University Program (HSUP) is Hungary's first national higher education-level startup course, which introduces students to the process of building a business through theoretical and practical training. The program is designed for university students who want to develop their own startup idea and develop it into a marketable project.\n\n HSUP is a two-semester, English-language e-learning course, the first semester of which focuses on innovative thinking and getting to know the startup world, while in the second semester students can acquire practical knowledge related to company building. The aim of the course is for participants to not only gain theoretical knowledge, but also to be able to launch their ideas into the real market. At the end of the program, student teams can present their projects in front of a professional jury and investors at a Demo Day event, gaining new contacts and opportunities. The program starts every academic year, and students can apply during the fall course enrollment period through their own university's NEPTUN system.",
+    "link": "https://hsup.niu.hu"
+  },
+  {
+    "stage": "Pre-startup",
+    "type": "Training opportunities",
+    "program": "Pathway to Business (for PhD students and doctoral candidates)",
+    "description": "Pathway to Business is a unique entrepreneurship program specifically for Hungarian doctoral students and researchers. The program aims to help participants transform their scientific findings into viable innovations and launch new startups or spin-offs. It is an ideal opportunity for those who want to apply their research findings or technological solutions in practice, in a business environment.\n\n The program provides comprehensive expert support, including business training, personalized mentoring and financial support. Pathway to Business forms a bridge between cutting-edge research and the market, providing the professional background necessary for the business success of scientific work.\n\n Applications for the program are open in September of each academic year, based on an announced call.",
+    "link": "https://www.niu.hu/service/pathway-to-business-program"
+  },
+  {
+    "stage": "Startup",
+    "type": "Professional support",
+    "program": "NIÜ Mentor Program",
+    "description": "The NIÜ Mentor Program helps innovative businesses grow and succeed by providing access to expertise, resources, and valuable networking opportunities. The program is aimed at early-stage startups and founders who are looking for targeted, professional support on business, technology, or market issues.\n\n Participants can rely on the many years of professional experience, industry knowledge and extensive network of mentors invited by NIÜ. The goal of the program is for every innovative entrepreneur to find the most suitable expert for them, who, with their competencies and success-oriented approach, can provide the most effective help for the growth of the business.",
+    "link": "https://niu.hu/service/niu-mentor"
+  },
+  {
+    "stage": "Startup",
+    "type": "Incubation",
+    "program": "Startup Incubators (NIÜ ecosystem)",
+    "description": "Incubator businesses help early-stage businesses with funding, mentoring, infrastructure, and a supportive community. The opportunity is ideal for those who have already launched their project but need a solid professional and business foundation to develop and enter the market.\n\n Incubators not only provide a physical working environment, but also access to an extensive network of experts and investment opportunities. The aim of the programs is to help startups overcome initial uncertainties and develop into prepared and viable businesses towards the global market. The incubator businesses are supported by the Startup Factory program.",
+    "link": "https://startup.niu.hu/ecosystem"
+  },
+  {
+    "stage": "Startup",
+    "type": "Early stage investment",
+    "program": "Business Angels – HunBAN",
+    "description": "HunBAN brings together business angels from Hungary and the CEE region, creating opportunities for the discovery of promising businesses and cross-border investments. The association aims to bridge local talent and international networks, ensuring that startups and investors alike can reach their full potential.",
+    "link": "https://hunban.eu"
+  },
+  {
+    "stage": "Growth",
+    "type": "Early stage investment",
+    "program": "Early-stage Venture Capitalists",
+    "description": "Early-stage venture capitalists finance startups that are already in operation but are still in the early stages of their growth. This opportunity is typically for businesses that are beyond the initial stages, have a validated product or service, and would like to take the next step with the help of new capital.\n\n The goal of venture capital is to support rapid and efficient scaling, whether it is market expansion, team building or technological development. Investors not only provide significant capital, but also expect dynamic growth, and in return, they use their professional background to help the startup expand beyond the domestic market and become a dominant player on an international level.",
+    "link": "https://startup.niu.hu/ecosystem"
+  },
+  {
+    "stage": "Growth",
+    "type": "State financial support",
+    "program": "HSUP Growth Fund (for HSUP Alumni)",
+    "description": "HSUP Growth Fund is a targeted funding opportunity that specifically supports startups founded by graduates of the Hungarian Startup University Program (HSUP). The program aims to help students move from the early product development stage to a marketable, investment-ready stage.\n\n The funding opportunity focuses on HSUP alumni founders who want to further scale up their projects launched during their university course. The Growth Fund provides the necessary bridge that helps make early-stage projects marketable and the business develop stably.\n\n The next call for applications is expected to be published in the summer of 2026.",
+    "link": "https://niu.hu/service/hsup-growth-fund"
+  },
+  {
+    "stage": "Growth",
+    "type": "State financial support",
+    "program": "Fast Track Program (for Deep Tech startups)",
+    "description": "The Fast Track (Gyorsítósáv) call is a form of support specifically designed for deep tech startups and spin-off companies, which helps them enter the market quickly with non-refundable financing, meaning that founders do not have to give up their ownership stake in their business in exchange for the support. The aim of the program is to support technology-intensive projects that plan to commercialize scientific results generated in higher education institutions or research institutes, i.e. those that have a significant research and development (R&D) background but require further technological developments to bring the product to market.",
+    "link": "https://nkfih.gov.hu/palyazoknak/nkfi-alap/gyorsitosav-2025-112-gyorsitosav/palyazati-felhivas"
+  },
+  {
+    "stage": "Growth",
+    "type": "State financial support",
+    "program": "Life Sciences Catalyst (for biotechnology startups)",
+    "description": "Life Sciences Catalyst aims to support startups in the life sciences sector – Biotech, Pharma and Medical Technology (Medtech) industries, TechBio and HealthTech – with non-repayable funding, meaning that founders do not have to give up ownership in their business in exchange for the support. The program is aimed at biotechnology startups that have proven scientific or technological achievements and want to bring innovative solutions to market.",
+    "link": "https://nkfih.gov.hu/palyazoknak/nkfi-alap/life-sciences-catalyst-program-koncepcio-bizonyitasatol-a-klinikai-vizsgalatokig-2025-114-life-sciences-2/palyazati-felhivas"
+  },
+  {
+    "stage": "Startup",
+    "type": "State financial support",
+    "program": "Industrial Property Grant (industrial law application)",
+    "description": "The Industrial Property Grant is an opportunity to support the acquisition of domestic and international protection of intellectual property. The aim of the call is to finance activities related to the acquisition of patents, trademarks, designs and other industrial property rights. The scheme is specifically recommended for startups, researchers and innovative enterprises that want to legally protect their intellectual property.",
+    "link": "https://nkfih.gov.hu/palyazoknak/nkfi-alap/szellemi-alkotasok-szellemi-tuladjun-vedelme-2025-111-iparjog/palyazati-felhivas"
+  },
+  {
+    "stage": "Scale-up",
+    "type": "State financial support",
+    "program": "Enterprise Horizon (international sourcing)",
+    "description": "Enterprise Horizon is an international funding assistance program that primarily opens the way to direct funding opportunities from the European Union (such as the Horizon Europe program). The multi-step preparatory program aims to support businesses in the successful application process and to facilitate international consortium building. It is aimed at startups and innovative companies that are ready to develop internationally and participate in European-level projects.",
+    "link": "https://niu.hu/hu/service/enterprise-horizon"
+  },
+  {
+    "stage": "Scale-up",
+    "type": "State financial support",
+    "program": "XPAND (international market entry)",
+    "description": "The XPAND program aims to provide targeted support to Hungarian startups and innovative small and medium-sized enterprises (SMEs) to enter international markets. The program provides business connections, market knowledge and practical tools to businesses that are ready to expand abroad but want to minimize the time and costs of entering the global market. Participants will learn about the specific challenges and needs of the target markets through customized training and mentoring.",
+    "link": "https://niu.hu/hu/service/xpand-program"
+  },
+  {
+    "stage": "Scale-up",
+    "type": "State financial support",
+    "program": "Venture Capitalists (growth stage)",
+    "description": "Growth-stage venture capitalists (VCs) fund startups with a proven business model and significant growth potential. This level is for businesses that have moved beyond the initial wing-tripping and are ready to scale significantly and explosively to realize their business's growth potential.\n\n VC investment is not just about financing, but also a close partnership, where the investor's capital serves to accelerate growth processes: whether it's international expansion, large-scale product development or a drastic increase in market share.",
+    "link": "https://startup.niu.hu/ecosystem"
+  }
+]
