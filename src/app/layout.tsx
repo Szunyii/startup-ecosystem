@@ -20,8 +20,8 @@ const roboto_mono = Roboto_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "National Innovation Agency",
-  description: "National Innovation Agency's startup database",
+  title: "Hungarian Innovation Agency",
+  description: "Hungarian Innovation Agency's startup database",
 };
 
 export default async function RootLayout({
