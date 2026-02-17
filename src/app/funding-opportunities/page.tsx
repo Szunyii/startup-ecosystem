@@ -2,33 +2,66 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import programData from "@/data/supportPrograms.json";
 import ProgramCard from "./ProgramCard";
+import FundingOpportunitiesMobile from "@/components/FundingOpportunitiesMobile";
 
 const stageCategory = ["Pre-startup", "Startup", "Scale-up"];
-const typeCategory = [
-  "Competitions",
-  "Training opportunities",
-  "Professional support",
-  "Incubation",
-  "Early stage investment",
-  "State financial support",
-];
+// const typeCategory = [
+//   "Competitions",
+//   "Training opportunities",
+//   "Professional support",
+//   "Incubation",
+//   "Early stage investment",
+//   "State financial support",
+// ];
 
 function Page() {
-  const [selectedType, setSelectedType] = useState("Competitions");
   const [selectedStage, setSelectedStage] = useState("Pre-startup");
 
+  const availableTypeCategory = useMemo(() => {
+    return programData.reduce<string[]>((acc, prog) => {
+      if (prog.stage === selectedStage && !acc.includes(prog.type))
+        acc.push(prog.type);
+      return acc;
+    }, []);
+  }, [selectedStage]);
+
+  const [selectedType, setSelectedType] = useState<string | null>(null);
+
+  useEffect(() => {
+    // ha nincs type, legyen null
+    if (availableTypeCategory.length === 0) {
+      setSelectedType(null);
+      return;
+    }
+
+    // ha a jelenlegi type érvényes, ne bántsd
+    setSelectedType((prev) =>
+      prev && availableTypeCategory.includes(prev)
+        ? prev
+        : availableTypeCategory[0],
+    );
+  }, [availableTypeCategory]);
+  // const filteredPrograms = programData.filter(
+  //   (el) => el.stage.includes(selectedStage) && el.type.includes(selectedType),
+  // );
   const filteredPrograms = programData.filter(
-    (el) => el.stage.includes(selectedStage) && el.type.includes(selectedType),
+    (el) =>
+      (selectedStage === "ALL" || el.stage === selectedStage) &&
+      (selectedType === "ALL" || el.type === selectedType),
   );
 
   return (
     <section className="min-h-screen mt-14">
-      {/* header */}
+      {/* Mobile View */}
+      <div className="lg:hidden w-full px-4">
+        <FundingOpportunitiesMobile />
+      </div>
 
-      <div className="flex w-full gap-4">
+      {/* Desktop View */}
+      <div className="hidden lg:flex w-full gap-4">
         {/* oldalsáv */}
         <div className=" w-1/5 flex flex-col">
           {/* stage */}
@@ -68,7 +101,7 @@ function Page() {
                 Select type
               </h2>
               <div className="flex flex-col  rounded-xl bg-primary/15 ">
-                {typeCategory.map((type, i) => (
+                {availableTypeCategory.map((type, i) => (
                   <div key={type} className="w-full flex flex-col">
                     <Button
                       key={type}
@@ -85,7 +118,7 @@ function Page() {
                     >
                       {type}
                     </Button>
-                    {i < typeCategory.length - 1 && (
+                    {i < availableTypeCategory.length - 1 && (
                       <Separator className="w-[90%] mx-auto bg-primary-foreground/10" />
                     )}
                   </div>

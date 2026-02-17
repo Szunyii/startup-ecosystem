@@ -4,39 +4,50 @@ import Link from "next/link";
 function Footer() {
   return (
     <footer className="w-full bg-[#011321] flex flex-row lg:justify-between justify-center pt-12 lg:px-32 lg:pb-20 flex-wrap gap-y-4">
-      <div className="flex flex-col gap-y-8">
-        <Image src={"/niu-logo.png"} width={300} height={200} alt="facebook" />
-        <div className="flex justify-between">
-          <Link href={"https://www.facebook.com/nemzetiinnovaciosugynokseg"}>
-            <Image src={"/fb.svg"} width={25} height={25} alt="facebook" />
-          </Link>
-          <Link
-            href={
-              "https://youtube.com/@hungarianinnovationagency?si=1pJ3dlq90bHwJlXr"
-            }
-          >
-            <Image src={"/youtube.svg"} width={25} height={25} alt="youtube" />
-          </Link>
-          <Link href={"https://www.instagram.com/nemzetiinnovaciosugynokseg/"}>
-            <Image
-              src={"/instagram.svg"}
-              width={25}
-              height={25}
-              alt="instagram"
-            />
-          </Link>
+      <div className="flex gap-1">
+        <div className="flex flex-col gap-y-8">
+          {" "}
+          <Image src={"/niu-logo.png"} width={300} height={200} alt="niu" />
+          <div className="flex justify-between">
+            <Link href={"https://www.facebook.com/nemzetiinnovaciosugynokseg"}>
+              <Image src={"/fb.svg"} width={25} height={25} alt="facebook" />
+            </Link>
+            <Link
+              href={
+                "https://youtube.com/@hungarianinnovationagency?si=1pJ3dlq90bHwJlXr"
+              }
+            >
+              <Image
+                src={"/youtube.svg"}
+                width={25}
+                height={25}
+                alt="youtube"
+              />
+            </Link>
+            <Link
+              href={"https://www.instagram.com/nemzetiinnovaciosugynokseg/"}
+            >
+              <Image
+                src={"/instagram.svg"}
+                width={25}
+                height={25}
+                alt="instagram"
+              />
+            </Link>
 
-          <Link
-            href={"https://www.linkedin.com/company/nationalinnovationagency"}
-          >
-            <Image
-              src={"/linkedin.svg"}
-              width={25}
-              height={25}
-              alt="linkedin"
-            />
-          </Link>
+            <Link
+              href={"https://www.linkedin.com/company/nationalinnovationagency"}
+            >
+              <Image
+                src={"/linkedin.svg"}
+                width={25}
+                height={25}
+                alt="linkedin"
+              />
+            </Link>
+          </div>
         </div>
+        <Image src={"/NKFIA-logo.png"} width={380} height={200} alt="NKFIA" />
       </div>
       <div className="flex gap-4 lg:gap-10 flex-wrap flex-col lg:flex-row ">
         <div className="text-white">

@@ -30,31 +30,33 @@ function EventCard({
   });
 
   return (
-    <Link href={event_url} target="_blank">
-      <Card className="relative h-full flex items-center justify-between rounded-xl  bg-primary/25 text-white border-none overflow-hidden max-h-[90px]">
-        <div className="flex items-center pl-2">
-          <div className="min-w-10 flex flex-col justify-center items-center ">
-            <h2 className="text-xl">{eventDateMoth}</h2>
-            <div className="flex gap-0">
+    <Link href={event_url} target="_blank" className="w-full">
+      <Card className="relative h-full flex items-center justify-between rounded-xl bg-primary/25 text-white border-none overflow-hidden min-h-[90px]">
+        <div className="flex items-center pl-2 w-full">
+          <div className="min-w-[40px] flex flex-col justify-center items-center flex-shrink-0">
+            <h2 className="text-lg md:text-xl font-bold">{eventDateMoth}</h2>
+            <div className="flex gap-0 text-sm md:text-base">
               <h2 className="">{eventDateDay}</h2>
               <span>{eventDateDayEnd.length > 0 && "-"}</span>
               <h2 className="">{eventDateDayEnd}</h2>
             </div>
           </div>
-          <div className="p-3 space-y-1">
-            <div className="flex  gap-2">
-              <p className="text-md truncate">{title}</p>
+          <div className="p-3 space-y-1 flex-1 min-w-0">
+            <div className="flex gap-2">
+              <p className="text-sm md:text-md truncate font-medium">{title}</p>
             </div>
-            <p className="text-sm opacity-80">{location}</p>
+            <p className="text-xs md:text-sm opacity-80 truncate">{location}</p>
           </div>
         </div>
-        <Image
-          src={`/flag/${eventFlag}.png`}
-          alt="flag"
-          width={100}
-          height={100}
-          className=" top-0 max-h-44 max-w-44  overflow-hidden"
-        />
+        <div className="flex-shrink-0">
+          <Image
+            src={`/flag/${eventFlag}.png`}
+            alt="flag"
+            width={100}
+            height={100}
+            className="object-cover h-[90px] w-auto max-w-[80px] md:max-w-[100px]"
+          />
+        </div>
       </Card>
     </Link>
   );

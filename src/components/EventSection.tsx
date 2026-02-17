@@ -56,7 +56,7 @@ function EventSection() {
       if (type === "All") {
         return true;
       } else {
-        return event.type === type;
+        return event.type.includes(type);
       }
     })
     .filter((event) => {
@@ -89,8 +89,8 @@ function EventSection() {
   };
 
   return (
-    <div className="w-full flex flex-col md:flex-row p-8 min-h-[500px] gap-4">
-      <div className="flex-shrink">
+    <div className="w-full flex flex-col md:flex-row p-4 md:p-8 min-h-[500px] gap-4">
+      <div className="flex-shrink w-full md:w-auto">
         <div className="flex flex-col justify-between items-center gap-2">
           <TypeSelect active={type} onClick={handleTypeClick} />
           <Select onValueChange={setSelectedCountry} defaultValue={""}>
@@ -120,7 +120,7 @@ function EventSection() {
         </div>
         {dateParam ? (
           <Button
-            className="mt-2"
+            className="mt-2 w-full md:w-auto"
             onClick={() => {
               router.replace("/#event");
             }}
@@ -129,7 +129,7 @@ function EventSection() {
           </Button>
         ) : null}
       </div>
-      <ScrollArea className="h-[540px] w-full rounded-md pr-2">
+      <ScrollArea className="h-[400px] md:h-[540px] w-full rounded-md pr-2">
         <div
           className="flex-grow grid grid-cols-1 sm:grid-cols-2 gap-4 order-2 md:order-none"
           ref={eventRef}
