@@ -75,7 +75,7 @@ export default function SubscribePage() {
         }
         setStatusHtml(html);
       }
-      //   eslint-disable-next-line @typescript-eslint/no-explicit-any
+      //   eslint-disable-next-line
     } catch (err: any) {
       setStatusHtml(
         `<p style="color:red;">Hiba történt: ${err?.message ?? String(err)}</p>`,
