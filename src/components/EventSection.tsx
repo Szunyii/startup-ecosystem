@@ -115,7 +115,7 @@ function EventSection() {
               const isEnabled = enabledDays.some((d) => isSameDay(d, day));
               return !isEnabled;
             }}
-            className="rounded-lg border order-1 md:order-none bg-primary/80 text-white w-full"
+            className="rounded-lg border order-1 md:order-none bg-primary/80 text-white w-full h-full"
           />
         </div>
         {dateParam ? (

@@ -7,7 +7,9 @@ interface WraperProps {
 }
 
 const MaxWidthWraper = ({ className, children }: WraperProps) => {
-  return <div className={cn(`mx-auto container`, className)}>{children}</div>;
+  return (
+    <div className={cn(`mx-auto container px-2`, className)}>{children}</div>
+  );
 };
 
 export default MaxWidthWraper;

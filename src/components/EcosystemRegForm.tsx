@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useTransition } from "react";
+import React, { useState, useTransition } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
@@ -61,6 +61,7 @@ function EcosystemRegForm() {
     },
   });
 
+  const [isSuccess, setIsSuccess] = useState(false);
   // 2. Define a submit handler.
   async function onSubmit({
     contactRole,
@@ -85,7 +86,25 @@ function EcosystemRegForm() {
       });
 
       form.reset();
+      setIsSuccess(true);
     });
+  }
+
+  if (isSuccess) {
+    return (
+      <div className="max-w-xl w-full animate-fadeInUp flex flex-col items-center justify-center p-8 text-center text-white bg-primary/20 rounded-xl border border-primary">
+        <h2 className="text-2xl font-bold mb-4">Thank you!</h2>
+        <p className="text-lg">
+          Your registration has been submitted successfully.
+        </p>
+        <button
+          onClick={() => setIsSuccess(false)}
+          className="mt-6 text-sm underline hover:text-primary transition-colors"
+        >
+          Submit another response
+        </button>
+      </div>
+    );
   }
   return (
     <div className=" max-w-xl w-full animate-fadeInUp">

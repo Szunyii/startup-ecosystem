@@ -31,7 +31,7 @@ async function StartupPage(props: {
   });
 
   return (
-    <div className="relative">
+    <div className="relative overflow-x-hidden min-h-screen">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute  left-0 top-1/4 z-0 transform-gpu blur-3xl"

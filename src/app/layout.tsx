@@ -37,17 +37,18 @@ export default async function RootLayout({
     bg-[#120937] antialiased grainy overflow-x-hidden `}
         cz-shortcut-listen="true"
       >
-        <div className="backdrop-blur-2xl w-full h-full m-0 p-0">
+        <div className=" w-full h-full p-0 m-0">
           <BgImage />
           <MaxWidthWraper>
             <Navigation />
             {children}
           </MaxWidthWraper>
-
-          <Footer />
         </div>
+        <Footer />
       </body>
       <GoogleAnalytics gaId="G-11RET9835Q" />
     </html>
   );
 }
+
+// backdrop-blur-2xl

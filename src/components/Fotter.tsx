@@ -3,84 +3,67 @@ import Link from "next/link";
 
 function Footer() {
   return (
-    <footer className="w-full bg-[#011321] flex flex-row lg:justify-between justify-center pt-12 lg:px-32 lg:pb-20 flex-wrap gap-y-4">
-      <div className="flex gap-1">
-        <div className="flex flex-col gap-y-8">
-          {" "}
-          <Image src={"/niu-logo.png"} width={300} height={200} alt="niu" />
-          <div className="flex justify-between">
-            <Link href={"https://www.facebook.com/nemzetiinnovaciosugynokseg"}>
-              <Image src={"/fb.svg"} width={25} height={25} alt="facebook" />
-            </Link>
-            <Link
-              href={
-                "https://youtube.com/@hungarianinnovationagency?si=1pJ3dlq90bHwJlXr"
-              }
-            >
-              <Image
-                src={"/youtube.svg"}
-                width={25}
-                height={25}
-                alt="youtube"
-              />
-            </Link>
-            <Link
-              href={"https://www.instagram.com/nemzetiinnovaciosugynokseg/"}
-            >
-              <Image
-                src={"/instagram.svg"}
-                width={25}
-                height={25}
-                alt="instagram"
-              />
-            </Link>
+    <footer className="w-full bg-[#011321] flex flex-col lg:flex-row justify-between pt-12 px-6 md:px-12 lg:px-32 pb-12 lg:pb-20 gap-y-10 lg:gap-y-0">
 
-            <Link
-              href={"https://www.linkedin.com/company/nationalinnovationagency"}
-            >
-              <Image
-                src={"/linkedin.svg"}
-                width={25}
-                height={25}
-                alt="linkedin"
-              />
+      {/* Logos Section */}
+      <div className="flex flex-col md:flex-row gap-8 lg:gap-12 items-start md:items-center lg:items-start">
+        <div className="flex flex-col gap-y-6">
+          <Image src={"/niu-logo.png"} width={250} height={160} alt="niu" className="w-[200px] md:w-[250px] h-auto" />
+
+          {/* Social Links */}
+          <div className="flex justify-between gap-x-6">
+            <Link href={"https://www.facebook.com/nemzetiinnovaciosugynokseg"} target="_blank">
+              <Image src={"/fb.svg"} width={24} height={24} alt="facebook" className="hover:opacity-80 transition-opacity" />
+            </Link>
+            <Link href={"https://youtube.com/@hungarianinnovationagency?si=1pJ3dlq90bHwJlXr"} target="_blank">
+              <Image src={"/youtube.svg"} width={24} height={24} alt="youtube" className="hover:opacity-80 transition-opacity" />
+            </Link>
+            <Link href={"https://www.instagram.com/nemzetiinnovaciosugynokseg/"} target="_blank">
+              <Image src={"/instagram.svg"} width={24} height={24} alt="instagram" className="hover:opacity-80 transition-opacity" />
+            </Link>
+            <Link href={"https://www.linkedin.com/company/nationalinnovationagency"} target="_blank">
+              <Image src={"/linkedin.svg"} width={24} height={24} alt="linkedin" className="hover:opacity-80 transition-opacity" />
             </Link>
           </div>
         </div>
-        <Image src={"/NKFIA-logo.png"} width={380} height={200} alt="NKFIA" />
+
+        <Image src={"/NKFIA-logo.png"} width={320} height={170} alt="NKFIA" className="w-[250px] md:w-[320px] h-auto object-contain" />
       </div>
-      <div className="flex gap-4 lg:gap-10 flex-wrap flex-col lg:flex-row ">
-        <div className="text-white">
+
+      {/* Info Section */}
+      <div className="flex flex-col lg:items-end gap-y-6 text-white">
+        <div>
           <Link
             href={"/disclaimer"}
-            className="text-lg text-white hover:underline overflow-hidden "
+            className="text-base md:text-lg text-white/80 hover:text-white hover:underline transition-colors"
           >
             Disclaimer
           </Link>
         </div>
 
-        <div className="flex-col flex justify-start text-white gap-0.5 ">
-          <p className="text-[#afe202] font-bold text-xl">Contact</p>
-          <div className="flex gap-x-4">
-            <a className="hover:underline" href="mailto:info@niu.hu">
+        <div className="flex flex-col gap-y-2 lg:items-end">
+          <p className="text-[#afe202] font-bold text-xl mb-1">Contact</p>
+          <div className="flex flex-col md:flex-row gap-2 md:gap-x-6 lg:justify-end">
+            <a className="hover:underline hover:text-[#afe202] transition-colors" href="mailto:info@niu.hu">
               info@niu.hu
             </a>
-            <a className="hover:underline" href="mailto:sajto@niu.hu">
+            <a className="hover:underline hover:text-[#afe202] transition-colors" href="mailto:sajto@niu.hu">
               sajto@niu.hu
             </a>
           </div>
           <a
-            className="hover:underline flex gap-x-2 "
+            className="hover:underline hover:text-[#afe202] transition-colors flex items-start lg:justify-end"
             href="https://maps.app.goo.gl/BhxV7LeYYrAtEnFj6"
             target="_blank"
           >
             <Image
               src={"/marker.png"}
-              width={15}
-              height={118}
+              width={16}
+              height={20}
               alt={"location"}
+              className="lg:-mr-4"
             />
-            Office: 1077 Budapest, Kéthly Anna tér 1.
+            <span className="max-w-[250px] lg:text-right">Office: 1077 Budapest, Kéthly Anna tér 1.</span>
           </a>
         </div>
       </div>
