@@ -35,6 +35,7 @@ export async function POST(req: Request) {
     const hash = full.slice(0, 16);
 
     return NextResponse.json({ success: true, hash, ts });
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (e: any) {
     return NextResponse.json(
       { success: false, message: e?.message ?? "Ismeretlen hiba" },
