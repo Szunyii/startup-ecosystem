@@ -18,7 +18,7 @@ const typeCategory = [
   "Governmental support",
   "Acccelerators/Incubators",
   "Local investors",
-  "HUBs",
+  "HUBs/ Co-working",
   "Supporting Organizations",
   "Foreign Investors",
   "Crowdfunding",
@@ -26,18 +26,28 @@ const typeCategory = [
 
 function EcosístemGridMobile(data: { startups: StartupDataType[] }) {
   const [selectedType, setSelectedType] = useState<string>(
-    "Governmental support"
+    "Governmental support",
   );
   const [selectedStage, setSelectedStage] = useState<string>("Pre-Startup");
 
   const filteredEntity = data.startups.filter(
-    (el) => el.stage.includes(selectedStage) && el.type.includes(selectedType)
+    (el) => el.stage.includes(selectedStage) && el.type.includes(selectedType),
   );
 
   return (
     <section className="text-white">
       {/* header */}
       <div className="mb-3 self-end flex lg:w-full justify-end">
+        <div className="mb-6 max-w-3xl">
+          <h1 className="text-4xl font-semibold text-white">
+            Startup Ecosystem
+          </h1>
+          <p className="mt-2 text-sm text-white/80">
+            Discover stakeholders that support startups at different stages.
+            Choose your startup’s current stage to find the most relevant
+            service providers and ecosystem partners.
+          </p>
+        </div>
         <Faq>
           <AccordionEcosystem />
         </Faq>

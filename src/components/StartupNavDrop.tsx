@@ -21,6 +21,7 @@ function StartupNavDrop() {
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger
+            triggerMode="click"
             className={cn(
               buttonVariants({ variant: "ghost", className: "px-2" }),
               "bg-transparent hover:bg-muted focus:bg-muted data-[state=open]:bg-muted data-[state=open]:text-foreground",

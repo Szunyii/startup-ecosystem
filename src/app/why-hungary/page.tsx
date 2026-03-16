@@ -26,75 +26,69 @@ function page() {
           />
         </div>
         <h2 className="text-[24px] text-center font-bold z-20">
-          1. Hungary&apos;s business environment is among the best globally
+          1. Hungary offers one of the most favorable business environments
         </h2>
         <div className="flex flex-col md:flex-row mt-16  max-w-full gap-6 justify-center items-center">
-          <div className="w-full flex-[55%] text-justify flex flex-col font-[16px] flex-wrap mt-4 z-30">
+          <div className="w-full flex-[55%] text-justify flex flex-col font-[16px] flex-wrap mt-4 z-30 gap-y-2">
+            <b className="">
+              Hungary ranks 34th globally and 2nd in Central Europe in the
+              first-ever published Innovators Business Environment Index.
+            </b>
             <p>
-              According to the 2024 Business Ready report published by the World
-              Bank Group,{" "}
-              <b>
-                Hungary&apos;s business environment ranks among the best in the
-                world.
-              </b>{" "}
-              Hungary is positioned in the top quintile of the 50 economies
-              examined, demonstrating high performance in both the regulatory
-              framework and public services.
+              StartupBlink&apos;s new index examines the business environment
+              for innovators in 125 countries along 3 pillars:
             </p>
-            <br />
+            <ol className="list-decimal ml-5 mt-3">
+              <li>Ease of operating a business</li>
+              <li>Business incentives</li>
+              <li>Market perception</li>
+            </ol>
+            <p>
+              Hungary ranks 11th globally in the “Business incentives” pillar,
+              due to its attractive tax and funding environment. Our rank is no.
+              1 among OECD countries in the area of taxation.
+            </p>
             <b>
               Hungary provides hugely favorable conditions for businesses,
               especially for research-intensive companies
             </b>
-
-            <ul className="list-disc ml-5 mt-3">
+            <ul className="list-disc ml-5 mt-3 ">
               <li>
-                <p>
-                  {" "}
-                  It boasts the lowest corporate tax rate within the European
-                  Union, set at <b>9%.</b>
-                </p>
+                It boasts the lowest corporate tax rate within the European
+                Union, set at <b>9%.</b>
               </li>
               <li>
-                Furthermore,<b> Hungary provides various tax incentives</b>
-                for conducting research and development (R&D) activities.
+                Furthermore,<b>Hungary provides various tax incentives</b> for
+                conducting research and development (R&D) activities.
               </li>
               <li>
                 Hungary also provides{" "}
                 <b>
-                  {" "}
                   cash grants for corporates who bring R&D activities and
-                  investments to Hungary
+                  investments to Hungary.
                 </b>
-                .
               </li>
             </ul>
-            <br />
-            <p>
-              <b>
-                In recent years, a number of new regulations have significantly
-                enhanced the startup ecosystem. Key developments include the
-                introduction of:
-              </b>
-            </p>
+            <b>
+              In recent years, a number of new regulations have significantly
+              enhanced the startup ecosystem. Key developments include the
+              introduction of:
+            </b>
             <ul className="list-disc ml-5 mt-3 ">
               <li>
-                <p>
-                  <b>Convertible note</b> regulation (since 2023)
-                </p>
+                <b>Convertible note</b> regulation (since 2023)
               </li>
               <li>
-                One of Europe&apos;s most favourable <b>ESOP regulation </b>
+                One of Europe&apos;s most favourable <b>ESOP regulation</b>{" "}
                 (since 2024)
               </li>
               <li>
-                {" "}
                 <b>Tax-free IP apport</b> to businesses (since 2025)
               </li>
             </ul>
           </div>
-          <Card className="w-full flex flex-[45%] justify-center items-center border-primary/20 bg-[#31255e33] h-min z-30">
-            <Image src={"/icon/1.png"} width={800} height={600} alt="image" />
+          <Card className="w-full flex flex-[45%] justify-center items-center bg-transparent border-none h-min z-30">
+            <Image src={"/icon/1up.png"} width={800} height={600} alt="image" />
           </Card>
         </div>
       </section>

@@ -1,7 +1,13 @@
 "use client";
 import { Calendar } from "./ui/calendar";
 import { useRouter, useSearchParams } from "next/navigation";
-import { format, isBefore, isEqual, startOfDay } from "date-fns";
+import {
+  format,
+  isBefore,
+  startOfDay,
+  isWithinInterval,
+  eachDayOfInterval,
+} from "date-fns";
 import eventsArray from "@/data/events.json";
 import EventCard from "./EventCard";
 import React, { useRef, useState } from "react";
@@ -29,7 +35,15 @@ function EventSection() {
     ...new Set(eventsArray.map((e) => e.country)),
   ].sort();
 
-  const enabledDays = eventsArray.map((d) => new Date(d.event_date));
+  // const enabledDays = eventsArray.map((d) => new Date(d.event_date));
+  const enabledDays = eventsArray.flatMap((event) => {
+    const start = startOfDay(new Date(event.event_date));
+    const end = event.event_end_date
+      ? startOfDay(new Date(event.event_end_date))
+      : start;
+
+    return eachDayOfInterval({ start, end });
+  });
 
   const today = startOfDay(new Date());
 
@@ -43,14 +57,19 @@ function EventSection() {
   // - ha nincs → minden, ami ma vagy utánna van
   const filteredEvents = eventsArray
     .filter((event) => {
-      const eventDate = startOfDay(new Date(event.event_date));
+      const eventStart = startOfDay(new Date(event.event_date));
+      const eventEnd = event.event_end_date
+        ? startOfDay(new Date(event.event_end_date))
+        : eventStart;
 
       if (selectedDate) {
-        return isEqual(eventDate, selectedDate);
+        return isWithinInterval(selectedDate, {
+          start: eventStart,
+          end: eventEnd,
+        });
       }
 
-      // alap eset: >= ma
-      return !isBefore(eventDate, today); // azaz eventDate >= today
+      return !isBefore(eventEnd, today);
     })
     .filter((event) => {
       if (type === "All") {
@@ -129,9 +148,9 @@ function EventSection() {
           </Button>
         ) : null}
       </div>
-      <ScrollArea className="h-[400px] md:h-[540px] w-full rounded-md pr-2">
+      <ScrollArea className="h-[400px] md:h-[540px] w-full rounded-md pr-2 ">
         <div
-          className="flex-grow grid grid-cols-1 sm:grid-cols-2 gap-4 order-2 md:order-none"
+          className="flex-grow grid grid-cols-1 sm:grid-cols-2 gap-4 order-2 md:order-none "
           ref={eventRef}
           id="event"
         >

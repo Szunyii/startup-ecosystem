@@ -5,9 +5,7 @@
     "event_date": "2026-03-02",
     "event_end_date": "2026-03-05",
     "location": "Barcelona, Spain",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "other",
     "country": "Spain"
   },
@@ -16,9 +14,7 @@
     "event_url": "https://www.africatechsummit.com",
     "event_date": "2026-05-29",
     "location": "London, UK",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "summit",
     "country": "UK"
   },
@@ -28,9 +24,7 @@
     "event_date": "2026-02-11",
     "event_end_date": "2026-02-12",
     "location": "Nairobi, Kenya",
-    "type": [
-      "Global"
-    ],
+    "type": ["Global"],
     "category": "summit",
     "country": "Kenya"
   },
@@ -40,9 +34,7 @@
     "event_date": "2026-06-11",
     "event_end_date": "2026-06-12",
     "location": "Helsinki, Finland",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "conference",
     "country": "Finland"
   },
@@ -52,9 +44,7 @@
     "event_date": "2026-05-20",
     "event_end_date": "2026-05-22",
     "location": "Singapore, Singapore",
-    "type": [
-      "Global"
-    ],
+    "type": ["Global"],
     "category": "other",
     "country": "Singapore"
   },
@@ -64,9 +54,7 @@
     "event_date": "2026-12-04",
     "event_end_date": "2026-12-30",
     "location": "Las Vegas, USA",
-    "type": [
-      "Global"
-    ],
+    "type": ["Global"],
     "category": "other",
     "country": "USA"
   },
@@ -76,9 +64,7 @@
     "event_date": "2026-09-28",
     "event_end_date": "2026-09-30",
     "location": "Munich, Germany",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "other",
     "country": "Germany"
   },
@@ -88,9 +74,7 @@
     "event_date": "2026-01-06",
     "event_end_date": "2026-01-09",
     "location": "Las Vegas, USA",
-    "type": [
-      "Global"
-    ],
+    "type": ["Global"],
     "category": "other",
     "country": "USA"
   },
@@ -100,9 +84,7 @@
     "event_date": "2026-05-27",
     "event_end_date": "2026-05-28",
     "location": "Dublin, Ireland",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "summit",
     "country": "Ireland"
   },
@@ -112,9 +94,7 @@
     "event_date": "2026-06-10",
     "event_end_date": "2026-06-11",
     "location": "Singapore",
-    "type": [
-      "Global"
-    ],
+    "type": ["Global"],
     "category": "other",
     "country": "Singapore"
   },
@@ -124,9 +104,7 @@
     "event_date": "2026-04-15",
     "event_end_date": "2026-04-16",
     "location": "Bilbao, Spain",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "summit",
     "country": "Spain"
   },
@@ -136,9 +114,7 @@
     "event_date": "2026-05-07",
     "event_end_date": "2026-05-08",
     "location": "Valetta, Malta",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "summit",
     "country": "Malta"
   },
@@ -148,9 +124,7 @@
     "event_date": "2026-06-09",
     "event_end_date": "2026-06-11",
     "location": "London, UK",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "forum",
     "country": "UK"
   },
@@ -160,10 +134,7 @@
     "event_date": "2026-07-07",
     "event_end_date": "2026-07-10",
     "location": "Riga, Latvia",
-    "type": [
-      "CEE",
-      "European"
-    ],
+    "type": ["CEE", "European"],
     "category": "other",
     "country": "Latvia"
   },
@@ -172,9 +143,7 @@
     "event_url": "https://www.gitex.com",
     "event_date": "2026-12-07",
     "location": "Dubai, UAE",
-    "type": [
-      "Global"
-    ],
+    "type": ["Global"],
     "category": "other",
     "country": "UAE"
   },
@@ -184,9 +153,7 @@
     "event_date": "2026-04-22",
     "event_end_date": "2026-04-24",
     "location": "Las Vegas, USA",
-    "type": [
-      "Global"
-    ],
+    "type": ["Global"],
     "category": "other",
     "country": "USA"
   },
@@ -196,9 +163,7 @@
     "event_date": "2026-06-11",
     "event_end_date": "2026-06-12",
     "location": "Amsterdam, Netherlands",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "summit",
     "country": "Netherlands"
   },
@@ -208,9 +173,7 @@
     "event_date": "2026-06-08",
     "event_end_date": "2026-06-12",
     "location": "London, UK",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "other",
     "country": "UK"
   },
@@ -220,9 +183,7 @@
     "event_date": "2026-03-02",
     "event_end_date": "2026-03-05",
     "location": "Barcelona, Spain",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "other",
     "country": "Spain"
   },
@@ -232,9 +193,7 @@
     "event_date": "2026-06-02",
     "event_end_date": "2026-06-04",
     "location": "Amsterdam, Netherlands",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "other",
     "country": "Netherlands"
   },
@@ -244,9 +203,7 @@
     "event_date": "2026-10-18",
     "event_end_date": "2026-10-21",
     "location": "Las Vegas, USA",
-    "type": [
-      "Global"
-    ],
+    "type": ["Global"],
     "category": "other",
     "country": "USA"
   },
@@ -256,9 +213,7 @@
     "event_date": "2026-09-24",
     "event_end_date": "2026-09-25",
     "location": "Helsinki, Finland",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "forum",
     "country": "Finland"
   },
@@ -267,9 +222,7 @@
     "event_url": "https://pioneers.io",
     "event_date": "2026-05-21",
     "location": "Vienna, Austria",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "other",
     "country": "Austria"
   },
@@ -278,9 +231,7 @@
     "event_url": "https://www.saastock.com",
     "event_date": "2026-10-13",
     "location": "Dublin, Ireland",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "other",
     "country": "Ireland"
   },
@@ -290,9 +241,7 @@
     "event_date": "2026-05-12",
     "event_end_date": "2026-05-14",
     "location": "San Francisco, USA",
-    "type": [
-      "Global"
-    ],
+    "type": ["Global"],
     "category": "other",
     "country": "USA"
   },
@@ -301,9 +250,7 @@
     "event_url": "https://summit.sifted.eu/",
     "event_date": "2026-09-30",
     "location": "London, UK",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "summit",
     "country": "UK"
   },
@@ -313,9 +260,7 @@
     "event_date": "2026-11-18",
     "event_end_date": "2026-11-20",
     "location": "Singapore, Singapore",
-    "type": [
-      "Global"
-    ],
+    "type": ["Global"],
     "category": "other",
     "country": "Singapore"
   },
@@ -325,9 +270,7 @@
     "event_date": "2026-11-19",
     "event_end_date": "2026-11-20",
     "location": "Helsinki, Finland",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "other",
     "country": "Finland"
   },
@@ -337,9 +280,7 @@
     "event_date": "2026-06-03",
     "event_end_date": "2026-06-05",
     "location": "Madrid, Spain",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "summit",
     "country": "Spain"
   },
@@ -349,10 +290,7 @@
     "event_date": "2026-01-28",
     "event_end_date": "2026-01-30",
     "location": "Tartu, Estonia",
-    "type": [
-      "CEE",
-      "European"
-    ],
+    "type": ["CEE", "European"],
     "category": "other",
     "country": "Estonia"
   },
@@ -362,9 +300,7 @@
     "event_date": "2026-04-27",
     "event_end_date": "2026-04-29",
     "location": "San Francisco, USA",
-    "type": [
-      "Global"
-    ],
+    "type": ["Global"],
     "category": "conference",
     "country": "USA"
   },
@@ -374,9 +310,7 @@
     "event_date": "2026-10-13",
     "event_end_date": "2026-10-15",
     "location": "Salamanca, Spain ",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "other",
     "country": "Spain"
   },
@@ -386,9 +320,7 @@
     "event_date": "2026-07-08",
     "event_end_date": "2026-07-10",
     "location": "Montreal, Canada",
-    "type": [
-      "Global"
-    ],
+    "type": ["Global"],
     "category": "other",
     "country": "Canada"
   },
@@ -397,9 +329,7 @@
     "event_url": "https://www.stepconference.com",
     "event_date": "2026-02-11",
     "location": "Dubai, UAE",
-    "type": [
-      "Global"
-    ],
+    "type": ["Global"],
     "category": "conference",
     "country": "UAE"
   },
@@ -408,9 +338,7 @@
     "event_url": "https://entrepreneurship.de/en",
     "event_date": "2026-10-17",
     "location": "Berlin, Germany",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "other",
     "country": "Germany"
   },
@@ -420,9 +348,7 @@
     "event_date": "2026-06-04",
     "event_end_date": "2026-06-07",
     "location": "Berlin, Germany",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "other",
     "country": "Germany"
   },
@@ -432,9 +358,7 @@
     "event_date": "2026-04-21",
     "event_end_date": "2026-04-22",
     "location": "London, UK",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "summit",
     "country": "UK"
   },
@@ -444,9 +368,7 @@
     "event_date": "2026-02-11",
     "event_end_date": "2026-01-12",
     "location": "Stockholm, Sweden",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "other",
     "country": "Sweden"
   },
@@ -456,9 +378,7 @@
     "event_date": "2026-08-26",
     "event_end_date": "2026-08-27",
     "location": "Copenhagen, Denmark",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "other",
     "country": "Denmark"
   },
@@ -468,10 +388,7 @@
     "event_date": "2026-06-24",
     "event_end_date": "2026-06-25",
     "location": "Cluj-Napoca, Romania",
-    "type": [
-      "CEE",
-      "European"
-    ],
+    "type": ["CEE", "European"],
     "category": "other",
     "country": "Romania"
   },
@@ -480,9 +397,7 @@
     "event_url": "https://www.iamsterdam.com/en",
     "event_date": "2026-01-29",
     "location": "Amsterdam, Netherlands",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "conference",
     "country": "Netherlands"
   },
@@ -491,9 +406,7 @@
     "event_url": "https://dublin.ie/whats-on/listings/the-dublin-ai-conference/",
     "event_date": "2026-01-30",
     "location": "Dublin, Ireland",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "conference",
     "country": "Ireland"
   },
@@ -502,9 +415,7 @@
     "event_url": "https://www.eventbrite.ie/e/the-stockholm-ai-conference-2026-tickets-1848998196379",
     "event_date": "2026-05-21",
     "location": "Stockholm, Sweden",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "conference",
     "country": "Sweden"
   },
@@ -513,9 +424,7 @@
     "event_url": "https://vivatechnology.com",
     "event_date": "2026-06-17",
     "location": "Paris, France",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "other",
     "country": "France"
   },
@@ -525,9 +434,7 @@
     "event_date": "2026-07-08",
     "event_end_date": "2026-07-10",
     "location": "Berlin, Germany",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "other",
     "country": "Germany"
   },
@@ -537,9 +444,7 @@
     "event_date": "2026-11-09",
     "event_end_date": "2026-11-12",
     "location": "Lisbon, Portugal",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "summit",
     "country": "Portugal"
   },
@@ -549,9 +454,7 @@
     "event_date": "2026-05-11",
     "event_end_date": "2026-05-14",
     "location": "Vancouver, Canada",
-    "type": [
-      "Global"
-    ],
+    "type": ["Global"],
     "category": "summit",
     "country": "Canada"
   },
@@ -560,10 +463,7 @@
     "event_url": "https://webit.org",
     "event_date": "2026-06-23",
     "location": "Sofia, Bulgaria",
-    "type": [
-      "CEE",
-      "European"
-    ],
+    "type": ["CEE", "European"],
     "category": "other",
     "country": "Bulgaria"
   },
@@ -573,10 +473,7 @@
     "event_date": "2026-04-21",
     "event_end_date": "2026-04-22",
     "location": "Warsaw, Poland",
-    "type": [
-      "CEE",
-      "European"
-    ],
+    "type": ["CEE", "European"],
     "category": "summit",
     "country": "Poland"
   },
@@ -585,11 +482,7 @@
     "event_url": "https://forbes.hu/esemenyek/forbes-uzleti-fesztival/2026-forbes-under-30-summit",
     "event_date": "2026-02-26",
     "location": "Budapest",
-    "type": [
-      "Local",
-      "European",
-      "CEE"
-    ],
+    "type": ["Local", "European", "CEE"],
     "category": "summit",
     "country": "Hungary"
   },
@@ -598,11 +491,7 @@
     "event_url": "https://www.portfolio.hu/rendezvenyek/konferencia-gazdasag/portfolio-investment-day-2026/1976/attekintes",
     "event_date": "2026-02-24",
     "location": "Budapest",
-    "type": [
-      "Local",
-      "European",
-      "CEE"
-    ],
+    "type": ["Local", "European", "CEE"],
     "category": "conference",
     "country": "Hungary"
   },
@@ -611,11 +500,7 @@
     "event_url": "https://startupsafari.com",
     "event_date": "2026-03-24",
     "location": "Budapest",
-    "type": [
-      "Local",
-      "European",
-      "CEE"
-    ],
+    "type": ["Local", "European", "CEE"],
     "category": "other",
     "country": "Hungary"
   },
@@ -624,11 +509,7 @@
     "event_url": "https://portfolio.hu",
     "event_date": "2026-03-24",
     "location": "Budapest",
-    "type": [
-      "Local",
-      "European",
-      "CEE"
-    ],
+    "type": ["Local", "European", "CEE"],
     "category": "other",
     "country": "Hungary"
   },
@@ -637,11 +518,7 @@
     "event_url": "https://proptech.hu",
     "event_date": "2026-05-14",
     "location": "Budapest",
-    "type": [
-      "Local",
-      "European",
-      "CEE"
-    ],
+    "type": ["Local", "European", "CEE"],
     "category": "other",
     "country": "Hungary"
   },
@@ -650,11 +527,7 @@
     "event_url": "https://craft-conf.com",
     "event_date": "2026-05-26",
     "location": "Budapest",
-    "type": [
-      "Local",
-      "European",
-      "CEE"
-    ],
+    "type": ["Local", "European", "CEE"],
     "category": "other",
     "country": "Hungary"
   },
@@ -663,11 +536,7 @@
     "event_url": "https://ybg.hu/",
     "event_date": "2026-03-13",
     "location": "Budapest",
-    "type": [
-      "Local",
-      "European",
-      "CEE"
-    ],
+    "type": ["Local", "European", "CEE"],
     "category": "other",
     "country": "Hungary"
   },
@@ -676,11 +545,7 @@
     "event_url": "https://letsconnect.hu/connect-conf/connect-2026/",
     "event_date": "2026-04-16",
     "location": "Budapest",
-    "type": [
-      "Local",
-      "European",
-      "CEE"
-    ],
+    "type": ["Local", "European", "CEE"],
     "category": "other",
     "country": "Hungary"
   },
@@ -690,9 +555,7 @@
     "event_date": "2026-06-08",
     "event_end_date": "2026-06-11",
     "location": "Rio De Janeiro, Brasil",
-    "type": [
-      "Global"
-    ],
+    "type": ["Global"],
     "category": "summit",
     "country": "Brasil"
   },
@@ -702,9 +565,7 @@
     "event_date": "2026-05-13",
     "event_end_date": "2026-05-15",
     "location": "Sao Paulo, Brasil",
-    "type": [
-      "Global"
-    ],
+    "type": ["Global"],
     "category": "summit",
     "country": "Brasil"
   },
@@ -713,9 +574,7 @@
     "event_url": "https://thenextweb.com/conference",
     "event_date": "2026-01-29",
     "location": "Amsterdam, Netherlands",
-    "type": [
-      "Global"
-    ],
+    "type": ["Global"],
     "category": "conference",
     "country": "Netherlands"
   },
@@ -725,9 +584,7 @@
     "event_date": "2026-06-15",
     "event_end_date": "2026-06-18",
     "location": "Amsterdam, Netherlands",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "conference",
     "country": "Netherlands"
   },
@@ -737,9 +594,7 @@
     "event_date": "2026-04-21",
     "event_end_date": "2026-04-23",
     "location": "Amsterdam, Netherlands",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "conference",
     "country": "Netherlands"
   },
@@ -749,9 +604,7 @@
     "event_date": "2026-02-04",
     "event_end_date": "2026-02-05",
     "location": "London, United Kingdom",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "other",
     "country": "UK"
   },
@@ -761,9 +614,7 @@
     "event_date": "2026-02-04",
     "event_end_date": "2026-02-05",
     "location": "London, United Kingdom",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "expo",
     "country": "UK"
   },
@@ -773,9 +624,7 @@
     "event_date": "2026-04-16",
     "event_end_date": "2026-04-16",
     "location": "London, United Kingdom",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "conference",
     "country": "UK"
   },
@@ -785,9 +634,7 @@
     "event_date": "2026-06-16",
     "event_end_date": "2026-06-17",
     "location": "London, United Kingdom",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "conference",
     "country": "UK"
   },
@@ -797,9 +644,7 @@
     "event_date": "2026-02-03",
     "event_end_date": "2026-02-05",
     "location": "Cannes, France",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "conference",
     "country": "France"
   },
@@ -809,9 +654,7 @@
     "event_date": "2026-03-10",
     "event_end_date": "2026-03-11",
     "location": "Paris, France",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "conference",
     "country": "France"
   },
@@ -820,9 +663,7 @@
     "event_url": "https://www.changenow.world/",
     "event_date": "2026-03-30",
     "location": "Paris, France",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "summit",
     "country": "France"
   },
@@ -832,9 +673,7 @@
     "event_date": "2026-10-08",
     "event_end_date": "2026-10-08",
     "location": "Berlin, Germany",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "conference",
     "country": "Germany"
   },
@@ -844,9 +683,7 @@
     "event_date": "2026-05-20",
     "event_end_date": "2026-05-21",
     "location": "Berlin, Germany",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "conference",
     "country": "Germany"
   },
@@ -856,9 +693,7 @@
     "event_date": "2026-06-08",
     "event_end_date": "2026-06-10",
     "location": "Berlin, Germany",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "conference",
     "country": "Germany"
   },
@@ -868,9 +703,7 @@
     "event_date": "2026-06-08",
     "event_end_date": "2026-06-12",
     "location": "Berlin, Germany",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "conference",
     "country": "Germany"
   },
@@ -879,9 +712,7 @@
     "event_url": "https://www.gitex.com/",
     "event_date": "2026-06-30",
     "location": "Berlin, Germany",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "expo",
     "country": "Germany"
   },
@@ -891,9 +722,7 @@
     "event_date": "2026-04-15",
     "event_end_date": "2026-04-16",
     "location": "Malmö, Sweden",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "conference",
     "country": "Sweden"
   },
@@ -903,9 +732,7 @@
     "event_date": "2026-05-11",
     "event_end_date": "2026-05-13",
     "location": "Stockholm, Sweden",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "forum",
     "country": "Sweden"
   },
@@ -915,9 +742,7 @@
     "event_date": "2026-03-23",
     "event_end_date": "2026-03-27",
     "location": "Stavanger, Norway",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "forum",
     "country": "Norway"
   },
@@ -927,10 +752,7 @@
     "event_date": "2026-01-28",
     "event_end_date": "2026-01-30",
     "location": "Tartu, Estonia",
-    "type": [
-      "CEE",
-      "European"
-    ],
+    "type": ["CEE", "European"],
     "category": "conference",
     "country": "Estonia"
   },
@@ -940,10 +762,7 @@
     "event_date": "2026-05-21",
     "event_end_date": "2026-05-22",
     "location": "Tallinn, Estonia",
-    "type": [
-      "CEE",
-      "European"
-    ],
+    "type": ["CEE", "European"],
     "category": "conference",
     "country": "Estonia"
   },
@@ -953,10 +772,7 @@
     "event_date": "2026-03-11",
     "event_end_date": "2026-03-13",
     "location": "Riga, Latvia",
-    "type": [
-      "CEE",
-      "European"
-    ],
+    "type": ["CEE", "European"],
     "category": "conference",
     "country": "Latvia"
   },
@@ -965,9 +781,7 @@
     "event_url": "https://italiantechweek.com/",
     "event_date": "2026-09-01",
     "location": "Turin, Italy",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "conference",
     "country": "Italy"
   },
@@ -977,9 +791,7 @@
     "event_date": "2026-05-13",
     "event_end_date": "2026-05-14",
     "location": "Bologna, Italy",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "conference",
     "country": "Italy"
   },
@@ -989,9 +801,7 @@
     "event_date": "2026-05-18",
     "event_end_date": "2026-05-25",
     "location": "Vienna, Austria",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "festival",
     "country": "Austria"
   },
@@ -1001,9 +811,7 @@
     "event_date": "2026-02-24",
     "event_end_date": "2026-02-26",
     "location": "Vienna, Austria",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "conference",
     "country": "Austria"
   },
@@ -1013,9 +821,7 @@
     "event_date": "2026-05-19",
     "event_end_date": "2026-05-19",
     "location": "Vienna, Austria",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "conference",
     "country": "Austria"
   },
@@ -1025,21 +831,17 @@
     "event_date": "2026-01-26",
     "event_end_date": "2026-01-27",
     "location": "Zurich, Switzerland",
-    "type": [
-      "Global"
-    ],
+    "type": ["Global"],
     "category": "summit",
     "country": "Switzerland"
   },
   {
     "title": "health.tech Global Summit",
-    "event_url": "https://www.healthtechsummit.eu/",
+    "event_url": "https://www.health.tech/",
     "event_date": "2026-03-03",
     "event_end_date": "2026-03-05",
     "location": "Basel, Switzerland",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "summit",
     "country": "Switzerland"
   },
@@ -1049,9 +851,7 @@
     "event_date": "2026-03-19",
     "event_end_date": "2026-03-20",
     "location": "St. Gallen, Switzerland",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "summit",
     "country": "Switzerland"
   },
@@ -1061,9 +861,7 @@
     "event_date": "2026-05-18",
     "event_end_date": "2026-05-19",
     "location": "Geneva, Switzerland",
-    "type": [
-      "European"
-    ],
+    "type": ["European"],
     "category": "forum",
     "country": "Switzerland"
   }

@@ -15,7 +15,7 @@ function FormChanger() {
 
   const [form, setForm] = useState<string>("startup database");
   return (
-    <div className="flex justify-center flex-col gap-8 row-start-2 items-center  w-full my-6">
+    <div className="flex justify-center flex-col gap-8 row-start-2 items-center min-h-screen  w-full my-6">
       <div className="flex">
         <SlidingNavbar onItemClick={onClickHandler} items={slideritems} />
       </div>

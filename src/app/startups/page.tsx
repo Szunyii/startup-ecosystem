@@ -82,7 +82,7 @@ async function StartupPage(props: {
       </section>
 
       {/* datatable */}
-      <section className=" w-full py-10">
+      <section className=" min-h-screen w-full py-10">
         <div className="lg:hidden block">
           <StartupDataTableMobile
             columns={columns}

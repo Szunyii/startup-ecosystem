@@ -9,7 +9,7 @@ export default function HomePage() {
       <div className="scroll-smooth">
         <div className="w-full min-h-screen max-h-screen z-10 text-white flex justify-center">
           <div className="mt-20 md:mt-36 flex flex-col items-center px-4">
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold max-w-3xl text-center ">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold max-w-3xl text-center animate-fadeInUp ">
               Facilitating the visibility of Hungarian startups on the global
               ecosystem map
             </h2>

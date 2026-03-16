@@ -90,7 +90,7 @@
   {
     "link": "https://create26.hu/",
     "stage": ["Pre-Startup"],
-    "type": ["HUBs"],
+    "type": ["HUBs/ Co-working"],
     "id": 13,
     "companyLogo": "startup13",
     "companyName": "Create26"
@@ -241,8 +241,8 @@
   },
   {
     "link": "https://hunban.eu/",
-    "stage": ["Scale-up", "Startup", "Pre-Startup"],
-    "type": ["Local investors", "Supporting Organizations"],
+    "stage": [],
+    "type": [],
     "id": 35,
     "companyLogo": "startup35",
     "companyName": "Hungarian Business Angel Network"
@@ -258,7 +258,7 @@
   {
     "link": "https://www.hihub.hu/",
     "stage": ["Pre-Startup"],
-    "type": ["HUBs"],
+    "type": ["HUBs/ Co-working"],
     "id": 37,
     "companyLogo": "startup37",
     "companyName": "Hungarian Innovation Hub"
@@ -418,7 +418,7 @@
   {
     "link": "https://www.puzl.com/coworking-locations/budapest",
     "stage": ["Pre-Startup", "Startup", "Scale-up"],
-    "type": ["HUBs"],
+    "type": ["HUBs/ Co-working"],
     "id": 57,
     "companyLogo": "startup57",
     "companyName": "PuzL Coworking"
