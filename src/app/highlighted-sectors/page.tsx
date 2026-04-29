@@ -10,7 +10,7 @@ import React from "react";
 
 function page() {
   return (
-    <div className="min-h-screen py-6 text-white flex items-center flex-col relative">
+    <div className="min-h-screen overflow-x-hidden py-6 text-white flex items-center flex-col relative">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute  left-0 top-1/4 z-0 transform-gpu blur-3xl"

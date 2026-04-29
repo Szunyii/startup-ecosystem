@@ -188,3 +188,49 @@ model startup_data_final {
   person               Float?
   personal_yoy         Float?
 }
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+
+
+model deeptech_seged {
+  id              Int       @id @default(autoincrement())
+  traderegnumber  String?   @db.VarChar(50)
+  taxnumber       String?   @db.VarChar(32)
+  website         String?   @db.Text
+  status          String?   @db.VarChar(32)
+  type            String?   @db.VarChar(32)
+  report          String?   @db.VarChar(32)
+  company         String?   @db.VarChar(255)
+  funding_year    Int?
+  created_at      DateTime? @default(now()) @db.Timestamp(0)
+  updated_at      DateTime? @default(now()) @db.Timestamp(0)
+  sector          String?   @db.VarChar(255)
+  deeptech        Boolean?
+  deeptech_sector String?   @db.VarChar(255)
+}
+
+model kkv_registry {
+  id            Int     @id @default(autoincrement())
+  company_name  String? @db.VarChar(255)
+  tax_number    String? @db.VarChar(255)
+  website       String? @db.VarChar(255)
+  about         String? @db.VarChar(255)
+  contact_email String? @db.VarChar(255)
+}
+
+model startup_test {
+  id              Int       @id @default(autoincrement())
+  traderegnumber  String?   @db.VarChar(50)
+  taxnumber       String?   @db.VarChar(32)
+  website         String?   @db.Text
+  status          String?   @db.VarChar(32)
+  type            String?   @db.VarChar(32)
+  report          String?   @db.VarChar(32)
+  company         String?   @db.VarChar(255)
+  funding_year    Int?
+  created_at      DateTime? @default(now()) @db.Timestamp(0)
+  updated_at      DateTime? @default(now()) @db.Timestamp(0)
+  sector          String?   @db.VarChar(255)
+  deeptech        Boolean?
+  deeptech_sector String?   @db.VarChar(255)
+}

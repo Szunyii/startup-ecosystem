@@ -5,7 +5,7 @@ import { Card } from "@/components/ui/card";
 
 function page() {
   return (
-    <div className="min-h-screen text-white backdrop-blur-2xl">
+    <div className="min-h-screen text-white backdrop-blur-2x">
       <div className=" p-3 mb-10 z-10">
         <h1 className="text-5xl font-bold mt-6 ml-4 z-50">Why Hungary?</h1>
       </div>
@@ -58,7 +58,7 @@ function page() {
                 Union, set at <b>9%.</b>
               </li>
               <li>
-                Furthermore,<b>Hungary provides various tax incentives</b> for
+                Furthermore, <b>Hungary provides various tax incentives</b> for
                 conducting research and development (R&D) activities.
               </li>
               <li>

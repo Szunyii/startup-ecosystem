@@ -5,7 +5,7 @@ import Image from "next/image";
 
 function LegalPage() {
   return (
-    <div className="min-h-screen flex items-center w-full flex-col">
+    <div className="min-h-screen overflow-x-hidden flex items-center w-full flex-col">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute  -right-[35%] z-0 transform-gpu blur-3xl"

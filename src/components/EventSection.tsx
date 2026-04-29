@@ -1,5 +1,6 @@
 "use client";
 import { Calendar } from "./ui/calendar";
+import { motion } from "framer-motion";
 import { useRouter, useSearchParams } from "next/navigation";
 import {
   format,
@@ -94,7 +95,7 @@ function EventSection() {
   const handleDateSelect = (date: Date | undefined) => {
     if (date) {
       const formattedDate = format(date, "yyyy-MM-dd");
-      router.push(`?date=${formattedDate}`);
+      router.push(`?date=${formattedDate}`, { scroll: false });
     }
   };
 
@@ -105,6 +106,16 @@ function EventSection() {
 
   const handleTypeClick = (type: string) => {
     setType(type);
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
   };
 
   return (
@@ -141,7 +152,7 @@ function EventSection() {
           <Button
             className="mt-2 w-full md:w-auto"
             onClick={() => {
-              router.replace("/#event");
+              router.replace("/#event", { scroll: false });
             }}
           >
             See all event
@@ -149,7 +160,12 @@ function EventSection() {
         ) : null}
       </div>
       <ScrollArea className="h-[400px] md:h-[540px] w-full rounded-md pr-2 ">
-        <div
+        <motion.div
+          key={`${type}-${selectedCountry}-${dateParam || "all"}`}
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
           className="flex-grow grid grid-cols-1 sm:grid-cols-2 gap-4 order-2 md:order-none "
           ref={eventRef}
           id="event"
@@ -170,7 +186,7 @@ function EventSection() {
           ) : (
             <p className="text-center text-white"></p>
           )}
-        </div>
+        </motion.div>
       </ScrollArea>
     </div>
   );
