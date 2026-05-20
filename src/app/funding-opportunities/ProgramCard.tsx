@@ -1,5 +1,3 @@
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import Link from "next/link";
 import React from "react";
 
@@ -11,19 +9,22 @@ interface ProgramProps {
 
 function ProgramCard({ description, link, program }: ProgramProps) {
   return (
-    <Card className="text-white border rounded-xl px-8 py-6 border-primary bg-transparent flex flex-col items-center h-full justify-between">
-      <h2 className="font-bold text-2xl text-white mb-5 self-start">
+    <div className="flex flex-col gap-3 p-5 rounded-[14px] border border-white/[0.07] bg-white/[0.03] transition-all hover:bg-[rgba(122,95,255,0.12)] hover:border-[rgba(122,95,255,0.3)] hover:-translate-y-0.5">
+      <h2 className="font-semibold text-[16px] tracking-tight text-white">
         {program}
       </h2>
-      <p className="text-white text-justify leading-relaxed whitespace-pre-line">
+      <p className="text-[13px] leading-relaxed text-white/75 whitespace-pre-line line-clamp-6">
         {description}
       </p>
-      <Link href={link} target="_blank" className="my-4">
-        <Button className="text-[16px] border-primary border bg-transparent text-white">
-          Go to website
-        </Button>
+      <Link
+        href={link}
+        target="_blank"
+        rel="noreferrer"
+        className="mt-auto self-start text-[#afe200] no-underline font-mono text-[11px] px-3 py-1.5 border border-[rgba(175,226,0,0.4)] rounded-full hover:bg-[rgba(175,226,0,0.08)]"
+      >
+        Visit website ↗
       </Link>
-    </Card>
+    </div>
   );
 }
 

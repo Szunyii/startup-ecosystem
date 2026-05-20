@@ -1,19 +1,35 @@
-import EcosystemGrid from "@/components/EcosystemGrid";
 import React from "react";
-import data from "@/data/startupdata.json";
-import EcosístemGridMobile from "@/components/EcosystemGridMobile";
+import partnerData from "@/data/partner.json";
+import EcosystemAtlas from "./EcosystemAtlas";
+import type { Metadata } from "next";
 
-const StartupPages = async () => {
-  return (
-    <div className="w-full mt-5">
-      <section className=" hidden lg:block">
-        <EcosystemGrid startups={data} />
-      </section>
-      <section className="lg:hidden mt-4">
-        <EcosístemGridMobile startups={data} />
-      </section>
-    </div>
-  );
+export const metadata: Metadata = {
+  title: "Startup Ecosystem",
+  description:
+    "The Hungarian startup ecosystem atlas: accelerators, incubators, VCs and partners supporting founders across every stage — from pre-seed to scale-up.",
+  alternates: { canonical: "/ecosystem" },
+  openGraph: {
+    title: "Startup Ecosystem — Hungarian Innovation Agency",
+    description:
+      "The Hungarian startup ecosystem atlas: accelerators, incubators, VCs and partners supporting founders.",
+    url: "/ecosystem",
+  },
 };
 
-export default StartupPages;
+type RawPartner = {
+  id: number;
+  link: string;
+  stage: string[];
+  type: string[];
+  companyLogo: string;
+  companyName: string;
+  about: string;
+};
+
+export default function NewEcosystemPage() {
+  const partners = (partnerData as RawPartner[]).filter(
+    (p) => p.companyName && p.stage?.length && p.type?.length,
+  );
+
+  return <EcosystemAtlas partners={partners} />;
+}

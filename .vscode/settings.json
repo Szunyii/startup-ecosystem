@@ -1,0 +1,46 @@
+{
+  "sqltools.connections": [
+    {
+      "mysqlOptions": {
+        "authProtocol": "default",
+        "enableSsl": "Disabled"
+      },
+      "ssh": "Enabled",
+      "previewLimit": 50,
+      "server": "127.0.0.1",
+      "port": 3306,
+      "sshOptions": {
+        "port": 22,
+        "host": "10.100.200.136",
+        "username": "newstartuproot",
+        "password": "2ParAz4Darab!"
+      },
+      "driver": "MariaDB",
+      "name": "127.0.0.1",
+      "database": "oeig",
+      "username": "oeiguser",
+      "password": "RollingStones1964!"
+    },
+    {
+      "mysqlOptions": {
+        "authProtocol": "default",
+        "enableSsl": "Disabled"
+      },
+      "ssh": "Enabled",
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 3306,
+      "sshOptions": {
+        "port": 22,
+        "host": "10.100.200.136",
+        "username": "newstartuproot",
+        "password": "2ParAz4Darab!"
+      },
+      "driver": "MySQL",
+      "name": "startup",
+      "database": "oeigdb",
+      "username": "oeiguser",
+      "password": "2ParAz4Darab!"
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import Leaf from "@/components/Leaf";
 import {
   Card,
   CardContent,
@@ -7,13 +8,27 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Highlighted Sectors",
+  description:
+    "Highlighted sectors of the Hungarian innovation ecosystem: deep tech, life sciences, AI, fintech, mobility and more — areas driving Hungary's startup growth.",
+  alternates: { canonical: "/highlighted-sectors" },
+  openGraph: {
+    title: "Highlighted Sectors — Hungarian Innovation Agency",
+    description:
+      "Highlighted sectors of the Hungarian innovation ecosystem: deep tech, life sciences, AI, fintech, mobility and more.",
+    url: "/highlighted-sectors",
+  },
+};
 
 function page() {
   return (
-    <div className="min-h-screen overflow-x-hidden py-6 text-white flex items-center flex-col relative">
+    <div className="min-h-screen  text-white font-sans px-4 md:px-7 py-8 relative">
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute  left-0 top-1/4 z-0 transform-gpu blur-3xl"
+        className="pointer-events-none absolute  left-0 top-20 z-0 transform-gpu blur-3xl"
       >
         <div
           style={{
@@ -33,29 +48,41 @@ function page() {
           className="relative aspect-square  w-[26.125rem]  rotate-[30deg] bg-gradient-to-tr from-primary to-[#9089fc] opacity-10 sm:left-[calc(50%-30rem)] z-0"
         />
       </div>
-      <h1 className="text-center text-2xl mb-5 text-[42px] mt-4">
-        Innovation Ecosystem Strength in Hungary
-      </h1>
-
-      <h3 className="text-center mb-10">
-        Over the past decade,{" "}
-        <b>
-          Hungary&apos;s startup ecosystem has shown sustained strength and
-          international visibility across five key industries.
-        </b>
-        <br />
-        <p>
-          {" "}
-          Between 2015 and 2025:{" "}
-          <b>
-            €925M million in venture capital flowed into the most active sectors
-          </b>{" "}
-          shaping the future of the Hungarian innovation economy.
-        </p>
-      </h3>
+      <header className="px-2 mb-10 z-10 relative">
+        <Leaf className="hidden md:block -right-6 top- size-20 opacity-10" />
+        <Leaf className="hidden md:block right-16 -top-2 size-28 opacity-25" />
+        <Leaf className="hidden md:block right-[180px] top-14 opacity-10" />
+        <div className="inline-flex items-center gap-2.5 font-mono text-xs opacity-80">
+          <span className="relative flex h-2 w-2">
+            <span className="absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75 animate-ping" />
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-secondary" />
+          </span>
+          <span>Highlighted · Sector strength 2015–2025</span>
+        </div>
+        <h1 className="mt-3 text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight">
+          Innovation Ecosystem Strength in Hungary
+        </h1>
+        <div className="mt-5 max-w-3xl text-base text-white/80 leading-relaxed space-y-3">
+          <p>
+            Over the past decade,{" "}
+            <b>
+              Hungary&apos;s startup ecosystem has shown sustained strength and
+              international visibility across five key industries.
+            </b>
+          </p>
+          <p>
+            Between 2015 and 2025:{" "}
+            <b>
+              €925M million in venture capital flowed into the most active
+              sectors
+            </b>{" "}
+            shaping the future of the Hungarian innovation economy.
+          </p>
+        </div>
+      </header>
       {/* grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-3 w-full gap-4 mt-6 ">
-        <Card className="bg-primary/20 text-white border-none rounded-tr-none rounded-bl-none rounded-tl-3xl rounded-br-3xl">
+        <Card className="bg-[#1a1140]/80 text-white border border-primary/40 rounded-tr-none rounded-bl-none rounded-tl-3xl rounded-br-3xl shadow-[0_8px_28px_-12px_rgba(93,61,255,0.45)]">
           <CardHeader>
             <div className="flex items-center gap-x-3">
               <Image
@@ -84,7 +111,7 @@ function page() {
             </div>
           </CardContent>
           <CardFooter className="flex flex-col justify-start items-start">
-            <h2 className="font-bold text-lg mb-1">Top startups:</h2>
+            <h2 className="font-mono text-[10px] uppercase tracking-widest opacity-55 mb-3">Top startups</h2>
             <div className="grid grid-cols-4 gap-3 w-full">
               <Link
                 className="flex flex-col justify-center items-center group"
@@ -209,7 +236,7 @@ function page() {
             </div>
           </CardFooter>
         </Card>
-        <Card className="bg-primary/20 text-white border-none rounded-tr-none rounded-bl-none rounded-tl-3xl rounded-br-3xl">
+        <Card className="bg-[#1a1140]/80 text-white border border-primary/40 rounded-tr-none rounded-bl-none rounded-tl-3xl rounded-br-3xl shadow-[0_8px_28px_-12px_rgba(93,61,255,0.45)]">
           <CardHeader>
             <div className="flex items-center gap-x-3">
               <Image src={"/icon/AI.png"} alt="icon" width={35} height={35} />
@@ -232,7 +259,7 @@ function page() {
             </div>
           </CardContent>
           <CardFooter className="flex flex-col justify-start items-start">
-            <h2 className="font-bold text-lg mb-1">Top startups:</h2>
+            <h2 className="font-mono text-[10px] uppercase tracking-widest opacity-55 mb-3">Top startups</h2>
             <div className="grid grid-cols-4 gap-3 w-full">
               <Link
                 className="flex flex-col justify-center items-center group rounded"
@@ -330,7 +357,7 @@ function page() {
           </CardFooter>
         </Card>
         {/* fintech */}
-        <Card className="bg-primary/20 text-white border-none rounded-tr-none rounded-bl-none rounded-tl-3xl rounded-br-3xl">
+        <Card className="bg-[#1a1140]/80 text-white border border-primary/40 rounded-tr-none rounded-bl-none rounded-tl-3xl rounded-br-3xl shadow-[0_8px_28px_-12px_rgba(93,61,255,0.45)]">
           <CardHeader>
             <div className="flex items-center gap-x-3">
               <Image src={"/icon/tech.png"} alt="icon" width={35} height={35} />
@@ -349,7 +376,7 @@ function page() {
             </div>
           </CardContent>
           <CardFooter className="flex flex-col justify-start items-start wf">
-            <h2 className="font-bold text-lg mb-1">Top startups:</h2>
+            <h2 className="font-mono text-[10px] uppercase tracking-widest opacity-55 mb-3">Top startups</h2>
             <div className="grid grid-cols-4 gap-3 w-full">
               <Link
                 className="flex flex-col justify-center items-center group rounded"
@@ -415,7 +442,7 @@ function page() {
           </CardFooter>
         </Card>
         {/* enterprise */}
-        <Card className="bg-primary/20 text-white border-none rounded-tr-none rounded-bl-none rounded-tl-3xl rounded-br-3xl">
+        <Card className="bg-[#1a1140]/80 text-white border border-primary/40 rounded-tr-none rounded-bl-none rounded-tl-3xl rounded-br-3xl shadow-[0_8px_28px_-12px_rgba(93,61,255,0.45)]">
           <CardHeader>
             <div className="flex items-center gap-x-3">
               <Image
@@ -442,7 +469,7 @@ function page() {
             </div>
           </CardContent>
           <CardFooter className="flex flex-col justify-start items-start">
-            <h2 className="font-bold text-lg mb-1">Top startups:</h2>
+            <h2 className="font-mono text-[10px] uppercase tracking-widest opacity-55 mb-3">Top startups</h2>
             <div className="grid grid-cols-4 gap-3 w-full">
               <Link
                 className="flex flex-col justify-center items-center group rounded"
@@ -509,7 +536,7 @@ function page() {
             </div>
           </CardFooter>
         </Card>
-        <Card className="bg-primary/20 text-white border-none rounded-tr-none rounded-bl-none rounded-tl-3xl rounded-br-3xl">
+        <Card className="bg-[#1a1140]/80 text-white border border-primary/40 rounded-tr-none rounded-bl-none rounded-tl-3xl rounded-br-3xl shadow-[0_8px_28px_-12px_rgba(93,61,255,0.45)]">
           <CardHeader>
             <div className="flex items-center gap-x-3">
               <Image
@@ -539,7 +566,7 @@ function page() {
             </div>
           </CardContent>
           <CardFooter className="flex flex-col justify-start items-start w-full">
-            <h2 className="font-bold text-lg mb-1">Top startups:</h2>
+            <h2 className="font-mono text-[10px] uppercase tracking-widest opacity-55 mb-3">Top startups</h2>
             <div className="grid grid-cols-4 gap-3 w-full">
               <Link
                 className="flex flex-col justify-center items-center group rounded"

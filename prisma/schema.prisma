@@ -8,11 +8,6 @@ datasource db {
   directUrl = env("DATABASE_URL")
 }
 
-model pelda {
-  id     Int     @id @default(autoincrement())
-  szoveg String? @db.Text
-}
-
 model scaleupOptenImport {
   id                    Int      @id @default(autoincrement())
   traderegnumber        Int?
@@ -189,9 +184,6 @@ model startup_data_final {
   personal_yoy         Float?
 }
 
-/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
-
-
 model deeptech_seged {
   id              Int       @id @default(autoincrement())
   traderegnumber  String?   @db.VarChar(50)
@@ -210,27 +202,65 @@ model deeptech_seged {
 }
 
 model kkv_registry {
-  id            Int     @id @default(autoincrement())
-  company_name  String? @db.VarChar(255)
-  tax_number    String? @db.VarChar(255)
-  website       String? @db.VarChar(255)
-  about         String? @db.VarChar(255)
-  contact_email String? @db.VarChar(255)
+  id             Int     @id @default(autoincrement())
+  company_name   String? @db.VarChar(255)
+  tax_number     String? @db.VarChar(255)
+  website        String? @db.VarChar(255)
+  about          String? @db.VarChar(255)
+  contact_email  String? @db.VarChar(255)
+  category       String? @db.VarChar(255)
+  sub_categories String? @db.LongText
 }
 
 model startup_test {
-  id              Int       @id @default(autoincrement())
-  traderegnumber  String?   @db.VarChar(50)
-  taxnumber       String?   @db.VarChar(32)
-  website         String?   @db.Text
-  status          String?   @db.VarChar(32)
-  type            String?   @db.VarChar(32)
-  report          String?   @db.VarChar(32)
-  company         String?   @db.VarChar(255)
+  id              Int                      @id @default(autoincrement())
+  traderegnumber  String?                  @db.VarChar(50)
+  taxnumber       String?                  @unique(map: "taxnumber_UNIQUE") @db.VarChar(32)
+  website         String?                  @db.Text
+  status          String?                  @db.VarChar(32)
+  type            String?                  @db.VarChar(32)
+  report          String?                  @db.VarChar(32)
+  company         String?                  @db.VarChar(255)
   funding_year    Int?
-  created_at      DateTime? @default(now()) @db.Timestamp(0)
-  updated_at      DateTime? @default(now()) @db.Timestamp(0)
-  sector          String?   @db.VarChar(255)
+  created_at      DateTime?                @default(now()) @db.Timestamp(0)
+  updated_at      DateTime?                @default(now()) @db.Timestamp(0)
+  sector          String?                  @db.VarChar(255)
   deeptech        Boolean?
-  deeptech_sector String?   @db.VarChar(255)
+  deeptech_sector String?                  @db.VarChar(255)
+  message         String?                  @db.VarChar(255)
+  year_data       startup_year_data_test[]
+}
+
+model startup_year_data_test {
+  id                   Int           @id @default(autoincrement())
+  taxnumber            String?       @db.VarChar(32)
+  status               String?       @db.VarChar(32)
+  report               String?       @db.VarChar(32)
+  year                 Int?
+  netrevenue           Float?
+  netrevenue_yoy       Float?
+  tax                  Float?
+  tax_yoy              Float?
+  personalexpenses     Float?
+  personalexpenses_yoy Float?
+  person               Float?
+  personal_yoy         Float?
+  startup              startup_test? @relation(fields: [taxnumber], references: [taxnumber], map: "fk_syd_taxnumber")
+
+  @@index([taxnumber], map: "fk_syd_taxnumber")
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model company_funding {
+  taxnumber    String? @db.VarChar(50)
+  company_name String? @db.VarChar(255)
+  funding_year Int?
+
+  @@ignore
+}
+
+model newsletter {
+  id         Int       @id @default(autoincrement())
+  email      String    @db.VarChar(255)
+  created_at DateTime? @default(now()) @db.Timestamp(0)
 }

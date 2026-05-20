@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import { Button } from "./ui/button";
 import { cn, StartupDataType } from "@/lib/utils";
 import StatupCard from "./StatupCard";
-import Faq from "@/app/startups/Faq";
-import AccordionEcosystem from "@/app/ecosystem/AccordionEcosystwm";
+import Faq from "@/components/Faq";
+import AccordionEcosystem from "@/components/AccordionEcosystem";
 import { Separator } from "./ui/separator";
 import {
   Tooltip,

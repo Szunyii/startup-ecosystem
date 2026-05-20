@@ -14,7 +14,10 @@ import { cn } from "@/lib/utils";
 
 function StartupNavDrop() {
   const pathname = usePathname();
-  const isActive = pathname === "/startups" || pathname === "/ecosystem";
+  const isActive =
+    pathname === "/startup" ||
+    pathname === "/ecosystem" ||
+    pathname === "/startup-overview";
 
   return (
     <NavigationMenu>
@@ -31,8 +34,9 @@ function StartupNavDrop() {
             Startups
           </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="w-44 space-y-2 p-3">
-              <ListItem href="/startups" title="Startup database" />
+            <ul className="w-48 space-y-2 p-3">
+              <ListItem href="/startup-overview" title="Startup overview" />
+              <ListItem href="/startup" title="Startup database" />
               <ListItem href="/ecosystem" title="Startup ecosystem" />
             </ul>
           </NavigationMenuContent>

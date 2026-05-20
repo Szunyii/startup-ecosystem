@@ -26,8 +26,8 @@ export const kkvRegistry = z.object({
   website: z.string(),
   contact_email: z.email(),
   about: z.string().max(500),
-  test_1: z.string().optional(),
-  test_2: z.string().optional(),
+  category: z.string(),
+  sub_categories: z.array(z.string()),
   acceptTerms: z.boolean().refine((val) => val === true, {
     message: "You must accept the terms and conditions to submit this form.",
   }),
@@ -45,6 +45,7 @@ export const ecosystemFormSchema = z.object({
   contactRole: z.string().min(2).max(50),
   contactEmail: z.string().min(2).max(50),
   stage: z.string().min(2),
+
   type: z.string().min(2),
   requestType: z.string().min(2),
   acceptTerms: z.boolean().refine((val) => val === true, {

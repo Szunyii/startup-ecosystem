@@ -14,8 +14,14 @@ export async function createKKVReg({
   company_name,
   contact_email,
   tax_number,
+  category,
+  sub_categories,
   website,
 }: kkvRegistryFormValues) {
+  // TODO: `category` and `sub_categories` are collected by the form but
+  // not yet persisted — the `kkv_registry` MySQL table does not have these
+  // columns. Add them via ALTER TABLE + `prisma db pull` + `generate`, then
+  // include them in the create payload below.
   const newStartup = await prisma.kkv_registry.create({
     data: {
       about,
@@ -23,6 +29,10 @@ export async function createKKVReg({
       company_name,
       tax_number,
       website,
+      category,
+      // sub_categories is a LongText column → serialize the array to JSON
+      // so we can JSON.parse it back when reading.
+      sub_categories: JSON.stringify(sub_categories ?? []),
     },
   });
 

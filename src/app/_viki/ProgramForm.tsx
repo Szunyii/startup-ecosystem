@@ -17,15 +17,11 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import LoadingButton from "@/components/LoadingButton";
 
-import { startupCategory, type StartupCategory } from "@/lib/constants";
+import { startupCategory } from "@/lib/constants";
 
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-} from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
+import { MultiSelect } from "@/components/ui/multi-select";
 import { createKKVReg } from "./actions";
 import {
   Select,
@@ -34,8 +30,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-
-
 
 function ProgramForm() {
   // const [error, setError] = useState<string>();
@@ -51,8 +45,8 @@ function ProgramForm() {
       tax_number: "",
       contact_email: "",
       website: "",
-      test_1: "",
-      test_2: "",
+      category: "",
+      sub_categories: [],
     },
   });
 
@@ -66,16 +60,10 @@ function ProgramForm() {
     contact_email,
     tax_number,
     website,
+    category,
+    sub_categories,
   }: kkvRegistryFormValues) {
     startTransition(async () => {
-      console.log(
-        about,
-        acceptTerms,
-        company_name,
-        contact_email,
-        tax_number,
-        website,
-      );
       await createKKVReg({
         about,
         company_name,
@@ -83,6 +71,8 @@ function ProgramForm() {
         contact_email,
         tax_number,
         website,
+        category,
+        sub_categories,
       });
 
       form.reset();
@@ -92,33 +82,53 @@ function ProgramForm() {
 
   if (isSuccess) {
     return (
-      <div className="max-w-xl w-full animate-fadeInUp flex flex-col min-h-screen items-center justify-center p-8 text-center text-white bg-primary/20 rounded-xl border border-primary">
-        <h2 className="text-2xl font-bold mb-4">Thank you!</h2>
-        <p className="text-lg">
-          Your registration has been submitted successfully.
-        </p>
-        <button
-          onClick={() => setIsSuccess(false)}
-          className="mt-6 text-sm underline hover:text-primary transition-colors"
+      <div className="max-w-xl w-full animate-fadeInUp">
+        <div
+          className="relative overflow-hidden rounded-[20px] border border-[rgba(175,226,0,0.25)] bg-gradient-to-b from-[rgba(175,226,0,0.08)] to-white/[0.02] p-8 text-white"
+          style={{
+            background:
+              "radial-gradient(600px 280px at 100% 0%, rgba(93,61,255,.25), transparent 60%)," +
+              "radial-gradient(400px 220px at 0% 100%, rgba(175,226,0,.12), transparent 60%)," +
+              "linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01))",
+          }}
         >
-          Submit another response
-        </button>
+          <div className="inline-flex items-center gap-2.5 font-mono text-xs opacity-80 mb-4">
+            <span className="relative inline-block w-2 h-2">
+              <span className="absolute inset-0 rounded-full bg-[#afe200]" />
+              <span className="absolute -inset-1 rounded-full bg-[#afe200] opacity-35 animate-ping" />
+            </span>
+            <span>Submission received</span>
+          </div>
+
+          <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">
+            <span className="text-[#afe200]">Thanks!</span> We&apos;ll be in
+            touch.
+          </h2>
+          <p className="mt-4 text-sm md:text-base text-white/75 leading-relaxed max-w-md">
+            Your registration has been submitted. Our team reviews every entry
+            and will reach out to you at the email you provided.
+          </p>
+
+          <div className="mt-7 flex flex-wrap items-center gap-3">
+            <button
+              type="button"
+              onClick={() => setIsSuccess(false)}
+              className="bg-[#afe200] text-[#0b1027] px-5 py-2.5 rounded-full font-bold text-sm hover:opacity-90 transition-opacity"
+            >
+              Submit another →
+            </button>
+            <span className="font-mono text-[11px] text-white/55">
+              Or close this tab.
+            </span>
+          </div>
+        </div>
       </div>
     );
   }
   return (
-    <div className=" max-w-xl w-full animate-fadeInUp mt-14">
+    <div className="max-w-xl w-full animate-fadeInUp">
       <Card className="text-white border-none bg-transparent">
-        <div className="gap-0 mb-4 flex items-center justify-center flex-col">
-          <CardHeader className="text-2xl font-bold">
-            Sign up to te voucher program!
-          </CardHeader>
-          <CardDescription className="text-center text-white">
-            If your startup isn’t listed yet, submit this form to be featured
-            with verified data.
-          </CardDescription>
-        </div>
-        <CardContent>
+        <CardContent className="p-0">
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)}>
               <div className="space-y-2 ">
@@ -126,10 +136,11 @@ function ProgramForm() {
                   control={form.control}
                   name="company_name"
                   render={({ field }) => (
-                    <FormItem className="space-y-1">
+                    <FormItem className="space-y-1 ">
                       <FormLabel>Company Name</FormLabel>
                       <FormControl>
                         <Input
+                          className=""
                           placeholder="Hungarian Innovation Agency Ltd."
                           {...field}
                         />
@@ -204,26 +215,25 @@ function ProgramForm() {
 
                 <FormField
                   control={form.control}
-                  name="test_1"
+                  name="category"
                   render={({ field }) => (
                     <FormItem className="space-y-1">
-                      <FormLabel>Test Dropdown 1</FormLabel>
+                      <FormLabel>Category</FormLabel>
                       <Select
                         onValueChange={field.onChange}
                         defaultValue={field.value}
                       >
                         <FormControl>
                           <SelectTrigger>
-                            <SelectValue placeholder="Select a test value" />
+                            <SelectValue placeholder="Select category" />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          <SelectItem value="test_value_1">
-                            Test Value 1
-                          </SelectItem>
-                          <SelectItem value="test_value_2">
-                            Test Value 2
-                          </SelectItem>
+                          {startupCategory.map((category) => (
+                            <SelectItem key={category} value={category}>
+                              {category}
+                            </SelectItem>
+                          ))}
                         </SelectContent>
                       </Select>
                       <FormMessage />
@@ -233,28 +243,18 @@ function ProgramForm() {
 
                 <FormField
                   control={form.control}
-                  name="test_2"
+                  name="sub_categories"
                   render={({ field }) => (
                     <FormItem className="space-y-1">
-                      <FormLabel>Test Dropdown 2</FormLabel>
-                      <Select
-                        onValueChange={field.onChange}
-                        defaultValue={field.value}
-                      >
-                        <FormControl>
-                          <SelectTrigger>
-                            <SelectValue placeholder="Select a test value" />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          <SelectItem value="test_value_1">
-                            Test Value 1
-                          </SelectItem>
-                          <SelectItem value="test_value_2">
-                            Test Value 2
-                          </SelectItem>
-                        </SelectContent>
-                      </Select>
+                      <FormLabel>Sub Categories</FormLabel>
+                      <FormControl>
+                        <MultiSelect
+                          options={startupCategory}
+                          value={field.value ?? []}
+                          onChange={field.onChange}
+                          placeholder="Select categories..."
+                        />
+                      </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}

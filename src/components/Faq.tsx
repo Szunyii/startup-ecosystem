@@ -12,15 +12,26 @@ import {
 
 import React from "react";
 
-export default function Faq({ children }: { children: React.ReactNode }) {
+export default function Faq({
+  children,
+  triggerClassName,
+}: {
+  children: React.ReactNode;
+  triggerClassName?: string;
+}) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button className="hover:bg-muted hover:text-black rounded-2xl transition-all flex flex-col justify-center items-center shadow-md group rounded-tr-none rounded-bl-none">
+        <Button
+          className={
+            triggerClassName ??
+            "hover:bg-muted hover:text-black rounded-2xl transition-all flex flex-col justify-center items-center shadow-md group rounded-tr-none rounded-bl-none"
+          }
+        >
           FAQ
         </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[620px] z-50 justify-center items-center">
+      <DialogContent className="sm:max-w-[620px] z-50">
         <DialogHeader>
           <DialogTitle>Frequently Asked Questions</DialogTitle>
           {/* <DialogDescription>

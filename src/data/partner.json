@@ -1,0 +1,767 @@
+[
+  {
+    "link": "https://www.cloudbreak.vc/",
+    "stage": ["Pre-Startup"],
+    "type": ["Local investors"],
+    "id": 1,
+    "companyLogo": "startup1",
+    "companyName": "Cloudbreak",
+    "about": "A Cloudbreak egy helyi kockázati tőkealap, amely kifejezetten a korai, pre-startup fázisban lévő cégeket támogatja. Fő céljuk a skálázható technológiai innovációk felkarolása és finanszírozása. A befektetett tőke mellett jelentős szakmai támogatást is nyújtanak a kezdeti növekedéshez."
+  },
+  {
+    "link": "https://www.credoventures.com/",
+    "stage": ["Startup"],
+    "type": ["Foreign Investors"],
+    "id": 2,
+    "companyLogo": "startup2",
+    "companyName": "Credo Ventures",
+    "about": "A Credo Ventures egy prágai székhelyű, Közép-Kelet-Európára fókuszáló kockázati tőkealap. Kifejezetten a globális növekedési potenciállal rendelkező, technológiai fókuszú startupokat keresik. Széles nemzetközi hálózatukkal hatékonyan segítik a régiós cégek piacra lépését."
+  },
+  {
+    "link": "https://depoventures.com/",
+    "stage": ["Pre-Startup", "Startup"],
+    "type": ["Foreign Investors"],
+    "id": 3,
+    "companyLogo": "startup3",
+    "companyName": "DEPO Ventures",
+    "about": "A DEPO Ventures egy angyalbefektetői hálózatot és kockázati tőkealapot ötvöző nemzetközi szervezet. Elsősorban a korai szakaszban lévő, innovatív technológiai startupokat célozzák meg a régióban. Céljuk, hogy a tőke mellett tapasztalt mentorok bevonásával is támogassák az alapítókat."
+  },
+  {
+    "link": "https://innovationnest.com/",
+    "stage": ["Startup"],
+    "type": ["Acccelerators/Incubators"],
+    "id": 4,
+    "companyLogo": "startup4",
+    "companyName": "Innovation Nest",
+    "about": "Az Innovation Nest egy európai fókuszú, B2B szoftverekre specializálódott befektetőcég és inkubátor. Kiemelten támogatják a SaaS modellel működő startupok korai fázisú növekedését és piacra lépését. Globális szemléletükkel a portfóliócégek nemzetközi skálázódását segítik elő."
+  },
+  {
+    "link": "https://www.karma.vc/",
+    "stage": ["Scale-up"],
+    "type": ["Foreign Investors"],
+    "id": 5,
+    "companyLogo": "startup5",
+    "companyName": "Karma Ventures",
+    "about": "A Karma Ventures egy európai fókuszú kockázati tőkealap, amely erős technológiai alapokon nyugvó, skálázódási fázisban lévő (scale-up) cégekbe fektet be. Jelentős tapasztalattal rendelkeznek a mélytechnológiai és szoftveres innovációk terén. Kiterjedt nemzetközi kapcsolatrendszerükkel segítik a portfóliójukba tartozó vállalatok növekedését."
+  },
+  {
+    "link": "https://lakestar.com/",
+    "stage": ["Startup"],
+    "type": ["Foreign Investors"],
+    "id": 6,
+    "companyLogo": "startup6",
+    "companyName": "Lakestar",
+    "about": "A Lakestar Európa egyik vezető kockázati tőketársasága, amely globális technológiai fókusszal rendelkezik. Kivételes alapítókat és forradalmi ötleteket keresnek a korai és növekedési szakaszban egyaránt. Céljuk a digitális átalakulást hajtó európai innovátorok intenzív finanszírozása és támogatása."
+  },
+  {
+    "link": "https://www.techstars.com/",
+    "stage": ["Pre-Startup"],
+    "type": ["Foreign Investors"],
+    "id": 7,
+    "companyLogo": "startup7",
+    "companyName": "Techstars",
+    "about": "A Techstars a világ egyik legismertebb globális startup akcelerátora és befektetője. Korai fázisú alapítóknak biztosítanak tőkét, intenzív mentorálást és hozzáférést egy hatalmas globális hálózathoz. Számos sikeres vállalat nőtte ki magát a programjaikból világszerte."
+  },
+  {
+    "link": "https://e2.vc/",
+    "stage": ["Pre-Startup", "Startup"],
+    "type": ["Foreign Investors"],
+    "id": 8,
+    "companyLogo": "startup8",
+    "companyName": "e2vc",
+    "about": "Ez a szervezet egy külföldi befektető, amely kifejezetten a pre-startup és startup fázisban lévő technológiai vállalkozásokra fókuszál. Nemzetközi tapasztalatukkal segítik a portfóliócégek globális terjeszkedését és a megfelelő üzleti modell kialakítását. Befektetési stratégiájuk alapja a hosszú távú szakmai partnerkapcsolat."
+  },
+  {
+    "link": "https://3tscapital.com/",
+    "stage": ["Scale-up", "Startup"],
+    "type": ["Local investors"],
+    "id": 9,
+    "companyLogo": "startup9",
+    "companyName": "3TS Capital Partners",
+    "about": "A 3TS Capital Partners Európa egyik vezető növekedési tőkealap-kezelője, jelentős közép-kelet-európai fókusszal. Elsősorban a technológiai, internetes és kommunikációs szektorokban skálázódó cégeket támogatják. Jelentős hozzáadott értékkel segítik a regionális cégek globális szereplővé válását."
+  },
+  {
+    "link": "https://apx.vc/",
+    "stage": ["Pre-Startup"],
+    "type": ["Foreign Investors"],
+    "id": 10,
+    "companyLogo": "startup10",
+    "companyName": "APX Ventures",
+    "about": "Az APX az Axel Springer és a Porsche által alapított, korai szakaszra fókuszáló európai kockázati tőkebefektető. A legkorábbi fázisú alapítókat támogatják, hogy gyorsan elérhessék az első jelentős mérföldköveiket. Kiemelkedő iparági szakértelmet és kiterjedt vállalati kapcsolatrendszert kínálnak."
+  },
+  {
+    "link": "https://www.twobirds.com/en/reach/central-and-eastern-europe/hungary/budapest",
+    "stage": ["Scale-up", "Startup"],
+    "type": ["Service Provider"],
+    "id": 11,
+    "companyLogo": "startup11",
+    "companyName": "Bird & Bird International LLP",
+    "about": "A Bird & Bird egy nemzetközi ügyvédi iroda, amely kiemelt figyelmet fordít a technológiai és innovációvezérelt vállalkozások jogi támogatására. Startupok és scale-upok számára nyújtanak specializált jogi tanácsadást az adatvédelemtől a szellemi tulajdonjogokig. Szakértelmük elengedhetetlen a biztonságos nemzetközi terjeszkedéshez."
+  },
+  {
+    "link": "https://create26.hu/",
+    "stage": ["Pre-Startup"],
+    "type": ["HUBs/ Co-working"],
+    "id": 13,
+    "companyLogo": "startup13",
+    "companyName": "Create26",
+    "about": "A Create26 egy budapesti közösségi irodatér és innovációs hub, amely a korai fázisú projekteket karolja fel. Inspiráló munkakörnyezetet és értékes közösségi hálózatot építenek az alapítók számára. Rendszeres eseményeikkel segítik a tudásmegosztást és a szakmai kapcsolatépítést."
+  },
+  {
+    "link": "https://creativeaccelerator.hu/",
+    "stage": ["Pre-Startup"],
+    "type": ["Local investors"],
+    "id": 14,
+    "companyLogo": "startup14",
+    "companyName": "Creative Accelerator",
+    "about": "A Creative Accelerator egy hazai finanszírozó és szakmai támogató szervezet a pre-startup fázisra koncentrálva. Céljuk az innovatív egészségipari, élettudományi és technológiai ötletek piacképessé tétele. Az anyagi források mellett stratégiai mentorálással segítik az ötletek validálását."
+  },
+  {
+    "link": "https://csovarilegal.hu/",
+    "stage": ["Startup"],
+    "type": ["Service Provider"],
+    "id": 15,
+    "companyLogo": "startup15",
+    "companyName": "Csővári Legal",
+    "about": "A Csővári Legal egy hazai ügyvédi iroda, amely jelentős tapasztalattal rendelkezik a startup ökoszisztéma jogi támogatásában. Befektetési körök lebonyolításában, cégalapításban és működési szerződések készítésében nyújtanak dedikált segítséget. Precíz jogi hátteret biztosítanak az alapítók számára a kezdeti szakaszokban."
+  },
+  {
+    "link": "https://dbh-group.com/hu",
+    "stage": ["Scale-up"],
+    "type": ["Local investors"],
+    "id": 16,
+    "companyLogo": "startup16",
+    "companyName": "DBH Group",
+    "about": "A DBH Group komplex fizikai, pénzügyi és informatikai infrastruktúrát nyújtó, kockázati tőkebefektetésekkel is foglalkozó vállalatcsoport. A skálázódási fázisban lévő cégek nemzetközi expanzióját és üzletfejlesztését támogatják aktívan. Testreszabott vállalati szolgáltatásaikkal felgyorsítják a piacra lépés folyamatát."
+  },
+  {
+    "link": "https://www.dayonecapital.com/",
+    "stage": ["Startup"],
+    "type": ["Local investors"],
+    "id": 17,
+    "companyLogo": "startup17",
+    "companyName": "Day One Capital",
+    "about": "A Day One Capital egy korai fázisú tech-startupokra fókuszáló, független budapesti kockázati tőkealap-kezelő. Elsősorban az innovatív, mélytechnológiai és szoftveres megoldásokat fejlesztő csapatokba fektetnek be a régióban. Intenzív iparági mentorálással készítik fel a cégeket a következő finanszírozási körökre."
+  },
+  {
+    "link": "https://drukka.hu/",
+    "stage": ["Pre-Startup"],
+    "type": ["Acccelerators/Incubators"],
+    "id": 19,
+    "companyLogo": "startup19",
+    "companyName": "Drukka Startup Studio",
+    "about": "A Drukka Startup Studio egy hazai inkubátor, amely ötletfázisú projektek gyors és hatékony piacra vitelére szakosodott. Saját erőforrásaikkal segítik a termékfejlesztést, a marketinget és a kezdeti értékesítést. Gyakorlatias megközelítéssel validálják és építik fel a legígéretesebb üzleti modelleket."
+  },
+  {
+    "link": "https://www.ebrdvcip.com/",
+    "stage": ["Scale-up", "Startup"],
+    "type": ["Foreign Investors"],
+    "id": 20,
+    "companyLogo": "startup20",
+    "companyName": "EBRD Ventures",
+    "about": "Az EBRD Ventures az Európai Újjáépítési és Fejlesztési Bank kockázati tőkebefektetési ága. Magas növekedési potenciálú, korai és skálázódási szakaszban lévő technológiai vállalatokat támogatnak Európa-szerte. Befektetéseikkel a gazdasági innovációt és a fenntartható fejlődést célozzák meg."
+  },
+  {
+    "link": "https://www.eitdigital.eu/",
+    "stage": ["Pre-Startup"],
+    "type": ["Acccelerators/Incubators"],
+    "id": 21,
+    "companyLogo": "startup21",
+    "companyName": "EIT Digital",
+    "about": "Az EIT Digital az Európai Innovációs és Technológiai Intézet digitális transzformációt támogató közössége és akcelerátora. Pán-európai hálózatukkal oktatási programokat, kutatásokat és startup inkubációt fognak össze. Kiemelt céljuk az európai deep-tech innovációk nemzetközi piacra segítése."
+  },
+  {
+    "link": "https://exim.hu/",
+    "stage": ["Scale-up"],
+    "type": ["Governmental support"],
+    "id": 22,
+    "companyLogo": "startup22",
+    "companyName": "EXIM Hungary",
+    "about": "Az EXIM Magyarország a hazai vállalkozások exporttevékenységét támogató állami pénzintézet és exporthitel-ügynökség. Célzott finanszírozási megoldásokkal és garanciavállalással segítik a cégek nemzetközi piacra lépését. Skálázódó vállalkozások számára elengedhetetlen stabilitást biztosítanak a globális expanzió során."
+  },
+  {
+    "link": "https://eximinvest.hu/",
+    "stage": ["Scale-up"],
+    "type": ["Governmental support"],
+    "id": 23,
+    "companyLogo": "startup23",
+    "companyName": "EXIM Invest",
+    "about": "Az EXIM Invest az EXIM csoporthoz tartozó alapkezelő, amely a nemzetközi terjeszkedést tervező hazai vállalkozások számára nyújt tőkefinanszírozást. Befektetéseikkel a magyar cégek versenyképességét és globális jelenlétét erősítik. Kifejezetten a stabil, növekedési szakaszban lévő vállalatok külpiaci stratégiáit támogatják."
+  },
+  {
+    "link": "https://euroventures.vc/",
+    "stage": ["Scale-up"],
+    "type": ["Local investors"],
+    "id": 25,
+    "companyLogo": "startup25",
+    "companyName": "Euroventures",
+    "about": "Az Euroventures az egyik legrégebbi, független magyar kockázati tőkealap-kezelő, fókuszban a technológiai scale-upokkal. Kiemelkedően tapasztalt csapatukkal stratégiai segítséget nyújtanak a gyors növekedés és a nemzetközi piacra lépés menedzselésében. Átfogó iparági tudásuk évtizedek óta erősíti a hazai innovációs ökoszisztémát."
+  },
+  {
+    "link": "https://fivosz.hu/",
+    "stage": ["Pre-Startup", "Startup"],
+    "type": ["Supporting Organizations"],
+    "id": 27,
+    "companyLogo": "startup27",
+    "companyName": "FIVOSZ",
+    "about": "A Fiatal Vállalkozók Országos Szövetsége (FIVOSZ) a fiatal hazai cégalapítókat összefogó és támogató érdekvédelmi szervezet. Rendezvényeikkel, szakmai edukációval és mentorprogramokkal segítik az induló vállalkozások sikerét. Közösségi és gazdasági platformjuk felgyorsítja a pre-startup és startup fázisban lévők piacra lépését."
+  },
+  {
+    "link": "https://www.fiedler.capital/",
+    "stage": ["Startup"],
+    "type": ["Local investors"],
+    "id": 28,
+    "companyLogo": "startup28",
+    "companyName": "Fiedler Capital",
+    "about": "A Fiedler Capital egy magántőke-befektető, amely a közép- és kelet-európai startupokat célozza meg a korai szakaszban. Nemcsak pénzügyi erőforrást biztosítanak, hanem proaktív, hands-on megközelítéssel építik a csapatokat. Fő profiljuk a B2B szoftverek és a magas hozzáadott értéket képviselő technológiák skálázása."
+  },
+  {
+    "link": "https://www.linkedin.com/company/first-principle-innovation",
+    "stage": ["Pre-Startup"],
+    "type": ["Acccelerators/Incubators"],
+    "id": 29,
+    "companyLogo": "startup29",
+    "companyName": "First Principle",
+    "about": "Ez a szervezet egy akcelerátor program, amely az innovatív ötletek koncepcionális fejlesztését és piacra vitelét segíti a legkorábbi fázisban. Szakmai iránymutatással és stabil alaptudás átadásával készítik fel az alapítókat a későbbi tőkebevonásra. Elsődleges céljuk a működő és skálázható üzleti prototípusok megalkotása."
+  },
+  {
+    "link": "https://flashpointvc.com/",
+    "stage": ["Scale-up", "Startup"],
+    "type": ["Local investors"],
+    "id": 30,
+    "companyLogo": "startup30",
+    "companyName": "Flashpoint VC",
+    "about": "A Flashpoint egy nemzetközi befektetési csoport, amely közép-kelet-európai és izraeli fókusszal rendelkezik a szoftverpiacon. Kockázati tőkét, kockázati hitelt és másodlagos likviditási megoldásokat kínálnak a fejlődő technológiai vállalatoknak. Kiemelt szerepet vállalnak a régiós cégek stabil pénzügyi növekedésének menedzselésében."
+  },
+  {
+    "link": "https://focusventures.hu/",
+    "stage": ["Startup"],
+    "type": ["Local investors"],
+    "id": 31,
+    "companyLogo": "startup31",
+    "companyName": "Focus Ventures",
+    "about": "A Focus Ventures egy magyar alapítású kockázati tőkebefektető, amely hazai, korai fázisú innovációk piacra vitelét támogatja. Szakmai tapasztalatukkal segítik a stratégiakészítést, a szervezetépítést és a következő finanszírozási mérföldkövek elérését. Célzott tőkeinjekcióval stabilizálják a kezdeti operációt."
+  },
+  {
+    "link": "https://www.futurefounders.hu/",
+    "stage": ["Pre-Startup"],
+    "type": ["Acccelerators/Incubators"],
+    "id": 32,
+    "companyLogo": "startup32",
+    "companyName": "Future Founders",
+    "about": "A Future Founders egy edukációs és akcelerátor program, amely a jövő vállalkozóinak képzésére és elindítására koncentrál. Intenzív kurzusokkal, mentorálással és kapcsolatépítési lehetőségekkel vértezik fel a pre-startup csapatokat. Segítségükkel az ötletgazdák elkerülhetik a tipikus kezdeti buktatókat."
+  },
+  {
+    "link": "https://www.hvca.hu/",
+    "stage": ["Pre-Startup", "Startup", "Scale-up"],
+    "type": ["Supporting Organizations"],
+    "id": 33,
+    "companyLogo": "startup33",
+    "companyName": "HVCA",
+    "about": "A Magyar Kockázati- és Magántőke Egyesület (HVCA) a hazai priváttőke és kockázati tőke szektor hivatalos szakmai és érdekképviseleti szerve. Kiemelt feladatuk a befektetési kultúra fejlesztése, a jogi környezet formálása és a szereplők közötti párbeszéd megteremtése. Rendezvényeik és kiadványaik révén iparági transzparenciát és tudásmegosztást biztosítanak."
+  },
+  {
+    "link": "https://www.hiventures.hu/",
+    "stage": ["Startup"],
+    "type": ["Local investors"],
+    "id": 34,
+    "companyLogo": "startup34",
+    "companyName": "Hiventures",
+    "about": "A Hiventures a kelet-közép-európai régió egyik legaktívabb állami hátterű kockázati tőkealap-kezelője, fókuszban a magyar startupokkal. Az ötletfázistól egészen a nemzetközi skálázódásig széles spektrumban kínálnak tőkebefektetési programokat. Finanszírozásukkal és szakmai mentorhálózatukkal a hazai innovációs ökoszisztéma egyik legfontosabb motorjai."
+  },
+  {
+    "link": "https://hunban.eu/",
+    "stage": [],
+    "type": [],
+    "id": 35,
+    "companyLogo": "startup35",
+    "companyName": "Hungarian Business Angel Network",
+    "about": "A HunBAN a magyar üzleti angyalok hivatalos hálózata, amely összeköti a tőkét kereső korai fázisú startupokat a magánbefektetőkkel. Rendszeres pitch eseményeik transzparens felületet biztosítanak az ígéretes innovációk bemutatására. A szervezet erősíti a hazai korai szakaszú befektetési kultúrát és a nemzetközi szindikált befektetéseket."
+  },
+  {
+    "link": "https://niu.hu/",
+    "stage": ["Pre-Startup", "Startup", "Scale-up"],
+    "type": ["Governmental support"],
+    "id": 36,
+    "companyLogo": "startup36",
+    "companyName": "Hungarian Innovation Agency",
+    "about": "A Nemzeti Innovációs Ügynökség állami szinten fogja össze és támogatja a magyarországi innovációs ökoszisztéma szereplőit. Tanácsadással, forrásszervezéssel és nemzetközi kapcsolatépítéssel segítik a hazai technológiák piacra vitelét. Céljuk Magyarország kutatás-fejlesztési versenyképességének hosszú távú és mérhető növelése."
+  },
+  {
+    "link": "https://www.hihub.hu/",
+    "stage": ["Pre-Startup"],
+    "type": ["HUBs/ Co-working"],
+    "id": 37,
+    "companyLogo": "startup37",
+    "companyName": "Hungarian Innovation Hub",
+    "about": "A Hungarian Innovation Hub egy fizikai és szellemi központ, amely az ötletgazdák számára biztosít modern co-working infrastruktúrát. A teret kifejezetten a tudásmegosztásra, a networkingre és a kreatív fejlesztői munkára optimalizálták. Pre-startupok számára ideális találkozási pont a szinergiák és partnerségek kiépítéséhez."
+  },
+  {
+    "link": "https://ivsz.hu/",
+    "stage": ["Pre-Startup"],
+    "type": ["Supporting Organizations"],
+    "id": 38,
+    "companyLogo": "startup38",
+    "companyName": "IVSZ",
+    "about": "Az IVSZ a digitális gazdaság legjelentősebb hazai érdekképviseleti szerve, amely az informatikai, távközlési és elektronikai cégeket tömöríti. Innovációs és edukációs programjaikkal aktívan segítik a startup környezet fejlődését és a technológiai cégek piacra lépését. Megkerülhetetlen szerepet töltenek be a digitalizációs jogszabályi környezet alakításában."
+  },
+  {
+    "link": "https://impactventures.hu/igy-fektetunk-be/",
+    "stage": ["Pre-Startup"],
+    "type": ["Local investors"],
+    "id": 39,
+    "companyLogo": "startup39",
+    "companyName": "Impact Ventures",
+    "about": "Az Impact Ventures egy speciális kockázati tőkealap, amely kifejezetten a pozitív társadalmi vagy környezeti hatást (social impact) elérő innovációkat támogatja. A korai és növekedési fázisban keresik azokat a vállalkozásokat, amelyek a pénzügyi hozam mellett mérhető társadalmi értéket is teremtenek. Célzott tőkével segítik a fenntarthatósági kihívásokra választ adó cégeket."
+  },
+  {
+    "link": "https://www.interactivevp.com/en/home.php",
+    "stage": ["Scale-up", "Startup"],
+    "type": ["Local investors"],
+    "id": 40,
+    "companyLogo": "startup40",
+    "companyName": "Interactive Venture Partners",
+    "about": "Ez a kockázati tőkealap a korai és növekedési (scale-up) fázisban lévő technológiai fókuszú vállalkozásokat célozza meg tőkebefektetéssel. Szakmai iránymutatással és stratégiai támogatással készítik fel a portfóliócégeket a sikeres hazai és regionális piaci expanzióra. Rugalmas és partnerségen alapuló modellben dolgoznak együtt az alapítókkal."
+  },
+  {
+    "link": "https://kekbolygoalapitvany.hu/",
+    "stage": ["Pre-Startup", "Startup"],
+    "type": ["Local investors"],
+    "id": 41,
+    "companyLogo": "startup41",
+    "companyName": "Kék Bolygó Tőkealapok",
+    "about": "A Kék Bolygó Tőkealapok a környezetvédelmi, vízipari és fenntarthatósági fókuszú, hazai innovációs ökoszisztéma finanszírozására jöttek létre. A zöld technológiákat fejlesztő korai és startup fázisú cégek számára biztosítanak dedikált kockázati tőkét. Pénzügyi támogatásuk elősegíti a magyar klímavédelmi megoldások nemzetközi piacra jutását."
+  },
+  {
+    "link": "https://leadventures.eu/",
+    "stage": ["Scale-up"],
+    "type": ["Local investors"],
+    "id": 42,
+    "companyLogo": "startup42",
+    "companyName": "Lead Ventures",
+    "about": "A Lead Ventures egy budapesti székhelyű, közép-kelet-európai növekedési tőkealap-kezelő (scale-up fókusszal). Olyan érett innovátorokat keresnek a deep-tech, energetika és fenntarthatóság területén, amelyek jelentős nemzetközi tőkeinjekciót igényelnek a skálázáshoz. Szakértői csapatuk a vállalatok globális szintre emelését támogatja a finanszírozással."
+  },
+  {
+    "link": "https://www.lunarprogram.eu/",
+    "stage": ["Pre-Startup"],
+    "type": ["Acccelerators/Incubators"],
+    "id": 43,
+    "companyLogo": "startup43",
+    "companyName": "Lunar",
+    "about": "A Lunar egy innovatív akcelerátor program, amely a legkorábbi fázisú alapítóknak kínál fókuszált tudástranszfert és fejlesztési kereteket. Intenzív képzéseik során a validációtól az üzleti terv finomhangolásáig végigkísérik a csapatokat az első befektetésig. Szakmai programjuk felgyorsítja a technológiai ötletek piacképessé formálását."
+  },
+  {
+    "link": "https://www.fintechlab.hu/",
+    "stage": ["Pre-Startup"],
+    "type": ["Acccelerators/Incubators"],
+    "id": 44,
+    "companyLogo": "startup44",
+    "companyName": "MBH Fintechlab",
+    "about": "Az MBH Fintechlab Magyarország egyik vezető pénzügyi technológiai (fintech) innovációs központja és akcelerátora. A banki háttér révén a korai fázisú startupok közvetlenül tesztelhetik megoldásaikat, szakértői iránymutatás mellett. A program célja a digitalizáció élénkítése és a modern pénzügyi szolgáltatások piacra segítése."
+  },
+  {
+    "link": "https://mfbinvest.hu/",
+    "stage": ["Scale-up"],
+    "type": ["Governmental support"],
+    "id": 45,
+    "companyLogo": "startup45",
+    "companyName": "MFB Invest",
+    "about": "Az MFB Invest a Magyar Fejlesztési Bank Zrt. kockázati tőkebefektetésekre és tőkealap-kezelésre specializálódott leányvállalata. Elsősorban a stabil növekedési szakaszba ért, skálázódó hazai vállalkozások fejlesztését és piacbővítését finanszírozzák. Állami háttérrel biztosítanak piaci fókuszú tőkét a nemzetgazdaságilag is értékes projektek számára."
+  },
+  {
+    "link": "https://kormany.hu/kulturalis-es-innovacios-miniszterium",
+    "stage": ["Pre-Startup"],
+    "type": ["Governmental support"],
+    "id": 46,
+    "companyLogo": "startup46",
+    "companyName": "Ministry of Culture and Innovation",
+    "about": "A Kulturális és Innovációs Minisztérium a hazai innovációs politika, a kutatás-fejlesztés és a felsőoktatás legfőbb állami irányító testülete. Pályázati rendszerekkel, ösztöndíjakkal és makroszintű programokkal támogatják az ötletfázisú innovációkat és a tudástranszfert. Céljuk egy nemzetközileg is versenyképes hazai vállalkozói és kutatói ökoszisztéma kiépítése."
+  },
+  {
+    "link": "https://www.naktechlab.hu/",
+    "stage": ["Pre-Startup"],
+    "type": ["Acccelerators/Incubators"],
+    "id": 47,
+    "companyLogo": "startup47",
+    "companyName": "NAK Techlab",
+    "about": "A NAK Techlab a Nemzeti Agrárgazdasági Kamara hosszú távú innovációs programja és inkubátora az agrárium területén. Az agritech startupokat és a pre-startup fázisú fejlesztéseket kapcsolják össze az agrárium meghatározó nagyvállalataival. Inkubációs programjukkal modern technológiai megoldásokat integrálnak a hagyományos hazai mezőgazdaságba."
+  },
+  {
+    "link": "https://nesprit.vc/",
+    "stage": ["Pre-Startup"],
+    "type": ["Acccelerators/Incubators"],
+    "id": 48,
+    "companyLogo": "startup48",
+    "companyName": "Nesprit",
+    "about": "A Nesprit egy célzott akcelerációs program és befektető, amely a korai fázisú digitális termékek validálására és felépítésére fókuszál. Intenzív mentorációt és kezdeti erőforrásokat kínálnak a prototípusok piacképes termékké alakításához. Módszertanuk kifejezetten a gyors iterációkra és az első piaci visszajelzések becsatornázására épül."
+  },
+  {
+    "link": "https://oxolabs.eu/",
+    "stage": ["Pre-Startup"],
+    "type": ["Acccelerators/Incubators"],
+    "id": 49,
+    "companyLogo": "startup49",
+    "companyName": "OXO Labs",
+    "about": "Az OXO Labs egy meghatározó hazai és régiós inkubátor, amely a technológiai startupok legelső lépéseit támogatja szakmailag. Intenzív tudástranszfert, validációs támogatást és befektetői felkészítést biztosítanak a pre-startup csapatok számára. Erős hálózatukkal lerövidítik a piacra lépéshez szükséges kezdeti időszakot."
+  },
+  {
+    "link": "https://oxotechnologies.eu/",
+    "stage": ["Startup"],
+    "type": ["Local investors"],
+    "id": 50,
+    "companyLogo": "startup50",
+    "companyName": "OXO Technologies",
+    "about": "Az OXO Technologies a tőzsdén is jegyzett, magyar központú befektetési társaság, amely technológiai innovációkat karol fel. Tőkebefektetési stratégiájuk kifejezetten a gyorsan növekvő és globális ambíciókkal bíró regionális startupokra épül. Stabil pénzügyi háttérrel és átfogó iparági tapasztalattal támogatják a nemzetközi terjeszkedést."
+  },
+  {
+    "link": "https://www.oktogon.vc/",
+    "stage": ["Startup"],
+    "type": ["Local investors"],
+    "id": 51,
+    "companyLogo": "startup51",
+    "companyName": "Oktogon Ventures",
+    "about": "Az Oktogon Ventures egy kifejezetten közép-kelet-európai (CEE) fókuszú kockázati tőkealap, budapesti és régiós bázissal. Elsősorban poszt-magvető (post-seed) és korai növekedési fázisban lévő B2B szoftver és e-kereskedelmi cégeket finanszíroznak. Céljuk az áttörés előtt álló régiós sikersztorik felismerése és globális pályára állítása."
+  },
+  {
+    "link": "https://www.oppenheimlegal.com/hu/",
+    "stage": ["Startup"],
+    "type": ["Service Provider"],
+    "id": 52,
+    "companyLogo": "startup52",
+    "companyName": "Oppenheim Ugyvedi Iroda",
+    "about": "Az Oppenheim egy vezető független magyar ügyvédi iroda, amely kiterjedt tapasztalattal rendelkezik a társasági jog és a szellemi tulajdon védelme terén. Kiemelten támogatják a startupokat befektetési szerződések, munkajogi struktúrák és adatvédelmi megfelelés kialakításában. Szakmai precizitásuk biztos jogi alapot ad a kockázati tőke bevonásához."
+  },
+  {
+    "link": "https://partechpartners.com/",
+    "stage": ["Scale-up", "Startup"],
+    "type": ["Foreign Investors"],
+    "id": 53,
+    "companyLogo": "startup53",
+    "companyName": "Partech",
+    "about": "A Partech egy globális jelenlétű, Párizs központú kockázati tőkebefektető a technológiai szektorban. A magvető fázistól a késői növekedési stádiumig minden szinten biztosítanak tőkét a szoftveres és deep-tech innovátorok számára. Hatalmas portfóliójukkal és nemzetközi tőkeerejükkel a globális terjeszkedés stabil motorjai."
+  },
+  {
+    "link": "https://platinacapital.hu/",
+    "stage": ["Scale-up"],
+    "type": ["Local investors"],
+    "id": 54,
+    "companyLogo": "startup54",
+    "companyName": "Platina Capital",
+    "about": "A Platina Capital egy magyarországi kockázati és magántőke-befektető, amely a stabil üzleti modellel rendelkező növekvő cégekre fókuszál. A skálázódási fázisban lévő vállalatok technológiai vagy szervezeti szintlépését finanszírozzák. Stratégiai iránymutatásukkal növelik a portfóliócégek értékét és piaci stabilitását."
+  },
+  {
+    "link": "https://www.pointnine.com/",
+    "stage": ["Startup"],
+    "type": ["Foreign Investors"],
+    "id": 55,
+    "companyLogo": "startup55",
+    "companyName": "Point Nine Capital",
+    "about": "A Point Nine Capital egy európai fókuszú, de globálisan aktív korai fázisú kockázati tőkealap. Kifejezetten a B2B SaaS és a digitális piactér modellekre specializálódtak a kezdeti finanszírozási körökben. Széles iparági hálózatuk felbecsülhetetlen értékű a szoftveres termékek nemzetközi skálázásánál."
+  },
+  {
+    "link": "https://www.portfolion.hu/",
+    "stage": ["Startup"],
+    "type": ["Local investors"],
+    "id": 56,
+    "companyLogo": "startup56",
+    "companyName": "PortfoLion",
+    "about": "A PortfoLion az OTP Csoport tagjaként a kelet-közép-európai régió meghatározó kockázati tőke- és magántőke alapkezelője. Startup és scale-up fázisban is tőkét biztosítanak, jelentős figyelmet fordítva a stabil vállalati működés kialakítására. Rugalmas finanszírozási stratégiájukkal az áttörés előtt álló technológiai cégeket támogatják."
+  },
+  {
+    "link": "https://www.puzl.com/coworking-locations/budapest",
+    "stage": ["Pre-Startup", "Startup", "Scale-up"],
+    "type": ["HUBs/ Co-working"],
+    "id": 57,
+    "companyLogo": "startup57",
+    "companyName": "PuzL Coworking",
+    "about": "A PuzL Coworking egy kifejezetten az IT szakemberek, fejlesztők és startupok számára létrehozott technológiai irodatér Budapesten. A prémium infrastruktúra mellett egy szakmailag szűrt, támogató ökoszisztémát is építenek az innovátorok számára. A közösségi tér a tudásmegosztás és az iparági networking egyik kiemelkedő központja."
+  },
+  {
+    "link": "https://strt.hu/",
+    "stage": ["Startup"],
+    "type": ["Acccelerators/Incubators"],
+    "id": 58,
+    "companyLogo": "startup58",
+    "companyName": "STRT Holding",
+    "about": "A Balogh Péter nevével fémjelzett STRT Holding egy tőzsdei jelenléttel is bíró startup stúdió, akcelerátor és befektetőcég. Intenzív képzésekkel, mentorálással és kezdőtőkével segítik az alapítókat a tudatos cégépítésben. Gyakorlatias, founders-first (alapító-központú) megközelítésük széles körben népszerű a hazai piacon."
+  },
+  {
+    "link": "https://strt.hu/launchpad/",
+    "stage": ["Pre-Startup"],
+    "type": ["Local investors"],
+    "id": 59,
+    "companyLogo": "startup59",
+    "companyName": "STRT Launchpad",
+    "about": "Az STRT Launchpad a Holding legkorábbi fázisú programja, amely az ötletek tesztelésére és a tőkebefektetési felkészítésre fókuszál. Szigorú metodológia alapján validálják az üzleti koncepciókat a nulladik lépéseknél. A program végén a legsikeresebb csapatok közvetlen befektetési ajánlatot kaphatnak."
+  },
+  {
+    "link": "https://seedcamp.com/",
+    "stage": ["Startup"],
+    "type": ["Foreign Investors"],
+    "id": 60,
+    "companyLogo": "startup60",
+    "companyName": "Seedcamp",
+    "about": "A Seedcamp Európa egyik leghíresebb korai fázisú, magvető (seed) kockázati tőkealapja, londoni székhellyel. Céljuk a világklasszis európai alapítók felkutatása és finanszírozása a leghamarabbi fejlesztési stádiumban. Óriási szakmai hálózatuk hozzáférést biztosít a kontinens legjelentősebb technológiai központjaihoz és társbefektetőihez."
+  },
+  {
+    "link": "https://www.soluscapital.hu/",
+    "stage": ["Pre-Startup", "Startup"],
+    "type": ["Local investors"],
+    "id": 61,
+    "companyLogo": "startup61",
+    "companyName": "Solus Capital",
+    "about": "A Solus Capital egy hazai kockázati tőkealap-kezelő, amely innovatív technológiákat fejlesztő magyar kkv-kat és startupokat finanszíroz. Kiemelt területük az ipar 4.0, az okosvárosok és a digitális szolgáltatások szektora. Támogatásukkal felgyorsítják a fejlesztési és a piaci bevezetési folyamatokat a kezdeti fázisokban."
+  },
+  {
+    "link": "https://www.speedinvest.com/",
+    "stage": ["Scale-up", "Startup"],
+    "type": ["Foreign Investors"],
+    "id": 62,
+    "companyLogo": "startup62",
+    "companyName": "Speedinvest",
+    "about": "A Speedinvest az egyik legaktívabb páneurópai korai fázisú kockázati tőkealap. Rendkívül fókuszált iparági csapatokkal – például fintech, healthtech, deep-tech területen – rendelkeznek a mélyebb szakmai támogatás érdekében. Tőkeerejük mellett az operatív cégépítést is aktívan segítik a növekedési ugrás küszöbén álló cégeknél."
+  },
+  {
+    "link": "https://www.facebook.com/startitkh/?locale=hu_HU",
+    "stage": ["Pre-Startup"],
+    "type": ["Acccelerators/Incubators"],
+    "id": 63,
+    "companyLogo": "startup63",
+    "companyName": "StartIT@KH",
+    "about": "A StartIT@K&H a K&H Bank vállalati innovációs inkubátor programja technológiai irányultságú pre-startupoknak. Ingyenes irodahasználattal, iparági mentorációval és edukációs workshopokkal segítik az ötletek termékké válását. Kiváló környezetet biztosítanak a koncepciók vállalati környezetben történő leteszteléséhez."
+  },
+  {
+    "link": "https://www.startuphungary.io/",
+    "stage": ["Scale-up", "Startup", "Pre-Startup"],
+    "type": ["Supporting Organizations"],
+    "id": 64,
+    "companyLogo": "startup64",
+    "companyName": "Startup Hungary",
+    "about": "A Startup Hungary egy alapítók és befektetők által létrehozott civil szervezet, a hazai innovációs ökoszisztéma motorja. Éves kutatásokkal, adatalapú elemzésekkel és nagy ívű szakmai rendezvényekkel (pl. First Monday) transzparenssé teszik a piacot. Fő céljuk a vállalkozói kultúra erősítése és a nemzetközileg sikeres cégek számának növelése."
+  },
+  {
+    "link": "https://www.startupbootcamp.org/",
+    "stage": ["Startup"],
+    "type": ["Acccelerators/Incubators"],
+    "id": 65,
+    "companyLogo": "startup65",
+    "companyName": "Startupbootcamp",
+    "about": "A Startupbootcamp a világ egyik legnagyobb iparág-specifikus startup akcelerátor hálózata. A kiválasztott csapatok intenzív három hónapos programokon vesznek részt, ahol tőkét és páratlan hozzáférést kapnak a nemzetközi szakértőkhöz. Célzott programjaik drasztikusan lerövidítik a piacra lépési és a tőkebevonási folyamatot."
+  },
+  {
+    "link": "https://www.szta.hu/",
+    "stage": ["Scale-up"],
+    "type": ["Local investors"],
+    "id": 67,
+    "companyLogo": "startup67",
+    "companyName": "Széchenyi Tőkealap-kezelő",
+    "about": "A Széchenyi Tőkealap-kezelő (SZTA) egy állami hátterű befektető, amely a stabil működésű hazai KKV-k és innovatív vállalkozások növekedését finanszírozza. A tőkebevonással a cégek technológiai megújulását, kapacitásbővítését és expanzióját segítik elő. Kifejezetten olyan scale-upokat keresnek, amelyek érdemi munkahelyteremtő képességgel bírnak."
+  },
+  {
+    "link": "https://drtanacs.hu/",
+    "stage": ["Pre-Startup"],
+    "type": ["Service Provider"],
+    "id": 68,
+    "companyLogo": "startup68",
+    "companyName": "Tanács Ferenc Ügyvédi Iroda",
+    "about": "Ez a budapesti ügyvédi iroda a klasszikus társasági és polgári jog mellett a pre-startup és technológiai cégek alapítására is figyelmet fordít. Személyre szabott jogi tanácsadásukkal megteremtik a szellemi termékek jogi védelmének stabil alapjait. Jogi precizitásuk biztosítékot jelent az első befektetői körök sikeres lebonyolításához."
+  },
+  {
+    "link": "https://twosigmaventures.com/",
+    "stage": ["Pre-Startup"],
+    "type": ["Foreign Investors"],
+    "id": 69,
+    "companyLogo": "startup69",
+    "companyName": "Two Sigma Ventures",
+    "about": "A Two Sigma Ventures az adatvezérelt technológiákra, mesterséges intelligenciára és deep-tech innovációkra fókuszáló nemzetközi kockázati tőkealap. A világ legkomplexebb mérnöki és algoritmikus megoldásait fejlesztő korai szakaszú alapítókat finanszírozzák. Tőkéjükkel a technológiai paradigmaváltást hozó szoftveres megoldásokat skálázzák."
+  },
+  {
+    "link": "https://vosz.hu/",
+    "stage": ["Scale-up", "Startup"],
+    "type": ["Supporting Organizations"],
+    "id": 70,
+    "companyLogo": "startup70",
+    "companyName": "VOSZ",
+    "about": "A Vállalkozók és Munkáltatók Országos Szövetsége (VOSZ) a magyar vállalkozói szféra egyik legjelentősebb érdekképviseleti fóruma. Kiterjedt információs hálózatukkal és edukációs programjaikkal támogatják a stabil és skálázódó cégek jogszerű működését. Makrogazdasági lobbitevékenységükkel folyamatosan javítják a hazai vállalkozói klímát."
+  },
+  {
+    "link": "https://www.vespuccipartners.com/",
+    "stage": ["Pre-Startup", "Startup"],
+    "type": ["Local investors"],
+    "id": 71,
+    "companyLogo": "startup71",
+    "companyName": "Vespucci Partners",
+    "about": "A Vespucci Partners egy kockázati tőkealap, amely a kelet-közép-európai régió innovációit köti össze az amerikai piaccal. Kifejezetten azokat a mélytechnológiai startupokat keresik, amelyek termékeiket globális szinten kívánják bevezetni. Tudástőkéjükkel megkönnyítik az amerikai piacra lépést és az ottani tőkebevonást."
+  },
+  {
+    "link": "https://www.ycombinator.com/",
+    "stage": ["Pre-Startup"],
+    "type": ["Foreign Investors"],
+    "id": 72,
+    "companyLogo": "startup72",
+    "companyName": "Y Combinator",
+    "about": "A Szilícium-völgyben alapított Y Combinator a világ legismertebb és legpresztízsesebb technológiai akcelerátora és magvető befektetője. A kiválasztott korai fázisú startupok intenzív, három hónapos programot végeznek el a legkiválóbb mentorok irányításával. Hatalmas alumni hálózatuk önmagában is felbecsülhetetlen piaci és kapcsolati tőkét jelent a résztvevőknek."
+  },
+  {
+    "link": "https://obudaunivc.com/",
+    "stage": ["Startup"],
+    "type": ["Local investors"],
+    "id": 73,
+    "companyLogo": "startup73",
+    "companyName": "Óbuda Uni Venture Capital",
+    "about": "Az Óbuda Uni Venture Capital az egyetemi innovációk és az akadémiai szférában született technológiai ötletek piacra vitelét támogató tőkealap. Az ipari digitalizáció, a robotika és a kiberbiztonság területén tevékenykedő startupokat részesítik előnyben. Céljuk az egyetemi kutatási eredmények stabil piaci termékké formálása."
+  },
+  {
+    "link": "https://blockchainhungary.org/",
+    "stage": ["Startup", "Pre-Startup"],
+    "type": ["Supporting programmes"],
+    "id": 74,
+    "companyLogo": "startup74",
+    "companyName": "Blockchain Hungary",
+    "about": "A Blockchain Hungary egy szakmai érdekképviseleti szervezet, amely a blokklánc technológia hazai népszerűsítésére és fejlesztésére fókuszál. Rendszeres edukációval, szakmai fórumokkal és jogszabályi javaslatokkal támogatják a szektorális pre-startup és startup innovációkat. Közösségépítő erejükkel fellendítik az itthoni Web3 ökoszisztémát."
+  },
+  {
+    "link": "https://bnlstart.com/",
+    "stage": ["Startup", "Pre-Startup"],
+    "type": ["Local investors", "Acccelerators/Incubators"],
+    "id": 75,
+    "companyLogo": "startup75",
+    "companyName": "BnL Growth Partners",
+    "about": "A BnL Growth Partners magántőke és szakmai tudás bevonásával segíti a hazai, elsősorban szoftveralapú startupok korai fázisú felépítését. Inkubátorként dedikált üzletfejlesztési támogatást és operatív segítséget nyújtanak az alapító csapatoknak. Támogatásuk a stabil go-to-market (piacra lépési) stratégiák kialakítását célozza."
+  },
+  {
+    "link": "https://brancskozosseg.hu/",
+    "stage": ["Pre-Startup"],
+    "type": ["Crowdfunding"],
+    "id": 76,
+    "companyLogo": "startup76",
+    "companyName": "Brancsközösség",
+    "about": "A Brancs Magyarország első modern, jutalomalapú közösségi finanszírozási (crowdfunding) platformja. Az ötletgazdák a piac legkorábbi visszajelzéseit és előfinanszírozását szerezhetik meg közvetlenül a leendő vásárlóiktól a kampányok során. Ez az alternatív forrásbevonási forma kiváló az innovatív termékek rizikómentes piacra vezetésére."
+  },
+  {
+    "link": "https://eit-ris.eu/hungary-2/hu/",
+    "stage": ["Startup", "Pre-Startup", "Scale-up"],
+    "type": ["Supporting programmes"],
+    "id": 77,
+    "companyLogo": "startup77",
+    "companyName": "EIT",
+    "about": "Az Európai Innovációs és Technológiai Intézet (EIT) az európai kutatás-fejlesztési ökoszisztéma egyik legfőbb regionális támogató pillére. Széles spektrumú képzésekkel, fejlesztési keretekkel és hálózatépítéssel segítik az innovatív projekteket a prototípustól a piacra lépésig. A tudásháromszög (üzlet, oktatás, kutatás) integrálásával ösztönzik az európai innovációt."
+  },
+  {
+    "link": "https://eit-ris.eu/hungary-2/hu/",
+    "stage": ["Pre-Startup"],
+    "type": ["Foreign Investors"],
+    "id": 78,
+    "companyLogo": "startup78",
+    "companyName": "Entrepreneurs First",
+    "about": "Ez az EIT-hez kapcsolódó finanszírozási és fejlesztési program kifejezetten az európai pre-startup fázisra koncentrál mélytechnológiai területeken. A befektetés mellett a szellemi termékek validációját és a nemzetközi kapcsolati tőke kiépítését támogatják. Inkubációs metodikájuk a magasan képzett egyéni szakemberekből kovácsol sikeres alapító csapatokat."
+  },
+  {
+    "link": "http://www.euroventures.hu/",
+    "stage": ["Scale-up"],
+    "type": ["Local investors"],
+    "id": 79,
+    "companyLogo": "startup79",
+    "companyName": "Euroventures Capital Advisory",
+    "about": "Az Euroventures tanácsadói üzletága a leginkább tapasztalt hazai tőkebefektetők szakmai erejével támogatja a cégépítést. A már skálázódási szakaszba érkezett portfóliócégek részére nyújtanak stratégiai szintű iránymutatást és piacra lépési tudást. Segítségükkel a technológiai innovációk hatékonyan illeszthetők a nemzetközi trendekhez."
+  },
+  {
+    "link": "https://hunfintech.com/",
+    "stage": ["Scale-up", "Pre-Startup", "Startup"],
+    "type": ["Supporting programmes"],
+    "id": 80,
+    "companyLogo": "startup80",
+    "companyName": "Hungarian Fintech Association",
+    "about": "A Magyar Fintech Szövetség (MAFISZ) a hazai pénzügyi technológiai vállalkozásokat összefogó szakmai közösség. Erősítik a szabályozói párbeszédet, biztosítják a tudástranszfert a hagyományos bankszektor és a startupok között. Edukációs programjaikkal nagyban hozzájárulnak a biztonságos és modern digitális pénzügyi ökoszisztéma kiépüléséhez."
+  },
+  {
+    "link": "https://www.innovacio.hu/",
+    "stage": ["Scale-up", "Pre-Startup", "Startup"],
+    "type": ["Supporting Organizations"],
+    "id": 81,
+    "companyLogo": "startup81",
+    "companyName": "Hungarian Innovation Association",
+    "about": "A Magyar Innovációs Szövetség az innovációban és kutatás-fejlesztésben érdekelt intézmények és vállalatok országos érdekképviselete. Pályázatokkal, ifjúsági versenyekkel és díjakkal ismerik el és motiválják a hazai technológiai kreativitást. Tevékenységük hidat képez a technológiai ötletek és az azokat alkalmazó makrogazdaság között."
+  },
+  {
+    "link": "https://nkfih.gov.hu/",
+    "stage": ["Scale-up", "Pre-Startup", "Startup"],
+    "type": ["Governmental support"],
+    "id": 82,
+    "companyLogo": "startup82",
+    "companyName": "NKFIH",
+    "about": "A Nemzeti Kutatási, Fejlesztési és Innovációs Hivatal (NKFIH) a hazai kutatási és innovációs pályázatok elsődleges állami koordinátora. Célzott pénzügyi alapjaikon keresztül a startup fázistól a vállalati K+F projektekig biztosítanak vissza nem térítendő forrásokat. Céljuk a tudományos eredmények gazdasági hasznosulásának és a hazai innovációnak a felerősítése."
+  },
+  {
+    "link": "",
+    "stage": ["Pre-Startup", "Startup"],
+    "type": ["Local investors"],
+    "id": 83,
+    "companyLogo": "startup83",
+    "companyName": "Szakacsits Ventures Kft.",
+    "about": ""
+  },
+  {
+    "link": "https://sztnh.gov.hu/",
+    "stage": ["Pre-Startup", "Startup", "Scale-up"],
+    "type": ["Governmental support"],
+    "id": 84,
+    "companyLogo": "startup84",
+    "companyName": "SZTNH",
+    "about": "A Szellemi Tulajdon Nemzeti Hivatala a szabadalmak, védjegyek és az iparjogvédelem hatósági nyilvántartását és oltalmazását végző állami szerv. Kiemelten támogatják a startupokat abban, hogy fejlesztéseiket jogi szempontból biztonságosan lajstromozzák. Szolgáltatásaik elengedhetetlenek a szellemi termékek értékének nemzetközi szintű megőrzéséhez."
+  },
+  {
+    "link": "https://tokeportal.com/",
+    "stage": ["Startup"],
+    "type": ["Crowdfunding"],
+    "id": 85,
+    "companyLogo": "startup85",
+    "companyName": "Tőkeportál",
+    "about": "A Tőkeportál az első hazai közösségi finanszírozási felület, amely részvénycélú (equity crowdfunding) tőkebevonást tesz lehetővé startupok számára. Platformjukon keresztül az egyszerű magánbefektetők is tulajdonrészt szerezhetnek az induló, nagy potenciálú vállalkozásokban. Innovatív finanszírozási formájukkal áthidalják az angyalbefektetők és a nagyközönség közötti szakadékot."
+  },
+  {
+    "link": "https://www.linkedin.com/in/andr%C3%A1s-szab%C3%B3/?originalSubdomain=hu",
+    "stage": ["Startup"],
+    "type": ["Service Provider"],
+    "id": 86,
+    "companyLogo": "startup86",
+    "companyName": "Dr. Szabó András",
+    "about": "Ez a profil egy olyan szakmai szolgáltatót képvisel, aki elsősorban a startupok operatív és jogi folyamataiban biztosít stratégiai tanácsadást. Magas szintű, személyre szabott professzionális szolgáltatásokkal segíti a cégeket a korai buktatók elkerülésében. Szakértelme hatékonyan támogatja a stabil és szabályszerű növekedést a befektetési fázisokban."
+  },
+  {
+    "link": "https://www.nth.hu/",
+    "stage": ["Startup", "Scale-up"],
+    "type": ["Governmental support"],
+    "id": 87,
+    "companyLogo": "startup87",
+    "companyName": "National Capital Holding",
+    "about": "A Nemzeti Tőkeholding feladata az állami hátterű tőkealapok működésének összehangolása és az optimális gazdaságfejlesztési célok elérése. Különböző alapkezelők (köztük a Hiventures) stratégiájának integrálásával biztosítják a források célzott elosztását a hazai startupok felé. Tevékenységükkel javítják Magyarország globális technológiai és üzleti versenyképességét."
+  },
+  {
+    "link": "https://www.hiventures.hu/",
+    "stage": ["Startup", "Scale-up"],
+    "type": ["Governmental support"],
+    "id": 88,
+    "companyLogo": "startup88",
+    "companyName": "Hiventures",
+    "about": "A Hiventures a kelet-közép-európai régió egyik legaktívabb állami hátterű kockázati tőkealap-kezelője, fókuszban a magyar startupokkal. Az ötletfázistól egészen a nemzetközi skálázódásig széles spektrumban kínálnak tőkebefektetési programokat. Finanszírozásukkal és szakmai mentorhálózatukkal a hazai innovációs ökoszisztéma egyik legfontosabb motorjai."
+  },
+  {
+    "link": "https://mkik.hu/",
+    "stage": ["Pre-Startup", "Startup", "Scale-up"],
+    "type": ["Supporting Organizations"],
+    "id": 89,
+    "companyLogo": "startup89",
+    "companyName": "Hungarian Chamber of Commerce and Industry",
+    "about": "A Magyar Kereskedelmi és Iparkamara (MKIK) a magyar vállalkozások hivatalos és független országos köztestülete. Gazdaságfejlesztési programjaikkal és erős lobbitevékenységükkel alakítják a vállalkozások számára kedvező jogi és gazdasági környezetet. Helyi és nemzetközi kapcsolataikkal hatékonyan segítik az innovatív hazai cégek exportpiacokra jutását."
+  },
+  {
+    "link": "https://hu.smartware.tech/",
+    "stage": ["Startup"],
+    "type": ["Local investors"],
+    "id": 90,
+    "companyLogo": "startup90",
+    "companyName": "SmartWare.tech",
+    "about": "A SmartWare.tech egy hardver fókuszú hazai kockázati tőkealap és akcelerátor az IT piacon. Célzottan a hardveres prototípusok gyártásához és piacra viteléhez szükséges speciális tudást és jelentős tőkét biztosítják az alapítóknak. Integrált hálózatukban kiemelkedő mérnöki és gyártási szaktudással segítik a portfóliócégek nemzetközi érvényesülését."
+  }
+]

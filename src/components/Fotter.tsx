@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import SubscribeButton from "./SubscribeButton";
 
 function Footer() {
   return (
@@ -84,6 +85,7 @@ function Footer() {
 
       {/* Info Section */}
       <div className="flex flex-col lg:items-end gap-y-6 text-white">
+        <SubscribeButton>Subscribe to newsletter →</SubscribeButton>
         <div>
           <Link
             href={"/disclaimer"}
@@ -106,7 +108,7 @@ function Footer() {
               className="hover:underline hover:text-[#afe202] transition-colors"
               href="mailto:sajto@niu.hu"
             >
-              sajto@niu.hu
+              startup@niu.hu
             </a>
           </div>
           <a

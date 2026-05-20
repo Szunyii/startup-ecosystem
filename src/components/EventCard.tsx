@@ -1,18 +1,20 @@
 "use client";
+
 import React from "react";
-import { Card } from "./ui/card";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, Variants } from "framer-motion";
 
-function EventCard({
-  title,
-  event_date,
-  event_url,
-  eventFlag,
-  location,
-  event_end_date,
-}: {
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
+};
+
+interface EventCardProps {
   title: string;
   event_date: string;
   event_url: string;
@@ -20,54 +22,62 @@ function EventCard({
   category: string;
   location: string;
   event_end_date?: string;
-}) {
-  const dateObj = new Date(event_date);
-  const dateObjEnd =
-    event_end_date && new Date(event_end_date) ? new Date(event_end_date) : "";
-  const eventDateMoth = dateObj.toLocaleString("en-En", { month: "short" });
-  const eventDateDay = dateObj.toLocaleString("en-En", { day: "numeric" });
-  const eventDateDayEnd = dateObjEnd.toLocaleString("en-En", {
-    day: "numeric",
-  });
+}
 
-  const itemVariants: Variants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
-  };
+export default function EventCard({
+  title,
+  event_date,
+  event_url,
+  eventFlag,
+  location,
+  event_end_date,
+}: EventCardProps) {
+  const dateObj = new Date(event_date);
+  const dateObjEnd = event_end_date ? new Date(event_end_date) : null;
+  const monthShort = dateObj.toLocaleString("en-EN", { month: "short" });
+  const dayStart = dateObj.toLocaleString("en-EN", { day: "numeric" });
+  const dayEnd = dateObjEnd?.toLocaleString("en-EN", { day: "numeric" });
 
   return (
     <motion.div variants={itemVariants} className="w-full h-full">
       <Link href={event_url} target="_blank" className="w-full h-full block">
-        <Card className="relative h-full flex items-center justify-between rounded-xl bg-primary/25 text-white border-none overflow-hidden min-h-[90px] hover:bg-primary/40 transition-colors">
-          <div className="flex items-center pl-2 w-full">
-            <div className="min-w-[40px] flex flex-col justify-center items-center flex-shrink-0">
-              <h2 className="text-lg md:text-xl font-bold">{eventDateMoth}</h2>
-              <div className="flex gap-0 text-sm md:text-base">
-                <h2 className="">{eventDateDay}</h2>
-                <span>{eventDateDayEnd.length > 0 && "-"}</span>
-                <h2 className="">{eventDateDayEnd}</h2>
-              </div>
-            </div>
-            <div className="p-3 space-y-1 flex-1 min-w-0">
-              <div className="flex gap-2">
-                <p className="text-sm md:text-md truncate font-medium">{title}</p>
-              </div>
-              <p className="text-xs md:text-sm opacity-80 truncate">{location}</p>
-            </div>
+        <article className="relative h-full flex items-stretch justify-between rounded-xl bg-gradient-to-b from-white/[0.06] to-white/[0.02] border border-white/10 text-white overflow-hidden min-h-[96px] hover:border-primary/40 hover:bg-white/[0.06] transition-colors">
+          {/* Date badge */}
+          <div className="flex flex-col justify-center items-center px-3 py-3 min-w-[60px] border-r border-white/[0.06] bg-primary/15">
+            <span className="font-mono text-[10px] uppercase tracking-widest opacity-70">
+              {monthShort}
+            </span>
+            <span className="font-extrabold text-lg leading-none mt-0.5 tracking-tight">
+              {dayStart}
+              {dayEnd && (
+                <>
+                  <span className="opacity-40 mx-0.5">–</span>
+                  {dayEnd}
+                </>
+              )}
+            </span>
           </div>
-          <div className="flex-shrink-0">
+
+          {/* Title + location */}
+          <div className="flex-1 min-w-0 px-3 py-3 flex flex-col justify-center gap-1">
+            <p className="text-sm font-semibold truncate">{title}</p>
+            <p className="font-mono text-[11px] opacity-65 truncate">
+              {location}
+            </p>
+          </div>
+
+          {/* Country flag */}
+          <div className="flex-shrink-0 self-stretch">
             <Image
               src={`/flag/${eventFlag}.png`}
-              alt="flag"
+              alt={eventFlag}
               width={100}
               height={100}
-              className="object-cover h-[90px] w-auto max-w-[80px] md:max-w-[100px]"
+              className="object-cover h-full w-auto max-w-[72px] md:max-w-[88px] opacity-90"
             />
           </div>
-        </Card>
+        </article>
       </Link>
     </motion.div>
   );
 }
-
-export default EventCard;

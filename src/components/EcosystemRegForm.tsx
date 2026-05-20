@@ -15,7 +15,7 @@ import {
 import { ecosystemFormSchema, ecosystemFormValues } from "@/lib/validation";
 import { Input } from "./ui/input";
 import LoadingButton from "./LoadingButton";
-import { createEcosystemReg } from "@/app/startups/actions";
+import { createEcosystemReg } from "@/lib/startup-actions";
 import {
   Select,
   SelectContent,
@@ -23,7 +23,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "./ui/select";
-import { Card, CardContent, CardDescription, CardHeader } from "./ui/card";
+import { Card, CardContent } from "./ui/card";
 import { Checkbox } from "./ui/checkbox";
 
 function EcosystemRegForm() {
@@ -107,18 +107,9 @@ function EcosystemRegForm() {
     );
   }
   return (
-    <div className=" max-w-xl w-full animate-fadeInUp">
+    <div className="max-w-xl w-full animate-fadeInUp">
       <Card className="bg-transparent border-none text-white">
-        <div className="gap-0 mb-4 flex items-center justify-center flex-col">
-          <CardHeader className="text-2xl font-bold">
-            Add or Update Your entity in the Startup Ecosystem page
-          </CardHeader>
-          <CardDescription className="text-center text-white">
-            Use this form to request inclusion or make changes to a current
-            listing.
-          </CardDescription>
-        </div>
-        <CardContent>
+        <CardContent className="p-0">
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)}>
               <div className="space-y-2 ">

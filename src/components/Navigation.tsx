@@ -19,7 +19,8 @@ const dropdownLinks = [
   { href: "/funding-opportunities", label: "Funding opportunities" },
 ];
 const startupDropdownLinks = [
-  { href: "/startups", label: "Startup database" },
+  { href: "/startup-overview", label: "Startup overview" },
+  { href: "/startup", label: "Startup database" },
   { href: "/ecosystem", label: "Startup ecosystem" },
 ];
 
@@ -31,9 +32,19 @@ function Navigation() {
     <>
       <header className=" w-full z-50 relative">
         <nav className="flex justify-between items-center py-4 bg-[#5d3dff] px-8 mt-3 rounded-br-3xl rounded-tl-3xl text-cyan-50">
-          <Link href={"/"}>
-            <Image src={"/niu-logo.png"} width={150} height={100} alt="link" />
-          </Link>
+          <div className="flex items-center gap-3">
+            <Link href={"/"}>
+              <Image
+                src={"/niu-logo.png"}
+                width={150}
+                height={100}
+                alt="link"
+              />
+            </Link>
+            <span className="inline-flex items-center font-mono text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-full bg-white/[0.08] border border-white/20 text-[#afe200]">
+              Beta
+            </span>
+          </div>
           {/* desktop nav */}
           <div className="hidden lg:flex gap-1 lg:items-center">
             {links.map(({ href, label }) => (

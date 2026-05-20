@@ -7,19 +7,28 @@ import {
   SelectTrigger,
   SelectValue,
 } from "./ui/select";
-import { useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
-function YearSelector() {
+interface YearSelectorProps {
+  triggerClassName?: string;
+}
+
+function YearSelector({ triggerClassName }: YearSelectorProps = {}) {
   const router = useRouter();
+  const pathname = usePathname();
   const searchParams = useSearchParams();
 
   const search = searchParams.get("year") ?? "2024";
 
   function updateSearchParam(key: string, value: string) {
-    const params = new URLSearchParams(searchParams.toString()); // meglévők megtartása
-    params.set(key, value); // új érték beállítása / felülírás
+    const params = new URLSearchParams(searchParams.toString());
+    params.set(key, value);
 
-    router.push(`?${params.toString()}`); // új URL push
+    // Push to the full path + searchParams so the App Router definitely sees
+    // it as a navigation, then refresh() forces server components (e.g. the
+    // SectorBarChart's Prisma query) to re-run with the new searchParam.
+    router.push(`${pathname}?${params.toString()}`);
+    router.refresh();
   }
   return (
     <div>
@@ -28,7 +37,7 @@ function YearSelector() {
         onValueChange={(value) => updateSearchParam("year", value)}
         value={search!}
       >
-        <SelectTrigger className="w-[180px]">
+        <SelectTrigger className={triggerClassName ?? "w-[180px]"}>
           <SelectValue placeholder="Year" />
         </SelectTrigger>
         <SelectContent>

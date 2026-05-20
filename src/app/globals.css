@@ -2,8 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+}
+
 body {
   font-family: var(--font-inter);
+  overflow-x: hidden; /* prevents horizontal scroll on mobile */
+}
+
+/* Radix Dialog adds padding-right to body when it locks scroll to compensate
+   for the scrollbar disappearing. Since scrollbar-gutter: stable already
+   reserves that space on html, we zero out Radix's compensation on body. */
+body[data-scroll-locked] {
+  padding-right: 0 !important;
+  margin-right: 0 !important;
 }
 
 @layer utilities {
@@ -88,4 +100,20 @@ body {
 .table {
   table-layout: auto !important;
   width: auto; /* ne töltse ki kényszerből a teljes szélességet */
+}
+
+/* Dark-theme override for the SlidingNavbar used on the registry page. */
+.registry-slider {
+  background: rgba(0, 0, 0, 0.3) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+.registry-slider > div {
+  background: #5d3dff !important;
+  border-color: transparent !important;
+}
+.registry-slider button {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+.registry-slider button.text-navbar-item-active {
+  color: #ffffff !important;
 }

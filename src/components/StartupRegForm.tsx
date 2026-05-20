@@ -15,7 +15,7 @@ import {
 import { startupFormSchema, startupFormValues } from "@/lib/validation";
 import { Input } from "./ui/input";
 import LoadingButton from "./LoadingButton";
-import { createStartupReg } from "@/app/startups/actions";
+import { createStartupReg } from "@/lib/startup-actions";
 import {
   Select,
   SelectContent,
@@ -23,7 +23,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "./ui/select";
-import { Card, CardContent, CardDescription, CardHeader } from "./ui/card";
+import { Card, CardContent } from "./ui/card";
 import { Checkbox } from "./ui/checkbox";
 
 function StartupRegForm() {
@@ -81,7 +81,9 @@ function StartupRegForm() {
     return (
       <div className="max-w-xl w-full animate-fadeInUp flex flex-col items-center justify-center p-8 text-center text-white bg-primary/20 rounded-xl border border-primary">
         <h2 className="text-2xl font-bold mb-4">Thank you!</h2>
-        <p className="text-lg">Your registration has been submitted successfully.</p>
+        <p className="text-lg">
+          Your registration has been submitted successfully.
+        </p>
         <button
           onClick={() => setIsSuccess(false)}
           className="mt-6 text-sm underline hover:text-primary transition-colors"
@@ -92,18 +94,9 @@ function StartupRegForm() {
     );
   }
   return (
-    <div className=" max-w-xl w-full animate-fadeInUp">
+    <div className="max-w-xl w-full animate-fadeInUp">
       <Card className="text-white border-none bg-transparent">
-        <div className="gap-0 mb-4 flex items-center justify-center flex-col">
-          <CardHeader className="text-2xl font-bold">
-            Want to be listed on the Startup database?
-          </CardHeader>
-          <CardDescription className="text-center text-white">
-            If your startup isn’t listed yet, submit this form to be featured
-            with verified data.
-          </CardDescription>
-        </div>
-        <CardContent>
+        <CardContent className="p-0">
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)}>
               <div className="space-y-2 ">

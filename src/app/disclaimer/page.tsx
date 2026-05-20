@@ -1,4 +1,13 @@
 import React from "react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Disclaimer",
+  description:
+    "Disclaimer for the Hungarian Innovation Agency (NIÜ) startup ecosystem website: scope of responsibility for the published content and data.",
+  alternates: { canonical: "/disclaimer" },
+  robots: { index: true, follow: true },
+};
 
 function disclaimer() {
   return (

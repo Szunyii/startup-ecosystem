@@ -5,10 +5,19 @@ import { Card } from "@/components/ui/card";
 
 function page() {
   return (
-    <div className="min-h-screen text-white backdrop-blur-2x">
-      <div className=" p-3 mb-10 z-10">
-        <h1 className="text-5xl font-bold mt-6 ml-4 z-50">Why Hungary?</h1>
-      </div>
+    <div className="min-h-screen text-white font-sans px-4 md:px-7 py-8">
+      <header className="px-2 mb-10">
+        <div className="inline-flex items-center gap-2.5 font-mono text-xs opacity-80">
+          <span className="relative flex h-2 w-2">
+            <span className="absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75 animate-ping" />
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-secondary" />
+          </span>
+          <span>Overview · Hungarian innovation ecosystem</span>
+        </div>
+        <h1 className="mt-3 text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight">
+          Why Hungary?
+        </h1>
+      </header>
 
       <section className=" relative p-4 ">
         <Leaf className="-left-[68px] -top-6 opacity-10" />
@@ -25,9 +34,14 @@ function page() {
             className="relative aspect-square  w-[56.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-primary to-[#9089fc] opacity-10 sm:left-[calc(50%-30rem)] z-0"
           />
         </div>
-        <h2 className="text-[24px] text-center font-bold z-20">
-          1. Hungary offers one of the most favorable business environments
-        </h2>
+        <div className="text-center z-20 relative">
+          <span className="font-mono text-xs uppercase tracking-widest text-[#afe200]">
+            01
+          </span>
+          <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight mt-2">
+            Hungary offers one of the most favorable business environments
+          </h2>
+        </div>
         <div className="flex flex-col md:flex-row mt-16  max-w-full gap-6 justify-center items-center">
           <div className="w-full flex-[55%] text-justify flex flex-col font-[16px] flex-wrap mt-4 z-30 gap-y-2">
             <b className="">
@@ -87,8 +101,11 @@ function page() {
               </li>
             </ul>
           </div>
-          <Card className="w-full flex flex-[45%] justify-center items-center bg-transparent border-none h-min z-30">
+          <Card className="w-full flex flex-col flex-[45%] justify-center items-center bg-transparent border-none h-min z-30 relative">
             <Image src={"/icon/1up.png"} width={800} height={600} alt="image" />
+            <p className="text-sm text-muted-foreground md:-mt-20 lg:-mt-30">
+              *the highest available score is 100.
+            </p>
           </Card>
         </div>
       </section>
@@ -98,9 +115,14 @@ function page() {
         <Leaf className="size-28 opacity-25 -right-0" />
         <Leaf className="right-[122px] top-12 opacity-10" />
 
-        <h2 className="text-[24px] text-center font-bold z-20">
-          2. Hungary&apos;s technological talent pool is highly competitive
-        </h2>
+        <div className="text-center z-20 relative">
+          <span className="font-mono text-xs uppercase tracking-widest text-[#afe200]">
+            02
+          </span>
+          <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight mt-2">
+            Hungary&apos;s technological talent pool is highly competitive
+          </h2>
+        </div>
         <div className="flex flex-col md:flex-row mt-16  max-w-full gap-6 justify-center items-center">
           <Card className="w-full flex flex-[45%] justify-center items-center border-primary/20 bg-[#12093733]/10  h-min z-30">
             <Image src={"/icon/2.png"} width={600} height={500} alt="image" />
@@ -161,9 +183,14 @@ function page() {
             className="relative aspect-square  w-[56.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-primary to-[#9089fc] opacity-10 sm:left-[calc(50%-30rem)] z-0"
           />
         </div>
-        <h2 className="text-[24px] text-center font-bold z-20">
-          3. Hungary&apos;s academic sector&apos;s strong scientific performance
-        </h2>
+        <div className="text-center z-20 relative">
+          <span className="font-mono text-xs uppercase tracking-widest text-[#afe200]">
+            03
+          </span>
+          <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight mt-2">
+            Hungary&apos;s academic sector&apos;s strong scientific performance
+          </h2>
+        </div>
         <div className="flex flex-col md:flex-row mt-16  max-w-full gap-6 justify-center items-center">
           <div className="w-full flex-[55%] text-justify flex flex-col font-[16px] flex-wrap mt-4 z-30">
             <p>
@@ -257,9 +284,14 @@ function page() {
             className="relative aspect-square  w-[56.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-primary to-[#9089fc] opacity-10 sm:left-[calc(50%-30rem)] z-0"
           />
         </div>
-        <h2 className="text-[24px] text-center font-bold z-20">
-          4. Constantly increasing investments is R&D
-        </h2>
+        <div className="text-center z-20 relative">
+          <span className="font-mono text-xs uppercase tracking-widest text-[#afe200]">
+            04
+          </span>
+          <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight mt-2">
+            Constantly increasing investments is R&D
+          </h2>
+        </div>
         <div className="flex flex-col md:flex-row mt-10  max-w-full gap-6 justify-center items-center">
           <Card className="w-full flex flex-[45%] justify-center items-center bg-inherit p-0 h-min z-30 py-12 border-none">
             <Image src={"/icon/4.png"} width={800} height={600} alt="image" />
@@ -296,11 +328,16 @@ function page() {
         {/* ------- */}
         <Leaf className="bottom-8 -left-12 size-44 opacity-25" />
         <Leaf className=" -bottom-20 -left-10 opacity-10 size-24" />
-        <h2 className="text-[24px] text-center font-bold z-20">
-          5. Large multinational corporates play a decisive role in
-          Hungary&apos;s innovation ecosystem bringing their R&D centers to
-          Hungary
-        </h2>
+        <div className="text-center z-20 relative">
+          <span className="font-mono text-xs uppercase tracking-widest text-[#afe200]">
+            05
+          </span>
+          <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight mt-2">
+            Large multinational corporates play a decisive role in
+            Hungary&apos;s innovation ecosystem bringing their R&D centers to
+            Hungary
+          </h2>
+        </div>
         <div className="flex flex-col md:flex-row mt-16  max-w-full gap-6 justify-center items-center">
           <div className="w-full flex-[55%] text-justify flex flex-col font-[16px] flex-wrap mt-4 z-30">
             <p>
