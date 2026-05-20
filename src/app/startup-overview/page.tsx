@@ -2,8 +2,7 @@ import React from "react";
 import SectorBarChart from "@/components/SectorBarChart";
 import FundingTrendChart from "@/components/FundingTrendChart";
 import ActiveStartupsList from "@/components/ActiveStartupsList";
-import Faq from "@/components/Faq";
-import AccordionDatabase from "@/components/AccordionDatabase";
+
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {

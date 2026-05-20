@@ -2,8 +2,7 @@
 
 import React, { useMemo, useState } from "react";
 import Image from "next/image";
-import Faq from "@/components/Faq";
-import AccordionEcosystem from "@/components/AccordionEcosystem";
+
 import Link from "next/link";
 
 type Partner = {
