@@ -678,5 +678,21 @@
     "id": 90,
     "companyLogo": "startup90",
     "companyName": "SmartWare.tech"
+  },
+  {
+    "link": "https://www.deep-ecosystems.com/",
+    "stage": ["Scale-up"],
+    "type": ["Foreign Investors"],
+    "id": 91,
+    "companyLogo": "startup91",
+    "companyName": "DEEP Ecosystems 500 UG"
+  },
+  {
+    "link": "https://winno.tech/",
+    "stage": ["Pre-Startup"],
+    "type": ["Acccelerators/Incubators"],
+    "id": 92,
+    "companyLogo": "startup92",
+    "companyName": "Winno tech"
   }
 ]

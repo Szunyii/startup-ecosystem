@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import programData from "@/data/supportPrograms.json";
 import ProgramCard from "./ProgramCard";
 import FundingOpportunitiesMobile from "@/components/FundingOpportunitiesMobile";
@@ -50,17 +50,14 @@ function Page() {
     return Array.from(types);
   }, [selectedStage]);
 
-  const [selectedType, setSelectedType] = useState<string | null>(null);
-
-  useEffect(() => {
-    if (availableTypes.length === 0) {
-      setSelectedType(null);
-      return;
-    }
-    setSelectedType((prev) =>
-      prev && availableTypes.includes(prev) ? prev : availableTypes[0],
-    );
-  }, [availableTypes]);
+  // Track the user's explicit pick. The effective `selectedType` is derived
+  // below so it stays consistent with `availableTypes` without a
+  // setState-in-effect feedback loop.
+  const [chosenType, setChosenType] = useState<string | null>(null);
+  const selectedType =
+    chosenType && availableTypes.includes(chosenType)
+      ? chosenType
+      : (availableTypes[0] ?? null);
 
   const filteredPrograms = useMemo(
     () =>
@@ -203,7 +200,7 @@ function Page() {
                 return (
                   <button
                     key={t}
-                    onClick={() => setSelectedType(t)}
+                    onClick={() => setChosenType(t)}
                     className={
                       "grid grid-cols-[1fr_auto] gap-2.5 items-center px-3 py-2.5 rounded-xl border text-[13px] text-left transition-colors cursor-pointer " +
                       (active

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 import { ExternalLink, Search } from "lucide-react";
 import { MultiSelect } from "@/components/ui/multi-select";
 
@@ -75,20 +75,25 @@ export default function ActiveStartupsListClient({ startups }: Props) {
   const [page, setPage] = useState(0);
   const pageCount = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
 
-  // Snap back to first page whenever filters change the result set.
-  useEffect(() => {
+  // Snap back to first page when filters change. Detect the change during
+  // render via a stored snapshot — avoids the setState-in-effect race where
+  // the user briefly sees a stale page before the reset commits.
+  const filterKey = `${search}|${selectedYears.join(",")}|${selectedSectors.join(",")}`;
+  const [prevFilterKey, setPrevFilterKey] = useState(filterKey);
+  if (prevFilterKey !== filterKey) {
+    setPrevFilterKey(filterKey);
     setPage(0);
-  }, [search, selectedYears, selectedSectors]);
+  }
 
-  // Clamp page when the result set shrinks (e.g. after filter narrows below
-  // current page boundary).
-  useEffect(() => {
-    if (page > pageCount - 1) setPage(pageCount - 1);
-  }, [page, pageCount]);
+  // Clamp the page for display when the result set just shrank. The
+  // underlying `page` state catches up on the next navigation click via
+  // setPage(safePage ± 1) below.
+  const safePage = Math.min(page, pageCount - 1);
 
   const pageItems = useMemo(
-    () => filtered.slice(page * PAGE_SIZE, page * PAGE_SIZE + PAGE_SIZE),
-    [filtered, page],
+    () =>
+      filtered.slice(safePage * PAGE_SIZE, safePage * PAGE_SIZE + PAGE_SIZE),
+    [filtered, safePage],
   );
 
   const pageNumbers = useMemo<(number | "…")[]>(() => {
@@ -97,7 +102,10 @@ export default function ActiveStartupsListClient({ startups }: Props) {
     // there's a gap between the window and the final page).
     const span = 2;
     const windowSize = 5;
-    const start = Math.max(0, Math.min(page - span, pageCount - windowSize));
+    const start = Math.max(
+      0,
+      Math.min(safePage - span, pageCount - windowSize),
+    );
     const end = Math.min(pageCount, start + windowSize);
     const window = Array.from({ length: end - start }, (_, i) => start + i);
 
@@ -108,7 +116,7 @@ export default function ActiveStartupsListClient({ startups }: Props) {
     if (last > window[window.length - 1] + 1) result.push("…");
     result.push(last);
     return result;
-  }, [page, pageCount]);
+  }, [safePage, pageCount]);
 
   return (
     <section className="mt-6 md:mt-8">
@@ -302,14 +310,14 @@ export default function ActiveStartupsListClient({ startups }: Props) {
       {filtered.length > PAGE_SIZE && (
         <div className="flex justify-between items-center px-1 pt-5 font-mono text-xs text-white/80">
           <span>
-            Showing {page * PAGE_SIZE + 1}–
-            {Math.min((page + 1) * PAGE_SIZE, filtered.length)} of{" "}
+            Showing {safePage * PAGE_SIZE + 1}–
+            {Math.min((safePage + 1) * PAGE_SIZE, filtered.length)} of{" "}
             {fmt(filtered.length)}
           </span>
           <div className="flex items-center gap-2">
             <button
-              onClick={() => setPage((p) => Math.max(0, p - 1))}
-              disabled={page === 0}
+              onClick={() => setPage(Math.max(0, safePage - 1))}
+              disabled={safePage === 0}
               className="bg-white/[0.06] border border-white/10 text-white px-3 py-1.5 rounded-md hover:bg-white/10 disabled:opacity-40 disabled:cursor-not-allowed text-[11px]"
             >
               ‹ Prev
@@ -329,7 +337,7 @@ export default function ActiveStartupsListClient({ startups }: Props) {
                     onClick={() => setPage(n)}
                     className={
                       "w-7 h-7 rounded-md text-[11px] " +
-                      (n === page
+                      (n === safePage
                         ? "bg-primary text-white font-bold"
                         : "bg-white/[0.06] border border-white/10 text-white/80 hover:bg-white/10")
                     }
@@ -340,8 +348,8 @@ export default function ActiveStartupsListClient({ startups }: Props) {
               )}
             </div>
             <button
-              onClick={() => setPage((p) => Math.min(pageCount - 1, p + 1))}
-              disabled={page >= pageCount - 1}
+              onClick={() => setPage(Math.min(pageCount - 1, safePage + 1))}
+              disabled={safePage >= pageCount - 1}
               className="bg-white/[0.06] border border-white/10 text-white px-3 py-1.5 rounded-md hover:bg-white/10 disabled:opacity-40 disabled:cursor-not-allowed text-[11px]"
             >
               Next ›

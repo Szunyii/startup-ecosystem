@@ -763,5 +763,29 @@
     "companyLogo": "startup90",
     "companyName": "SmartWare.tech",
     "about": "A SmartWare.tech egy hardver fókuszú hazai kockázati tőkealap és akcelerátor az IT piacon. Célzottan a hardveres prototípusok gyártásához és piacra viteléhez szükséges speciális tudást és jelentős tőkét biztosítják az alapítóknak. Integrált hálózatukban kiemelkedő mérnöki és gyártási szaktudással segítik a portfóliócégek nemzetközi érvényesülését."
+  },
+  {
+    "link": "https://www.deep-ecosystems.com/",
+    "stage": ["Scale-up"],
+    "type": ["Foreign Investors"],
+    "id": 91,
+    "companyLogo": "startup91",
+    "companyName": "DEEP Ecosystems 500 UG"
+  },
+  {
+    "link": "https://winno.tech/",
+    "stage": ["Pre-Startup"],
+    "type": ["Acccelerators/Incubators"],
+    "id": 92,
+    "companyLogo": "startup92",
+    "companyName": "Winno tech"
+  },
+  {
+    "link": "https://incubatorzero.hu/",
+    "stage": ["Startup"],
+    "type": ["Acccelerators/Incubators"],
+    "id": 93,
+    "companyLogo": "startup93",
+    "companyName": "Incubator Zero"
   }
 ]

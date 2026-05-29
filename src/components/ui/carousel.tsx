@@ -111,6 +111,11 @@ function Carousel({
 
   React.useEffect(() => {
     if (!api) return;
+    // Bootstrap our local state from the embla API. Calling onSelect here
+    // is the documented pattern from the shadcn carousel template — it
+    // syncs canScrollPrev/Next and selectedIndex against the live api
+    // before the user interacts.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     onSelect(api);
     api.on("reInit", onSelect);
     api.on("select", onSelect);

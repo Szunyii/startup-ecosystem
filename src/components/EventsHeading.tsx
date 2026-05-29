@@ -25,7 +25,7 @@ export default function EventsHeading() {
             style={{ background: LIME }}
           />
         </span>
-        <span>What's coming up</span>
+        <span>What&apos;s coming up</span>
       </div>
       <h2 className="mt-2 text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-white">
         Upcoming Events

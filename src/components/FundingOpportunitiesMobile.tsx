@@ -1,5 +1,5 @@
 "use client";
-import React, { useMemo, useState, useEffect } from "react";
+import React, { useMemo, useState } from "react";
 import programData from "@/data/supportPrograms.json";
 import ProgramCard from "@/app/funding-opportunities/ProgramCard";
 import {
@@ -25,21 +25,14 @@ function FundingOpportunitiesMobile() {
     }, []);
   }, [selectedStage]);
 
-  const [selectedType, setSelectedType] = useState<string | null>(null);
-
-  // Update selectedType when available types change
-  useEffect(() => {
-    if (availableTypeCategory.length === 0) {
-      setSelectedType(null);
-      return;
-    }
-
-    setSelectedType((prev) =>
-      prev && availableTypeCategory.includes(prev)
-        ? prev
-        : availableTypeCategory[0]
-    );
-  }, [availableTypeCategory]);
+  // Track the user's explicit pick. The effective `selectedType` is derived
+  // below so it stays consistent with `availableTypeCategory` without a
+  // setState-in-effect feedback loop.
+  const [chosenType, setChosenType] = useState<string | null>(null);
+  const selectedType =
+    chosenType && availableTypeCategory.includes(chosenType)
+      ? chosenType
+      : (availableTypeCategory[0] ?? null);
 
   const filteredPrograms = programData.filter(
     (el) =>
@@ -72,7 +65,7 @@ function FundingOpportunitiesMobile() {
         <div className="w-full">
           <p className="mb-2 text-sm font-medium">Select Type</p>
           <Select
-            onValueChange={(value: string) => setSelectedType(value)}
+            onValueChange={(value: string) => setChosenType(value)}
             value={selectedType || ""}
             disabled={!selectedType}
           >

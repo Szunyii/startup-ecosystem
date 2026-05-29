@@ -114,11 +114,15 @@ export default function HeroConstellation({ pool }: Props) {
   useEffect(() => {
     if (pool.length === 0) return;
 
-    // Initial randomization on mount.
+    // Initial randomization on mount. Intentionally deferred to a post-
+    // hydration effect: the SSR HTML must match the deterministic initial
+    // pick (see useState above), so randomization can only happen after
+    // React has committed the matching first client render.
     const firstPick = pickRandom(pool, SLOTS.length);
     while (firstPick.length < SLOTS.length) {
       firstPick.push({ name: "—", sector: "—" });
     }
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setActive(firstPick);
 
     // Skip the rotation interval if there's nothing extra to swap in.
