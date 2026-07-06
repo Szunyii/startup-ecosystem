@@ -14,8 +14,8 @@ import {
 } from "@tanstack/react-table";
 import YearSelector from "@/components/YearSelector";
 import { MultiSelect } from "@/components/ui/multi-select";
-// import Faq from "@/app/startups/Faq";
-// import AccordionDatabase from "@/app/startups/AccordionDatabe";
+import Faq from "@/components/Faq";
+import AccordionDatabase from "@/components/AccordionDatabase";
 import type { Prisma } from "@prisma/client";
 
 // Row shape matches the include shape used in page.tsx — every financial
@@ -28,6 +28,7 @@ export type StartupRow = Prisma.startup_year_data_testGetPayload<{
         website: true;
         sector: true;
         funding_year: true;
+        deeptech: true;
         type: true;
       };
     };
@@ -55,9 +56,17 @@ function hasFinancials(r: StartupRow) {
   return (r.tax ?? 0) > 0 || (r.personalexpenses ?? 0) > 0;
 }
 
-// Treat anything whose `type` mentions "deep" (case-insensitive) as deep tech.
+// Deep-tech state comes straight from the `deeptech` flag on startup_test.
 function isDeepTech(r: StartupRow) {
-  return /deep/i.test(r.startup?.type ?? "");
+  return r.startup?.deeptech === true;
+}
+
+// Maps the raw `type` column ("startup" / "scale-up") to a display label.
+function startupTypeLabel(type: string | null | undefined) {
+  const t = type?.trim().toLowerCase();
+  if (t === "scale-up") return "Scale-up";
+  if (t === "startup") return "Startup";
+  return "";
 }
 
 // YoY cell — values are stored as decimals (e.g. 0.083 → +8.3%). Renders
@@ -135,6 +144,14 @@ const columns: ColumnDef<StartupRow>[] = [
                   {name}
                 </span>
               )}
+              {isDeepTech(r) && (
+                <span
+                  title="Deep tech company"
+                  className="shrink-0 inline-block bg-[#afe200]/15 text-[#afe200] px-1 py-px rounded text-[9px] leading-none font-mono"
+                >
+                  Deep Tech
+                </span>
+              )}
             </div>
             <span className="font-mono text-[10px] opacity-40">
               #{String(sortedIndex + 1).padStart(3, "0")}
@@ -165,20 +182,28 @@ const columns: ColumnDef<StartupRow>[] = [
   },
   {
     id: "type",
-    accessorFn: (r) => (isDeepTech(r) ? "Deep Tech" : ""),
+    accessorFn: (r) => startupTypeLabel(r.startup?.type),
     header: "Type",
-    meta: { cellClassName: "max-w-[80px]" },
-    cell: ({ row }) =>
-      isDeepTech(row.original) ? (
+    meta: { cellClassName: "max-w-[90px]" },
+    cell: ({ row }) => {
+      const label = startupTypeLabel(row.original.startup?.type);
+      if (!label)
+        return <span className="font-mono text-[11px] opacity-30">—</span>;
+      const isScaleUp = label === "Scale-up";
+      return (
         <span
-          title="Deep tech company"
-          className="inline-block max-w-full truncate align-middle bg-[#afe200]/15 text-[#afe200] px-1.5 py-0.5 rounded-md text-[10px] font-mono"
+          title={label}
+          className={
+            "inline-block max-w-full truncate align-middle px-1.5 py-0.5 rounded-md text-[10px] font-mono " +
+            (isScaleUp
+              ? "bg-sky-400/15 text-sky-300"
+              : "bg-white/[0.06] text-white/60")
+          }
         >
-          Deep Tech
+          {label}
         </span>
-      ) : (
-        <span className="font-mono text-[11px] opacity-30">—</span>
-      ),
+      );
+    },
   },
   {
     accessorKey: "person",
@@ -271,11 +296,12 @@ export default function StartupBrowser({
 }: Props) {
   const [search, setSearch] = useState("");
   const [empBand, setEmpBand] = useState(0);
-  // 3-state filter: "all" shows everything, "deep" shows only deep tech,
-  // "startup" shows only startup-tech.
-  const [deepTechFilter, setDeepTechFilter] = useState<
-    "all" | "deep" | "startup"
-  >("all");
+  // Company type from the `type` column: startup vs scale-up.
+  const [typeFilter, setTypeFilter] = useState<"all" | "startup" | "scale-up">(
+    "all",
+  );
+  // Deep-tech is an orthogonal boolean flag; "deep" narrows to deep-tech only.
+  const [deepTechFilter, setDeepTechFilter] = useState<"all" | "deep">("all");
   // Multi-select: empty array = no filter, any sector passes.
   const [selectedSectors, setSelectedSectors] = useState<string[]>([]);
 
@@ -305,7 +331,11 @@ export default function StartupBrowser({
         const b = EMP_BANDS[empBand];
         if (employees < b.min || employees > b.max) return false;
         if (deepTechFilter === "deep" && !isDeepTech(r)) return false;
-        if (deepTechFilter === "startup" && isDeepTech(r)) return false;
+        if (
+          typeFilter !== "all" &&
+          startupTypeLabel(r.startup?.type).toLowerCase() !== typeFilter
+        )
+          return false;
         if (
           selectedSectors.length > 0 &&
           (!r.startup?.sector || !selectedSectors.includes(r.startup.sector))
@@ -313,7 +343,7 @@ export default function StartupBrowser({
           return false;
         return true;
       }),
-    [data, search, empBand, deepTechFilter, selectedSectors],
+    [data, search, empBand, typeFilter, deepTechFilter, selectedSectors],
   );
 
   const table = useReactTable({
@@ -333,12 +363,17 @@ export default function StartupBrowser({
     <div className="min-h-screen text-white font-sans px-4 md:px-7 py-8">
       {/* HEADER */}
       <div className="px-2">
-        <div className="inline-flex items-center gap-2.5 font-mono text-xs opacity-80">
-          <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75 animate-ping" />
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-secondary" />
-          </span>
-          <span>Browse · Hungarian startup registry</span>
+        <div className="flex items-start justify-between gap-4">
+          <div className="inline-flex items-center gap-2.5 font-mono text-xs opacity-80">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75 animate-ping" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-secondary" />
+            </span>
+            <span>Browse · Hungarian startup registry</span>
+          </div>
+          <Faq triggerClassName="bg-transparent text-white/85 hover:bg-white/10 hover:text-white px-5 py-3 h-auto rounded-full font-medium text-sm border border-white/20">
+            <AccordionDatabase />
+          </Faq>
         </div>
 
         <div className="mt-3 flex flex-col md:flex-row items-start md:items-end justify-between gap-6 md:gap-8">
@@ -349,9 +384,6 @@ export default function StartupBrowser({
             <YearSelector triggerClassName="w-[140px] bg-black/30 border border-white/10 rounded-lg px-3 py-2 text-xs font-mono text-white outline-none focus:border-primary hover:bg-black/40 transition-colors" />
           </div>
           <div className="flex flex-col gap-7 pb-2">
-            {/* <Faq>
-              <AccordionDatabase />
-            </Faq> */}
             <div className="flex flex-col items-end">
               <b className="text-2xl font-bold tracking-tight">{total}</b>
               <span className="font-mono text-[10px] uppercase opacity-55 tracking-widest">
@@ -421,8 +453,66 @@ export default function StartupBrowser({
               {(
                 [
                   { key: "all", label: "All" },
-                  { key: "deep", label: "Deep Tech" },
                   { key: "startup", label: "Startup" },
+                  { key: "scale-up", label: "Scale-up" },
+                ] as const
+              ).map((opt) => (
+                <button
+                  key={opt.key}
+                  onClick={() => setTypeFilter(opt.key)}
+                  className={
+                    "px-3 py-1 rounded-full text-xs font-mono whitespace-nowrap transition-colors " +
+                    (typeFilter === opt.key
+                      ? opt.key === "scale-up"
+                        ? "bg-sky-400 text-slate-900 font-semibold"
+                        : "bg-primary text-white font-semibold"
+                      : "text-white/70 hover:text-white")
+                  }
+                >
+                  {opt.label}
+                </button>
+              ))}
+            </div>
+          </div>
+
+        </div>
+
+        {/* Row 2: Sector multi-select + deep-tech filter */}
+        <div className="flex flex-wrap items-center gap-2.5 mt-3 pt-3 border-t border-dashed border-white/10">
+          {sectorOptions.length > 0 && (
+            <>
+              <span className="font-mono text-[10px] uppercase tracking-widest opacity-55 shrink-0">
+                Sector
+              </span>
+              <div className="flex-1 min-w-[220px] max-w-[360px]">
+                <MultiSelect
+                  options={sectorOptions}
+                  value={selectedSectors}
+                  onChange={setSelectedSectors}
+                  placeholder="All sectors"
+                />
+              </div>
+              {selectedSectors.length > 0 && (
+                <button
+                  onClick={() => setSelectedSectors([])}
+                  className="font-mono text-[11px] text-white/60 hover:text-white underline-offset-2 hover:underline"
+                >
+                  Clear
+                </button>
+              )}
+              <div className="w-px h-7 bg-white/10 hidden sm:block" />
+            </>
+          )}
+
+          <div className="flex items-center gap-2.5 flex-wrap">
+            <span className="font-mono text-[10px] uppercase tracking-widest opacity-55 shrink-0">
+              Deep Tech
+            </span>
+            <div className="flex gap-1 p-[3px] rounded-full bg-black/30 border border-white/[0.06]">
+              {(
+                [
+                  { key: "all", label: "All" },
+                  { key: "deep", label: "Deep Tech" },
                 ] as const
               ).map((opt) => (
                 <button
@@ -442,33 +532,7 @@ export default function StartupBrowser({
               ))}
             </div>
           </div>
-
         </div>
-
-        {/* Row 2: Sector multi-select */}
-        {sectorOptions.length > 0 && (
-          <div className="flex flex-wrap items-center gap-2.5 mt-3 pt-3 border-t border-dashed border-white/10">
-            <span className="font-mono text-[10px] uppercase tracking-widest opacity-55 shrink-0">
-              Sector
-            </span>
-            <div className="flex-1 min-w-[260px] max-w-[520px]">
-              <MultiSelect
-                options={sectorOptions}
-                value={selectedSectors}
-                onChange={setSelectedSectors}
-                placeholder="All sectors"
-              />
-            </div>
-            {selectedSectors.length > 0 && (
-              <button
-                onClick={() => setSelectedSectors([])}
-                className="font-mono text-[11px] text-white/60 hover:text-white underline-offset-2 hover:underline"
-              >
-                Clear
-              </button>
-            )}
-          </div>
-        )}
       </div>
 
       {/* RESULTS */}

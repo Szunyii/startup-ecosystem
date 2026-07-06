@@ -2,6 +2,8 @@ import React from "react";
 import SectorBarChart from "@/components/SectorBarChart";
 import FundingTrendChart from "@/components/FundingTrendChart";
 import ActiveStartupsList from "@/components/ActiveStartupsList";
+import Faq from "@/components/Faq";
+import AccordionOverview from "@/components/AccordionOverview";
 
 import type { Metadata } from "next";
 
@@ -40,9 +42,9 @@ export default async function StartupOverviewPage(props: {
           </h1>
         </div>
 
-        {/* <Faq triggerClassName="bg-transparent text-white/85 hover:bg-white/10 hover:text-white px-5 py-3 h-auto rounded-full font-medium text-sm border border-white/20">
-          <AccordionDatabase />
-        </Faq> */}
+        <Faq triggerClassName="bg-transparent text-white/85 hover:bg-white/10 hover:text-white px-5 py-3 h-auto rounded-full font-medium text-sm border border-white/20">
+          <AccordionOverview />
+        </Faq>
       </header>
 
       {/* Two-column grid on lg+ — chart left, placeholder for additional

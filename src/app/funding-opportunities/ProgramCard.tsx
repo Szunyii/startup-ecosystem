@@ -13,7 +13,7 @@ function ProgramCard({ description, link, program }: ProgramProps) {
       <h2 className="font-semibold text-[16px] tracking-tight text-white">
         {program}
       </h2>
-      <p className="text-[13px] leading-relaxed text-white/75 whitespace-pre-line line-clamp-6">
+      <p className="text-[13px] leading-relaxed text-white/75 whitespace-pre-line">
         {description}
       </p>
       <Link

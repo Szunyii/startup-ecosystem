@@ -4,6 +4,8 @@ import React, { useMemo, useState } from "react";
 import Image from "next/image";
 
 import Link from "next/link";
+import Faq from "@/components/Faq";
+import AccordionEcosystem from "@/components/AccordionEcosystem";
 
 type Partner = {
   id: number;
@@ -102,31 +104,35 @@ export default function EcosystemAtlas({ partners }: { partners: Partner[] }) {
   return (
     <div className="relative text-white font-sans rounded-[32px] px-4 md:px-7 pt-4 pb-9 min-h-screen overflow-hidden">
       {/* HEADER */}
-      <header className="flex flex-col md:flex-row justify-between md:items-end gap-6 md:gap-8 px-2 pt-10">
-        <div>
+      <header className="px-2 pt-10">
+        <div className="flex items-start justify-between gap-4">
           <div className="inline-flex items-center gap-2.5 font-mono text-xs opacity-80">
             <LiveDot />
             <span>{totalPartners} ecosystem partners · updated weekly</span>
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-[56px] font-extrabold tracking-tight mt-3.5 mb-2">
-            Startup Ecosystem
-          </h1>
-          <p className="text-white/70 text-base leading-relaxed max-w-[640px] m-0">
-            A living map of the people, programs and capital that support
-            Hungarian startups — pick where you are and what you need, and see
-            exactly who can help.
-          </p>
-        </div>
-        <div className="flex gap-2.5 items-center">
-          {/* <Faq triggerClassName="bg-transparent text-white/85 hover:bg-white/10 hover:text-white px-5 py-3 h-auto rounded-full font-medium text-sm border border-white/20">
+          <Faq triggerClassName="bg-transparent text-white/85 hover:bg-white/10 hover:text-white px-5 py-3 h-auto rounded-full font-medium text-sm border border-white/20">
             <AccordionEcosystem />
-          </Faq> */}
-          <Link
-            href="/registry"
-            className="bg-[#afe200] text-[#0b1027] px-5 py-3 rounded-full no-underline font-bold text-sm hover:opacity-90"
-          >
-            Submit your organization →
-          </Link>
+          </Faq>
+        </div>
+        <div className="flex flex-col md:flex-row justify-between md:items-end gap-6 md:gap-8 mt-3.5">
+          <div>
+            <h1 className="text-4xl md:text-5xl lg:text-[56px] font-extrabold tracking-tight mb-2">
+              Startup Ecosystem
+            </h1>
+            <p className="text-white/70 text-base leading-relaxed max-w-[640px] m-0">
+              A living map of the people, programs and capital that support
+              Hungarian startups — pick where you are and what you need, and see
+              exactly who can help.
+            </p>
+          </div>
+          <div className="flex gap-2.5 items-center">
+            <Link
+              href="/registry"
+              className="bg-[#afe200] text-[#0b1027] px-5 py-3 rounded-full no-underline font-bold text-sm hover:opacity-90"
+            >
+              Submit your organization →
+            </Link>
+          </div>
         </div>
       </header>
 

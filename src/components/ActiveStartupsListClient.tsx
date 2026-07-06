@@ -11,7 +11,7 @@ export interface ActiveStartup {
   company: string | null;
   website: string | null;
   sector: string | null;
-  type: string | null;
+  deeptech: boolean | null;
   funding_year: number | null;
 }
 
@@ -19,8 +19,8 @@ interface Props {
   startups: ActiveStartup[];
 }
 
-function isDeepTech(type: string | null | undefined) {
-  return /deep/i.test(type ?? "");
+function isDeepTech(deeptech: boolean | null | undefined) {
+  return deeptech === true;
 }
 
 const fmt = (n: number) => new Intl.NumberFormat("hu-HU").format(n);
@@ -226,7 +226,7 @@ export default function ActiveStartupsListClient({ startups }: Props) {
             {pageItems.map((s) => {
               const name = (s.company ?? "—").trim() || "—";
               const sector = s.sector?.trim();
-              const deep = isDeepTech(s.type);
+              const deep = isDeepTech(s.deeptech);
               const initial = name[0]?.toUpperCase() ?? "?";
               return (
                 <article

@@ -35,6 +35,7 @@ async function NewStartupPage(props: {
           website: true,
           sector: true,
           funding_year: true,
+          deeptech: true,
           type: true,
         },
       },

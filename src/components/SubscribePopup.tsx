@@ -33,7 +33,7 @@ export default function SubscribePopup() {
     };
     window.addEventListener(OPEN_EVENT, onManualOpen);
 
-    if (sessionStorage.getItem(STORAGE_KEY)) {
+    if (localStorage.getItem(STORAGE_KEY)) {
       return () => window.removeEventListener(OPEN_EVENT, onManualOpen);
     }
 
@@ -46,9 +46,9 @@ export default function SubscribePopup() {
 
   function markSeen() {
     try {
-      sessionStorage.setItem(STORAGE_KEY, "1");
+      localStorage.setItem(STORAGE_KEY, "1");
     } catch {
-      // sessionStorage may be unavailable (private mode, quota); ignore
+      // localStorage may be unavailable (private mode, quota); ignore
     }
   }
 

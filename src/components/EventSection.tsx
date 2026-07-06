@@ -32,9 +32,7 @@ function EventSection() {
   const searchParams = useSearchParams();
   const eventRef = useRef<HTMLDivElement | null>(null);
 
-  const uniqueCountries = [
-    ...new Set(eventsArray.map((e) => e.country)),
-  ].sort();
+  const today = startOfDay(new Date());
 
   // const enabledDays = eventsArray.map((d) => new Date(d.event_date));
   const enabledDays = eventsArray.flatMap((event) => {
@@ -46,7 +44,20 @@ function EventSection() {
     return eachDayOfInterval({ start, end });
   });
 
-  const today = startOfDay(new Date());
+  const uniqueCountries = [
+    ...new Set(
+      eventsArray
+        .filter((event) => {
+          const eventEnd = startOfDay(
+            new Date(event.event_end_date ?? event.event_date),
+          );
+          if (isBefore(eventEnd, today)) return false;
+          if (type !== "All" && !event.type.includes(type)) return false;
+          return true;
+        })
+        .map((e) => e.country),
+    ),
+  ].sort();
 
   // --TODO ref scolling
   // date param olvasása

@@ -27,7 +27,7 @@ export default async function HomePage() {
       company: { not: null },
       sector: { not: null },
     },
-    select: { company: true, sector: true },
+    select: { company: true, sector: true, website: true },
     take: 200,
   });
 
@@ -36,6 +36,7 @@ export default async function HomePage() {
     .map((c) => ({
       name: (c.company ?? "").trim(),
       sector: (c.sector ?? "").trim() || "—",
+      website: (c.website ?? "").trim() || null,
     }))
     .filter((c) => c.name.length > 0);
 

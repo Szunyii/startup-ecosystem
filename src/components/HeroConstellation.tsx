@@ -14,6 +14,15 @@ const LIME = "#afe200";
 export interface CompanyEntry {
   name: string;
   sector: string;
+  website?: string | null;
+}
+
+function normalizeUrl(url: string | null | undefined): string | null {
+  if (!url) return null;
+  const trimmed = url.trim();
+  if (!trimmed) return null;
+  if (/^https?:\/\//i.test(trimmed)) return trimmed;
+  return `https://${trimmed}`;
 }
 
 interface ConstellationSlot {
@@ -376,27 +385,44 @@ export default function HeroConstellation({ pool }: Props) {
                       boxShadow: `0 0 0 ${ringSize}px rgba(175,226,0,${ringOpacity}), 0 0 12px ${LIME}`,
                     }}
                   />
-                  <div className="absolute left-[18px] -top-2 whitespace-nowrap rounded-[10px] px-2.5 py-1.5 backdrop-blur-md bg-[rgba(11,16,39,0.82)] border border-white/[0.12] overflow-hidden">
-                    <AnimatePresence mode="wait">
-                      <motion.div
-                        key={company?.name ?? "empty"}
-                        initial={{ opacity: 0, y: -4 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 4 }}
-                        transition={{ duration: 0.3, ease: "easeOut" }}
-                      >
-                        <div className="font-semibold text-[13px] text-white">
-                          {company?.name ?? "—"}
-                        </div>
-                        <div
-                          className="font-mono text-[10px] opacity-90"
-                          style={{ color: LIME }}
+                  {(() => {
+                    const href = normalizeUrl(company?.website);
+                    const cardInner = (
+                      <AnimatePresence mode="wait">
+                        <motion.div
+                          key={company?.name ?? "empty"}
+                          initial={{ opacity: 0, y: -4 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: 4 }}
+                          transition={{ duration: 0.3, ease: "easeOut" }}
                         >
-                          {company?.sector ?? "—"}
-                        </div>
-                      </motion.div>
-                    </AnimatePresence>
-                  </div>
+                          <div className="font-semibold text-[13px] text-white">
+                            {company?.name ?? "—"}
+                          </div>
+                          <div
+                            className="font-mono text-[10px] opacity-90"
+                            style={{ color: LIME }}
+                          >
+                            {company?.sector ?? "—"}
+                          </div>
+                        </motion.div>
+                      </AnimatePresence>
+                    );
+                    const cardClasses =
+                      "absolute left-[18px] -top-2 whitespace-nowrap rounded-[10px] px-2.5 py-1.5 backdrop-blur-md bg-[rgba(11,16,39,0.82)] border border-white/[0.12] overflow-hidden";
+                    return href ? (
+                      <a
+                        href={href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`${cardClasses} no-underline block cursor-pointer hover:border-[#afe200]/60 hover:bg-[rgba(11,16,39,0.92)] transition-colors`}
+                      >
+                        {cardInner}
+                      </a>
+                    ) : (
+                      <div className={cardClasses}>{cardInner}</div>
+                    );
+                  })()}
                 </motion.div>
               </div>
             );

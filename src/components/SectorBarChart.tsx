@@ -22,16 +22,30 @@ export default async function SectorBarChart({
   title = "Companies by sector",
   subtitle,
 }: SectorBarChartProps) {
-  const rows = await prisma.startup_year_data_test.findMany({
+  const rawRows = await prisma.startup_year_data_test.findMany({
     where: {
       year,
       startup: { status: "active" },
     },
     select: {
+      taxnumber: true,
       person: true,
       netrevenue: true,
-      startup: { select: { sector: true, type: true } },
+      startup: { select: { sector: true, deeptech: true } },
     },
+  });
+
+  // `taxnumber` isn't unique in startup_test, so a duplicate company row
+  // makes the year-data → startup join fan out and double-count that
+  // company (both in the total and in its sector bucket). Keep one row per
+  // taxnumber so the chart counts each company exactly once. On clean data
+  // this is a no-op.
+  const seen = new Set<string>();
+  const rows = rawRows.filter((r) => {
+    if (r.taxnumber == null) return true;
+    if (seen.has(r.taxnumber)) return false;
+    seen.add(r.taxnumber);
+    return true;
   });
 
   return (

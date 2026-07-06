@@ -15,7 +15,7 @@ export default async function ActiveStartupsList() {
       company: true,
       website: true,
       sector: true,
-      type: true,
+      deeptech: true,
       funding_year: true,
     },
     orderBy: { company: "asc" },
