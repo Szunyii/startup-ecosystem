@@ -26,6 +26,7 @@ export default async function SectorBarChart({
     where: {
       year,
       startup: { status: "active" },
+      netrevenue: { not: null },
     },
     select: {
       taxnumber: true,

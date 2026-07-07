@@ -15,19 +15,21 @@ export default function AccordionOverview() {
         <AccordionContent className="flex flex-col gap-4 text-balance">
           <p>
             A yearly snapshot of the Hungarian startup ecosystem: sector
-            breakdown, funding trends, and the list of active startups for the
-            selected reporting year.
+            breakdown, funding trends, and the list of currently active
+            startups.
           </p>
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-2">
         <AccordionTrigger>
-          2. How do I change the reporting year?
+          2. Why aren&apos;t the numbers the same in the tables?
         </AccordionTrigger>
         <AccordionContent className="flex flex-col gap-4 text-balance">
           <p>
-            Use the year selector — the page defaults to 2024. All three
-            sections update to reflect the chosen year.
+            The &quot;Companies by Sector&quot; table covers the year 2024,
+            while the list of active startups covers the entire startup
+            ecosystem. Discrepancies may arise due to differences in the year of
+            founding or the availability of financial reports.
           </p>
         </AccordionContent>
       </AccordionItem>
@@ -37,8 +39,8 @@ export default function AccordionOverview() {
         </AccordionTrigger>
         <AccordionContent className="flex flex-col gap-4 text-balance">
           <p>
-            Active companies grouped by their primary sector. Each bar’s length
-            is relative to the largest sector for that year.
+            Active companies grouped by their primary sector. Each bar&apos;s
+            length is relative to the largest sector for that year.
           </p>
         </AccordionContent>
       </AccordionItem>
@@ -56,10 +58,7 @@ export default function AccordionOverview() {
           5. Which startups count as “active”?
         </AccordionTrigger>
         <AccordionContent className="flex flex-col gap-4 text-balance">
-          <p>
-            Companies with reported activity in the selected year, drawn from
-            the current startup dataset.
-          </p>
+          <p>Companies that have an active tax ID number.</p>
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-6">

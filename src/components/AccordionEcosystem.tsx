@@ -14,8 +14,8 @@ export default function AccordionEcosystem() {
         </AccordionTrigger>
         <AccordionContent className="flex flex-col gap-4 text-balance">
           <p>
-            A curated map of active Hungarian startups with basic financial and
-            team data.
+            It is a matchmaking platform for startups that helps them connect
+            with members of the ecosystem in specific categories.
           </p>
         </AccordionContent>
       </AccordionItem>
@@ -25,8 +25,8 @@ export default function AccordionEcosystem() {
         </AccordionTrigger>
         <AccordionContent className="flex flex-col gap-4 text-balance">
           <p>
-            Entity’s webpage URL, official logo, official name, their stage and
-            type.
+            how many companies there are in each category and which ones they
+            are.
           </p>
         </AccordionContent>
       </AccordionItem>

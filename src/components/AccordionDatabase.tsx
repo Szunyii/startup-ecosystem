@@ -13,7 +13,9 @@ export default function AccordionDatabase() {
         <AccordionContent className="flex flex-col gap-4 text-balance">
           <p>
             A detailed directory of Hungarian startups, including historical
-            data and metrics.
+            data and metrics. It includes only those companies that have filed
+            active tax returns and have a Hungarian tax ID number for the given
+            years.
           </p>
         </AccordionContent>
       </AccordionItem>
@@ -23,9 +25,9 @@ export default function AccordionDatabase() {
         </AccordionTrigger>
         <AccordionContent className="flex flex-col gap-4 text-balance">
           <p>
-            Includes more companies and deeper historical data; ecosystem page
-            excludes startups, only shows entities who are working in/on the
-            Hungarian startup ecosystem.
+            This is a historical table showing the performance of startups, only
+            shows entities who are working in/on the Hungarian startup
+            ecosystem.
           </p>
         </AccordionContent>
       </AccordionItem>
@@ -34,7 +36,10 @@ export default function AccordionDatabase() {
           3. Can I update my company’s entries?
         </AccordionTrigger>
         <AccordionContent className="flex flex-col gap-4 text-balance">
-          <p>Yes. Use the “Join the Startup Database” form below.</p>
+          <p>
+            Yes. Use the “Join the Startup Database” form in the registratoin
+            page.
+          </p>
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-4">
