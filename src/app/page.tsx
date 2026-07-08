@@ -43,7 +43,7 @@ export default async function HomePage() {
   return (
     <div className="scroll-smooth">
       <HeroConstellation pool={pool} />
-      <section id="events" className="flex flex-col mb-11 mt-6">
+      <section id="events" className="flex flex-col mb-11 mt-2">
         <EventsHeading />
         <Suspense fallback={"Loading"}>
           <EventSection />

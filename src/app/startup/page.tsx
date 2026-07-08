@@ -26,7 +26,7 @@ async function NewStartupPage(props: {
   const newData = await prisma.startup_year_data_test.findMany({
     where: {
       year: q,
-      startup: { status: "active" },
+      startup: { status: "active", funding_year: { lte: q } },
     },
     include: {
       startup: {

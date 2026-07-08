@@ -3,6 +3,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 // Brand-token bridge: `--secondary` resolves to lavender in :root, not lime,
 // so the lime accent stays a hex literal. Amethyst is exposed via the
@@ -153,8 +154,8 @@ export default function HeroConstellation({ pool }: Props) {
   }, [pool]);
 
   return (
-    <section className="relative overflow-hidden text-white font-sans bg-transparent">
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.05fr] gap-0 px-4 md:px-7 pt-7 pb-10 min-h-[640px] lg:min-h-[760px]">
+    <section className="relative overflow-hidden text-white font-sans bg-transparent -mt-6">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.05fr] gap-0 px-4 md:px-7 pt-1 pb-10 min-h-[640px] lg:min-h-[760px]">
         {/* Foreground content — second column on lg+, right-aligned there
             but kept left-aligned on small screens where the text spans full
             width. */}
@@ -188,7 +189,7 @@ export default function HeroConstellation({ pool }: Props) {
           </p>
 
           <div className="flex flex-wrap gap-3 mt-8 lg:justify-end">
-            <a
+            <Link
               href="/startup"
               className="group inline-flex items-center gap-2.5 px-5 py-3.5 rounded-full font-semibold no-underline bg-primary text-white shadow-[0_12px_30px_-8px_rgba(93,61,255,.6)] hover:bg-primary/90 transition-colors"
             >
@@ -197,13 +198,13 @@ export default function HeroConstellation({ pool }: Props) {
                 className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1"
                 strokeWidth={2.4}
               />
-            </a>
-            <a
+            </Link>
+            {/* <a
               href="/registry"
               className="inline-flex items-center px-5 py-3.5 rounded-full text-white no-underline border border-white/20 hover:bg-white/[0.06] transition-colors"
             >
               For companies
-            </a>
+            </a> */}
           </div>
 
           <div className="flex flex-wrap gap-5 md:gap-7 mt-9 pt-5 border-t border-white/10 lg:justify-end">
@@ -228,8 +229,11 @@ export default function HeroConstellation({ pool }: Props) {
           </div>
         </motion.div>
 
-        {/* Constellation canvas — first column on lg+. */}
-        <div className="relative min-h-[480px] lg:min-h-[720px] hidden md:block lg:order-1">
+        {/* Constellation canvas — first column on lg+. Constrained to a
+            square and vertically centered (`self-center`) instead of
+            stretching to fill the tall hero row, so it doesn't elongate
+            toward the top and bottom (and the rings stay circular). */}
+        <div className="relative w-full max-w-[620px] aspect-square mx-auto self-center hidden lg:block lg:order-1">
           <svg
             className="absolute inset-0 w-full h-full"
             viewBox="0 0 100 100"
