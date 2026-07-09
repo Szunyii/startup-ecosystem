@@ -155,7 +155,7 @@ export default function HeroConstellation({ pool }: Props) {
 
   return (
     <section className="relative overflow-hidden text-white font-sans bg-transparent -mt-6">
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.05fr] gap-0 px-4 md:px-7 pt-1 pb-10 min-h-[640px] lg:min-h-[760px]">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.05fr] gap-0 px-4 md:px-7 pt-1 pb-10 min-h-[640px] lg:min-h-[760px] xl:min-h-[860px] 2xl:min-h-[920px]">
         {/* Foreground content — second column on lg+, right-aligned there
             but kept left-aligned on small screens where the text spans full
             width. */}
@@ -233,7 +233,7 @@ export default function HeroConstellation({ pool }: Props) {
             square and vertically centered (`self-center`) instead of
             stretching to fill the tall hero row, so it doesn't elongate
             toward the top and bottom (and the rings stay circular). */}
-        <div className="relative w-full max-w-[620px] aspect-square mx-auto self-center hidden lg:block lg:order-1">
+        <div className="relative w-full max-w-[620px] xl:max-w-[700px] 2xl:max-w-[760px] aspect-square mx-auto self-center hidden lg:block lg:order-1">
           <svg
             className="absolute inset-0 w-full h-full"
             viewBox="0 0 100 100"
